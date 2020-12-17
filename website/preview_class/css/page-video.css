@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+*{font-family:\5FAE\8EDF\6B63\9ED1\9AD4,\65B0\7D30\660E\9AD4;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+body{margin:0px;font-family:\5FAE\8EDF\6B63\9ED1\9AD4,\65B0\7D30\660E\9AD4;}
+input:focus{outline: -webkit-focus-ring-color auto 0;}
+select:focus{outline: -webkit-focus-ring-color auto 0;}
+textarea:focus{outline: -webkit-focus-ring-color auto 0;}
+select { -webkit-appearance: none; /*Chrome*/-moz-appearance: none; /*FF*/appearance: none;/*CSS3*/}
+select::-ms-expand {display: none; /*IE*/}
+.select-arrow {background-image:url(../image/select-arrow.png);background-repeat:no-repeat;background-position:94% 20px;}
+ul{padding:0px;margin:0px;list-style:none;}
+li{padding:0px;margin:0px;}
+.trans{transform:rotateY(180deg);}
+a{text-decoration:none;}
+
+/* 影片播放 */
+.teach-video-container{width:1280px;margin-left:auto;margin-right:auto;padding-top:30px;}
+.teach-video-title{width:100%;font-size:24px;color:#ffffff;text-align:left;margin-bottom:15px;line-height:32px;}
+.teach-video-play{width:100%;padding:0px 10px;}
+.teach-video-play img{max-width:100%;height:auto;}
+.bu-goback{text-align:center;margin-top:30px;margin-bottom:30px;display:none;}
+.bu-goback img{width:200px;cursor:pointer;}
+/* 影片播放 end */
+/* 影片播放 RWD */
+@media (max-width:1280px) {.teach-video-container{width:100%;}.teach-video-title{padding:0px 10px;}}
+@media (max-width:1024px) {.teach-video-title{font-size:22px;}.bu-goback img{width:190px;}}
+@media (max-width:850px) {.teach-video-title{font-size:20px;margin-bottom:5px;}.bu-goback img{width:170px;}}
+@media (max-width:700px) {.bu-goback img{width:160px;}}
+@media (max-width:550px) {.bu-goback img{width:150px;}}
+@media (max-width:500px) {.bu-goback {margin-top:40px;}}
+@media (max-width:450px) {.teach-video-title{font-size:18px;}.bu-goback img{width:140px;}}
+@media (max-width:400px) {.teach-video-title{font-size:16px;}.bu-goback img{width:130px;}}
+/* 影片播放 RWD end */
+
+/* main board */
+.video-board-container{width:100%;height:auto;margin-left:auto;margin-right:auto;-webkit-box-shadow:0 8px 15px rgba(0,0,0,0.6);-moz-box-shadow:0 8px 15px rgba(0,0,0,0.6);box-shadow:0 8px 15px rgba(0,0,0,0.6);}
+.css-table{display:table;}
+.css-tr{display:table-row;}
+.css-td{display:table-cell;}
+.board-corner{display:table-cell;width:20px;height:20px;}
+.board-line-top{display:table-cell;height:21px;width:100%;background-image:url(../image/board-line-top.jpg);background-repeat:repeat-x;}
+.board-line-bottom{display:table-cell;height:21px;width:100%;background-image:url(../image/board-line-bottom.png);background-repeat:repeat-x;}
+.board-center{width:100%;height:100vh;background-color:#0d2414;text-align:center;display:table-cell;position:relative;padding-bottom:50px;}
+.s-left{width:20px;background-image:url(../image/board-line-left.jpg);background-repeat:repeat-y;}
+.s-right{width:20px;background-image:url(../image/board-line-right.jpg);background-repeat:repeat-y;}
+.video-demo{width:100%;height:100%;position:absolute;top:0px;left:0px;z-index:10;}
+.board-dis-1{display:block;}
+.board-dis-2{display:none;}
+.board-dis-3{display:none;}
+/* main board end */
+/* main board rwd */
+@media (max-width:750px) {
+.log-container{width:100%;}
+.board-dis-1{display:none;}
+.board-dis-2{display:block;}
+.s-left img{width:16px;height:16px;}
+.s-right img{width:16px;height:16px;}
+.s-left{width:16px;background-image:url(../image/board-line-left-2.jpg);}
+.s-right{width:16px;background-image:url(../image/board-line-right-2.jpg);}
+.board-corner {width:16px;height:17px;}
+.board-line-top{height:17px;background-image:url(../image/board-line-top-2.jpg);background-position:top center;}
+.board-line-bottom{height:17px;background-image:url(../image/board-line-bottom-2.png);background-position:top center;}
+}
+@media (max-width:700px) {
+.board-dis-2{display:none;}
+.board-dis-3{display:block;}
+.s-left img{width:12px;height:12px;}
+.s-right img{width:12px;height:12px;}
+.s-left{width:12px;background-image:url(../image/board-line-left-3.jpg);}
+.s-right{width:12px;background-image:url(../image/board-line-right-3.jpg);}
+.board-corner {width:12px;height:13px;}
+.board-line-top{height:14px;background-image:url(../image/board-line-top-3.jpg);background-position:center center;}
+.board-line-bottom{height:14px;background-image:url(../image/board-line-bottom-3.png);background-position:center center;}
+}
+/* main board rwd end */
+
+

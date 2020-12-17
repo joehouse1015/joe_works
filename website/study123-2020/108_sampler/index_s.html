@@ -1,0 +1,276 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+<meta name="author" content="學習王科技">
+<meta name="copyright" content="學習王科技股份有限公司">  
+<link rel="author" href="學習王科技">
+<link rel="publisher" href="https://www.study123.com.tw/">
+<meta name="description" content="108課綱萬試通智能學習系統-產品試讀">  
+<meta itemprop="name" content="108課綱萬試通智能學習系統-產品試讀">
+<meta itemprop="image" content="">
+<meta itemprop="description" content="108課綱萬試通智能學習系統-產品試讀">
+<meta property="og:title" content="108課綱萬試通智能學習系統-產品試讀">
+<meta property="og:url" content="">
+<meta property="og:image" content="image/og-img.jpg">
+<meta property="og:description" content="108課綱萬試通智能學習系統-產品試讀">
+<meta name="keywords" content="學習王,萬試通,108課綱,智能學習系統,國中,升學,會考,考試">
+
+<link rel="shoutcut icon" href="image/logo_shortcut.ico"/>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<title>108課綱萬試通智能學習系統-產品試讀</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".main_subject_btn_mobile,.main_subject_btn").click(function(){
+        $(".main_subject_btn_container").toggleClass("subject_btn_show-hide");
+    });
+    $(".main_subject_btn_mobile").click(function(){
+        if($(".subject_btn_mobile_text").text() == "科目選項"){
+          $(".subject_btn_mobile_text").text("收起選項")
+        }
+        else{
+          $(".subject_btn_mobile_text").text("科目選項")
+        }
+    });
+    $(".main_subject_btn").click(function(){
+        var clickIndex = $(".main_subject_btn").index(this);
+        var subject = $($(".main_subject_btn")[clickIndex]).text();
+        $(".subject_btn_mobile_title").text(subject);
+    });
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".top_bar_grade_btn").click(function(){
+        $(".grade_btn_container,.grade_btn_container_bg").show();
+    });
+    $(".grade_btn").click(function(){
+        $(".grade_btn_container,.grade_btn_container_bg").hide();
+    });
+});
+</script>
+</head>
+
+<body>
+
+<div class="top_bar_container">
+<div class="top_bar_grade_btn" style="display:none;">
+<picture><source media="(max-width:768px)" srcset="image/grade_btn_img_768.png"/><img src="image/grade_btn_img_1920.png" alt=""/></picture>
+</div>
+<picture><img src="image/logo_s_1920.png" class="top_bar_logo"></picture>
+<div class="grade_btn_container" style="display:none;">
+<div class="grade_btn active">國一課程</div> 
+<div class="grade_btn">國二課程</div> 
+<div class="grade_btn">國三課程</div> 
+</div>
+</div>
+    
+<div class="main">
+<div class="main_container">
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$(function(){
+		var showTab = 0;
+		var defaultLi = $('.main_subject_btn').eq(showTab).addClass('active');
+		$(defaultLi.find('a').attr('href')).siblings().hide();		
+		$('.main_subject_btn').click(function() {
+			var $this = $(this),
+			    clickTab = $this.find('a').attr('href');
+			$this.addClass('active').siblings('.active').removeClass('active');
+			$(clickTab).stop(false, true).show().siblings().hide();
+            return false;
+		}).find('a').focus(function(){
+			this.blur();
+		});
+	});
+});
+</script>    
+    
+<div class="main_subject_btn_area">
+<div class="main_subject_btn_mobile"><span class="subject_btn_mobile_title">國文</span><span><span class="subject_btn_mobile_text">科目選項</span><img src="image/btn_arrow.png"></span></div>
+<div class="main_subject_btn_container">
+<div class="main_subject_btn"><a href="#t1">國文</a></div>
+<div class="main_subject_btn"><a href="#t2">英文</a></div>
+<div class="main_subject_btn"><a href="#t3">數學</a></div>
+<div class="main_subject_btn"><a href="#t4">自然</a></div>
+<div class="main_subject_btn"><a href="#t5">社會</a></div>
+</div>   
+</div>
+    
+<div class="main_subject_video_area">
+    
+<div id="t1">   
+<div class="main_subject_video_title">國文</div>   
+<div class="main_subject_video_container">   
+<div class="main_subject_video">
+<img src="image/s1.jpg">
+<div class="main_subject_text">國文名師-古祥<br/><span>師說</span></div>
+</div> 
+<div class="main_subject_video">
+<img src="image/s2.jpg">
+<div class="main_subject_text">國文名師-唐文<br/><span>古今應用文</span></div>
+</div> 
+<div class="main_subject_video">
+<img src="image/s3.jpg">
+<div class="main_subject_text">國文名師-周玟<br/><span>作文指導-論說不強辯</span></div>
+</div> 
+<div class="main_subject_video">
+<img src="image/s4.jpg">
+<div class="main_subject_text">動畫演繹<br/><span>作文指導-論說不強辯</span></div>
+</div> 
+</div>
+</div>  
+<div id="t2" style="display:none;">   
+<div class="main_subject_video_title">英文</div>   
+<div class="main_subject_video_container">   
+<div class="main_subject_video">
+<img src="image/s5.jpg">
+<div class="main_subject_text">英文名師-蘇銳<br/><span>五大句型</span></div>
+</div> 
+<div class="main_subject_video">
+<img src="image/s6.jpg">
+<div class="main_subject_text">英文名師-奇諺<br/><span>慣用語與句型</span></div>
+</div> 
+<div class="main_subject_video">
+<img src="image/s7.jpg">
+<div class="main_subject_text">英文名師-Crystal<br/><span>版本課文-龍騰版</span></div>
+</div>    
+</div>
+</div>    
+<div id="t3" style="display:none;">   
+<div class="main_subject_video_title">數學</div>   
+<div class="main_subject_video_container">   
+<div class="main_subject_video">
+<img src="image/s8.jpg">
+<div class="main_subject_text">數學名師-林名揚<br/><span>常用對數</span></div>
+</div> 
+<div class="main_subject_video">
+<img src="image/s9.jpg">
+<div class="main_subject_text">數學名師-郭建宏<br/><span>段考複習-數與式</span></div>
+</div> 
+<div class="main_subject_video">
+<img src="image/s10.jpg">
+<div class="main_subject_text">數學名師-閻安<br/><span>進階課程-數列與級數</span></div>
+</div>   
+</div>
+</div>   
+<div id="t4" style="display:none;">   
+<div class="main_subject_video_title">自然</div>   
+<div class="main_subject_video_container">   
+<div class="main_subject_video">
+<img src="image/s11.jpg">
+<div class="main_subject_text">物理名師-陳達<br/><span>光的發展、波的概念</span></div>
+</div> 
+<div class="main_subject_video">
+<img src="image/s12.jpg">
+<div class="main_subject_text">物理名師-陳建豪<br/><span>實驗-電動機馬達原理</span></div>
+</div> 
+<div class="main_subject_video">
+<img src="image/s13.jpg">
+<div class="main_subject_text">化學名師-朱鼎樞<br/><span>純物質與混合物</span></div>
+</div> 
+<div class="main_subject_video">
+<img src="image/s14.jpg">
+<div class="main_subject_text">化學名師-李振瑋<br/><span>實驗-化學電池</span></div>
+</div> 
+<div class="main_subject_video">
+<img src="image/s15.jpg">
+<div class="main_subject_text">生物名師-游夏<br/><span>光合作用</span></div>
+</div> 
+<div class="main_subject_video">
+<img src="image/s15-2.jpg">
+<div class="main_subject_text">生物名師-黃聖鈞<br/><span>心臟</span></div>
+</div>
+<div class="main_subject_video">
+<img src="image/s16.jpg">
+<div class="main_subject_text">地科名師-蘇偉<br/><span>日、月食的發生</span></div>
+</div>  
+</div>
+</div> 
+<div id="t5" style="display:none;">   
+<div class="main_subject_video_title">社會</div>   
+<div class="main_subject_video_container">   
+<div class="main_subject_video">
+<img src="image/s17.jpg">
+<div class="main_subject_text">歷史名師-李偉<br/><span>日治時期到後的經濟</span></div>
+</div> 
+<div class="main_subject_video">
+<img src="image/s18.jpg">
+<div class="main_subject_text">地理名師-蘇偉<br/><span>地理資料的分析</span></div>
+</div> 
+<div class="main_subject_video">
+<img src="image/s19.jpg">
+<div class="main_subject_text">地理名師-李威立<br/><span>風成地形</span></div>
+</div> 
+<div class="main_subject_video">
+<img src="image/s20.jpg">
+<div class="main_subject_text">公民名師-蔡擎<br/><span>政府的組成</span></div>
+</div>   
+</div>
+</div>
+    
+</div>    
+<div class="main_tip">僅開放部分影片提供試讀<br/>完整課程與系統功能之需求請洽詢客服</div>    
+</div>        
+</div>
+    
+<div class="footer">
+<div class="footer_contact">客服專線 0800-088-589轉2</div>
+<div class="footer_copyright">Copyright © Study123 Technology Co.Ltd. All Rights Reserved</div>
+</div>
+
+<div class="grade_btn_container_bg" style="display:none;"></div>
+    
+<div class="pup_container" style="display:none;">
+<div class="pup_bg"></div>
+<div class="pup_video_container">
+<img src="image/close_icon.png" class="close_icon" alt=""/>
+<img src="image/video_play_pic.jpg" alt=""/>
+<div class="video_iframe"></div>
+</div>
+</div>
+ <!-- ... 影片彈跳視窗 ... -->
+ <script>
+    $(document).ready(function(){
+      var iframeArray = [		
+        '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/oKWLKG6Ki5U" frameborder="0" allowfullscreen></iframe>',
+        '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/QrB_akBwkqg" frameborder="0" allowfullscreen></iframe>',
+        '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/roSXTqeWKPc" frameborder="0" allowfullscreen></iframe>',
+        '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/xu25ub6_gdI" frameborder="0" allowfullscreen></iframe>',
+        '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/oykZYwYAC8M" frameborder="0" allowfullscreen></iframe>',
+		'<iframe width="100%" height="100%" src="https://www.youtube.com/embed/BuSe_kciPtk" frameborder="0" allowfullscreen></iframe>',
+        '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/6oUJew2jJo8" frameborder="0" allowfullscreen></iframe>',
+		'<iframe width="100%" height="100%" src="https://www.youtube.com/embed/4vjG0ZN86JU" frameborder="0" allowfullscreen></iframe>',
+        '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/s-x_69FnYtI" frameborder="0" allowfullscreen></iframe>',
+        '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/h-02o6mVM48" frameborder="0" allowfullscreen></iframe>',
+        '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/dzoe-QbnfL8" frameborder="0" allowfullscreen></iframe>',
+        '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/7cE5TXV8P_s" frameborder="0" allowfullscreen></iframe>',
+        '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/zjSAnsZhu1c" frameborder="0" allowfullscreen></iframe>',
+        '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/72y5ebl3Aig" frameborder="0" allowfullscreen></iframe>',
+		'<iframe width="100%" height="100%" src="https://www.youtube.com/embed/cGsZrAGoYwg" frameborder="0" allowfullscreen></iframe>',
+		'<iframe width="100%" height="100%" src="https://www.youtube.com/embed/iYGhgrEZv8U" frameborder="0" allowfullscreen></iframe>',
+		'<iframe width="100%" height="100%" src="https://www.youtube.com/embed/ULMpT8HPkMI" frameborder="0" allowfullscreen></iframe>',
+        '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/ieBvSYM82js" frameborder="0" allowfullscreen></iframe>',
+        '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/PF1w2b0Qzrk" frameborder="0" allowfullscreen></iframe>',
+        '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vek4RcX3KFw" frameborder="0" allowfullscreen></iframe>',
+        '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/SBAvcuXP23U" frameborder="0" allowfullscreen></iframe>'
+        ];
+      $(".main_subject_video").click(function(){
+        var clickIndex = $(".main_subject_video").index(this);
+		  $(".pup_container").fadeIn(500);
+          $($(".video_iframe")).html(iframeArray[clickIndex]);
+      });
+	  $(".close_icon,.pup_bg").click(function(){
+        $(".pup_container").hide();
+		$(".video_iframe").empty();		
+      });
+    });
+</script>
+<!-- ... 影片彈跳視窗 end ... -->   
+</body>
+</html>

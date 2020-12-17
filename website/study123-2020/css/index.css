@@ -1,0 +1,241 @@
+@charset "utf-8";
+
+/* 輪播大banner */
+.banner_container{width:100%;height:auto;overflow:hidden;}
+/* 輪播大banner end */
+
+/* 關於我們 */
+.index_about_us_container{width:100%;}
+.index_about_us_container:after{content:"";display:block;clear:both;}
+.index_about_us_left{
+width:calc(100% - 800px);height:560px;
+background-image:url(../image/index_about_us_left_pic.jpg);background-repeat:no-repeat;background-position:top left;
+float:left;
+}
+.index_about_us_text_container{width:calc(100% - 400px);height:100%;padding:60px 80px 0px 0px;float:right;}
+.index_about_us_title{height:40px;color:#1f1f1f;border-left:5px solid #158124;padding-left:10px;}
+.index_about_us_title_top{font-size:16px;position:relative;top:-2px;}
+.index_about_us_title_bottom{font-size:22px;font-weight:bold;position:relative;top:-3px;}
+.index_about_us_big_text{width:100%;font-size:26px;font-weight:bold;color:#158124;margin-top:21px;}
+.index_about_us_small_text{font-size:18px;color:#202020;line-height:30px;margin-top:17px;}
+.index_about_us_middle_text{font-size:20px;color:#158124;text-align:right;font-weight:bold;margin-top:15px;}
+.index_about_us_btn{
+width:140px;height:50px;
+background-color:#158124;
+font-size:20px;color:#ffffff;
+border-bottom:2px solid #0f5b0f;
+border-radius:5px;
+margin-top:86px;
+float:right;
+display:flex;justify-content:center;align-items:center;
+cursor:pointer;
+}
+.index_about_us_right{width:800px;height:560px;float:left;}
+.index_about_us_pic{width:50%;height:280px;overflow:hidden;float:left;position:relative;}
+.index_about_us_pic:hover .index_about_us_pic_hover{top:0%;}
+.index_about_us_pic img{width:100%;height:100%;}
+.index_about_us_pic_hover{width:100%;height:100%;background-color:#158124;text-align:center;padding:40px;position:absolute;top:-100%;left:0px;transition-duration:1s;}
+
+.pic_hover_title{font-size:24px;text-align:center;color:#fff000;}
+.pic_hover_line{width:100%;height:1px;background-color:#ffffff;margin:15px 0px;}
+.pic_hover_text{font-size:18px;color:#ffffff;text-align:left;line-height:30px;letter-spacing:0px;}
+/* 關於我們 end */
+/* 關於我們 RWD */
+@media (max-width:1750px){
+.index_about_us_left{width:calc(100% - 700px);height:490px;background-image:url(../image/index_about_us_left_pic1750.jpg);}
+.index_about_us_text_container{width:calc(100% - 320px);height:100%;padding:60px 50px 0px 0px;}
+.index_about_us_right{width:700px;height:490px;}
+.index_about_us_pic{height:245px;}
+.index_about_us_pic_hover{padding:30px;}
+}
+@media (max-width:1550px){
+.index_about_us_left{background-image:none;}
+.index_about_us_text_container{width:100%;padding:50px 80px 0px 50px;}
+.index_about_us_middle_text{text-align:left;}
+}
+@media (max-width:1400px){
+.index_about_us_left{width:calc(100% - 600px);height:420px;}
+.index_about_us_btn{margin-top:36px;}
+.index_about_us_right{width:600px;height:420px;}
+.index_about_us_pic{height:210px;}
+.index_about_us_pic_hover{padding:25px;}
+.pic_hover_line{margin:10px 0px;}
+.pic_hover_title{font-size:21px;}
+.pic_hover_text{font-size:15px;line-height:23px;}
+}
+@media (max-width:1200px){
+.index_about_us_left{width:calc(100% - 500px);height:350px;}
+.index_about_us_text_container{padding:30px 30px 0px 30px;}
+.index_about_us_title{height:40px;padding-left:10px;}
+.index_about_us_title_top{font-size:15px;}
+.index_about_us_title_bottom{font-size:21px;}
+.index_about_us_big_text{font-size:24px;margin-top:21px;}
+
+.index_about_us_middle_text{font-size:18px;margin-top:15px;}
+.index_about_us_btn{width:120px;height:46px;font-size:18px;margin-top:31px;}
+.index_about_us_right{width:500px;height:350px;}
+.index_about_us_pic{height:175px;}
+.index_about_us_pic_hover{padding:20px;}
+.pic_hover_title{font-size:22px;}
+.pic_hover_text{font-size:14px;line-height:20px;}
+.pic_hover_line{margin:5px 0px;}
+}
+@media (max-width:1024px){
+.index_about_us_text_container{padding:30px 20px 0px 20px;}
+.index_about_us_big_text{font-size:23px;}
+.index_about_us_middle_text{font-size:17px;}
+.index_about_us_btn{width:110px;height:42px;font-size:17px;margin-top:31px;}
+}
+@media (max-width:950px){
+.index_about_us_left{width:100%;height:auto;}
+.index_about_us_text_container{padding:30px 20px 30px 20px;}
+.index_about_us_right{width:100%;display:none;}
+.index_about_us_pic{width:25%;height:auto;}
+}
+@media (max-width:768px){
+.index_about_us_big_text{font-size:22px;}
+}
+
+
+/* 關於我們RWD end */
+
+/* 產品相關 */
+.index_product_container{width:100%;background-image:url(../image/index_product_bg.jpg);padding:80px 0px 170px 0px;}
+.index_product{width:1200px;height:auto;margin:0 auto;}
+.index_product_title{width:92px;font-size:22px;color:#1f1f1f;text-align:center;font-weight:bold;border-bottom:5px solid #158124;margin:0 auto;padding-bottom:15px;}
+.index_product_btn_container{width:100%;text-align:center;margin-top:20px;}
+.index_product_btn{
+width:140px;height:50px;
+background-color:#737373;
+font-size:20px;color:#ffffff;
+border-bottom:2px solid #1f1f1f;
+border-radius:5px;
+margin:0 10px;
+display:inline-flex;justify-content:center;align-items:center;
+cursor:pointer;
+}
+.index_product_btn a{color:#ffffff;}
+.index_product_btn a:hover{text-decoration:none}
+.index_product_btn.active,.index_product_btn:hover{background-color:#158124;border-bottom:2px solid #0f5b0f;border-radius:5px;}
+.index_product_pic_container{width:100%;height:auto;margin-top:40px;}
+/* 產品相關 end */
+/* 產品相關RWD */
+@media (max-width:1550px){.index_product_container{padding:60px 0px 150px 0px;}}
+@media (max-width:1400px){
+.index_product_container{padding:55px 0px 140px 0px;}
+.index_product{width:100%;padding:0 80px;}
+}
+@media (max-width:1200px){
+.index_product_title{width:90px;font-size:21px;padding-bottom:10px;}
+.index_product_btn{width:120px;height:46px;font-size:18px;}
+}
+@media (max-width:1024px){.index_product_container{padding:50px 0px 120px 0px;}.index_product_btn{width:110px;height:42px;font-size:17px;margin:0 5px;}}
+@media (max-width:950px){.index_product{padding:0 30px;}}
+@media (max-width:550px){
+.index_product_title{width:86px;font-size:20px;}
+.index_product_btn{width:100px;height:40px;font-size:16px;}
+.index_product_pic_container{margin-top:30px;}
+}
+@media (max-width:499px){.index_product_container{padding:40px 0px 100px 0px;}}
+@media (max-width:375px){.index_product{padding:0 15px;}}
+@media (max-width:350px){.index_product_btn{width:85px;margin:0 3px;}}
+/* 產品相關RWD end */
+
+/* 學習見證 */
+.index_witness_container{width:100%;padding:80px 0px 130px 0px;}
+.index_witness{width:100%;height:auto;}
+.index_witness_title{width:92px;font-size:22px;color:#1f1f1f;text-align:center;font-weight:bold;border-bottom:5px solid #158124;margin:0 auto;padding-bottom:15px;}
+.index_witness_pic_container{width:100%;margin-top:30px;}
+.index_witness_pic_container:after{content:"";display:block;clear:both;}
+.index_witness_pic{width:25%;height:auto;overflow:hidden;float:left;position:relative;}
+.index_witness_pic img{width:100%;height:auto;display:block;}
+.index_witness_pic_hover{width:100%;height:100%;background-color:#158124;text-align:center;position:absolute;top:-100%;left:0px;transition-duration:1s;display:flex;justify-content:center;align-items:center;}
+.index_witness_pic:hover .index_witness_pic_hover{top:0%;}
+.witness_pic_hover_title{font-size:24px;text-align:center;color:#ffffff;margin-bottom:5px;}
+.witness_pic_hover_line{width:100%;height:1px;background-color:#ffffff;margin:15px 0px;}
+.witness_pic_hover_text{font-size:20px;color:#ffffff;line-height:22px;letter-spacing:0px;margin-top:20px;}
+.witness_pic_hover_btn{
+width:110px;height:45px;
+font-size:18px;color:#ffffff;
+border:1px solid #ffffff;
+border-radius:5px;
+margin:0 auto;margin-top:30px;
+display:flex;justify-content:center;align-items:center;
+cursor:pointer;
+transition-duration:1s;
+}
+
+.index_witness_btn{
+width:140px;height:50px;
+background-color:#158124;
+font-size:20px;color:#ffffff;
+border-bottom:2px solid #0f5b0f;
+border-radius:5px;
+margin:0 auto;margin-top:50px;
+display:flex;justify-content:center;align-items:center;
+cursor:pointer;
+}
+/* 學習見證 end */
+/* 學習見證RWD */
+@media (max-width:1750px){
+.witness_pic_hover_text{margin-top:15px;}
+.witness_pic_hover_btn{margin:0 auto;margin-top:20px;}
+}
+@media (max-width:1550px){
+.index_witness_container{padding:60px 0px 110px 0px;}
+.witness_pic_hover_title{font-size:23px;}
+.witness_pic_hover_line{margin:12px 0px;}
+.witness_pic_hover_text{margin-top:15px;}
+.witness_pic_hover_btn{margin:0 auto;margin-top:15px;}
+}
+@media (max-width:1400px){
+.witness_pic_hover_title{font-size:21px;}
+.witness_pic_hover_line{margin:10px 0px;}
+.witness_pic_hover_text{margin-top:12px;}
+.witness_pic_hover_btn{width:90px;height:38px;font-size:16px;}
+}
+@media (max-width:1200px){
+.index_witness_title{width:90px;font-size:21px;padding-bottom:10px;}
+.index_witness_pic{width:33.333%;}
+.index_witness_pic:nth-child(7),.index_witness_pic:nth-child(8){display:none;}
+.index_witness_btn{width:120px;height:46px;font-size:18px;}
+.witness_pic_hover_title{font-size:23px;}
+.witness_pic_hover_line{margin:12px 0px;}
+.witness_pic_hover_text{margin-top:15px;}
+.witness_pic_hover_btn{margin:0 auto;margin-top:15px;}
+}
+@media (max-width:1024px){
+.index_witness_container{padding:50px 0px 90px 0px;}
+.index_witness_pic_container{padding:0px 10px;}
+.index_witness_pic{padding:0px 5px;margin-bottom:10px;}
+.index_witness_pic_hover{position:relative;}
+.index_witness_pic_hover_container{padding:10px 10px;}
+.index_witness_btn{margin-top:30px;}
+.witness_pic_hover_title{font-size:21px;}
+.witness_pic_hover_text{font-size:16px;margin-top:5px;}
+.witness_pic_hover_line{display:none;}
+.witness_pic_hover_btn{display:none;}
+}
+@media (max-width:799px){
+.index_witness_pic{width:50%;}
+.index_witness_pic:nth-child(5),.index_witness_pic:nth-child(6){display:none;}
+.witness_pic_hover_title{font-size:20px;}
+}
+@media (max-width:600px){
+.index_witness_title{width:86px;font-size:20px;}
+.witness_pic_hover_title{font-size:19px;}
+}
+@media (max-width:499px){
+.index_witness_container{padding:40px 0px 60px 0px;}
+.index_witness_pic_container{padding:0px 0px;}
+.index_witness_pic{width:100%;margin-bottom:20px;padding:0 30px;}
+.index_witness_pic:nth-child(4){display:none;}
+.index_witness_btn{margin:0 auto;margin-top:20px;}
+.witness_pic_hover_title{font-size:18px;}
+.witness_pic_hover_text{margin-top:0px;}
+}
+@media (max-width:420px){.index_witness_btn{width:110px;height:42px;font-size:17px;}}
+@media (max-width:375px){.index_witness_pic{margin-bottom:10px;padding:0 15px;}}
+/* 學習見證RWD end */
+
+

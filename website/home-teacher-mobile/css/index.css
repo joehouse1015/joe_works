@@ -1,0 +1,308 @@
+@charset "utf-8";
+
+/* main board */
+.main{width:100%;height:auto;background-image:url(../image/banner-bg.png);background-repeat:no-repeat;background-position:bottom center;padding-bottom:30px;}
+.main-container{
+width:1024px;margin-left:auto;margin-right:auto;
+-webkit-box-shadow:0 8px 15px rgba(0,0,0,0.6);-moz-box-shadow:0 5px 10px rgba(0,0,0,0.4);box-shadow:0 5px 10px rgba(0,0,0,0.4);
+}
+.css-table{display:table;}
+.css-tr{display:table-row;}
+.css-td{display:table-cell;}
+.board-corner{display:table-cell;}
+.board-line-top{display:table-cell;height:21px;width:100%;background-image:url(../image/board-line-top.jpg);background-repeat:repeat-x;background-position:top center;}
+.board-line-bottom{display:table-cell;height:21px;width:100%;background-image:url(../image/board-line-bottom.jpg);background-repeat:repeat-x;background-position:top center;}
+.board-center{width:100%;height:auto;display:table-cell;background-color:#0d2613;position:relative;}
+.s-left{width:20px;background-image:url(../image/board-line-left.jpg);background-repeat:repeat-y;}
+.s-right{width:20px;background-image:url(../image/board-line-right.jpg);background-repeat:repeat-y;}
+
+.red-ribbon{position:absolute;top:-20px;right:-20px;}
+.dis1{display:block;}
+.dis2{display:none;}
+.dis3{display:none;}
+/* main board end*/
+/* main board RWD */
+@media (max-width:1024px){
+.main-container{width:95%;}
+.dis1{display:none;}
+.dis2{display:block;}
+.s-left img{width:16px;height:16px;}
+.s-right img{width:16px;height:16px;}
+.s-left{width:16px;background-image:url(../image/board-line-left-2.jpg);}
+.s-right{width:16px;background-image:url(../image/board-line-right-2.jpg);}
+.board-corner {width:16px;height:17px;}
+.board-line-top{height:17px;background-image:url(../image/board-line-top-2.jpg);}
+.board-line-bottom{height:17px;background-image:url(../image/board-line-bottom-2.jpg);}
+
+.red-ribbon{position:absolute;top:-16px;right:-16px;}
+}
+@media (max-width:700px) {
+.main-container{width:100%;}
+.dis2{display:none;}
+.dis3{display:block;}
+.s-left img{width:12px;height:12px;}
+.s-right img{width:12px;height:12px;}
+.s-left{width:12px;background-image:url(../image/board-line-left-3.jpg);}
+.s-right{width:12px;background-image:url(../image/board-line-right-3.jpg);}
+.board-corner {width:12px;height:12px;}
+.board-line-top{height:14px;background-image:url(../image/board-line-top-3.jpg);}
+.board-line-bottom{height:12px;background-image:url(../image/board-line-bottom-3.jpg);}
+
+.red-ribbon{position:absolute;top:-12px;right:-12px;}
+.red-ribbon img{width:100px;}
+}
+@media (max-width:800px) {.main{margin-top:-5px;}}
+@media (max-width:500px) {.main{padding-bottom:20px;}.red-ribbon img{width:90px;}}
+/* main board RWD end*/
+
+/* 推薦教師 */
+.recom-teacher-area{
+width:1240px;height:auto;margin:0 auto;
+background: #f1f1f1;
+background: -moz-linear-gradient(top, #f1f1f1 0%, #e1e1e1 100%);
+background: -webkit-linear-gradient(top, #f1f1f1 0%,#e1e1e1 100%);
+background: linear-gradient(to bottom, #f1f1f1 0%,#e1e1e1 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#e1e1e1',GradientType=0 );
+-webkit-box-shadow: 0 5px 8px rgba(0,0,0,0.3);
+-moz-box-shadow: 0 5px 8px rgba(0,0,0,0.3);
+box-shadow: 0 5px 8px rgba(0,0,0,0.3);
+padding-bottom:14px;
+}
+.recom-teacher-container{width:1024px;height:auto;margin:0 auto;padding:0px 20px;color:#4e4e4e;padding-top:30px;padding-bottom:6px;}
+.recom-title{font-size:30px;font-weight:bold;}
+.recom-title i{margin-right:3px;position:relative;top:-1px;}
+.recom-title span{float:right;color:#ff8a00;font-size:22px;position:relative;top:8px;cursor:pointer;}
+.recom-title span div{width:100%;height:2px;background-color:#ff8a00;;position:absolute;left:0px;bottom:0px;}
+.recom-teacher-list{margin-top:26px;}
+.recom-teacher-infor-area{width:50%;float:left;margin-bottom:17px;}
+.recom-teacher-infor-area:nth-child(odd){padding-right:12px;}
+.recom-teacher-infor-area:nth-child(even){padding-left:12px;}
+.recom-teacher-infor{
+width:100%;height:auto;
+background: #ffffff;
+background: -moz-linear-gradient(top, #ffffff 0%, #e4e4e4 100%);
+background: -webkit-linear-gradient(top, #ffffff 0%,#e4e4e4 100%);
+background: linear-gradient(to bottom, #ffffff 0%,#e4e4e4 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e4e4e4',GradientType=0 );
+border-radius:10px;
+-webkit-box-shadow: 0 2px 7px rgba(0,0,0,0.35);
+-moz-box-shadow: 0 2px 7px rgba(0,0,0,0.35);
+box-shadow: 0 2px 7px rgba(0,0,0,0.35);
+}
+.recom-teacher-infor-pic{width:170px;height:214px;overflow:hidden;position:relative;float:left;}
+.recom-teacher-infor-pic img{width:100%;border-radius:10px;border:3px solid #ffae00;}
+.recom-teacher-infor-name{
+width:100%;height:42px;
+background-image:url(../image/t-name-bg.jpg);background-position:center center;background-repeat:repeat-x;
+position:absolute;bottom:0px;
+border-top-left-radius:0px;
+border-top-right-radius:0px;
+border-bottom-right-radius:10px;
+border-bottom-left-radius:10px;
+text-align:center;font-size:23px;color:#380d00;font-weight:bold;
+padding-top:6px;
+}
+.recom-teacher-infor-text{width:calc(100% - 170px);float:left;font-size:20px;padding:10px 17px;padding-bottom:0px;position:relative;}
+.recom-teacher-infor-text div{margin-bottom:5px;}
+.recom-teacher-infor-text .star{width:22px;margin-right:3px;}
+.bu-more-infor-container{width:100%;text-align:right;margin-top:9px;}
+.bu-more-infor{width:120px;height:45px;font-size:20px;letter-spacing:1px;border-bottom:1px solid #003380;padding-top:7px;display:inline-block;}
+.recom-medal{position:absolute;top:-3px;right:-5px;}
+.recom-teacher-list:after,.recom-teacher-infor:after{display:block;content:" ";clear:both;}
+/* 推薦教師 end */
+/* 推薦教師 RWD */
+@media (max-width:1240px){.recom-teacher-area{width:100%;}}
+@media (max-width:1024px){.recom-teacher-container{width:100%;}}
+@media (max-width:925px){.recom-teacher-infor-text .star{margin-right:2px;}}
+@media (max-width:915px){
+.recom-teacher-infor-pic{width:160px;height:214px;}
+.recom-teacher-infor-text{width:calc(100% - 160px);font-size:21px;padding:10px 10px;padding-bottom:0px;}
+.recom-teacher-infor-text div{margin-bottom:6px;}
+.bu-more-infor-container{margin-top:18px;margin-bottom:0px !important;}
+.recom-teacher-infor-text .star{width:23px;}
+.recom-medal{right:-15px;}
+.recom-title{font-size:31px;}
+.recom-title span{font-size:24px;}
+}
+@media (max-width:815px){
+.recom-teacher-infor-area{width:100%;}
+.recom-teacher-infor-area:nth-child(odd){padding-right:0px;}
+.recom-teacher-infor-area:nth-child(even){padding-left:0px;}
+.recom-teacher-infor-pic{width:210px;}
+.recom-teacher-infor-name{border-bottom-right-radius:0px;border-bottom-left-radius:0px;}
+.recom-teacher-infor-text{width:calc(100% - 210px);font-size:23px;padding:10px 17px;padding-bottom:0px;}
+.recom-teacher-infor-text div{margin-bottom:5px;}
+.bu-more-infor-container{margin-top:8px;margin-bottom:0px !important;}
+.recom-teacher-infor-text .star{width:26px;margin-right:3px;}
+.recom-medal{right:-5px;}
+}
+@media (max-width:600px){
+.recom-title{font-size:30px;font-weight:normal;}
+.recom-teacher-infor-pic{width:180px;}
+.recom-teacher-infor-name{font-weight:normal;}
+.recom-teacher-infor-text{width:calc(100% - 180px);font-size:22px;padding:10px 17px;padding-bottom:0px;}
+.recom-teacher-infor-text{font-size:22px;}
+}
+@media (max-width:500px){.recom-title{font-size:28px;}.recom-title span{font-size:22px;}.recom-teacher-container{padding-top:20px;}.recom-teacher-list{margin-top:15px;}}
+@media (max-width:465px){
+.recom-teacher-infor-pic{width:160px;height:214px;}
+.recom-teacher-infor-name{border-bottom-right-radius:10px;border-bottom-left-radius:10px;}
+.recom-teacher-infor-text{width:calc(100% - 160px);font-size:21px;padding:10px 10px;padding-bottom:0px;}
+.bu-more-infor-container{margin-top:18px;margin-bottom:0px !important;}
+.recom-teacher-infor-text .star{width:24px;margin-right:2px;}
+}
+@media (max-width:420px){
+.recom-teacher-infor-pic{width:150px;height:auto;overflow:visible;}
+.recom-teacher-infor-text{width:calc(100% - 150px);font-size:19px;padding:10px 10px;padding-bottom:0px;}
+.recom-teacher-infor-text div{margin-bottom:3px;}
+.recom-teacher-infor-text .star{width:22px;margin-right:1px;}
+.recom-medal{width:40px;}
+.bu-more-infor-container{margin-top:10px;margin-bottom:9px !important;}
+.bu-more-infor{width:102px;height:38px;font-size:19px;padding-top:5px;}
+.recom-teacher-infor-name{font-size:22px;bottom:-10px;}
+.recom-medal{right:-6px;}
+.recom-title{font-size:29px;}
+.recom-title span{font-size:22px;top:4px;}
+}
+@media (max-width:400px){.recom-title{font-size:26px;}.recom-title span{font-size:20px;}}
+@media (max-width:390px){
+.recom-teacher-infor-pic{width:135px;height:auto;}
+.recom-teacher-infor-text{width:calc(100% - 135px);}
+.recom-teacher-infor-text .star{width:20px;margin-right:0px;}
+.recom-teacher-infor-name{bottom:-26px;}
+.bu-more-infor-container{margin-bottom:8px !important;}
+}
+/* 推薦教師 RWD end*/
+
+/* 家長見證 */
+.member-prove-area{width:100%;height:auto;background-image:url(../image/banner-bg.png);background-repeat:no-repeat;background-position:bottom center;padding-bottom:95px;position:relative;}
+.member-prove-container{width:1024px;height:auto;margin:0 auto;padding:0px 20px;color:#4e4e4e;padding-top:30px;}
+.member-prove-title{font-size:30px;font-weight:bold;margin-top:17px;}
+.member-prove-title i{margin-right:3px;}
+.member-prove-title span{float:right;color:#ff8a00;font-size:20px;position:relative;top:9px;cursor:pointer;}
+.member-prove-title span div{width:100%;height:2px;background-color:#ff8a00;;position:absolute;left:0px;bottom:0px;}
+.member-prove-infor{margin-top:30px;}
+.member-prove-infor:after{display:block;content:" ";clear:both;}
+.member-prove-pic{width:321px;float:left;margin-right:20px;-webkit-box-shadow: 0 5px 8px rgba(0,0,0,0.3);-moz-box-shadow: 0 5px 8px rgba(0,0,0,0.3);box-shadow: 0 5px 8px rgba(0,0,0,0.3);}
+.member-prove-text-area{padding-top:12px;}
+.member-prove-name{font-size:26px;font-weight:bold;}
+.member-prove-date{font-size:20px;font-weight:bold;font-family:'Arial';float:right;position:relative;top:6px;}
+.member-prove-text{font-size:18px;margin-top:7px;letter-spacing:1px;line-height:30px;}
+.bu-see-all-container{width:100%;text-align:right;margin-top:30px;}
+.bu-see-all{width:120px;height:45px;font-size:20px;letter-spacing:1px;border-bottom:1px solid #003380;padding-top:8px;display:inline-block;}
+/* 家長見證 end */
+
+/* 家長見證 RWD */
+@media (max-width:1024px){.member-prove-container{width:100%;}}
+@media (max-width:915px){.member-prove-title{font-size:31px;}.member-prove-title span{font-size:24px;top:3px;}.member-prove-area{padding-bottom:65px;}}
+@media (max-width:897px){.bu-see-all-container{margin-top:12px;}}
+@media (max-width:835px){.member-prove-text-area{padding-top:0px;}.member-prove-pic{width:40%;}}
+@media (max-width:780px){.member-prove-name{font-size:26px;}.member-prove-date{font-size:23px;}.member-prove-text{font-size:21px;line-height:30px;}}
+@media (max-width:670px){.member-prove-pic{width:280px;}.member-prove-name{font-size:25px;}.member-prove-date{font-size:22px;display:block;float:none;}.member-prove-text{font-size:20px;}.member-prove-area{padding-bottom:35px;}}
+@media (max-width:600px){.member-prove-title{font-size:30px;font-weight:normal;}.member-prove-name,.member-prove-date{font-weight:normal;}}
+@media (max-width:500px){.member-prove-pic{width:235px;margin-right:12px;}.member-prove-name{font-size:24px;}.member-prove-date{font-size:20px;display:block;float:none;}.member-prove-text{font-size:20px;line-height:30px;}.member-prove-container{padding-top:15px;}.member-prove-infor{margin-top:20px;}.member-prove-area {padding-bottom:20px;}.member-prove-title{font-size:28px;}.member-prove-title span {font-size:22px;}}
+@media (max-width:440px){
+.member-prove-container{padding-top:10px;}
+.member-prove-infor{margin-top:20px;}
+.member-prove-pic{width:80%;float:none;display:block;margin:0 auto;margin-bottom:10px;}
+.member-prove-date{display:inline;float:right;}
+.member-prove-text-area{padding-top:5px;}
+.member-prove-name{font-size:23px;}
+.member-prove-date{font-size:19px;}
+.member-prove-text{font-size:19px;line-height:26px;}
+}
+@media (max-width:420px){.member-prove-title{font-size:29px;}.member-prove-title span{font-size:22px;top:4px;}}
+@media (max-width:400px){.member-prove-pic{width:90%;}.member-prove-title{font-size:26px;}.member-prove-title span {font-size:20px;}}
+/* 家長見證 RWD end*/
+
+/* 彈跳視窗-家長見證 */
+.prove-all{padding:0 25px;max-height:420px;overflow:scroll;}
+.p-headpic{width:171px;float:left;margin-right:16px;}
+.prove-article{position:absolute;top:156px;left:31px;padding-top:20px;padding-left:20px;}
+.prove-text{color:#4e4e4e;font-size:20px;line-height:32px;letter-spacing:1px;padding-right:20px;}
+.prove-text-p1{font-size:24px;margin-top:15px;text-align:right;}
+.prove-text-p2{margin-top:-25px;font-size:18px;text-align:right;padding-right:3px;}
+.prove-text-p3{margin-top:-14px;margin-bottom:10px;}
+.prove-text iframe{height:420px;}
+/* 彈跳視窗-家長見證 end */
+/* 彈跳視窗-家長見證 RWD */
+@media (max-width:750px){.prove-text iframe{height:380px;}}
+@media (max-width:700px){.prove-text iframe{height:350px;}}
+@media (max-width:670px){
+.prove-all{padding:0 15px;}
+.p-headpic{width:165px;margin-right:12px;}
+.prove-text{font-size:19px;line-height:27px;}
+.prove-text-p1{font-size:23px;margin-top:6px;}
+.prove-text-p2{font-size:17px;}
+}
+@media (max-width:650px){.prove-text iframe{height:325px;}}
+@media (max-width:600px){.prove-text iframe{height:296px;}}
+@media (max-width:550px){
+.p-headpic{width:155px;}
+.prove-text{font-size:18px;line-height:26px;}
+.prove-text-p1{font-size:22px;}
+.prove-text-p2{font-size:16px;}
+.prove-text iframe{height:270px;}
+}
+@media (max-width:500px){.prove-text iframe{height:242px;}}
+@media (max-width:450px){.prove-text iframe{height:215px;}}
+@media (max-width:400px){
+.p-headpic{width:145px;margin-right:6px;}
+.prove-text{font-size:17px;line-height:24px;}
+.prove-text-p1{font-size:21px;}
+.prove-text-p2{font-size:15px;}
+.prove-text iframe{height:190px;}
+}
+@media (max-width:350px){.prove-text iframe{height:162px;}}
+/* 彈跳視窗-家長見證 RWD end */
+
+/* 教師影音 */
+.teach-video-area{
+width:1240px;height:auto;margin:0 auto;
+background: #f1f1f1;
+background: -moz-linear-gradient(top, #f1f1f1 0%, #e1e1e1 100%);
+background: -webkit-linear-gradient(top, #f1f1f1 0%,#e1e1e1 100%);
+background: linear-gradient(to bottom, #f1f1f1 0%,#e1e1e1 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#e1e1e1',GradientType=0 );
+-webkit-box-shadow: 0 5px 8px rgba(0,0,0,0.3);
+-moz-box-shadow: 0 5px 8px rgba(0,0,0,0.3);
+box-shadow: 0 5px 8px rgba(0,0,0,0.3);
+position:relative;
+}
+.teach-video-container{width:1024px;height:auto;margin:0 auto;padding:0px 20px;color:#4e4e4e;padding-top:30px;padding-bottom:35px;}
+.teach-video-title{font-size:30px;font-weight:bold;position:relative;}
+.teach-video-title i{margin-right:3px;}
+.teach-video-title span{float:right;color:#ff8a00;font-size:20px;position:relative;top:9px;cursor:pointer;}
+.teach-video-title span div{width:100%;height:2px;background-color:#ff8a00;;position:absolute;left:0px;bottom:0px;}
+.teach-video-infor{position:absolute;top:7px;left:150px;display:inline;font-size:22px;color:#0063cc;}
+.dis4{display:inline;}
+.teach-video-play-area{width:100%;height:500px;background-image:url(../image/ipad-img.png);background-repeat:no-repeat;background-position:center center;margin-top:14px;padding-top:20px;position:relative;}
+.teach-video-play-container{width:590px;height:445px;margin:0 auto;}
+.teach-video-play-container iframe{width:100%;height:100%;}
+.arrow-left{position:absolute;top:50%;left:20px;cursor:pointer;}
+.arrow-right{position:absolute;top:50%;right:20px;cursor:pointer;}
+.teach-video-play-footer{width:100%;height:186px;background-image:url(../image/teach-video-play-footer.png);background-repeat:no-repeat;background-position:top center;position:absolute;bottom:-36px;}
+.teach-video-play-footer ul{text-align:center;margin-top:135px;}
+.teach-video-play-footer li{width:22px;height:22px;background-image:url(../image/recom-bu2.jpg);border-radius:3px;display:inline-block;margin:0 16px;cursor:pointer;}
+.teach-video-play-footer li:hover{background-image:url(../image/recom-bu-active2.jpg);}
+.teach-video-play-footer li.active{background-image:url(../image/recom-bu-active2.jpg);}
+/* 教師影音 end */
+/* 教師影音 RWD end */
+@media (max-width:1240px){.teach-video-area{width:100%;}}
+@media (max-width:1024px){.teach-video-container{width:100%;}}
+@media (max-width:915px){.teach-video-title{font-size:31px;}.teach-video-title span{font-size:24px;}.teach-video-infor{top:6px;left:150px;font-size:27px;}.arrow-left{width:25px;top:508px;left:5px;}.arrow-right{width:25px;top:508px;right:5px;}}
+@media (max-width:768px){.teach-video-play-area{height:480px;background-size:100% auto;background-position:top center;}.teach-video-play-container{width:78%;height:100%;position:relative;top:0px;padding-bottom:26px;}.teach-video-play-container iframe{height:99%;}.arrow-left{top:488px;}.arrow-right{top:488px;}}
+@media (max-width:750px){.teach-video-play-container{top:5px;}.teach-video-play-container iframe{height:95%;}}
+@media (max-width:730px){.teach-video-play-area{height:465px;}.teach-video-play-footer{bottom:-35px;}.arrow-left{top:472px;}.arrow-right{top:472px;}}
+@media (max-width:700px){.teach-video-play-area{height:455px;}.teach-video-play-container iframe{height:92%;}.teach-video-play-footer{bottom:-20px;}.arrow-left{top:448px;}.arrow-right{top:448px;}}
+@media (max-width:680px){.teach-video-play-container iframe{height:90%;}.teach-video-play-footer{bottom:-10px;}.arrow-left{top:438px;}.arrow-right{top:438px;}}
+@media (max-width:660px){.teach-video-play-area{height:445px;}.arrow-left{top:430px;}.arrow-right{top:430px;}}
+@media (max-width:650px){.teach-video-play-area{background-image:none;}.teach-video-play-container{width:100%;}.teach-video-play-container{padding-bottom:12px;}}
+@media (max-width:600px){.teach-video-title{font-size:30px;font-weight:normal;}.teach-video-play-area{margin-top:30px;}.teach-video-infor{top:50px;left:0px;font-size:25px;}.dis4{display:none;}}
+@media (max-width:550px){.teach-video-play-area{height:400px;}.arrow-left{top:383px;}.arrow-right{top:383px;}}
+@media (max-width:500px){.teach-video-play-area{height:380px;margin-top:20px;}.arrow-left{width:18px;top:365px;}.arrow-right{width:18px;top:365px;}.teach-video-container{padding-top:20px;}.teach-video-infor{font-size:24px;top:45px;}.teach-video-title{font-size:28px;}.teach-video-title span{font-size:22px;}.teach-video-play-footer li{width:20px;height:20px;background-size:100%;margin:0 12px;}}
+@media (max-width:450px){.teach-video-play-area{height:360px;}.arrow-left{top:345px;}.arrow-right{top:345px;}}
+@media (max-width:420px){.teach-video-title{font-size:29px;}.teach-video-title span{font-size:22px;top:4px;}}
+@media (max-width:400px){.teach-video-title{font-size:26px;}.teach-video-title span{font-size:20px;}.teach-video-play-area{height:340px;}.arrow-left{width:16px;top:328px;}.arrow-right{width:16px;top:328px;}.teach-video-infor{font-size:22px;}.teach-video-play-footer li{width:18px;height:18px;}}
+@media (max-width:360px){.teach-video-play-area{height:320px;}.arrow-left{top:308px;}.arrow-right{top:308px;}}
+/* 教師影音 RWD end*/

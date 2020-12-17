@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=Edge;chrome=1" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="學習王科技" name="author">
+	<meta content="學習王科技股份有限公司" name="copyright">
+	<meta content="好師到會員中心" name="description">
+	<meta content="好師到會員中心" itemprop="name">
+	<meta content="image/og-img.jpg" itemprop="image">
+	<meta content="好師到會員中心" itemprop="description">
+	<meta content="好師到會員中心" property="og:title">
+	<meta content="" property="og:url">
+	<meta content="image/og-img.jpg" property="og:image">
+	<meta content="好師到會員中心" property="og:description">
+	<meta content="好師到, 一對一" name="keywords">
+	<link href="css/member_center.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery.min.js" type="text/javascript">
+	</script>
+	<link href="image/shortcut.ico" rel="shoutcut icon">
+	<title>好師到學生會員中心</title>
+	<link href="clndr/clndr.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<!-- 最上端綠色橫bar -->
+	<div class="top_bar">
+		<div class="top_bar_container">
+			<div class="top_bar_left">
+				客服專線:0800-088-589
+			</div>
+			<div class="top_bar_right">
+				<a href="https://www.facebook.com/studyking123/" target="_blank"><img alt="" src="image/fb_icon.png"><span>粉絲團</span></a>
+                <a href="https://www.youtube.com/channel/UCE0ihSRPHpWjKC8VHeQFvDQ/feed" target="_blank"><img alt="" src="image/yt_icon.png"><span>影音頻道</span></a>
+                <a href="https://www.104.com.tw/company/1a2x6biida?roleJobCat=0_0&area=0&page=1&pageSize=20&order=8&asc=0" target="_blank"><img alt="" src="image/104_icon.png"><span>人才招募</span></a>
+			</div>
+		</div>
+	</div>
+    <!-- 最上端綠色橫bar end -->
+	<div class="member_main_area">
+		<div class="member_main_container">
+			<div class="member_nav_container">
+				<div class="member_nav_logo">
+					<a href="index.html" target="_blank"><img alt="" src="image/member_login_logo.png"></a>
+				</div>
+				<div class="member_nav_btn_open" role="button">
+					會員資訊
+				</div>
+				<div class="member_nav_account_container">
+					<div class="member_nav_account">
+						<div class="member_nav_headpic"><img alt="" src="image/member_headpic.jpg"></div>
+						<div class="member_nav_infor">
+							<div>
+								<span class="display_none_600">王曉明</span>[0912345678]<span class="member_setting">帳號管理</span>
+							</div>
+							<div>
+								<span class="display_none_600">上課</span>點數：5000點<span><span class="member_point_deposit">儲值</span><img alt="" class="yellow_line" src="image/yellow_line.jpg"><span class="member_point_record">記錄</span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+                <!-- 會員資訊 -->
+				<div class="member_nav_btn_container">
+					<div class="member_nav_btn nav_btn_news">
+						最新消息
+						<div class="member_news_notice"></div><!-- 有新消息更新會出現黃點提示 -->
+					</div>
+					<div class="member_nav_btn nav_btn_rule">
+						上課公約
+					</div>
+					<div class="member_nav_btn nav_btn_device">
+						設備檢測
+					</div>
+					<div class="member_nav_btn nav_btn_qa">
+						常見問題
+					</div>
+				</div>
+                <!-- 會員資訊end -->
+				<!-- ... 會員資訊-pup視窗 ... -->
+				<script>
+				   $(document).ready(function(){
+				   $(".nav_btn_news").click(function(){
+				       $(".member_pup_news").show();
+				   });
+				   $(".nav_btn_rule").click(function(){
+				       $(".member_pup_rule").show();
+				   });
+				   $(".nav_btn_device").click(function(){
+				       $(".member_pup_device").show();
+				   });
+				   $(".nav_btn_qa").click(function(){
+				       $(".member_pup_qa").show();
+				   });
+				   $(".member_pup_close,.member_pup_bg").click(function(){
+				       $(".member_pup_news,.member_pup_rule,.member_pup_device,.member_pup_qa").hide();
+				   });
+				   $(".pup_news_title").click(function(){
+				       $(".pup_news_detail_container").show();
+				   });
+				   $(".pup_news_detail_close,.member_pup_bg").click(function(){
+				       $(".pup_news_detail_container").hide();
+				   });
+				   }); 
+				</script>
+                <!-- ... 會員資訊-pup視窗end ... -->
+				<!-- ... 會員資訊選項展開收起 ... -->
+				<script>
+				   $(document).ready(function(){
+				   $(".member_nav_btn_open").click(function(){
+				       $(".member_nav_btn_container").toggle();
+				       $(".member_nav_btn_open").toggleClass("active");       
+				   });
+				   }); 
+				</script>
+                <!-- ... 會員資訊選項展開收起end ... -->
+				<!-- 帳號設定 -->
+				<div class="member_setting_window" style="display:none;">
+                    <!-- 0929新增 視窗背景 -->    
+                    <div class="member_setting_window_bg"></div>    
+                    <!-- 0929新增 視窗背景end -->
+					<div class="member_setting_container">
+						<div class="member_setting_headpic"><img alt="" src="image/member_headpic.jpg"></div>
+						<div class="member_setting_name">
+							王曉明
+						</div>
+						<div class="member_setting_account">
+							0912345678
+						</div>
+						<div class="member_setting_btn headpic_upload_open">
+							上傳頭像
+						</div>
+						<div class="member_setting_btn reset_passowrd_btn">
+							修改密碼
+						</div>
+						<div class="member_setting_btn">
+							帳號登出
+						</div>
+						<div class="member_setting_window_close">
+							關閉
+						</div>
+					</div>
+				</div>
+                <!-- ... 帳號設定視窗 ... -->
+				<script>
+				   $(document).ready(function(){
+				   $(".member_setting,.teacher_account_setting").click(function(){
+				       $(".member_setting_window").toggle();
+				   });
+				   $(".member_setting_btn,.member_setting_window_close,.member_setting_window_bg").click(function(){
+				       $(".member_setting_window").hide();
+				   });
+				   }); 
+				</script>
+                <!-- ... 帳號設定視窗end ... -->
+			    <!-- ... 修改密碼示意跳轉用 ... -->	 
+				<script>
+				   $(document).ready(function(){
+				   $(".reset_passowrd_btn").click(function(){
+				       $(".reset_password_step_1").show();
+				   });
+				   $(".reset_password_step_1_send").click(function(){
+				       $(".reset_password_step_1").hide();
+				       $(".reset_password_step_2").show();
+				   });
+				   $(".reset_password_step_2_send").click(function(){
+				       $(".reset_password_step_2").hide();
+				       $(".reset_password_step_3").show();
+				   });
+				   $(".reset_password_step_3_send").click(function(){
+				       $(".reset_password_step_3").hide();
+				   });
+				   $(".close_icon,.pup_form_bg").click(function(){
+				       $(".pup_container_form").hide();
+				   });
+				   }); 
+				</script>
+                <!-- ... 修改密碼示意跳轉用end ... -->
+				<!-- 帳號設定end -->
+			</div>
+<!-- 中間區塊 我的課表、基本資料、成績紀錄、上課錄影-->            
+<div class="member_lesson_infor">
+<div class="member_lesson_tip_container"><div class="member_lesson_tip"><img src="image/time_icon.jpg" alt=""/>2018/10/1&nbsp;15:00:02</div><div class="member_lesson_tip">即將上課:10/5 12:00pm&nbsp;國一國文</div></div>
+<ul class="tabs">
+<li class="tab_li" href="#infor4">上課錄影</li>
+<li class="tab_li" href="#infor3">成績紀錄</li>
+<li class="tab_li" href="#infor2">基本資料</li>
+<li class="tab_li active" href="#infor1">我的課表</li>
+</ul>
+<div class="member_lesson_infor_container">
+<!-- 我的課表 -->
+<div id="infor1">
+<div class="member_lesson_infor_title">我的課表</div>
+<div class="my_calendar_container">
+<div class="my_calendar_tip"><span><img src="image/green_bottom_line.jpg" alt=""/>當天有排定上課</span>&nbsp;<span><img src="image/black_bottom_line.jpg" alt=""/>當天有讀書計畫</span></div>
+<div id="full-clndr" class="clearfix"><div class="clndr">
+<div class="clndr-controls">
+<div class="clndr-previous-button"> &lt;</div>
+<div class="clndr-next-button">&gt;</div>
+<div class="current-month">2018&nbsp;十月</div>
+</div>
+<div class="clndr-grid">
+<div class="days-of-the-week clearfix">
+<div class="header-day">日</div>
+<div class="header-day">一</div>
+<div class="header-day">二</div>
+<div class="header-day">三</div>
+<div class="header-day">四</div>
+<div class="header-day">五</div>
+<div class="header-day">六</div>
+</div>
+<div class="days">
+<div class="day past adjacent-month last-month calendar-day-2018-09-30 calendar-dow-0">
+<a class="day-number" style="cursor: pointer;">30</a>
+</div>
+<div class="day calendar-day-2018-10-01 calendar-dow-1"><a class="day-number day-today" style="cursor:pointer;">1</a></div>
+<div class="day calendar-day-2018-10-02 calendar-dow-2"><a class="day-number" style="cursor: pointer;">2</a></div>
+<div class="day calendar-day-2018-10-03 calendar-dow-3"><a class="day-number" style="cursor: pointer;">3</a></div>
+<div class="day calendar-day-2018-10-04 calendar-dow-4"><a class="day-number" style="cursor: pointer;">4</a></div>
+<div class="day calendar-day-2018-10-05 calendar-dow-5 calendar-class-study calendar-active"><a class="day-number" style="cursor: pointer;">5</a></div>
+<div class="day calendar-day-2018-10-06 calendar-dow-6"><a class="day-number" style="cursor: pointer;">6</a></div>
+<div class="day calendar-day-2018-10-07 calendar-dow-0"><a class="day-number" style="cursor: pointer;">7</a></div>
+<div class="day calendar-day-2018-10-08 calendar-dow-1"><a class="day-number" style="cursor: pointer;">8</a></div>
+<div class="day calendar-day-2018-10-09 calendar-dow-2"><a class="day-number" style="cursor: pointer;">9</a></div>
+<div class="day calendar-day-2018-10-10 calendar-dow-3 calendar-class"><a class="day-number" style="cursor: pointer;">10</a></div>
+<div class="day calendar-day-2018-10-11 calendar-dow-4"><a class="day-number" style="cursor: pointer;">11</a></div>
+<div class="day calendar-day-2018-10-12 calendar-dow-5"><a class="day-number" style="cursor: pointer;">12</a></div>
+<div class="day calendar-day-2018-10-13 calendar-dow-6"><a class="day-number" style="cursor: pointer;">13</a></div>
+<div class="day calendar-day-2018-10-14 calendar-dow-0"><a class="day-number" style="cursor: pointer;">14</a></div>
+<div class="day calendar-day-2018-10-15 calendar-dow-1 calendar-study"><a class="day-number" style="cursor: pointer;">15</a></div>
+<div class="day calendar-day-2018-10-16 calendar-dow-2"><a class="day-number" style="cursor: pointer;">16</a></div>
+<div class="day calendar-day-2018-10-17 calendar-dow-3"><a class="day-number" style="cursor: pointer;">17</a></div>
+<div class="day calendar-day-2018-10-18 calendar-dow-4"><a class="day-number" style="cursor: pointer;">18</a></div>
+<div class="day calendar-day-2018-10-19 calendar-dow-5"><a class="day-number" style="cursor: pointer;">19</a></div>
+<div class="day calendar-day-2018-10-20 calendar-dow-6 calendar-class-study"><a class="day-number" style="cursor: pointer;">20</a></div>
+<div class="day calendar-day-2018-10-21 calendar-dow-0"><a class="day-number" style="cursor: pointer;">21</a></div>
+<div class="day calendar-day-2018-10-22 calendar-dow-1"><a class="day-number" style="cursor: pointer;">22</a></div>
+<div class="day calendar-day-2018-10-23 calendar-dow-2"><a class="day-number" style="cursor: pointer;">23</a></div>
+<div class="day calendar-day-2018-10-24 calendar-dow-3"><a class="day-number" style="cursor: pointer;">24</a></div>
+<div class="day calendar-day-2018-10-25 calendar-dow-4"><a class="day-number" style="cursor: pointer;">25</a></div>
+<div class="day calendar-day-2018-10-26 calendar-dow-5"><a class="day-number" style="cursor: pointer;">26</a></div>
+<div class="day calendar-day-2018-10-27 calendar-dow-6"><a class="day-number" style="cursor: pointer;">27</a></div>
+<div class="day calendar-day-2018-10-28 calendar-dow-0"><a class="day-number" style="cursor: pointer;">28</a></div>
+<div class="day calendar-day-2018-10-29 calendar-dow-1"><a class="day-number" style="cursor: pointer;">29</a></div>
+<div class="day calendar-day-2018-10-30 calendar-dow-2"><a class="day-number" style="cursor: pointer;">30</a></div>
+<div class="day calendar-day-2018-10-31 calendar-dow-3"><a class="day-number" style="cursor: pointer;">31</a></div>
+<div class="day adjacent-month next-month calendar-day-2018-11-01 calendar-dow-4"><a class="day-number" style="cursor: pointer;">1</a></div>
+<div class="day adjacent-month next-month calendar-day-2018-11-02 calendar-dow-5"><a class="day-number" style="cursor: pointer;">2</a></div>
+<div class="day adjacent-month next-month calendar-day-2018-11-03 calendar-dow-6"><a class="day-number" style="cursor: pointer;">3</a></div>
+<div class="day adjacent-month next-month calendar-day-2018-11-04 calendar-dow-0"><a class="day-number" style="cursor: pointer;">4</a></div>
+<div class="day adjacent-month next-month calendar-day-2018-11-05 calendar-dow-1"><a class="day-number" style="cursor: pointer;">5</a></div>
+<div class="day adjacent-month next-month calendar-day-2018-11-06 calendar-dow-2"><a class="day-number" style="cursor: pointer;">6</a></div>
+<div class="day adjacent-month next-month calendar-day-2018-11-07 calendar-dow-3"><a class="day-number" style="cursor: pointer;">7</a></div>
+<div class="day adjacent-month next-month calendar-day-2018-11-08 calendar-dow-4"><a class="day-number" style="cursor: pointer;">8</a></div>
+<div class="day adjacent-month next-month calendar-day-2018-11-09 calendar-dow-5"><a class="day-number" style="cursor: pointer;">9</a></div>
+<div class="day adjacent-month next-month calendar-day-2018-11-10 calendar-dow-6"><a class="day-number" style="cursor: pointer;">10</a></div>
+</div>
+</div>
+<div class="event-listing">
+<div class="event-listing-title">10/5&nbsp;上課行程</div>
+<div class="event-item" id="class-event-list-div">
+<div class="calendar_detail_container">
+<div class="calendar_detail_title">iTeacher國一國文</div>
+<div>預定時間：12:00-13:00</div>
+<div>老師/代碼：小中&nbsp;/&nbsp;611-0101-556</div>
+<div></div>
+<div class="calendar_detail_state state_confirm">預約中</div>
+</div>
+<div class="calendar_detail_container">
+<div class="calendar_detail_title">iTeacher國一英文</div>
+<div>預定時間：14:00-15:00</div>
+<div>預計進度：英文第一課</div>
+<div>老師/代碼：小中&nbsp;/&nbsp;611-0101-556</div>
+<div class="calendar_detail_state state_ready">準備中</div>
+</div>
+<div class="calendar_detail_container">
+<div class="calendar_detail_title">iTutor國一數學</div>
+<div>預定時間：16:00-17:00</div>
+<div>預計進度：數學第一課</div>
+<div>老師/代碼：小中&nbsp;/&nbsp;611-0101-556</div>
+<div><span class="calendar_class_infor">上課詳細資訊</span>&nbsp;&nbsp;<span class="calendar_class_star">給予評分</span></div>
+<div class="calendar_detail_state state_finish">已完成</div>
+</div>
+<div class="calendar_detail_container">
+<div class="calendar_detail_title">iTeacher國一英文</div>
+<div>預定時間：18:00-19:00</div>
+<div>預計進度：英文第二課</div>
+<div>老師/代碼：小中&nbsp;/&nbsp;611-0101-556</div>
+<div class="calendar_detail_state state_cancel">已取消</div>
+</div>
+<div class="calendar_detail_container">
+<div class="calendar_detail_title">讀書計畫安排</div>
+<div>國文第一課第一段</div>
+<div>英文第二課考卷</div>
+<div>英文第三課影片</div>
+<div>數學第一課公式預習</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+ <!-- ... 我的課表 上課詳細資訊 ... -->  
+ <script>
+    $(document).ready(function(){
+      $(".calendar_class_infor").click(function(){
+		  $(".member_pup_class_detail").show();
+      });
+	  $(".member_pup_close,.member_pup_bg").click(function(){
+        $(".member_pup_class_detail").hide();	
+      });
+    });
+</script>
+<!-- ... 我的課表 上課詳細資訊end ... -->
+<!-- 我的課表end -->
+<!-- 基本資料 -->
+<div id="infor2">
+<div class="member_lesson_infor_title">基本資料</div>
+<div class="personal_data_container">
+<div class="personal_data_input_container">
+<div class="personal_data_input_title">學生姓名</div>
+<div class="personal_data_input"><input type="text" value="王曉明" readonly class="input_lock"></div>
+</div>
+<div class="personal_data_input_container">
+<div class="personal_data_input_title">學生年級</div>
+<div class="personal_data_input"><input type="text" value="國中二年級" readonly class="input_lock"></div>
+</div>
+<div class="personal_data_input_container">
+<div class="personal_data_input_title">就讀學校</div>
+<div class="personal_data_input"><input type="text" value="曉明國中" readonly class="input_lock"></div>
+</div>
+<div class="personal_data_input_container">
+<div class="personal_data_input_title">身分字號</div>
+<div class="personal_data_input"><input type="text" value="A123456789" readonly class="input_lock"></div>
+</div>
+<div class="personal_data_input_container">
+<div class="personal_data_input_title">手機號碼</div>
+<div class="personal_data_input"><input type="text" value="0912345678" readonly class="input_lock"></div>
+</div>
+<div class="personal_data_input_container">
+<div class="personal_data_input_title">住家電話</div>
+<div class="personal_data_input"><input type="text" value="021234567" readonly class="input_lock"></div>
+</div>
+<div class="personal_data_input_container">
+<div class="personal_data_input_title">聯絡地址</div>
+<div class="personal_data_input"><input type="text" value="新北市板橋區中山路一段352巷161號2樓" readonly class="input_lock"></div>
+</div>
+<div class="personal_data_input_container">
+<div class="personal_data_input_title">電子信箱</div>
+<div class="personal_data_input"><input type="text" value="a1234567@yahoo.com.tw" readonly class="input_lock"></div>
+</div>
+<div style="clear:both;"></div>
+<div class="personal_data_infor_title">學生聯絡人資料</div>
+<div style="clear:both;"></div>
+<div class="personal_data_input_container">
+<div class="personal_data_input_title">姓名</div>
+<div class="personal_data_input"><input type="text" value="王大明" readonly class="input_lock"></div>
+</div>
+<div class="personal_data_input_container">
+<div class="personal_data_input_title">學生關係</div>
+<div class="personal_data_input"><input type="text" value="父子" readonly class="input_lock"></div>
+</div>
+<div class="personal_data_input_container">
+<div class="personal_data_input_title">手機號碼</div>
+<div class="personal_data_input"><input type="text" value="0912876543" readonly class="input_lock"></div>
+</div>
+<div style="clear:both;"></div>
+<div class="personal_data_btn">修改資料</div>
+<div class="personal_data_btn" style="display:none;">儲存資料</div>
+<!-- 按下修改資料後 input拿掉readonly class換成input_unlock -->
+<!-- 按下儲存資料後 input增加readonly class換成input_lock -->
+</div>
+</div>
+<!-- 基本資料end -->
+<!-- 成績紀錄 -->
+<div id="infor3">
+<div class="member_lesson_infor_title">成績紀錄</div>
+<div class="score_record_search_container">
+<!-- 1006新增 -->
+<div class="score_record_search">
+<select>
+<option value="">選擇年度</option>
+<option value="">2020年</option>
+<option value="">2019年</option>
+<option value="">2018年</option>
+</select>
+</div>
+<div class="score_record_search">
+<select>
+<option value="">選擇科目</option>
+<option value="">國文</option>
+<option value="">數學</option>
+<option value="">英文</option>
+</select>
+</div>
+<!-- 1006新增 end -->
+</div>
+
+<!-- 1006新增 -->
+<div class="score_record_form_title">2020年&nbsp;<span>國文</span>成績表</div>    
+<!-- 1006新增 end -->         
+    
+<!-- 1006新增修改 -->
+<div class="score_record_title_contianer">
+<div class="score_record_title_date"><span>日期</span><span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
+<div class="score_record_title_type"><span>類別</span><span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
+<div class="score_record_title_point"><span>分數</span><span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
+<div class="score_record_title_memo">備註</div>
+</div>
+<!-- 1006新增修改 -->
+    
+<div class="score_record_main">
+<div class="score_record_contianer">
+<div class="score_record_date">01/22</div>
+<div class="score_record_type">學校小考</div>
+
+<div class="score_record_point"><span class="score_pass">80</span></div><!-- ... 成績80以上 數字綠色使用class="score_pass"  ... -->
+<div class="score_record_memo">國二第1冊第1章</div>
+</div>
+<div class="score_record_contianer">
+<div class="score_record_date">01/22</div>
+<div class="score_record_type">家教作業</div>
+
+<div class="score_record_point"><span class="score_no_pass">56</span></div><!-- ... 成績60以下 數字紅色使用class="score_no_pass"  ... -->
+<div class="score_record_memo">國二第1冊1~3課</div>
+</div>
+<div class="score_record_contianer">
+<div class="score_record_date">01/22</div>
+<div class="score_record_type">學校小考</div>
+
+<div class="score_record_point"><span class="score_pass">92</span></div>
+<div class="score_record_memo">國二第1冊1~3課</div>
+</div>
+<div class="score_record_contianer">
+<div class="score_record_date">01/22</div>
+<div class="score_record_type">學校小考</div>
+
+<div class="score_record_point"><span class="score_pass">81</span></div>
+<div class="score_record_memo">國二第1冊1~3課</div>
+</div>
+<div class="score_record_contianer">
+<div class="score_record_date">01/22</div>
+<div class="score_record_type">家教作業</div>
+
+<div class="score_record_point"><span class="score_low_pass">62</span></div><!-- ... 成績60-80 數字橘色使用class="score_low_pass"  ... -->
+<div class="score_record_memo">國二第1冊1~3課</div>
+</div>
+<div class="score_record_contianer">
+<div class="score_record_date">01/22</div>
+<div class="score_record_type">家教作業</div>
+
+<div class="score_record_point"><span class="score_low_pass">71</span></div>
+<div class="score_record_memo">國二第1冊1~3課</div>
+</div>
+</div>  
+</div>
+<!-- 成績紀錄end -->
+<!-- 上課錄影 -->
+<div id="infor4">
+<div class="member_lesson_infor_title">上課錄影</div>
+<div class="video_record_tip">提醒同學，上課錄影僅保留7天喔</div>
+<div class="video_record_title_contianer">
+<div class="video_record_title_name">上課時間內容</div>
+<div class="video_record_title_download">錄影下載</div>
+</div>
+<div class="video_record_main">
+<div class="video_record_contianer">
+<div class="video_record_name">01/22&nbsp;16:00-17:00&nbsp;&nbsp;iTeacher國一國文</div>
+<div class="video_record_download"><a href="#"><img src="image/download_icon.png" alt=""/></a></div>
+</div>
+<div class="video_record_contianer">
+<div class="video_record_name">01/22&nbsp;16:00-17:00&nbsp;&nbsp;iTutor國一國文</div>
+<div class="video_record_download"><a href="#"><img src="image/download_icon.png" alt=""/></a></div>
+</div>
+<div class="video_record_contianer">
+<div class="video_record_name">01/22&nbsp;16:00-17:00&nbsp;&nbsp;iTutor國一國文</div>
+<div class="video_record_download"><a href="#"><img src="image/download_icon.png" alt=""/></a></div>
+</div>
+<div class="video_record_contianer">
+<div class="video_record_name">01/22&nbsp;16:00-17:00&nbsp;&nbsp;iTutor國一國文</div>
+<div class="video_record_download"><a href="#"><img src="image/download_icon.png" alt=""/></a></div>
+</div>
+</div>
+</div>
+<!-- 上課錄影end -->
+</div>
+</div>
+<!-- 中間區塊 我的課表、基本資料、成績紀錄、上課錄影end -->  
+			<script type="text/javascript">
+			 $(function(){
+			     var showTab = 3;
+			     var defaultLi = $('ul.tabs li').eq(showTab).addClass('active');
+			     $(defaultLi.attr('href')).siblings().hide();        
+			     $('ul.tabs li').click(function() {  
+			         var $this = $(this),
+			         clickTab = $this.attr('href');
+			         $this.addClass('active').siblings('.active').removeClass('active');
+			         $(clickTab).stop(false, true).show().siblings().hide();
+			         $(clickTab .course_video_iframe).empty();
+			         return false;
+			     }).find('a').focus(function(){
+			         this.blur();
+			     });
+			 });
+			</script>
+		</div>
+	</div>
+    <!-- ... footer 聯絡資訊、追蹤我們 招募人才 版權說明 條款 聲明 黑色區塊... -->
+	<div class="footer_black_container">
+		<div class="footer_black">
+			<div class="footer_black_top">
+				<div class="footer_black_follow_job">
+					<div class="footer_black_follow">
+						<div class="footer_black_follow_title">
+							追蹤我們
+						</div>
+						<div class="footer_black_follow_icon">
+							<a href="https://www.facebook.com/studyking123/" target="_blank"><img alt="facebook粉絲團" src="image/follow_icon_1.png"></a><a href="https://www.youtube.com/channel/UCE0ihSRPHpWjKC8VHeQFvDQ/feed" target="_blank"><img alt="Youtube頻道" src="image/follow_icon_2.png"></a>
+						</div>
+					</div>
+					<div class="footer_black_job">
+						<div class="footer_black_job_title">
+							招募人才
+						</div>
+						<div class="footer_black_job_icon">
+							<a href="https://www.104.com.tw/jobbank/custjob/index.php?r=cust&j=48424a733c3e466f383a426b40463e2193131312c49743a7109j56" target="_blank"><img alt="104人力銀行" src="image/job_icon.png"></a>
+						</div>
+					</div>
+					<div class="footer_black_prepare">
+						<div class="footer_black_prepare_title">
+							課前準備
+						</div>
+						<div class="footer_black_prepare_item">
+							<span class="software_download_open">軟體下載安裝</span>
+						</div>
+						<div class="footer_black_prepare_item">
+							<a href="#">網速測試</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer_black_contact">
+					<div class="footer_black_contact_title">
+						聯絡資訊
+					</div>
+					<div class="footer_black_contact_text">
+						<div class="footer_contact_text_title">
+							客服時間：
+						</div>
+						<div class="footer_contact_text">
+							週一至週五 早上10:00至晚上09:00，週六至週日 早上10:00至晚上06:00
+						</div>
+					</div>
+					<div class="footer_black_contact_text">
+						<div class="footer_contact_text_title">
+							客服電話：
+						</div>
+						<div class="footer_contact_text">
+							0800-088-589
+						</div>
+					</div>
+					<div class="footer_black_contact_text">
+						<div class="footer_contact_text_title">
+							客服傳真：
+						</div>
+						<div class="footer_contact_text">
+							02-8251-3567
+						</div>
+					</div>
+					<div class="footer_black_contact_text">
+						<div class="footer_contact_text_title">
+							客服信箱：
+						</div>
+						<div class="footer_contact_text">
+							service@study123.com.tw
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer_black_bottom">
+				<div class="footer_black_copyright">
+					<span>學習王科技股份有限公司 版權所有</span><span>Copyright © Study123 Technology Co.Ltd. All Rights Reserved.</span>
+				</div>
+				<div class="footer_black_terms">
+					<span class="terms_of_service">服務條款</span><span class="privacy_policy">隱私權聲明</span>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!-- ... footer 聯絡資訊、追蹤我們 招募人才 版權說明 條款 聲明 黑色區塊 end... -->
+	<div class="system_talk_area" style="">
+		<img alt="" class="system_talk_close" src="image/system_talk_close.png">
+		<div class="system_talk_bar">
+			<span class="system_talk_title">線上客服</span>
+		</div>
+		<div class="system_talk_window"></div>
+	</div>
+    <!-- ... 線上客服 ... -->
+	<script>
+	      $(document).ready(function(){
+	      $(".system_talk_bar").click(function(){
+	          $(".system_talk_window,.system_talk_close").show();    
+	      });
+	      $(".system_talk_close").click(function(){
+	          $(".system_talk_window,.system_talk_close").hide();    
+	      });
+	      }); 
+	</script>
+    <!-- ... 線上客服end ... -->
+	<!-- ... pup視窗-最新消息 ... -->
+	<div class="member_pup_news" style="display:none;">
+		<div class="member_pup_bg"></div>
+		<div class="member_pup_container">
+			<div class="member_pup_title">
+				最新消息
+			</div>
+			<div class="member_pup_main">
+				<div class="pup_news_search_container">
+					<div class="pup_news_search">
+						<select>
+							<option value="">
+								選擇消息月份
+							</option>
+							<option value="">
+								2020/01
+							</option>
+							<option value="">
+								2019/12
+							</option>
+							<option value="">
+								2019/11
+							</option>
+						</select>
+					</div>
+					<div class="pup_news_search"><input placeholder="搜尋關鍵字" type="text"> <img alt="搜尋" src="image/search_icon.png"></div>
+				</div>
+				<div class="pup_news_head">
+					<div class="pup_news_mark_head">
+						置頂
+					</div>
+					<div class="pup_news_date_head">
+						發佈日期
+					</div>
+					<div class="pup_news_title_head">
+						標題
+					</div>
+				</div>
+				<div class="pup_news_item_continer">
+					<div>
+						<div class="pup_news_item">
+							<div class="pup_news_mark active"></div>
+							<div class="pup_news_date">
+								<span>2020.01.21</span>
+							</div>
+							<div class="pup_news_title">
+								109會考指定科目報名截止109會考指定科目報名截止
+							</div>
+						</div>
+						<div class="pup_news_item">
+							<div class="pup_news_mark"></div>
+							<div class="pup_news_date">
+								<span>2020.01.21</span>
+							</div>
+							<div class="pup_news_title">
+								109會考指定科目報名截止
+							</div>
+						</div>
+						<div class="pup_news_item">
+							<div class="pup_news_mark"></div>
+							<div class="pup_news_date">
+								<span>2020.01.21</span>
+							</div>
+							<div class="pup_news_title">
+								109會考指定科目報名截止
+							</div>
+						</div>
+						<div class="pup_news_item">
+							<div class="pup_news_mark"></div>
+							<div class="pup_news_date">
+								<span>2020.01.21</span>
+							</div>
+							<div class="pup_news_title">
+								109會考指定科目報名截止
+							</div>
+						</div>
+						<div class="pup_news_item">
+							<div class="pup_news_mark"></div>
+							<div class="pup_news_date">
+								<span>2020.01.21</span>
+							</div>
+							<div class="pup_news_title">
+								109會考指定科目報名截止
+							</div>
+						</div>
+						<div class="pup_news_item">
+							<div class="pup_news_mark"></div>
+							<div class="pup_news_date">
+								<span>2020.01.21</span>
+							</div>
+							<div class="pup_news_title">
+								109會考指定科目報名截止
+							</div>
+						</div>
+						<div class="pup_news_item">
+							<div class="pup_news_mark"></div>
+							<div class="pup_news_date">
+								<span>2020.01.21</span>
+							</div>
+							<div class="pup_news_title">
+								109會考指定科目報名截止
+							</div>
+						</div>
+						<div class="pup_news_item">
+							<div class="pup_news_mark"></div>
+							<div class="pup_news_date">
+								<span>2020.01.21</span>
+							</div>
+							<div class="pup_news_title">
+								109會考指定科目報名截止
+							</div>
+						</div>
+						<div class="pup_news_item">
+							<div class="pup_news_mark"></div>
+							<div class="pup_news_date">
+								<span>2020.01.21</span>
+							</div>
+							<div class="pup_news_title">
+								109會考指定科目報名截止
+							</div>
+						</div>
+						<div class="pup_news_item">
+							<div class="pup_news_mark"></div>
+							<div class="pup_news_date">
+								<span>2020.01.21</span>
+							</div>
+							<div class="pup_news_title">
+								109會考指定科目報名截止
+							</div>
+						</div>
+						<div class="pup_news_item">
+							<div class="pup_news_mark"></div>
+							<div class="pup_news_date">
+								<span>2020.01.21</span>
+							</div>
+							<div class="pup_news_title">
+								109會考指定科目報名截止
+							</div>
+						</div>
+						<div class="pup_news_item">
+							<div class="pup_news_mark"></div>
+							<div class="pup_news_date">
+								<span>2020.01.21</span>
+							</div>
+							<div class="pup_news_title">
+								109會考指定科目報名截止
+							</div>
+						</div>
+						<div class="pup_news_item">
+							<div class="pup_news_mark"></div>
+							<div class="pup_news_date">
+								<span>2020.01.21</span>
+							</div>
+							<div class="pup_news_title">
+								109會考指定科目報名截止
+							</div>
+						</div>
+						<div class="pup_news_item">
+							<div class="pup_news_mark"></div>
+							<div class="pup_news_date">
+								<span>2020.01.21</span>
+							</div>
+							<div class="pup_news_title">
+								109會考指定科目報名截止
+							</div>
+						</div>
+						<div class="pup_news_item">
+							<div class="pup_news_mark"></div>
+							<div class="pup_news_date">
+								<span>2020.01.21</span>
+							</div>
+							<div class="pup_news_title">
+								109會考指定科目報名截止
+							</div>
+						</div>
+					</div>
+					<div class="pup_news_loading">
+						載入更多消息
+					</div>
+				</div>
+			</div><img alt="" class="member_pup_close" src="image/close_icon.png">
+			<div class="pup_news_detail_container" style="display:none;">
+				<div>
+				<div class="pup_news_detail_title">
+					109會考指定科目報名截止
+				</div>
+				<div class="pup_news_detail_text">
+					我們是一群大學法學教育及法律學者，針對大考中心的指考及學測社會科的法律類題目的命題方式與審題作業問題︰
+                    <!-- 0929新增 新聞外部連結位置 -->
+                    <br/><br/><div>原文出處<a href="#" target="_blank" style="color:#018247"><br/>https://www.12345678teacher.com/</a></div>
+                    <!-- 0929新增 新聞外部連結位置end -->
+				</div><img alt="" class="pup_news_detail_close" src="image/close_icon_green.png"></div>
+			</div>
+		</div>
+	</div>
+    <!-- ... pup視窗-最新消息end ... -->
+	<!-- ... pup視窗-上課公約 ... -->
+	<div class="member_pup_rule" style="display:none;">
+		<div class="member_pup_bg"></div>
+		<div class="member_pup_container">
+		<div class="member_pup_title">
+			上課公約
+		</div>
+		<div class="member_pup_main">
+			<div class="pup_rule_main">
+				<div class="pup_rule_text_title">
+					為提供良好的服務品質，在上課前請務必詳讀以下資訊：
+				</div>
+				<ol>
+					<li>為避免因網路、設備等因素影響上課時間，請老師於預定時間前10分鐘上線。</li>
+					<li>如果學生有傳照片或問題要問老師，請提早傳給小編轉交。因圖片需要經過處理，最晚至少要在上課前1小時傳問題。</li>
+					<li>上課中請保持該有的上課禮儀，過程中如果需要離席(例如去廁所或是找考卷)，請通知學生一聲勿直接行動。</li>
+					<li>若超過預定上課時間2分鐘未上線或通知，將扣半堂課點數給學生。</li>
+					<li>如有調課、請假等需求，務必提前一天告知line小編，小編會協助與學生溝通調整時間。如果連續兩次臨時請假，將影響後續上課權利。</li>
+					<li>上課過程中如果遇到平台的技術性問題，請做初步的故障排除。若判斷會嚴重影響上課，請在第一時間告知客服人員協助處理。</li>
+					<li>為保障老師權益，請老師勿留下個人聯繫資訊給學生，避免被學生或家長騷擾。</li>
+					<li>如果有出卷或是出作業的需求，請在下課後盡快告知客服人員。</li>
+				</ol>
+			</div>
+		</div><img alt="" class="member_pup_close" src="image/close_icon.png"></div>
+	</div>
+    <!-- ... pup視窗-上課公約end ... -->
+	<!-- ... pup視窗-設備檢測 ... -->
+	<div class="member_pup_device" style="display:none;">
+		<div class="member_pup_bg"></div>
+		<div class="member_pup_container">
+		<div class="member_pup_title">
+			設備檢測
+		</div>
+		<div class="member_pup_main">
+			<div class="pup_device_main">
+				<div class="pup_device_title">
+					電腦規格
+				</div>
+				<div class="pup_device_container">
+					<div class="pup_device_row">
+						<div class="pup_device_th">
+							CPU
+						</div>
+						<div class="pup_device_td">
+							Intel Core i3 3.9 Ghz CPU 以上
+						</div>
+					</div>
+					<div class="pup_device_row">
+						<div class="pup_device_th">
+							作業系統
+						</div>
+						<div class="pup_device_td">
+							微軟Windows 7 、Windows8、Windows8.1、Windows10的作業系統
+						</div>
+					</div>
+					<div class="pup_device_row">
+						<div class="pup_device_th">
+							硬碟空間
+						</div>
+						<div class="pup_device_td">
+							電腦需 4 GB 以上的記憶體 (RAM) / 10 GB以上可用硬碟空間
+						</div>
+					</div>
+					<div class="pup_device_row">
+						<div class="pup_device_th">
+							顯示器
+						</div>
+						<div class="pup_device_td">
+							顯示至少16bit色和1024x768解析度的顯示器與顯示卡
+						</div>
+					</div>
+					<div class="pup_device_row">
+						<div class="pup_device_th">
+							耳機/麥克風
+						</div>
+						<div class="pup_device_td">
+							一體成型頭掛式雙接頭耳機/麥克風
+						</div>
+					</div>
+					<div class="pup_device_row">
+						<div class="pup_device_th" style="border-bottom:1px solid #137a52;">
+							網路需求
+						</div>
+						<div class="pup_device_td" style="border-bottom:1px solid #757575;">
+							建議以有線寬頻連接網際網路－網路頻寬需求為專線光纖16M/8M以上或涵蓋率良好4G手機網路，盡可能避免使用Cable或第四台網路(因非專線連線方式，可能於熱門使用時段有頻寬不穩情況)。
+						</div>
+					</div>
+				</div>
+				<div class="pup_device_title">
+					環境測試
+				</div>
+				<div class="pup_device_container" style="margin-bottom:0px;">
+					<div class="pup_device_test_container">
+						<img alt="網路速度測試" src="image/device_icon_1.png">
+						<div class="pup_device_test_btn">
+							網路速度測試
+						</div>
+						<div class="pup_device_test_tip">
+							<span class="test_y">裝置正常</span><!-- ... 測試結果正常 提示字綠色 class="test_y"  ... -->
+						</div>
+					</div>
+					<div class="pup_device_test_container">
+						<img alt="視訊鏡頭測試" src="image/device_icon_2.png">
+						<div class="pup_device_test_btn">
+							視訊鏡頭測試
+						</div>
+						<div class="pup_device_test_tip">
+							<span class="test_n">裝置無法運行</span><!-- ... 測試結果無法運行 提示字紅色 class="test_n"  ... -->
+						</div>
+					</div>
+					<div class="pup_device_test_container">
+						<img alt="耳機麥克風測試" src="image/device_icon_3.png">
+						<div class="pup_device_test_btn">
+							耳機麥克風測試
+						</div>
+						<div class="pup_device_test_tip">
+							<span class="test_y">裝置正常</span><!-- ... 測試結果正常 提示字綠色 class="test_y"  ... -->
+						</div>
+					</div>
+					<div class="pup_device_test_container">
+						<img alt="電腦裝置測試" src="image/device_icon_4.png">
+						<div class="pup_device_test_btn">
+							電腦裝置測試
+						</div>
+						<div class="pup_device_test_tip">
+							<span class="test_n">裝置無法運行</span><!-- ... 測試結果無法運行 提示字紅色 class="test_n"  ... -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><img alt="" class="member_pup_close" src="image/close_icon.png"></div>
+	</div>
+    <!-- ... pup視窗-設備檢測end ... -->
+	<!-- ... pup視窗-常見問題 ... -->
+	<div class="member_pup_qa" style="display:none;">
+		<div class="member_pup_bg"></div>
+		<div class="member_pup_container">
+		<div class="member_pup_title">
+			常見問題
+		</div>
+		<div class="member_pup_main">
+			<div class="pup_qa_main">
+				<table cellpadding="0" cellspacing="0" style="width:100%;">
+					<tbody>
+						<tr>
+							<td class="qa_number">Q1</td>
+							<td class="qa_question">時間到學生沒上線怎麼辦？</td>
+							<td class="qa_answer_bu">回答</td>
+						</tr>
+						<tr>
+							<td class="qa_answer" colspan="4" style="display:none;">請立即通知客服人員協助聯繫學生，若超過10分鐘未上線且未通知，則扣半堂課點數給老師。</td>
+						</tr>
+						<tr>
+							<td colspan="4" style="height:30px;"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table cellpadding="0" cellspacing="0" style="width:100%;">
+					<tbody>
+						<tr>
+							<td class="qa_number">Q2</td>
+							<td class="qa_question">上課所需的電腦規格和網路需求為何？</td>
+							<td class="qa_answer_bu">回答</td>
+						</tr>
+						<tr>
+							<td class="qa_answer" colspan="4" style="display:none;">請參考設備檢測頁面。</td>
+						</tr>
+						<tr>
+							<td colspan="4" style="height:30px;"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table cellpadding="0" cellspacing="0" style="width:100%;">
+					<tbody>
+						<tr>
+							<td class="qa_number">Q3</td>
+							<td class="qa_question">網路斷線或不穩怎麼辦？</td>
+							<td class="qa_answer_bu">回答</td>
+						</tr>
+						<tr>
+							<td class="qa_answer" colspan="4" style="display:none;">如果還沒上課，請先使用speedtest網頁(https://www.speedtest.net/zh-Hans)進行測速，如果網路環境不好或不穩定，可以換一個網路再試試看，建議使用有線寬頻網路或涵蓋率良好的4G手機網路。</td>
+						</tr>
+						<tr>
+							<td colspan="4" style="height:30px;"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table cellpadding="0" cellspacing="0" style="width:100%;">
+					<tbody>
+						<tr>
+							<td class="qa_number">Q4</td>
+							<td class="qa_question">沒畫面、麥克風、耳機沒聲音怎麼辦？</td>
+							<td class="qa_answer_bu">回答</td>
+						</tr>
+						<tr>
+							<td class="qa_answer" colspan="4" style="display:none;">課前請先檢查網路攝影機、麥克風、耳機功能是否正常，如果有異常可拔掉網路攝影機、耳機或麥克風，用筆記型電腦內建的設備即可。</td>
+						</tr>
+						<tr>
+							<td colspan="4" style="height:30px;"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table cellpadding="0" cellspacing="0" style="width:100%;">
+					<tbody>
+						<tr>
+							<td class="qa_number">Q5</td>
+							<td class="qa_question">學生反應冷淡，不願意互動怎麼辦？</td>
+							<td class="qa_answer_bu">回答</td>
+						</tr>
+						<tr>
+							<td class="qa_answer" colspan="4" style="display:none;">上課過程中記得不斷丟問題詢問同學，保持學生的專注力，並可以適時停下來讓學生自行練習作答，切勿自己悶著頭一直上；也可以在上課過程中尋找學生有興趣的內容，適時加入一些生活或有趣味性的話題進去。</td>
+						</tr>
+						<tr>
+							<td colspan="4" style="height:30px;"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table cellpadding="0" cellspacing="0" style="width:100%;">
+					<tbody>
+						<tr>
+							<td class="qa_number">Q6</td>
+							<td class="qa_question">如果我的帳號或密碼忘記了怎麼辦？</td>
+							<td class="qa_answer_bu">回答</td>
+						</tr>
+						<tr>
+							<td class="qa_answer" colspan="4" style="display:none;">請至會員登入區點選「忘記帳號」或「忘記密碼」，在出現視窗中之欄位填寫資料...</td>
+						</tr>
+						<tr>
+							<td colspan="4" style="height:30px;"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table cellpadding="0" cellspacing="0" style="width:100%;">
+					<tbody>
+						<tr>
+							<td class="qa_number">Q7</td>
+							<td class="qa_question">學生有學校作業或考卷問題想問怎麼辦？</td>
+							<td class="qa_answer_bu">回答</td>
+						</tr>
+						<tr>
+							<td class="qa_answer" colspan="4" style="display:none;">可在課前使用手機拍照後傳給line官方帳號由小編傳給老師。因照片處理需要時間，請至少在上課前1小時傳送問題給小編。拍照時記得將題目盡量清晰放大喔！</td>
+						</tr>
+						<tr>
+							<td colspan="4" style="height:30px;"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table cellpadding="0" cellspacing="0" style="width:100%;">
+					<tbody>
+						<tr>
+							<td class="qa_number">Q8</td>
+							<td class="qa_question">zoom的下載位置或操作問題？</td>
+							<td class="qa_answer_bu">回答</td>
+						</tr>
+						<tr>
+							<td class="qa_answer" colspan="4" style="display:none;">中華電信zoom的下載網址為 https://zoom.emome.net/zoom_download.php 。如有操作問題可透過Line詢問小編或致電(02)2311-3260。</td>
+						</tr>
+						<tr>
+							<td colspan="4" style="height:30px;"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div><img alt="" class="member_pup_close" src="image/close_icon.png"></div>
+	</div>
+	<script>
+	   $(document).ready(function(){
+	     $(".qa_answer_bu").click(function(){
+	       var clickIndex = $(".qa_answer_bu").index(this);
+	       if($(this).text() == "回答"){
+	         $($(".qa_answer")[clickIndex]).show();
+	         $(this).text("收起");
+	       }
+	       else{
+	         $($(".qa_answer")[clickIndex]).hide();
+	         $(this).text("回答");
+	       }
+	     });
+	   });
+	</script>
+    <!-- ... pup視窗-常見問題end ... -->
+	<!-- ... pup視窗-點數紀錄 ... -->
+	<div class="member_pup_point_record" style="display:none;">
+		<div class="member_pup_bg"></div>
+		<div class="member_pup_container">
+		<div class="member_pup_title">
+			點數紀錄
+		</div>
+		<div class="member_pup_main">
+			<div class="point_top_container">
+				<div class="pup_point_record_search">
+					<select>
+						<option value="">
+							選擇月份
+						</option>
+						<option value="">
+							2020/01
+						</option>
+						<option value="">
+							2019/12
+						</option>
+						<option value="">
+							2019/11
+						</option>
+					</select>
+				</div>
+				<div class="point_have_now">
+					目前點數：<span>860</span>&nbsp;點
+				</div>
+			</div>
+			<div class="point_record_title_contianer">
+				<div class="point_record_title_date">
+					日期
+				</div>
+				<div class="point_record_title_type">
+					類別
+				</div>
+				<div class="point_record_title_count">
+					點數
+				</div>
+				<div class="point_record_title_memo">
+					備註
+				</div>
+			</div>
+			<div class="pup_point_main">
+				<div class="point_record_contianer">
+					<div class="point_record_date">
+						2020/01/22
+					</div>
+					<div class="point_record_type">
+						儲值
+					</div>
+					<div class="point_record_count">
+						<span class="point_plus">+80</span><!-- ... 點數增加 提示字綠色 class="point_plus"  ... -->
+					</div>
+					<div class="point_record_memo">
+						信用卡付款8000元
+					</div>
+				</div>
+				<div class="point_record_contianer">
+					<div class="point_record_date">
+						2020/01/22
+					</div>
+					<div class="point_record_type">
+						扣除
+					</div>
+					<div class="point_record_count">
+						<span class="point_minus">-5</span><!-- ... 點數減少 提示字紅色 class="point_minus"  ... -->
+					</div>
+					<div class="point_record_memo">
+						01.22 英文課2小時
+					</div>
+				</div>
+				<div class="point_record_contianer">
+					<div class="point_record_date">
+						2020/01/22
+					</div>
+					<div class="point_record_type">
+						贈送
+					</div>
+					<div class="point_record_count">
+						<span class="point_plus">+10</span>
+					</div>
+					<div class="point_record_memo">
+						成立滿週年活動
+					</div>
+				</div>
+				<div class="point_record_contianer">
+					<div class="point_record_date">
+						2020/01/22
+					</div>
+					<div class="point_record_type">
+						退費
+					</div>
+					<div class="point_record_count">
+						<span class="point_minus">-50</span>
+					</div>
+					<div class="point_record_memo">
+						無
+					</div>
+				</div>
+				<div class="point_record_contianer">
+					<div class="point_record_date">
+						2020/01/22
+					</div>
+					<div class="point_record_type">
+						儲值
+					</div>
+					<div class="point_record_count">
+						<span class="point_plus">+80</span>
+					</div>
+					<div class="point_record_memo">
+						信用卡付款8000元
+					</div>
+				</div>
+				<div class="point_record_contianer">
+					<div class="point_record_date">
+						2020/01/22
+					</div>
+					<div class="point_record_type">
+						扣除
+					</div>
+					<div class="point_record_count">
+						<span class="point_minus">-5</span>
+					</div>
+					<div class="point_record_memo">
+						01.22 英文課2小時
+					</div>
+				</div>
+				<div class="point_record_contianer">
+					<div class="point_record_date">
+						2020/01/22
+					</div>
+					<div class="point_record_type">
+						贈送
+					</div>
+					<div class="point_record_count">
+						<span class="point_plus">+10</span>
+					</div>
+					<div class="point_record_memo">
+						成立滿週年活動
+					</div>
+				</div>
+				<div class="point_record_contianer">
+					<div class="point_record_date">
+						2020/01/22
+					</div>
+					<div class="point_record_type">
+						退費
+					</div>
+					<div class="point_record_count">
+						<span class="point_minus">-50</span>
+					</div>
+					<div class="point_record_memo">
+						無
+					</div>
+				</div>
+				<div class="point_record_contianer">
+					<div class="point_record_date">
+						2020/01/22
+					</div>
+					<div class="point_record_type">
+						儲值
+					</div>
+					<div class="point_record_count">
+						<span class="point_plus">+80</span>
+					</div>
+					<div class="point_record_memo">
+						信用卡付款8000元
+					</div>
+				</div>
+				<div class="point_record_contianer">
+					<div class="point_record_date">
+						2020/01/22
+					</div>
+					<div class="point_record_type">
+						扣除
+					</div>
+					<div class="point_record_count">
+						<span class="point_minus">-5</span>
+					</div>
+					<div class="point_record_memo">
+						01.22 英文課2小時
+					</div>
+				</div>
+				<div class="point_record_contianer">
+					<div class="point_record_date">
+						2020/01/22
+					</div>
+					<div class="point_record_type">
+						贈送
+					</div>
+					<div class="point_record_count">
+						<span class="point_plus">+10</span>
+					</div>
+					<div class="point_record_memo">
+						成立滿週年活動
+					</div>
+				</div>
+				<div class="point_record_contianer">
+					<div class="point_record_date">
+						2020/01/22
+					</div>
+					<div class="point_record_type">
+						退費
+					</div>
+					<div class="point_record_count">
+						<span class="point_minus">-50</span>
+					</div>
+					<div class="point_record_memo">
+						無
+					</div>
+				</div>
+			</div>
+		</div><img alt="" class="member_pup_close" src="image/close_icon.png"></div>
+	</div>
+	<script>
+	      $(document).ready(function(){
+	      $(".member_point_record").click(function(){
+	          $(".member_pup_point_record").show();
+	      });
+	      $(".member_pup_close,.member_pup_bg").click(function(){
+	          $(".member_pup_point_record").hide();
+	      });
+	      }); 
+	</script>
+    <!-- ... pup視窗-點數紀錄end ... -->
+	<!-- ... pup視窗-儲值點數 ... -->
+	<div class="buy_point_pup" style="display:none;">
+		<div class="member_pup_bg"></div>
+		<div class="member_pup_container">
+		<div class="member_pup_title">
+			儲值點數
+		</div>
+		<div class="member_pup_main">
+			<div class="buy_point_main">
+				<div class="buy_item_container">
+					<div class="buy_item_product">
+						<div>
+							<div class="buy_item_product_pic"><img alt="" src="image/member_login_logo.png"></div>
+							<div class="buy_item_product_point">
+								80點
+							</div>
+						</div>
+					</div>
+					<div class="buy_item_infor_container">
+						<div class="buy_item_infor_title">
+							好師到學習點數80點
+						</div>
+						<div class="buy_item_infor_text">
+							適用於iTeacher、iTutor線上視訊課程
+						</div>
+						<div class="buy_item_infor_price">
+							<span class="price_discount">售價：<span>NT$3600元</span></span><span class="price_original">原價：NT$4000元</span>
+						</div>
+						<div class="buy_item_infor_count">
+							<div class="buy_item_infor_count_title">
+								數量：
+							</div>
+							<div class="buy_item_infor_input">
+								<div class="buy_amount_minus" role="button">-</div> <input class="buy_amount" type="text" value="1"> <div class="buy_amount_plus" role="button">+</div>
+							</div>
+							<div class="buy_item_infor_money">
+								小計：3600元
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="buy_item_container">
+					<div class="buy_item_product">
+						<div>
+							<div class="buy_item_product_pic"><img alt="" src="image/member_login_logo.png"></div>
+							<div class="buy_item_product_point">
+								120點
+							</div>
+						</div>
+					</div>
+					<div class="buy_item_infor_container">
+						<div class="buy_item_infor_title">
+							好師到學習點數120點
+						</div>
+						<div class="buy_item_infor_text">
+							適用於iTeacher、iTutor線上視訊課程
+						</div>
+						<div class="buy_item_infor_price">
+							<span class="price_discount">售價：<span>NT$5200元</span></span><span class="price_original">原價：NT$6000元</span>
+						</div>
+						<div class="buy_item_infor_count">
+							<div class="buy_item_infor_count_title">
+								數量：
+							</div>
+							<div class="buy_item_infor_input">
+								<div class="buy_amount_minus" role="button">-</div> <input class="buy_amount" type="text" value="1"> <div class="buy_amount_plus" role="button">+</div>
+							</div>
+							<div class="buy_item_infor_money">
+								小計：0元
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="buy_point_total_container">
+				<div class="buy_item_line"></div>
+				<div class="buy_item_discount_id">
+					<input placeholder="輸入折扣代碼" type="text">
+					<div class="buy_item_discount_btn">
+						使用折扣
+					</div>
+				</div>
+				<div class="buy_item_discount_tip">
+					折扣代碼有誤或已使用
+				</div>
+				<div class="buy_point_infor">
+					<span>點數合計：80點</span><span>點數金額：3600元</span><br/><span style="color:#0ba96c;">折扣金額：100元</span>
+				</div>
+				<div class="buy_point_total">
+					<span>應付金額：3500元</span>
+				</div><a href="member_buy_check_page.html" target="_blank">
+				<div class="buy_go_to_check">
+					確認結帳
+				</div></a>
+			</div>
+		</div><img alt="" class="member_pup_close" src="image/close_icon.png"></div>
+	</div>
+	<script>
+	      $(document).ready(function(){
+	      $(".member_point_deposit").click(function(){
+	          $(".buy_point_pup").show();
+	      });
+	      $(".member_pup_bg,.member_pup_close,.buy_go_to_check").click(function(){
+	          $(".buy_point_pup").hide();
+	      });
+	      }); 
+	</script>
+    <!-- ... pup視窗-儲值點數跳轉end ... -->
+	<!-- ... pup視窗-修改密碼-身分驗證 ... -->
+	<div class="pup_container_form reset_password_step_1" style="display:none;">
+		<div class="pup_form_bg"></div>
+		<div class="pup_form_container">
+			<div class="pup_form_title">
+				修改密碼
+			</div>
+			<div class="pup_form_scroll">
+				<div class="form_input_container">
+					<div class="form_input_title">
+						會員註冊手機號碼
+					</div>
+					<div class="form_input">
+						<input placeholder="" type="text">
+					</div>
+				</div>
+				<div class="pup_form_tip">
+					將傳送簡訊驗證碼確認會員身分
+				</div>
+			</div><img alt="" class="close_icon" src="image/close_icon_green.png">
+			<div class="pup_form_btn reset_password_step_1_send">
+				確認送出
+			</div>
+		</div>
+	</div>
+    <!-- ... pup視窗-修改密碼-身分驗證end ... -->
+	<!-- ... pup視窗-修改密碼 ... -->
+	<div class="pup_container_form reset_password_step_2" style="display:none;">
+		<div class="pup_form_bg"></div>
+		<div class="pup_form_container">
+			<div class="pup_form_title">
+				修改密碼
+			</div>
+			<div class="pup_form_scroll">
+				<div class="form_input_container">
+					<div class="form_input_title">
+						設定密碼
+					</div>
+					<div class="form_input">
+						<input placeholder="" type="text">
+					</div>
+				</div>
+				<div class="form_input_container">
+					<div class="form_input_title">
+						再次輸入確定密碼
+					</div>
+					<div class="form_input">
+						<input placeholder="" type="text">
+					</div>
+				</div>
+				<div class="form_input_container">
+					<div class="form_input_title">
+						簡訊驗證碼
+					</div>
+					<div class="form_input">
+						<input placeholder="" type="text">
+					</div>
+				</div>
+				<div class="pup_form_tip">
+					沒有收到簡訊？<a href="#">重新發送</a>
+				</div>
+			</div>
+            <img alt="" class="close_icon" src="image/close_icon_green.png">
+			<div class="pup_form_btn reset_password_step_2_send">
+				確認送出
+			</div>
+		</div>
+	</div>
+    <!-- ... pup視窗-修改密碼end ... -->
+	<!-- ... pup視窗-修改密碼成功 ... -->
+	<div class="pup_container_form reset_password_step_3" style="display:none;">
+		<div class="pup_form_bg"></div>
+		<div class="pup_form_container">
+			<div class="pup_form_text">
+				密碼修改成功
+			</div>
+			<div class="pup_form_text_tip">
+				請以新的密碼作會員登入
+			</div>
+			<div class="pup_form_btn reset_password_step_3_send">
+				關閉
+			</div>
+		</div>
+	</div>
+    <!-- ... pup視窗-設定密碼成功end ... -->
+    
+<!-- ... pup視窗-上傳頭像 ... -->
+<div class="pup_container_form pup_headpic" style="display:none;">
+<div class="pup_form_bg"></div>
+<div class="pup_form_container">
+<div class="pup_headpic_container"><div><img src="image/member_headpic_default.jpg" alt=""/></div></div>
+<div class="pup_headpic_upload"><input type="file">選擇圖片</div>
+<img alt="" class="close_icon" src="image/close_icon_green.png">
+<div class="pup_form_btn">確認上傳</div>
+</div>
+</div>
+	<script>
+	   $(document).ready(function(){
+	   $(".headpic_upload_open").click(function(){
+	       $(".pup_headpic").show();
+	   });
+	   $(".close_icon,.pup_form_bg").click(function(){
+	       $(".pup_headpic").hide();
+	   });
+	   }); 
+	</script>
+<!-- ... pup視窗-上傳頭像end ... -->
+    
+	<!-- ... pup視窗-上課詳細資訊 ... -->
+	<div class="member_pup_class_detail" style="display:none;">
+		<div class="member_pup_bg"></div>
+		<div class="member_pup_container">
+		<div class="member_pup_title">
+			上課詳細資訊
+		</div>
+		<div class="member_pup_main">
+			<div class="pup_class_detail_main">
+				<div class="pup_class_detail_text">
+					<div class="title">
+						課程名稱：
+					</div>
+					<div class="infor">
+						iTutor國一數學
+					</div>
+				</div>
+				<div class="pup_class_detail_text">
+					<div class="title">
+						上課時間：
+					</div>
+					<div class="infor">
+						2018/10/5&nbsp;16:00-17:00&nbsp;合計1小時
+					</div>
+				</div>
+				<div class="pup_class_detail_text">
+					<div class="title">
+						老師代碼：
+					</div>
+					<div class="infor">
+						小中&nbsp;/&nbsp;611-0101-556
+					</div>
+				</div>
+				<div class="pup_class_detail_text">
+					<div class="title">
+						本次扣點：
+					</div>
+					<div class="infor">
+						20點
+					</div>
+				</div>
+				<div class="pup_class_detail_text">
+					<div class="title">
+						上課回報：
+					</div>
+					<div class="infor">
+						上課內容為數學規律問題，作業範圍從第9單元第1題至第9單元第20題，學生在公式應用方面還需加強...。
+					</div>
+				</div>
+			</div>
+		</div><img alt="" class="member_pup_close" src="image/close_icon.png"></div>
+	</div>
+    <!-- ... pup視窗-上課詳細資訊end ... -->
+    
+<!-- ... pup視窗-給予評分 ... -->
+<div class="pup_container_report_star" style="display:none;">
+<div class="pup_form_bg"></div>
+<div class="pup_form_container">
+
+<div class="report_star_title">上課評分</div>
+<div class="report_star_container">
+<select>
+<option value="">選擇評分星數</option>
+<option value="">5顆星</option>
+<option value="">4顆星</option>
+<option value="">3顆星</option>
+<option value="">2顆星</option>
+<option value="">1顆星</option>
+<option value="">0顆星</option>
+</select>
+</div>
+<div class="report_class_tip">送出後將無法修改</div>
+
+<img alt="" class="close_icon" src="image/close_icon_green.png">
+<div class="pup_form_btn">送出評分</div>
+</div>
+</div>
+     <script>
+    $(document).ready(function(){
+      $(".calendar_class_star").click(function(){
+		  $(".pup_container_report_star").show();
+      });
+	  $(".close_icon,.pup_form_bg").click(function(){
+        $(".pup_container_report_star").hide();	
+      });
+    });
+    </script>
+<!-- ... pup視窗-給予評分end ... -->
+        
+<!-- ... pup視窗-軟體下載安裝 ... -->
+<div class="software_download_setting" style="display:none;">
+<div class="member_pup_bg"></div>
+<div class="member_pup_container"> 
+<div class="member_pup_title">軟體下載安裝</div>
+
+<div class="software_pup_choice_container">
+<div href="#soft1" class="software_pup_choice_btn active">Zoom下載安裝</div>
+<div href="#soft2" class="software_pup_choice_btn">iTeacher設定</div>
+<div href="#soft3" class="software_pup_choice_btn">itutor設定</div>
+</div> 
+
+<div class="software_detail_container">
+<div id="soft1">
+<div class="software_step_container">
+<div class="software_step_text">步驟1：前往中華電信Zoom(視訊軟體)網址下載</div>
+<div class="software_step_text"><a href="#" target="_blank">https://zoom.emome.net/zoom_download.php</a></div>
+</div>
+<div class="software_step_container">
+<div>步驟2：選擇您通訊載具系統版本點擊下載</div>
+<div class="software_step_pic"><img src="image/setting_pic/zoom_setting_1.jpg" alt=""/></div>
+<div class="software_step_tip" style="color:#ff0000;">使用手機、平板上課時會可能有文字過小無法清晰閱讀以及功能受限的狀況，建議使用桌上型電腦或筆記型電腦進行上課。</div>
+</div>
+<div class="software_step_infor">接續安裝步驟為window電腦版本，其他系統安裝檔案流程可依系統提示依序進行，如有疑問可網路搜尋相關教學或聯絡客服人員。</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟3：儲存zoom安裝檔</div>
+<div class="software_step_pic"><img src="image/setting_pic/zoom_setting_2.jpg" alt=""/></div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟4：安裝檔下載完成後，點擊安裝檔進行安裝</div>
+<div class="software_step_pic"><img src="image/setting_pic/zoom_setting_3.jpg" alt=""/></div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟5：點選「是」執行zoom安裝檔</div>
+<div class="software_step_pic"><img src="image/setting_pic/zoom_setting_4.jpg" alt=""/></div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟6：點選「是」允許zoom應用程式</div>
+<div class="software_step_pic"><img src="image/setting_pic/zoom_setting_5.jpg" alt=""/></div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟7：等候安裝進度完成</div>
+<div class="software_step_pic"><img src="image/setting_pic/zoom_setting_6.jpg" alt=""/></div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟8：安裝完成後可在工作列中滑鼠右鍵點擊zoom圖示，選擇釘選至工作列，以便下次開啟使用</div>
+<div class="software_step_pic"><img src="image/setting_pic/zoom_setting_7.jpg" alt=""/></div>
+</div>
+</div>
+<div id="soft2">
+<div class="software_step_infor">以下步驟為window電腦版本，其他系統之設定流程可依系統提示依序進行，如有疑問可網路搜尋相關教學或聯絡客服人員。</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟1：開啟zoom軟體</div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_1.jpg" alt=""/></div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_1-2.jpg" alt=""/></div>
+<div class="software_step_tip">如果找不到zoom圖示開啟軟體，可點擊window開始鍵，在搜尋欄輸入「zoom」進行搜尋</div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟2：點選「登入」</div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_2.jpg" alt=""/></div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟3：選擇登入方式進行登入</div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_3.jpg" alt=""/></div>
+<div class="software_step_tip">如果沒有任何帳號，可點選「免費註冊」依引導之步驟提示完成zoom帳號註冊</div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟4：登入後畫面，點擊「齒輪圖示」進行設定</div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_4.jpg" alt=""/></div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟5：開啟設定畫面，點選「分享畫面」，勾選「遠程控制時，允許對方控制所有的應用程序」</div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_5.jpg" alt=""/></div>
+<div class="software_step_tip">此為方便老師上課時進行滑鼠、鍵盤之操作，不會有影響電腦安全之疑慮。</div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟6：關閉設定畫面，回到主畫面，點選擊上角圖示開啟視窗，點選「登出」</div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_6.jpg" alt=""/></div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟7：點擊「返回」</div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_7.jpg" alt=""/></div>
+</div>
+<div class="software_step_infor">步驟至此上課前置設定已完成，後續為開始進行上課設定之步驟</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟8：點選「加入會議」</div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_8.jpg" alt=""/></div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟9：輸入老師提供的會議ID共十碼，並點擊「加入會議」</div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_9.jpg" alt=""/></div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟10：點選「加入並開啟視訊」</div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_10.png" alt=""/></div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟11：點選「使用電腦語音設備」</div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_11.png" alt=""/></div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟12：點選下方列表的「共享螢幕」</div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_12.jpg" alt=""/></div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟13：點選「螢幕」，勾選「共享電腦聲音」，點擊「共享螢幕」</div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_13.png" alt=""/></div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟14：將滑鼠移至頂端，出現工作列後，點選「遠端控制」並且點選滑鼠/鍵盤控制權給:「老師」</div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_14.png" alt=""/></div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟15：頂端工具列出現老師正在控制您的螢幕，即完成上課所需設定</div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_15.jpg" alt=""/></div>
+</div>
+</div>
+<div id="soft3">
+<div class="software_step_infor">以下步驟為window電腦版本，其他系統之設定流程可依系統提示依序進行，如有疑問可網路搜尋相關教學或聯絡客服人員。</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟1：開啟zoom軟體</div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_1.jpg" alt=""/></div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_1-2.jpg" alt=""/></div>
+<div class="software_step_tip">如果找不到zoom圖示開啟軟體，可點擊window開始鍵，在搜尋欄輸入「zoom」進行搜尋</div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟2：點選「加入會議」</div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_8.jpg" alt=""/></div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟3：輸入老師提供的會議ID共十碼，並點擊「加入會議」</div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_9.jpg" alt=""/></div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟4：點選「加入並開啟視訊」</div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_10.png" alt=""/></div>
+</div>
+<div class="software_step_container">
+<div class="software_step_text">步驟5：點選「使用電腦語音設備」,開始進行上課</div>
+<div class="software_step_pic"><img src="image/setting_pic/iteacher_setting_11.png" alt=""/></div>
+</div>
+</div>
+</div>
+
+<img alt="" class="member_pup_close" src="image/close_icon.png">	
+</div>
+    
+</div>
+	<script>
+	   $(document).ready(function(){
+	   $(".software_download_open").click(function(){
+	       $(".software_download_setting").show();
+	   });
+	   $(".member_pup_close,.member_pup_bg").click(function(){
+	       $(".software_download_setting").hide();
+	   });
+	   }); 
+	</script>
+<script type="text/javascript">
+	$(function(){
+		var softwareTab = 0;
+		var defaultLi = $('.software_pup_choice_container div').eq(softwareTab).addClass('active');
+		$(defaultLi.attr('href')).siblings().hide();		
+		$('.software_pup_choice_container div').click(function() {	
+			var $this = $(this),
+			clickTab = $this.attr('href');
+			$this.addClass('active').siblings('.active').removeClass('active');
+
+			$(clickTab).stop(false, true).show().siblings().hide();
+			$(clickTab .course_video_iframe).empty();
+            return false;
+		}).find('a').focus(function(){
+			this.blur();
+		});
+	});
+</script>
+<!-- ... pup視窗-軟體下載安裝end ... -->
+	<!-- ... pup視窗-服務條款 隱私權聲明 ... -->
+	<div class="notice_pup_rule sevice_rule" style="display:none;">
+		<div class="notice_pup_bg"></div>
+		<div class="notice_pup_container">
+		<div class="notice_pup_title">
+			服務條款
+		</div>
+		<div class="notice_pup_main"></div><img alt="" class="notice_pup_close" src="image/close_icon.png"></div>
+	</div>
+	<div class="notice_pup_rule right_to_privacy_rule" style="display:none;">
+		<div class="notice_pup_bg"></div>
+		<div class="notice_pup_container">
+		<div class="notice_pup_title">
+			隱私權聲明
+		</div>
+		<div class="notice_pup_main"></div><img alt="" class="notice_pup_close" src="image/close_icon.png"></div>
+	</div>
+	<script>
+	      $(document).ready(function(){
+	      $(".terms_of_service").click(function(){
+	          $(".sevice_rule").show();
+	      });
+	      $(".privacy_policy").click(function(){
+	          $(".right_to_privacy_rule").show();
+	      });
+	      $(".notice_pup_close,.notice_pup_bg").click(function(){
+	          $(".sevice_rule,.right_to_privacy_rule").hide();
+	      });
+	      }); 
+	</script>
+    <!-- ... pup視窗-服務條款 隱私權聲明end ... -->
+</body>
+</html>

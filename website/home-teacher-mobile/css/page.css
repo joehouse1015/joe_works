@@ -1,0 +1,844 @@
+@charset "utf-8";
+
+/* 頁面 */
+.page-main-area{width:1024px;height:auto;background-image:url(../image/window-bar-bg.jpg);background-color:#f5f5f5;background-repeat:repeat-x;background-position:top center;color:#4e4e4e;border-radius:20px;margin:0 auto;-webkit-box-shadow:0 2px 5px rgba(0,0,0,0.6);-moz-box-shadow:0 2px 5px rgba(0,0,0,0.6);box-shadow:0 2px 5px rgba(0,0,0,0.6);padding-bottom:40px;}
+.page-main-title{padding-top:18px;padding-left:20px;position:relative;}
+.page-main-title img{height:26px;}
+.page-title-bu{position:absolute;top:-48px;right:0px;cursor:pointer;}
+.page-main-container{width:100%;height:100%;min-height:600px;position:relative;padding-top:42px;}
+.page-title-window{width:400px;height:46px;background-color:#ffffff;position:absolute;top:6px;right:120px;}
+.page-title-window-close{width:46px;height:100%;background-color:#0063cc;font-size:22px;color:#ffffff;text-align:center;padding-top:8px;float:left;cursor:pointer;}
+.page-title-point{width:calc(100% - 46px);font-size:20px;float:left;padding-top:9px;padding-left:9px;}
+.page-title-point label{display:inline-block;width:50%;}
+.page-title-point input{transform:scale(1.3,1.3);}
+/* 頁面end */
+/* 頁面 RWD */
+@media (max-width:1050px){.page-main-area{width:96%;margin:0 2%;}}
+@media (max-width:900px){.page-main-container{padding-top:32px;}.page-title-window{height:42px;top:8px;}.page-title-window-close{font-size:21px;padding-top:6px;}
+.page-title-point{font-size:19px;}}
+@media (max-width:670px){
+.page-main-area{background-size:100% 66px;}
+.page-main-title{padding-top:16px;}
+.page-main-title img{height:24px;}
+.page-title-bu{width:103px;top:-44px;}
+.page-title-window-close {width:40px;font-size:20px;}
+.page-title-window{width:320px;}
+.page-title-point{width:calc(100% - 40px);font-size:18px;}
+.page-title-point input{transform:scale(1.2,1.2);position:relative;top:1px;}
+}
+@media (max-width:500px){.page-title-window-close {width:34px;font-size:19px;padding-top:8px;}.page-main-container{padding-top:27px;}.page-title-window{width:290px;}.page-title-point{padding-left:6px;}}
+@media (max-width:450px){
+.page-main-area{background-size:100% 62px;}
+.page-main-container{padding-top:22px;}
+.page-main-title{padding-top:16px;padding-left:12px;}
+.page-main-title img{height:22px;}
+.page-title-bu{width:97px;top:-42px;}
+.page-title-window{width:250px;height:38px;top:7px;right:100px;}
+.page-title-window-close {width:32px;font-size:18px;padding-top:7px;}
+.page-title-point{width:calc(100% - 32px);font-size:17px;padding-top:8px;}
+}
+@media (max-width:400px){.page-title-window{width:220px;}.page-title-window-close {width:30px;font-size:17px;}.page-title-point input{transform:scale(1.1,1.1);}.page-title-point {font-size:16px;padding-top:9px;padding-left:3px;}}
+/* 頁面 RWD end */
+
+/* 頁面-搜尋結果 */
+.page-search-point{font-size:19px;line-height:28px;letter-spacing:0.5px;padding:0 20px;position:relative;}
+.page-search-point > span{padding-left:10px;padding-right:22px;background-image:url(../image/search-point-line.jpg);background-repeat:no-repeat;background-position:center right;}
+.page-search-point > span:first-child{padding-left:0px;padding-right:22px;}
+.point-close{font-family:'arial';color:#ff0000;font-weight:bold;font-size:17px;margin-right:12px;cursor:pointer;}
+.page-search-point > span > .point-close:last-child{margin-right:0px;}
+.page-search-tip{color:#0063cc;text-decoration:underline;margin-left:22px;}
+.page-search-result{font-size:19px;line-height:28px;letter-spacing:0.5px;margin-top:6px;padding:0 20px;position:relative;}
+.page-search-result label{color:#0063cc;}
+.page-search-result input[type="checkbox"]{transform:scale(1.3,1.3);}
+.page-search-line-container{padding:0 20px;}
+.line-margin-1{margin-top:15px;margin-bottom:22px;}
+.page-search-line-1{width:100%;height:1px;background-color:#c4c4c4;position:relative;}
+.page-search-line-2{width:calc(50% - 39px);height:1px;background-color:#c9c9c9;position:relative;top:-7px;display:inline-block;}
+.page-number-container{width:100%;margin-top:40px;margin-bottom:10px;}
+.page-number{width:50px;font-size:18px;font-family:'arial';color:#4e4e4e;letter-spacing:1px;text-align:center;margin:0 10px;display:inline-block;}
+.page-search-select-area{position:absolute;width:82px;right:0px;top:-33px}
+.page-search-select{
+width:100%;height:34px;
+font-size:18px;color:#4c2400;
+background-image:url(../image/page-select-bg.jpg);
+background-repeat:no-repeat;
+background-position:top center;
+border:1px solid #FF8E00;
+padding-top:1px;padding-left:7px;
+cursor:pointer;
+}
+.page-search-list-area{width:100%;height:auto;max-height:905px;overflow:scroll;padding:0 20px;}
+.page-search-teacher-container{
+width:calc(50% - 10px);height:auto;
+line-height:24px;
+background: #ffffff;
+background: -moz-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+background: -webkit-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+background: linear-gradient(to bottom, #ffffff 0%,#f0f0f0 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f0f0f0',GradientType=0 );
+-webkit-box-shadow:0 2px 5px rgba(0,0,0,0.6);-moz-box-shadow:0 2px 5px rgba(0,0,0,0.6);box-shadow:0 2px 5px rgba(0,0,0,0.6);
+margin-bottom:20px;
+position:relative;
+float:left;
+}
+.page-search-teacher-container:nth-child(odd){margin-right:10px;}
+.page-search-teacher-container:nth-child(even){margin-left:10px;}
+.page-teacher-pic-container{width:160px;height:210px;overflow:hidden;float:left;position:relative;}
+.page-teacher-pic-container img{position:relative;left:-25px;}
+.page-search-add-bu{
+width:100%;height:40px;
+font-size:21px;letter-spacing:1px;text-shadow:0 1px 2px rgba(0,0,0,0.6);
+border-bottom:3px solid #003380;
+border-radius:0px;
+padding-top:6px;
+position:absolute;
+left:0px;bottom:0px;
+}
+.page-teacher-text-container{width:calc(100% - 160px);font-size:19px;float:left;}
+.page-teacher-text-container img{width:20px;margin-left:2px;}
+.page-teacher-text-container > div{padding-left:12px;padding-right:12px;padding-top:7px;}
+.page-teacher-text-top{border-bottom:1px solid #c9c9c9;padding-top:10px !important;padding-bottom:8px;margin-bottom:4px;}
+.t-name{font-size:27px;font-weight:bold;}
+.t-id{font-family:'arial';font-size:19px;float:right;position:relative;top:5px;}
+.t-bu{width:65%;position:absolute;left:163px;bottom:12px;}
+.t-bu i{margin-right:2px;}
+.t-day,.t-infor-page{color:#0063cc;text-decoration:underline;padding-top:2px;cursor:pointer;}
+.t-w50{width:50%;display:inline-block;}
+.t-day-window{width:100%;height:100%;background-color:#ffffff;border:3px solid #ffae00;position:absolute;top:0px;left:0px;padding:12px 10px;}
+.t-day-window-close{font-size:22px;font-family:'arial';color:#0063cc;font-weight:bold;cursor:pointer;position:absolute;top:-6px;right:0px;}
+.t-day-text{width:100%;font-size:19px;line-height:28px;position:relative;}
+.t-day-text span{font-size:17px;}
+/* 頁面-搜尋結果 end */
+/* 頁面-搜尋結果 RWD*/
+@media (max-width:900px){
+.page-search-point{font-size:18px;line-height:26px;}
+.page-search-result{font-size:18px;line-height:26px;}
+.page-teacher-pic-container{width:130px;}
+.page-teacher-pic-container img{left:-40px;}
+.page-teacher-text-container{width:calc(100% - 130px);font-size:18px;}
+.t-name{font-size:26px;}
+.t-id{font-size:18px;}
+.t-bu{left:133px;}
+}
+@media (max-width:800px){
+.page-search-point{font-size:19px;line-height:28px;}
+.page-search-result{font-size:19px;line-height:28px;}
+.line-margin-1{margin-top:40px;}
+.page-search-teacher-container{width:100%;float:left;}
+.page-search-teacher-container:nth-child(odd){margin-right:0px;}
+.page-search-teacher-container:nth-child(even){margin-left:0px;}
+.page-teacher-pic-container{width:210px;}
+.page-teacher-pic-container img{left:0px;}
+.page-teacher-text-container{width:calc(100% - 210px);font-size:20px;}
+.page-teacher-text-container > div{padding-left:20px;padding-right:20px;padding-top:8px;}
+.page-teacher-text-top{margin-bottom:4px;padding-top:10px !important;padding-bottom:10px;}
+.t-name{font-size:28px;}
+.t-id{font-size:19px;}
+.t-bu{width:75%;left:213px;bottom:16px;}
+}
+@media (max-width:670px){
+.page-search-point{font-size:18px;line-height:26px;}
+.page-search-point > span{padding-left:6px;padding-right:18px;}
+.page-search-point > span:first-child{padding-right:18px;}
+.page-search-tip-window{font-size:17px;line-height:28px;}
+.page-search-tip-window span{font-size:18px;}
+.page-search-result{font-size:18px;line-height:26px;}
+.page-search-result label{position:absolute;top:35px;right:16px;}
+.page-search-select-area{left:0px;}
+.page-teacher-pic-container{width:160px;height:200px;}
+.page-teacher-pic-container img{left:-25px;}
+.page-teacher-text-container{width:calc(100% - 160px);font-size:19px;}
+.page-teacher-text-container > div{padding-left:12px;padding-right:12px;padding-top:6px;}
+.page-teacher-text-top{margin-bottom:3px;padding-top:8px !important;padding-bottom:6px;}
+.t-name{font-size:27px;}
+.t-id{font-size:18px;}
+.t-bu{width:73%;left:163px;bottom:12px;}
+}
+@media (max-width:500px){
+.page-search-point{font-size:17px;line-height:25px;padding:0 15px;}
+.page-search-result{font-size:17px;line-height:25px;padding:0 15px;}
+.page-search-select{font-size:17px;}
+.page-search-list-area{padding:0 15px;}
+.page-teacher-pic-container{width:130px;height:190px;}
+.page-teacher-pic-container img{left:-40px;}
+.page-search-add-bu{font-size:20px;padding:7px;}
+.page-teacher-text-container{width:calc(100% - 130px);font-size:17px;line-height:22px;}
+.page-teacher-text-container > div{padding-top:5px;}
+.t-name{font-size:25px;font-weight:normal;}
+.t-id{font-size:17px;}
+.t-bu{width:70%;left:133px;}
+.t-day-text{font-size:18px;line-height:27px;}
+.t-day-text span{font-size:16px;}
+.t-day-window-close{font-size:21px;}
+}
+@media (max-width:400px){
+.page-search-point{font-size:16px;line-height:24px;}
+.page-search-result{font-size:16px;line-height:24px;}
+.page-teacher-pic-container{width:110px;height:180px;}
+.page-teacher-pic-container img{left:-50px;}
+.page-search-add-bu{height:36px;font-size:19px;padding:5px;}
+.page-teacher-text-container{width:calc(100% - 110px);font-size:16px;line-height:20px;}
+.page-teacher-text-container > div{padding-left:8px;padding-right:8px;padding-top:5px;}
+.t-name{font-size:23px;}
+.t-id{font-size:16px;}
+.t-bu{width:66%;left:110px;}
+.t-day-text{font-size:17px;line-height:26px;}
+.t-day-text span{font-size:15px;}
+.t-day-window-close{font-size:20px;}
+}
+/* 頁面-搜尋結果 RWD end*/
+
+/* 推薦教師 */
+.recom-input-area{width:100%;padding:0 25px;}
+.recom-input-area:after{content:" ";display:block;clear:both;}
+.recom-input-container{width:230px;float:left;}
+.recom-input-area > .recom-input-container:nth-child(2){margin-left:12px;}
+.recom-input{width:100%;height:40px;background-color:#f5f5f5;font-size:20px;color:#0063cc;letter-spacing:1px;border:1px solid #0063cc;padding-left:12px;}
+.recom-input-container > .select-arrow {background-image:url(../image/select-arrow-blue.png);background-repeat:no-repeat;background-position:94% 17px;}
+.recom-input-tip{font-size:20px;padding-top:15px;text-align:right;}
+.recom-teacher-warning{width:100%;text-align:center;padding-top:100px;padding-bottom:200px;}
+.recom-teacher-warning i{font-size:200px;}
+.recom-teacher-warning span{font-size:22px;}
+.recom-teacher-list{margin-top:20px;padding:0 20px;}
+.recom-teacher-infor-area{width:50%;float:left;margin-bottom:17px;}
+.recom-teacher-infor-area:nth-child(odd){padding-right:12px;}
+.recom-teacher-infor-area:nth-child(even){padding-left:12px;}
+.recom-teacher-infor{
+width:100%;height:auto;
+background: #ffffff;
+background: -moz-linear-gradient(top, #ffffff 0%, #e4e4e4 100%);
+background: -webkit-linear-gradient(top, #ffffff 0%,#e4e4e4 100%);
+background: linear-gradient(to bottom, #ffffff 0%,#e4e4e4 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e4e4e4',GradientType=0 );
+border-radius:10px;
+-webkit-box-shadow: 0 2px 7px rgba(0,0,0,0.35);
+-moz-box-shadow: 0 2px 7px rgba(0,0,0,0.35);
+box-shadow: 0 2px 7px rgba(0,0,0,0.35);
+}
+.recom-teacher-infor-pic{width:170px;height:214px;overflow:hidden;position:relative;float:left;}
+.recom-teacher-infor-pic img{width:100%;border-radius:10px;border:3px solid #ffae00;}
+.recom-teacher-infor-name{
+width:100%;height:42px;
+background-image:url(../image/t-name-bg.jpg);background-position:center center;background-repeat:repeat-x;
+position:absolute;bottom:0px;
+border-top-left-radius:0px;
+border-top-right-radius:0px;
+border-bottom-right-radius:10px;
+border-bottom-left-radius:10px;
+text-align:center;font-size:23px;color:#380d00;font-weight:bold;
+padding-top:6px;
+}
+.recom-teacher-infor-text{width:calc(100% - 170px);float:left;font-size:22px;padding:10px 17px;padding-bottom:0px;position:relative;}
+.recom-teacher-infor-text div{margin-bottom:5px;}
+.recom-teacher-infor-text .star{width:26px;margin-right:3px;}
+.recom-teacher-day{color:#0063cc;text-decoration:underline;}
+.recom-teacher-day span{cursor:pointer;}
+
+.recom-teacher-day-window{width:96%;height:96%;background-color:#ffffff;font-size:19px;line-height:28px;border-radius:10px;border:3px solid #ffae00;padding:10px;position:absolute;top:6px;left:2%;}
+.recom-teacher-day-window span{font-size:17px;}
+.recom-teacher-day-window-close{font-family:'arial';font-size:24px !important;font-weight:bold;color:#0063cc;position:absolute;top:-5px;right:0px;cursor:pointer;}
+
+.bu-more-infor-container{width:100%;text-align:right;margin-top:9px;}
+.bu-more-infor{width:120px;height:45px;font-size:21px;letter-spacing:1px;border-bottom:3px solid #003380;text-shadow: 0 2px 2px rgba(0,0,0,0.6);padding-top:6px;display:inline-block;}
+.recom-medal{position:absolute;top:-3px;right:-5px;}
+.recom-teacher-list:after,.recom-teacher-infor:after{display:block;content:" ";clear:both;}
+/* 推薦教師 end */
+/* 推薦教師 RWD */
+@media (max-width:925px){.recom-teacher-infor-text .star{margin-right:1px;}}
+@media (max-width:915px){
+.recom-teacher-infor-pic{width:160px;}
+.recom-teacher-infor-text{width:calc(100% - 160px);font-size:21px;padding:10px 10px;padding-bottom:0px;}
+.recom-teacher-infor-text div{margin-bottom:6px;}
+.bu-more-infor-container{margin-top:18px;margin-bottom:0px !important;}
+.recom-teacher-infor-text .star{width:23px;}
+.recom-medal{right:-15px;}
+
+.recom-teacher-day-window{font-size:18px;line-height:25px;}
+.recom-teacher-day-window span{font-size:16px;}
+.recom-teacher-day-window-close{font-size:23px !important;}
+}
+@media (max-width:850px){.recom-input-tip{text-align:left;padding-top:50px;}}
+@media (max-width:815px){
+.recom-teacher-infor-area{width:100%;}
+.recom-teacher-infor-area:nth-child(odd){padding-right:0px;}
+.recom-teacher-infor-area:nth-child(even){padding-left:0px;}
+.recom-teacher-infor-pic{width:210px;}
+.recom-teacher-infor-name{border-bottom-right-radius:0px;border-bottom-left-radius:0px;}
+.recom-teacher-infor-text{width:calc(100% - 210px);font-size:23px;padding:10px 17px;padding-bottom:0px;}
+.recom-teacher-infor-text div{margin-bottom:5px;}
+.bu-more-infor-container{margin-top:8px;margin-bottom:0px !important;}
+.recom-teacher-infor-text .star{width:26px;margin-right:3px;}
+.recom-medal{right:-5px;}
+
+.recom-teacher-day-window{font-size:19px;line-height:28px;}
+.recom-teacher-day-window span{font-size:17px;}
+.recom-teacher-day-window-close{font-size:24px !important;}
+}
+@media (max-width:670px){
+.recom-input{height:36px;font-size:19px;padding-left:10px;}
+.recom-input-container > .select-arrow {background-size:15px auto;background-position:94% 14px;}
+.recom-input-area{margin-top:10px;padding:0 15px;}
+.recom-input-tip{font-size:19px;}
+.recom-teacher-warning{padding-top:60px;padding-bottom:120px;}
+.recom-teacher-warning span{font-size:20px;}
+}
+@media (max-width:600px){
+.recom-teacher-infor-pic{width:180px;}
+.recom-teacher-infor-name{font-weight:normal;}
+.recom-teacher-infor-text{width:calc(100% - 180px);font-size:22px;padding:10px 10px;padding-bottom:0px;}
+.recom-teacher-infor-text{font-size:20px;}
+.bu-more-infor-container{margin-top:18px;}
+}
+@media (max-width:550px){
+.recom-input-container{width:170px;}
+.recom-input{height:34px;font-size:18px;letter-spacing:0px;}
+.recom-input-tip{font-size:18px;}
+.recom-teacher-warning{padding-top:40px;padding-bottom:100px;}
+.recom-teacher-warning span{font-size:18px;}
+}
+@media (max-width:500px){.recom-teacher-container{padding-top:20px;}.recom-teacher-list{margin-top:15px;padding:0 15px;}}
+@media (max-width:465px){
+.recom-teacher-infor-pic{width:160px;height:214px;}
+.recom-teacher-infor-name{border-bottom-right-radius:10px;border-bottom-left-radius:10px;}
+.recom-teacher-infor-text{width:calc(100% - 160px);font-size:21px;padding:10px 10px;padding-bottom:0px;}
+.bu-more-infor-container{margin-bottom:0px !important;}
+.recom-teacher-infor-text .star{width:23px;margin-right:2px;}
+}
+@media (max-width:450px){
+.recom-teacher-day-window{font-size:18px;line-height:25px;}
+.recom-teacher-day-window span{font-size:16px;}
+.recom-teacher-day-window-close{font-size:22px !important;}
+}
+@media (max-width:420px){
+.recom-teacher-warning i{font-size:160px;}
+.recom-teacher-warning span{font-size:18px;}
+.recom-teacher-infor-pic{width:150px;height:auto;overflow:visible;}
+.recom-teacher-infor-text{width:calc(100% - 150px);font-size:18px;padding:10px 8px;padding-bottom:0px;}
+.recom-teacher-infor-text div{margin-bottom:4px;}
+.recom-teacher-infor-text .star{width:22px;margin-right:1px;}
+.recom-medal{width:40px;}
+.bu-more-infor-container{margin-top:10px;margin-bottom:9px !important;}
+.bu-more-infor{width:102px;height:38px;font-size:19px;padding-top:5px;}
+.recom-teacher-infor-name{font-size:21px;bottom:-10px;}
+.recom-medal{right:-6px;}
+.recom-title{font-size:29px;}
+.recom-title span{font-size:22px;top:4px;}
+
+.recom-teacher-day-window{width:100%;height:100%;font-size:17px;line-height:22px;padding:5px;top:0px;left:0px;}
+.recom-teacher-day-window span{font-size:15px;}
+.recom-teacher-day-window-close{font-size:21px !important;top:-1px;right:2px;}
+}
+@media (max-width:400px){
+.recom-title{font-size:26px;}
+.recom-title span{font-size:20px;}
+.recom-input-container{width:145px;}
+.recom-input-container > .select-arrow {background-size:12px auto;}
+.recom-input{font-size:17px;padding-left:8px;}
+.recom-input-tip{font-size:17px;}
+}
+@media (max-width:390px){
+.recom-teacher-infor-pic{width:130px;height:152px;}
+.recom-teacher-infor-text{width:calc(100% - 135px);}
+.recom-teacher-infor-text .star{width:20px;margin-right:0px;}
+.recom-teacher-infor-name{bottom:-26px;}
+.recom-teacher-infor-text .star{width:20px;}
+.bu-more-infor-container{margin-bottom:8px !important;}
+}
+/* 推薦教師 RWD end*/
+
+/* 教師資訊 */
+.teach-infor-container{padding:0 20px;}
+.teach-infor-area-1{width:100%;}
+.teach-infor-area-1:after{content:" ";display:block;clear:both;}
+.teach-infor-pic{width:210px;overflow:hidden;float:left;}
+.teach-infor-text-window{width:calc(100% - 230px);background-image:url(../image/window-bar-bg.jpg);background-color:#f5f5f5;background-repeat:repeat-x;background-position:top center;border-top-left-radius:10px;border-top-right-radius:10px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;margin-left:20px;float:left;position:relative;}
+.teach-infor-name{width:100%;font-size:28px;color:#4c2400;font-weight:bold;padding-right:32px;position:absolute;top:10px;left:16px;}
+.teach-infor-name span{font-family:'arial',\5FAE\8EDF\6B63\9ED1\9AD4,\65B0\7D30\660E\9AD4;font-size:23px;font-weight:normal;float:right;position:relative;top:10px;}
+.teach-infor-text-container{font-size:21px;height:auto;border:1px solid #9b9b9b;border-top:0px;margin-top:58px;}
+.teach-infor-text-container div{padding:8px 10px;border-bottom:1px dashed #c9c9c9;}
+.teach-infor-text-container div:last-child{border-bottom:0px dashed #c9c9c9;}
+.teach-infor-text-container img{width:22px;margin-right:2px;}
+.teach-infor-text-w50{width:50%;display:inline-block;}
+.teach-introduce-text{font-size:18px;}
+.teach-infor-area-2{width:100%;height:auto;border:1px solid #9b9b9b;margin-top:20px;}
+.teach-infor-area-2 > div{font-size:21px;border-bottom:1px dashed #c9c9c9;padding:8px 10px;}
+.teach-infor-area-2 > div:last-child{border-bottom:0px dashed #c9c9c9;}
+.teach-infor-area-2 > div > div{font-size:19px;}
+.teach-infor-area-2 > div > div > span{font-size:17px;}
+.teach-infor-bookmark{margin-top:20px;position:relative;}
+.teach-infor-bookmark-title{width:150px;background-color:#0063cc;font-size:22px;text-align:center;color:#ffffff;padding:5px 0px;position:absolute;top:0px;left:0px;}
+.teach-infor-bookmark ul{text-align:right;}
+.teach-infor-bookmark li{width:100px;background-color:#c5c5c5;padding:6px 0px;border-top-left-radius:10px;border-top-right-radius:10px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;text-align:center;color:#ffffff;font-size:21px;display:inline-block;cursor:pointer;}
+.teach-infor-bookmark li.active{background-color:#0063cc;color:#ffffff;}
+.teach-infor-box{font-size:20px;border:1px solid #9b9b9b;padding-bottom:2px;margin-top:0px;}
+.teach-infor-box-text{border-bottom:1px dashed #c9c9c9;padding:8px 10px;}
+.teach-infor-box-text:last-child{border-bottom:0px dashed #c9c9c9;}
+.teach-infor-video{height:504px;padding:21px;}
+.teach-infor-video-title{width:140px !important;}
+/* 教師資訊 end*/
+/* 教師資訊 RWD */
+@media (max-width:915px){
+.teach-infor-text-window{background-size:100% 66px;}
+.teach-infor-name{font-size:27px;}
+.teach-infor-name span{font-size:22px;}
+.teach-infor-text-container{font-size:20px;margin-top:56px;}
+.teach-infor-area-2 > div{font-size:20px;}
+.teach-infor-area-2 > div > div{font-size:18px;}
+.teach-infor-area-2 > div > div > span{font-size:16px;}
+.teach-infor-bookmark-title{width:140px;font-size:21px;padding:6px 0px;}
+.teach-infor-bookmark li{width:90px;font-size:20px;}
+.teach-infor-box{font-size:19px;}
+.teach-infor-video-title{width:130px !important;}
+}
+@media (max-width:850px){.teach-infor-video{height:455px;}}
+@media (max-width:800px){.teach-infor-video{height:428px;}}
+@media (max-width:750px){.teach-infor-video{height:402px;}}
+@media (max-width:700px){.teach-infor-video{height:375px;}}
+@media (max-width:670px){
+.teach-infor-container {padding:0 15px;}
+.teach-infor-pic{width:190px;}
+.teach-infor-pic img{position:relative;left:-10px;}
+.teach-infor-text-window{width:calc(100% - 205px);background-size:100% 62px;margin-left:15px;}
+.teach-infor-name{font-size:24px;font-weight:normal;left:10px;padding-right:22px;}
+.teach-infor-name span{font-size:21px;}
+.teach-infor-text-container{font-size:19px;margin-top:53px;}
+.teach-infor-text-container div{padding:8px 8px;}
+.teach-infor-text-container img{width:21px;}
+.teach-introduce-text{font-size:17px;}
+.teach-infor-area-2{margin-top:15px;}
+.teach-infor-area-2 > div{font-size:19px;}
+.teach-infor-area-2 > div > div{font-size:18px;line-height:20px;}
+.teach-infor-bookmark{margin-top:15px;}
+.teach-infor-bookmark-title{width:130px;font-size:20px;top:-1px;}
+.teach-infor-bookmark li{width:70px;font-size:19px;}
+.teach-infor-box{font-size:18px;}
+.teach-infor-video-title{width:120px !important;}
+.teach-infor-video{padding:15px;}
+}
+@media (max-width:650px){.teach-infor-video{height:342px;padding:10px;}}
+@media (max-width:600px){.teach-infor-video{height:318px;}}
+@media (max-width:550px){
+.teach-infor-pic{width:160px;}
+.teach-infor-pic img{left:-25px;}
+.teach-infor-text-window{width:calc(100% - 175px);background-size:100% 58px;}
+.teach-infor-name{font-size:23px;font-weight:normal;top:9px;}
+.teach-infor-name span{font-size:19px;}
+.teach-infor-text-container{font-size:18px;margin-top:50px;}
+.teach-infor-bookmark-title{width:120px;font-size:19px;}
+.teach-infor-bookmark li{width:60px;font-size:18px;}
+.teach-infor-box{font-size:17px;}
+.teach-infor-video-title{width:110px !important;}
+.teach-infor-video{height:290px;}
+}
+@media (max-width:500px){.teach-infor-video{height:262px;}}
+@media (max-width:450px){
+.teach-infor-pic{width:140px;}
+.teach-infor-pic img{left:-35px;}
+.teach-infor-text-window{width:calc(100% - 150px);margin-left:10px;}
+.teach-infor-name{font-size:22px;}
+.teach-infor-name span{font-size:18px;}
+.teach-infor-text-container{font-size:17px;}
+.teach-infor-text-container img{width:19px;}
+.teach-introduce-text{font-size:16px;}
+.teach-infor-area-2{margin-top:10px;}
+.teach-infor-bookmark{margin-top:10px;}
+.teach-infor-bookmark-title{font-size:18px;}
+.teach-infor-bookmark li{width:55px;font-size:17px;}
+.teach-infor-box{font-size:16px;}
+.teach-infor-video-title{width:100px !important;}
+.teach-infor-video{height:236px;}
+}
+@media (max-width:400px){
+.teach-infor-pic{width:210px;}
+.teach-infor-pic img{left:0px;}
+.teach-infor-text-window{width:100%;margin-top:5px;margin-left:0px;}
+.teach-infor-name{font-size:23px;}	
+.teach-infor-video{height:209px;}
+}
+@media (max-width:350px){.teach-infor-video{height:182px;}}
+/* 教師資訊 RWD end*/
+
+/* 教師影音 */
+.teacher-video-area{width:100%;height:auto;margin-top:20px;padding:0px 10px;}
+.teacher-video-area:after{content:" ";display:block;clear:both;}
+.teacher-video-container{width:33.333%;float:left;padding:0px 11px;margin-bottom:21px;font-size:18px;}
+.teacher-video-container img{max-width:100%;cursor:pointer;}
+.teacher-video-text{margin-top:2px;}
+.teacher-video-tname a{float:right;color:#0063cc;}
+/* 教師影音-彈跳視窗 */
+.pup-video-window-area{
+width:950px;height:auto;
+background-color:#000000;
+color:#4e4e4e;
+border-radius:20px;
+position:fixed;top:20px;left:50%;z-index:30;
+margin-left:-475px;
+}
+.pup-video-window{
+    width:100%;
+    max-width:1000px;
+    height:639px;
+    border-radius:20px;
+    background-color:#ffffff;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+	padding-top:65px;
+    z-index: 124;
+}
+.video-window-text{font-size:26px;color:#808080;position:absolute;top:15px;left:20px;}
+.video-window-bu{width:140px;height:42px;font-size:20px;color:#808080;letter-spacing:0.5px;text-align:center;border:2px solid #808080;border-radius:30px;padding-top:5px;position:absolute;top:11px;right:20px;cursor:pointer;}
+.video-window-bu i{font-size:24px;position:relative;top:1px;margin-right:1px;}
+.right-margin{right:170px;}
+.pup-video-window iframe{width:100%;height:calc(100% - 40px);}
+/* 教師影音-彈跳視窗 end */
+/* 教師影音 end */
+/* 教師影音 RWD*/
+@media (max-width:1024px){
+.pup-video-window{height:646px;}
+.pup-video-window-area{width:94%;left:0%;margin-left:0px;margin:0 3%;}
+}
+@media (max-width:950px){.pup-video-window{height:607px;}}
+@media (max-width:915px){
+.video-window-text{font-size:25px;}
+.video-window-bu{width:130px;height:39px;font-size:19px;}
+.right-margin{right:160px;}
+.video-window-bu i{font-size:23px;}
+}
+@media (max-width:900px){.pup-video-window{height:580px;}}
+@media (max-width:850px){.pup-video-window{height:554px;}.teacher-video-container{font-size:17px;}}
+@media (max-width:800px){.pup-video-window{height:528px;}.teacher-video-container{width:50%;font-size:18px;}}
+@media (max-width:750px){.pup-video-window{height:502px;}}
+@media (max-width:700px){.pup-video-window{height:460px;}}
+@media (max-width:670px){
+.teacher-video-container{font-size:17px;}
+.pup-video-window-area{width:96%;margin:0 2%;}
+.pup-video-window{padding-top:60px;}
+.video-window-text{font-size:23px;top:14px;}
+.video-window-bu{width:124px;height:36px;font-size:18px;}
+.right-margin{right:150px;}
+.video-window-bu i{font-size:22px;}
+}
+@media (max-width:650px){.pup-video-window{height:456px;}}
+@media (max-width:600px){.pup-video-window{height:429px;}}
+@media (max-width:550px){
+.pup-video-window{height:402px;}
+.video-window-text{font-size:22px;left:10px;}
+.video-window-bu{width:116px;height:34px;font-size:17px;padding-top:4px;right:10px;}
+.right-margin{right:130px;}
+.video-window-bu i{font-size:21px;}
+}
+@media (max-width:500px){.pup-video-window{height:375px;}.teacher-video-container{width:100%;}}
+@media (max-width:450px){
+.pup-video-window{height:338px;padding-top:55px;}
+.video-window-text{font-size:20px;}
+.video-window-bu{width:110px;height:34px;font-size:16px;padding-top:4px;}
+.right-margin{right:125px;}
+.video-window-bu i{font-size:20px;}
+}
+@media (max-width:400px){.pup-video-window{height:311px;}}
+/* 教師影音 RWD end */
+
+/* 家長見證 */
+.member-prove-area{width:100%;margin-top:20px;padding:0 20px;}
+.member-prove-container{width:100%;height:auto;color:#4e4e4e;border:2px solid #dedede;border-radius:10px;padding:15px;-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.3);-moz-box-shadow:0 2px 4px rgba(0,0,0,0.3);box-shadow:0 2px 4px rgba(0,0,0,0.3);margin-bottom:20px;}
+.member-prove-container img{border-radius:10px;}
+.member-prove-infor{margin-top:30px;}
+.member-prove-infor:after{display:block;content:" ";clear:both;}
+.member-prove-pic{width:280px;float:left;margin-right:10px;}
+.member-prove-text-area{padding-top:12px;}
+.member-prove-name{font-size:27px;font-weight:bold;}
+.member-prove-date{font-size:20px;font-family:'Arial';float:right;position:relative;top:12px;}
+.member-prove-text{font-size:21px;margin-top:7px;letter-spacing:0.5px;line-height:30px;}
+.bu-see-all-container{width:100%;text-align:right;margin-top:20px;}
+.bu-see-all{width:120px;height:45px;font-size:21px;letter-spacing:1px;border-bottom:3px solid #003380;text-shadow: 0 2px 2px rgba(0,0,0,0.6);padding-top:6px;display:inline-block;}
+/* 家長見證 end */
+/* 家長見證 RWD */
+@media (max-width:897px){.bu-see-all-container{margin-top:12px;}}
+@media (max-width:835px){.member-prove-text-area{padding-top:0px;}.member-prove-pic{width:40%;}}
+@media (max-width:780px){.member-prove-name{font-size:25px;}.member-prove-date{font-size:19px;}.member-prove-text{font-size:20px;line-height:28px;}}
+@media (max-width:670px){
+.member-prove-container{margin-bottom:15px;}
+.member-prove-pic{width:220px;}
+.member-prove-name{font-size:23px;}
+.member-prove-date{font-size:18px;display:block;float:none;top:5px;}
+.member-prove-text{font-size:19px;line-height:27px;}.member-prove-area{padding:0 15px;}
+.bu-see-all{width:115px;height:43px;font-size:20px;}
+}
+@media (max-width:600px){.member-prove-name,.member-prove-date{font-weight:normal;}}
+@media (max-width:500px){
+.member-prove-pic{width:175px;margin-right:7px;}
+.member-prove-name{font-size:21px;}
+.member-prove-date{font-size:17px;}
+.member-prove-text{font-size:18px;line-height:26px;}
+.member-prove-container{padding-top:15px;}
+.member-prove-infor{margin-top:20px;}
+.member-prove-area {padding-bottom:20px;}
+}
+@media (max-width:400px){
+.member-prove-container{padding:10px;}
+.member-prove-infor{margin-top:20px;}
+.member-prove-pic{width:90%;float:none;display:block;}
+.member-prove-date{display:inline;float:right;}
+.member-prove-text-area{padding-top:5px;}
+.member-prove-text{margin-top:5px;}
+}
+/* 家長見證 RWD end*/
+
+/* 彈跳視窗-家長見證 */
+.prove-all{padding:0 25px;max-height:380px;overflow:scroll;}
+.p-headpic{width:171px;float:left;margin-right:16px;}
+.prove-article{position:absolute;top:156px;left:31px;padding-top:20px;padding-left:20px;}
+.prove-text{color:#4e4e4e;font-size:19px;line-height:28px;letter-spacing:0.5px;padding-right:20px;}
+.prove-text-p1{font-size:24px;margin-top:15px;text-align:right;}
+.prove-text-p2{margin-top:-20px;font-size:18px;text-align:right;padding-right:3px;}
+.prove-text-p3{margin-top:-14px;margin-bottom:10px;}
+.prove-text iframe{height:420px;}
+/* 彈跳視窗-家長見證 end */
+/* 彈跳視窗-家長見證 RWD */
+@media (max-width:750px){.prove-text iframe{height:380px;}}
+@media (max-width:700px){.prove-text iframe{height:350px;}}
+@media (max-width:670px){
+.prove-all{padding:0 15px;}
+.p-headpic{width:165px;margin-right:12px;}
+.prove-text{font-size:18px;line-height:25px;}
+.prove-text-p1{font-size:23px;margin-top:15px;}
+.prove-text-p2{font-size:17px;}
+}
+@media (max-width:650px){.prove-text iframe{height:325px;}}
+@media (max-width:600px){.prove-text iframe{height:296px;}}
+@media (max-width:550px){
+.p-headpic{width:155px;}
+.prove-text{font-size:17px;line-height:24px;}
+.prove-text-p1{font-size:22px;}
+.prove-text-p2{font-size:16px;}
+.prove-text iframe{height:270px;}
+}
+@media (max-width:500px){.prove-text iframe{height:242px;}}
+@media (max-width:450px){.prove-text iframe{height:215px;}}
+@media (max-width:400px){
+.p-headpic{width:130px;}
+.prove-text{font-size:16px;line-height:23px;}
+.prove-text-p1{font-size:21px;}
+.prove-text-p2{font-size:15px;}
+.prove-text iframe{height:190px;}
+}
+@media (max-width:350px){.prove-text iframe{height:162px;}}
+/* 彈跳視窗-家長見證 RWD end */
+
+/* 網站介紹 */
+.page-about-container{padding:0 20px;}
+.introd-title{font-size:26px;font-weight:bold;margin-top:30px;}
+.introd-title:first-child{margin-top:0px;}
+.introd-title i{margin-right:2px;}
+.introd-title span{font-size:20px;font-weight:normal;color:#0063cc;margin-left:16px;}
+.introd-text{font-size:19px;margin-top:9px;letter-spacing:1px;line-height:31px;}
+.introd-text span{color:#0063cc;}
+.introd-tip{font-size:21px;font-weight:bold;margin-top:50px;letter-spacing:1px;}
+.introd-tip div{font-size:23px;color:#0063cc;margin-top:5px;text-decoration:underline;cursor:pointer;}
+/* 網站介紹 end*/
+/* 網站介紹 RWD */
+@media (max-width:915px){
+.introd-title{font-size:25px;}
+.introd-title span{font-size:19px;}
+.introd-text{font-size:18px;line-height:29px;}
+.introd-tip{font-size:20px;}
+.introd-tip div{font-size:22px;}
+}
+@media (max-width:670px){
+.page-about-container{padding:0 15px;}
+.introd-title{font-size:24px;margin-top:20px;}
+.introd-title span{font-size:18px;}
+.introd-text{font-size:17px;line-height:27px;margin-top:5px;}
+.introd-tip{font-size:19px;margin-top:40px;}
+.introd-tip div{font-size:21px;}
+}
+@media (max-width:550px){
+.introd-title{font-size:23px;margin-top:15px;}
+.introd-title span{font-size:17px;}
+.introd-text{font-size:16px;line-height:25px;}
+.introd-tip{font-size:18px;margin-top:30px;}
+.introd-tip div{font-size:20px;}
+}
+@media (max-width:400px){
+.introd-title{font-size:22px;margin-top:10px;}
+.introd-title span{font-size:16px;}
+.introd-text{font-size:15px;line-height:23px;}
+.introd-tip{font-size:17px;margin-top:20px;}
+.introd-tip div{font-size:19px;}
+}
+/* 網站介紹 RWD end*/
+
+/* 常見問題 */
+.page-qa-container{padding:0 20px;}
+.qa-number{
+width:64px;
+text-align:center;color:#4c2400;font-family:'arial';font-weight:bold;font-size:26px;padding:10px 0px;
+background: #ffb827;
+background: -moz-linear-gradient(top, #ffb827 0%, #ff880c 100%);
+background: -webkit-linear-gradient(top, #ffb827 0%,#ff880c 100%);
+background: linear-gradient(to bottom, #ffb827 0%,#ff880c 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb827', endColorstr='#ff880c',GradientType=0 );
+}
+.qa-question{font-size:20px;color:#4e4e4e;padding:10px 20px;border:1px solid #cccccc;border-left:0px;border-right:0px;}
+.qa-answer-bu{
+width:73px;text-align:center;color:#ffffff;font-size:21px;padding:10px 0px;
+background: #0086f4;
+background: -moz-linear-gradient(top, #0086f4 0%, #004db3 100%);
+background: -webkit-linear-gradient(top, #0086f4 0%,#004db3 100%);
+background: linear-gradient(to bottom, #0086f4 0%,#004db3 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0086f4', endColorstr='#004db3',GradientType=0 );
+cursor:pointer;
+}
+.qa-answer{font-size:20px;padding-top:5px;}
+.qa-margin{margin-bottom:30px;}
+.qa-tip{font-size:22px;font-weight:bold;color:#4e4e4e;letter-spacing:0.5px;}
+.qa-tip span{color:#0063cc;text-decoration:underline;cursor:pointer;}
+/* 常見問題 end */
+/* 常見問題 RWD */
+@media (max-width:915px){
+.page-qa-container > table:first-child{margin-top:5px;}
+.qa-number{font-size:25px;}
+.qa-question{font-size:19px;}
+.qa-answer-bu{font-size:20px;}
+.qa-answer{font-size:19px;}
+.qa-tip{font-size:21px;}
+}
+@media (max-width:900px){
+.page-qa-container > table:first-child{margin-top:5px;}
+}
+@media (max-width:670px){
+.page-qa-container{padding:0 15px;}
+.qa-number{width:60px;font-size:24px;padding:8px 0px;}
+.qa-question{font-size:18px;padding:8px 12px;}
+.qa-answer-bu{width:60px;font-size:19px;padding:8px 0px;}
+.qa-answer{font-size:18px;}
+.qa-tip{font-size:20px;}
+.qa-margin{margin-bottom:25px;}
+}
+@media (max-width:550px){
+.qa-number{width:58px;font-size:23px;}
+.qa-question{font-size:17px;padding:8px 8px;}
+.qa-answer-bu{width:58px;font-size:18px;}
+.qa-answer{font-size:17px;}
+.qa-tip{font-size:19px;}
+.qa-margin{margin-bottom:20px;}
+}
+@media (max-width:400px){
+.qa-number{width:55px;font-size:22px;}
+.qa-question{font-size:16px;}
+.qa-answer-bu{width:55px;font-size:17px;}
+.qa-answer{font-size:16px;}
+.qa-tip{font-size:18px;}
+.qa-margin{margin-bottom:15px;}
+}
+/* 常見問題 RWD end */
+
+/* 教材推薦 */
+.page-learn-tool-container{padding:0 16px;}
+.learing-tool-container{width:25%;padding:0px 12px;float:left;}
+.learing-tool-container img{max-width:100%;height:auto;}
+.learing-tool-area{height:320px;box-shadow: 0 2px 5px rgba(0,0,0,0.4);border-bottom-right-radius:10px;border-bottom-left-radius:10px;margin-bottom:38px;cursor:pointer;}
+.learing-tool-title{font-size:23px;color:#4e4e4e;font-weight:bold;padding:0px 7px;padding-top:5px;}
+.learing-tool-name{font-size:19px;font-weight:normal;}
+/* 教材推薦 end */
+/* 教材推薦 RWD */
+@media (max-width:1024px){.learing-tool-area{height:310px;}}
+@media (max-width:915px){.learing-tool-area{height:290px;}}
+@media (max-width:850px){.learing-tool-container{width:33.333%;}.learing-tool-area{height:325px;}}
+@media (max-width:760px){.learing-tool-area{height:315px;}}
+@media (max-width:730px){.learing-tool-area{height:305px;}}
+@media (max-width:700px){.learing-tool-area{height:295px;}}
+@media (max-width:670px){.page-learn-tool-container{padding:0 8px;}.learing-tool-area{height:290px;margin-bottom:30px;}.learing-tool-container{padding:0px 8px;}.learing-tool-title{font-size:22px;}.learing-tool-name{font-size:18px;margin-top:2px;}}
+@media (max-width:630px){.learing-tool-area{height:278px;}}
+@media (max-width:600px){.learing-tool-area{height:265px;}}
+@media (max-width:550px){.learing-tool-area{height:315px;}.learing-tool-container{width:50%;padding:0px 16px;}}
+@media (max-width:500px){.learing-tool-area{height:305px;}.learing-tool-container{padding:0px 12px;}}
+@media (max-width:460px){.learing-tool-area{height:290px;}}
+@media (max-width:440px){.learing-tool-area{height:280px;}}
+@media (max-width:420px){.learing-tool-area{height:270px;margin-bottom:20px;}.learing-tool-title{font-size:21px;}.learing-tool-name{font-size:17px;}}
+@media (max-width:400px){.learing-tool-area{height:260px;}}
+@media (max-width:380px){.learing-tool-area{height:250px;}.learing-tool-container{padding:0px 8px;}.learing-tool-title{font-size:20px;}.learing-tool-name{font-size:16px;}}
+@media (max-width:360px){.learing-tool-area{height:240px;}}
+/* 教材推薦 RWD end */
+
+/* 教材資訊 */
+.learn-tool-infor-area{width:100%;margin-bottom:20px;}
+.learn-tool-infor-area:after{content:" ";display:block;clear:both;}
+.learn-tool-infor-pic{width:264px;float:left;}
+.learn-tool-infor-pic img{width:100%;}
+.learn-tool-infor-text-window{width:calc(100% - 284px);background-image:url(../image/window-bar-bg.jpg);background-color:#f5f5f5;background-repeat:repeat-x;background-position:top center;border-top-left-radius:10px;border-top-right-radius:10px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;margin-left:20px;float:left;position:relative;}
+
+.learn-tool-infor-name{width:100%;font-size:28px;color:#4c2400;font-weight:bold;padding-right:32px;position:absolute;top:11px;left:16px;}
+.learn-tool-infor-name span{font-family:'arial',\5FAE\8EDF\6B63\9ED1\9AD4,\65B0\7D30\660E\9AD4;font-size:21px;font-weight:normal;float:right;position:relative;top:8px;}
+
+.learn-tool-infor-text-container{font-size:21px;height:auto;border:1px solid #9b9b9b;border-top:0px;margin-top:58px;}
+.learn-tool-infor-text-container div{padding:11px 10px;border-bottom:1px dashed #c9c9c9;}
+.learn-tool-infor-text-container div:last-child{border-bottom:0px dashed #c9c9c9;}
+.learn-tool-infor-text-container a{color:#0063cc;}
+.learn-tool-infor-tip{font-size:18px;margin-left:3px;}
+
+.learn-tool-infor-bookmark{margin-top:20px;position:relative;}
+.learn-tool-infor-bookmark ul{text-align:right;}
+.learn-tool-infor-bookmark li{width:120px;background-color:#c5c5c5;font-size:21px;text-align:center;color:#ffffff;border-top-left-radius:10px;border-top-right-radius:10px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;padding:6px 0px;display:inline-block;cursor:pointer;}
+.learn-tool-infor-bookmark li.active{background-color:#0063cc;color:#ffffff;}
+.learn-tool-infor-box{font-size:19px;line-height:30px;border:1px solid #9b9b9b;padding:15px;margin-top:0px;}
+.learn-tool-infor-box-text{border-bottom:1px dashed #c9c9c9;padding:8px 10px;}
+.learn-tool-infor-box-text:last-child{border-bottom:0px dashed #c9c9c9;}
+/* 教材資訊 end*/
+/* 教材資訊 RWD */
+@media (max-width:915px){
+.learn-tool-infor-pic{width:250px;}
+.learn-tool-infor-text-window{width:calc(100% - 270px);background-size:100% 66px;}
+.learn-tool-infor-name{font-size:27px;}
+.learn-tool-infor-name span{font-size:20px;}
+.learn-tool-infor-text-container{font-size:20px;margin-top:56px;}
+.learn-tool-infor-text-container div{padding:10px 8px;}
+.learn-tool-infor-tip{font-size:17px;}
+.learn-tool-infor-bookmark li{font-size:20px;}
+.learn-tool-infor-box{font-size:18px;line-height:28px;}
+}
+@media (max-width:670px){
+.learn-tool-infor-pic{width:230px;}
+.learn-tool-infor-text-window{width:calc(100% - 245px);background-size:100% 62px;margin-left:15px;}
+.learn-tool-infor-name{font-size:24px;top:10px;left:8px;padding-right:18px;}
+.learn-tool-infor-name span{font-size:19px;top:7px;}
+.learn-tool-infor-text-container{font-size:19px;margin-top:52px;}
+.learn-tool-infor-text-container div{padding:10px 6px;}
+.learn-tool-infor-tip{font-size:16px;}
+.learn-tool-infor-bookmark li{font-size:19px;}
+.learn-tool-infor-box{font-size:17px;padding:10px;line-height:26px;}
+}
+@media (max-width:550px){
+.learn-tool-infor-pic{width:180px;}
+.learn-tool-infor-text-window{width:calc(100% - 190px);background-size:100% 58px;margin-left:10px;}
+.learn-tool-infor-name{font-size:23px;top:9px;}
+.learn-tool-infor-name span{font-size:18px;top:6px;}
+.learn-tool-infor-text-container{font-size:18px;margin-top:48px;}
+.learn-tool-infor-text-container div{padding:8px 6px;}
+.learn-tool-infor-tip{font-size:15px;}
+.learn-tool-infor-bookmark li{font-size:18px;}
+.learn-tool-infor-box{font-size:16px;line-height:24px;}
+}
+@media (max-width:450px){
+.learn-tool-infor-pic{width:150px;}
+.learn-tool-infor-text-window{width:calc(100% - 160px);}
+.learn-tool-infor-name{font-size:22px;top:9px;}
+.learn-tool-infor-name span{font-size:17px;top:6px;}
+.learn-tool-infor-text-container{font-size:17px;margin-top:48px;}
+.learn-tool-infor-text-container div{padding:8px 6px;}
+.learn-tool-infor-tip{font-size:14px;}
+.learn-tool-infor-bookmark li{font-size:17px;}
+.learn-tool-infor-box{font-size:15px;line-height:22px;}
+}
+@media (max-width:400px){
+.learn-tool-infor-pic{width:200px;}
+.learn-tool-infor-text-window{width:100%;margin-left:0px;margin-top:5px;}
+.learn-tool-infor-bookmark li{width:100px;}
+}
+/* 教材資訊 RWD end*/
+
+
+
+
+

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=Edge;chrome=1" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="學習王科技" name="author">
+	<meta content="學習王科技股份有限公司" name="copyright">
+	<meta content="好師到學習管理中心" name="description">
+	<meta content="好師到學習規劃中心" itemprop="name">
+	<meta content="image/og-img.jpg" itemprop="image">
+	<meta content="好師到學習管理中心" itemprop="description">
+	<meta content="好師到學習管理中心" property="og:title">
+	<meta content="" property="og:url">
+	<meta content="image/og-img.jpg" property="og:image">
+	<meta content="好師到學習管理中心" property="og:description">
+	<meta content="好師到, 一對一" name="keywords">
+	<link href="css/manager_center.css" rel="stylesheet" type="text/css">
+	<link href="image/shortcut.ico" rel="shoutcut icon">
+	<title>好師到學習管理中心</title>
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+	
+<div class="manager_main_area">
+<div class="manager_main_container">
+
+<div class="manager_nav_container">
+<div class="manager_nav_logo"><a href="#" target="_blank"><img src="image/member_login_logo.png" alt=""/></a></div>
+
+<div class="manager_nav_account_container">
+<div class="manager_nav_account">
+<div class="manager_nav_headpic"><div><img src="image/member_headpic.jpg" alt=""/></div></div>
+<div class="manager_nav_infor">
+<div><span>陳中信</span>&nbsp;<span>6117400104</span></div>
+<div><span class="manager_reset_passowrd_btn">修改密碼</span><img src="image/yellow_line.jpg" class="yellow_line" alt=""/><span class="manager_logout_btn"><a href="tutor_manager_login.html">帳號登出</a></span></div>
+</div>
+</div>
+</div>
+  
+</div>
+
+<!-- 中間區塊 上課紀錄 讀書規劃 聯絡紀錄  -->            
+<div class="manager_lesson_infor">
+    
+<div class="manager_lesson_tip_container">   
+<div class="manager_lesson_tip manager_lesson_date_tip">
+<span>尚未填上課資料<span class="manager_notice">(<span>2</span>)</span></span>
+</div>
+<!-- 0730新增 -->
+<div class="manager_lesson_tip manager_lesson_punch_tip">
+<span>上課20分鐘尚未打卡<span class="manager_notice">(<span>1</span>)</span></span>
+</div>
+<!-- 0730新增end -->
+</div>
+    
+<ul class="tabs">
+<li class="tab_li" href="#infor3">聯絡紀錄</li>
+<li class="tab_li" href="#infor2">讀書規劃</li>
+<li class="tab_li active" href="#infor1">上課紀錄</li>
+</ul>
+<div class="manager_lesson_infor_container">
+
+<!-- 上課紀錄 -->
+<div id="infor1">
+<div class="manager_lesson_infor_title">上課紀錄：王曉明同學</div>
+<div class="manager_record_search_container">
+<div class="manager_record_search">
+<input type="text" placeholder="選擇月份">
+</div>
+</div>
+<div class="manager_list_container">
+<div class="manager_list_title">
+<div>上課日期</div>
+<div>上課時間</div>
+<div>科目老師</div>
+<div>上課狀態</div>
+</div>
+<div class="manager_list_infor">
+<div>2020/04/20</div>
+<div>14:00-15:00</div>
+<div>物理-黃大可</div>
+<div>準備上課</div>
+</div>    
+<div class="student_class_record_btn">
+<div class="cancel_class_btn">取消上課</div>
+</div>
+</div>
+    
+<div class="manager_list_container">
+<div class="manager_list_title">
+<div>上課日期</div>
+<div>上課時間</div>
+<div>科目老師</div>
+<div>上課狀態</div>
+</div>
+<div class="manager_list_infor">
+<div>2020/04/15</div>
+<div>14:00-15:00</div>
+<div>物理-黃大可</div>
+<div>完成上課</div>
+</div>    
+<div class="student_class_record_btn">
+<div class="fill_in_recode_btn fill_in_recode"><span style="position:relative;">填寫上課紀錄<span class="notice_point"></span></span></div>
+<!-- 0730新增 -->
+<div class="fill_in_recode_btn fill_in_video"><span style="position:relative;">填寫上課錄影<span class="notice_point"></span></span></div>
+<!-- 0730新增end -->
+<!-- ... 上課紀錄有必須欄位未填寫會出現黃點<span class="notice_point"></span> ... -->
+</div>
+</div>
+    
+<!-- 0929新增 學習顧問送出上課回報後的資訊表 -->   
+<div class="manager_list_container">
+<div class="manager_list_title">
+<div>上課日期</div>
+<div>上課時間</div>
+<div>科目老師</div>
+<div>上課狀態</div>
+</div>
+<div class="manager_list_infor">
+<div>2020/04/10</div>
+<div>14:00-15:00</div>
+<div>物理-黃大可</div>
+<div>完成上課</div>
+</div>    
+<div class="student_class_record_btn">
+<div class="check_record_btn">上課完成紀錄</div><!-- 0929新增 查看上課完成紀錄按鈕 -->
+</div>
+</div>
+<!-- 0929新增 end 學習顧問送出上課回報後的資訊表-->
+    
+</div>
+<!-- 上課紀錄 end -->
+<!-- 讀書規劃 -->
+<div id="infor2">
+<div class="manager_lesson_infor_title">讀書規劃：王曉明同學</div>
+<div class="manager_record_search_container">
+<div class="manager_record_search">
+<input type="text" placeholder="選擇月份">
+</div>
+</div>    
+<div class="study_list_title">
+<div class="study_list_title_day">日期</div>
+<div class="study_list_title_text">讀書內容</div>
+<div class="study_list_title_edit">動作</div>
+</div>
+<div class="study_list_infor">
+<div class="study_list_infor_day">2020/04/12</div>
+<div class="study_list_infor_text">國一數學第一冊第二章-等比數列 康軒版</div>
+<div class="study_list_infor_edit"><div class="study_list_infor_btn">編輯</div></div>
+</div>
+ 
+</div>
+<!-- 讀書規劃end -->
+<!-- 聯絡紀錄 -->
+<div id="infor3">
+<div class="manager_lesson_infor_title">聯絡紀錄：王曉明同學</div>
+<div class="manager_record_search_container">
+<div class="manager_record_search">
+<input type="text" placeholder="選擇月份">
+</div>
+</div>    
+<div class="manager_list_title">
+<div>聯絡日期</div>
+<div>聯絡人</div>
+<div>下次聯絡日</div>
+<div>聯絡內容</div>
+</div>
+<div class="manager_list_infor border_left_right_none">
+<div>2020/04/11</div>
+<div>父</div>
+<div>2020/04/21</div>
+<div><div class="manager_list_infor_btn contact_check_btn">查看</div></div>
+</div>
+<div class="manager_list_infor border_left_right_none">
+<div>2020/04/01</div>
+<div>母</div>
+<div>2020/04/11</div>
+<div><div class="manager_list_infor_btn contact_check_btn">查看</div></div>
+</div>
+  
+</div>
+<!-- 聯絡紀錄end -->
+</div>
+</div>
+<!-- 中間區塊 學生列表 老師列表end -->  
+			<script type="text/javascript">
+			 $(function(){
+			     var showTab = 2;
+			     var defaultLi = $('ul.tabs li').eq(showTab).addClass('active');
+			     $(defaultLi.attr('href')).siblings().hide();        
+			     $('ul.tabs li').click(function() {  
+			         var $this = $(this),
+			         clickTab = $this.attr('href');
+			         $this.addClass('active').siblings('.active').removeClass('active');
+			         $(clickTab).stop(false, true).show().siblings().hide();
+			         $(clickTab .course_video_iframe).empty();
+			         return false;
+			     }).find('a').focus(function(){
+			         this.blur();
+			     });
+			 });
+			</script>
+
+</div>
+</div>
+
+<!-- ... pup視窗-未填寫上課資料名單 0730修改... -->
+<div class="pup_manager_notice_date" style="display:none;">
+<div class="pup_manager_bg"></div>
+<div class="pup_manager_window">
+<div>
+<div class="pup_manager_container">   
+<div class="pup_notice_title">尚未填寫上課資料：</div>
+<div class="pup_notice_text"><span>王曉明&nbsp;4/11&nbsp;14:00-15:00&nbsp;物理-上課錄影</span></div>
+<div class="pup_notice_text"><span>王曉明&nbsp;4/11&nbsp;14:00-15:00&nbsp;物理-上課紀錄</span></div>
+</div>     
+<img src="image/close_icon.png" class="pup_manager_close" alt=""/>
+</div>  
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+      $(".manager_lesson_date_tip").click(function(){
+		  $(".pup_manager_notice_date").show();
+      });
+	  $(".pup_manager_close,.pup_manager_bg").click(function(){
+        $(".pup_manager_notice_date").hide();	
+      });
+    });
+</script>
+<!-- ... pup視窗-未填寫上課資料名單end ... -->
+    
+<!-- ... pup視窗-上課20分鐘尚未打卡名單 0730新增... -->
+<div class="pup_manager_notice_punch" style="display:none;">
+<div class="pup_manager_bg"></div>
+<div class="pup_manager_window">
+<div>
+<div class="pup_manager_container">   
+<div class="pup_notice_title">上課20分鐘尚未打卡：</div>
+<div class="pup_notice_text"><span>王曉明&nbsp;4/20&nbsp;14:00-15:00&nbsp;物理</span></div>
+</div>     
+<img src="image/close_icon.png" class="pup_manager_close" alt=""/>
+</div>  
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+      $(".manager_lesson_punch_tip").click(function(){
+		  $(".pup_manager_notice_punch").show();
+      });
+	  $(".pup_manager_close,.pup_manager_bg").click(function(){
+        $(".pup_manager_notice_punch").hide();	
+      });
+    });
+</script>
+<!-- ... pup視窗-上課20分鐘尚未打卡名單end ... -->
+    
+<!-- ... pup視窗-取消上課提示 ... -->    
+<div class="pup_cancel_class" style="display:none;">
+<div class="pup_manager_bg"></div>
+<div class="pup_manager_window">
+<div style="padding-bottom:90px;">
+<div>
+    
+<div class="pup_cancel_tip_title">取消上課</div> 
+<div class="pup_cancel_tip_infor">2020/04/20&nbsp;14:00-15:00<br/>王曉明同學、黃大可老師的物理</div> 
+<!-- 0730新增 -->
+<div class="pup_cancel_tip_reason"><textarea placeholder="填寫取消上課原因..."></textarea></div>
+<!-- 0730新增 end-->    
+</div>
+<img src="image/close_icon.png" class="pup_manager_close" alt=""/>
+<div class="pup_manager_window_btn">確認取消</div>
+</div>  
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+      $(".cancel_class_btn").click(function(){
+		  $(".pup_cancel_class").show();
+      });
+	  $(".pup_manager_close,.pup_manager_bg").click(function(){
+        $(".pup_cancel_class").hide();	
+      });
+    });
+</script>
+<!-- ... pup視窗-取消上課提示end ... -->
+
+<!-- ... pup視窗-填寫上課紀錄 0730修改... -->
+<div class="pup_class_report_recode" style="display:none;">
+<div class="pup_manager_bg"></div>
+<div class="pup_manager_window">
+<div style="padding-bottom:80px;">
+<div class="pup_manager_container">
+<div class="pup_study_infor_title" style="margin-bottom:20px;">2020/04/15&nbsp;14:00-15:00&nbsp;物理</div> 
+<div class="pup_manager_input_container">
+<div class="pup_manager_input_title">上課回報<span>*必須</span></div>
+<div class="pup_manager_input_textarea"><textarea></textarea></div>
+</div>
+<div class="pup_manager_input_container">
+<div class="pup_manager_input_title">作業成績</div>
+<div class="pup_manager_input_textarea"><textarea></textarea></div>
+</div>
+<div class="pup_manager_input_container">
+<div class="pup_manager_input_title">上課星數</div>
+<div class="pup_manager_input">
+<select>
+<option>選擇星數</option>
+<option>5顆星</option>
+<option>4顆星</option>
+<option>3顆星</option>
+<option>2顆星</option> 
+<option>1顆星</option>
+</select>    
+</div>
+</div>
+<div class="pup_manager_input_container">
+<div class="pup_manager_input_title">上課狀況</div>
+<div class="pup_manager_input">
+<select>
+<option>選擇狀況</option>
+<option>完成上課</option>
+<option>完成上課-補打卡</option>
+<option>完成上課-上課回報遲交</option>
+<option>老師曠課</option> 
+<option>學生曠課</option>
+<option>因故而未完成上課</option>
+</select>    
+</div>
+</div>
+    
+</div>
+<img src="image/close_icon.png" class="pup_manager_close" alt=""/>
+<div class="pup_manager_window_btn">確認送出</div>
+</div>  
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+      $(".fill_in_recode").click(function(){
+		  $(".pup_class_report_recode").show();
+      });
+	  $(".pup_manager_close,.pup_manager_bg").click(function(){
+        $(".pup_class_report_recode").hide();	
+      });
+    });
+</script>
+<!-- ... pup視窗-填寫上課紀錄end ... -->
+    
+<!-- ... pup視窗-填寫上課錄影 0730新增... -->
+<div class="pup_class_report_video" style="display:none;">
+<div class="pup_manager_bg"></div>
+<div class="pup_manager_window">
+<div style="padding-bottom:80px;">
+<div class="pup_manager_container">
+<div class="pup_study_infor_title" style="margin-bottom:20px;">2020/04/15&nbsp;14:00-15:00&nbsp;物理</div> 
+
+<div class="pup_manager_input_container">
+<div class="pup_manager_input_title">上課錄影<span>*必須</span></div>
+<div class="pup_manager_input"><input type="text"></div>
+</div>
+   
+</div>
+<img src="image/close_icon.png" class="pup_manager_close" alt=""/>
+<div class="pup_manager_window_btn">確認送出</div>
+</div>  
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+      $(".fill_in_video").click(function(){
+		  $(".pup_class_report_video").show();
+      });
+	  $(".pup_manager_close,.pup_manager_bg").click(function(){
+        $(".pup_class_report_video").hide();	
+      });
+    });
+</script>
+<!-- ... pup視窗-填寫上課錄影end ... -->
+    
+<!-- ... pup視窗-上課完成紀錄 0929新增... -->
+<div class="pup_class_record_detile" style="display:none">
+<div class="pup_manager_bg"></div>
+<div class="pup_manager_window">
+<div style="padding-bottom:80px;">
+<div class="pup_manager_container">
+<div class="pup_study_infor_title" style="margin-bottom:20px;">2020/04/15&nbsp;14:00-15:00&nbsp;物理</div> 
+
+<div class="pup_class_detail_main">
+    
+<div class="pup_class_detail_text">課程名稱：iTutor國一數學</div>
+<div class="pup_class_detail_text">上課時間：2018/10/5 14:00-15:00 合計1小時</div>
+<div class="pup_class_detail_text">上課學生：張小中</div>
+<div class="pup_class_detail_text">上課時間：13:58完成打卡</div>
+<div class="pup_class_detail_text">下課時間：15:01完成打卡</div>
+<div class="pup_class_detail_text">上課點數：20點</div>
+<div class="pup_class_detail_text">上課回報：上課內容為數學規律問題，作業範圍從第9單元第1題至第9單元第20題，學生在公式應用方面還需加強...。</div>
+<div class="pup_class_detail_text">學生評價：4.5<img src="image/star_pic.png" alt=""></div>
+
+</div>
+   
+</div>
+<img src="image/close_icon.png" class="pup_manager_close" alt=""/>
+</div>  
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+      $(".check_record_btn").click(function(){
+		  $(".pup_class_record_detile").show();
+      });
+	  $(".pup_manager_close,.pup_manager_bg").click(function(){
+        $(".pup_class_record_detile").hide();	
+      });
+    });
+</script>
+<!-- ... pup視窗-上課完成紀錄 0929新增 end ... -->
+    
+<!-- ... pup視窗-編輯讀書內容 ... -->    
+<div class="pup_study_infor" style="display:none;">
+<div class="pup_manager_bg"></div>
+<div class="pup_manager_window">
+<div style="padding-bottom:90px;">
+<div class="pup_manager_container">
+    
+<div class="pup_study_infor_title">2020/04/12&nbsp;王曉明讀書內容</div> 
+<div class="pup_study_infor_textarea"><textarea></textarea></div>     
+    
+</div>
+<img src="image/close_icon.png" class="pup_manager_close" alt=""/>
+<div class="pup_manager_window_btn">儲存內容</div>
+</div>  
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+      $(".study_list_infor_btn").click(function(){
+		  $(".pup_study_infor").show();
+      });
+	  $(".pup_manager_close,.pup_manager_bg").click(function(){
+        $(".pup_study_infor").hide();	
+      });
+    });
+</script>
+<!-- ... pup視窗-編輯讀書內容end ... -->
+    
+<!-- ... pup視窗-聯絡內容 ... -->    
+<div class="pup_contact_infor" style="display:none;">
+<div class="pup_manager_bg"></div>
+<div class="pup_manager_window">
+<div style="padding-bottom:90px;">
+<div class="pup_manager_container">
+    
+<div class="pup_contact_infor_title">2020/04/11&nbsp;王曉明聯絡內容</div> 
+<div class="pup_contact_infor_textarea"><textarea></textarea></div>     
+    
+</div>
+<img src="image/close_icon.png" class="pup_manager_close" alt=""/>
+<div class="pup_manager_window_btn" style="display:none;">儲存內容</div>
+<div class="pup_manager_window_btn_no">儲存內容</div>
+</div>  
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+      $(".contact_check_btn").click(function(){
+		  $(".pup_contact_infor").show();
+      });
+	  $(".pup_manager_close,.pup_manager_bg").click(function(){
+        $(".pup_contact_infor").hide();	
+      });
+    });
+</script>
+<!-- ... pup視窗-聯絡內容end ... -->
+    
+</body>
+</html>

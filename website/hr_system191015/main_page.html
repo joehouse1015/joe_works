@@ -1,0 +1,1302 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link rel="shoutcut icon" href="image/shortcut.ico" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/font-awesome.css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<title>學習王人事系統</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $(".main-left-area").css("height",$('.main-right-area').height()+34);
+  });
+</script>
+<script>
+    $(document).ready(function(){
+    $(".search-bu").click(function(){
+        $("#search-result").fadeIn(500);
+    });
+	$(".pup-list-cell a").click(function(){
+        $("#em-infor-window").fadeIn(500);
+    });
+	$("#em-history").click(function(){
+        $("#em-history-window").fadeIn(500);
+    });
+	$(".history-detail-open").click(function(){
+        $("#history-detail-window").fadeIn(500);
+    });
+	$("#search-result-close").click(function(){
+        $("#search-result").fadeOut(500);
+    });
+	$("#em-infor-window-close").click(function(){
+        $("#em-infor-window").fadeOut(500);
+    });
+	$("#em-history-close").click(function(){
+        $("#em-history-window").fadeOut(500);
+    });
+	$("#history-detail-close").click(function(){
+        $("#history-detail-window").fadeOut(500);
+    });
+	$(".top-bar-information span").click(function(){
+        $("#wait-check-window").fadeIn(500);
+    });
+	$("#wait-check-window-close").click(function(){
+        $("#wait-check-window").fadeOut(500);
+    });
+	$(".cell-green-bu,.cell-red-bu,.cell-gray-bu,.cell-blue-bu").click(function(){
+        $(".check-tip-bg").show();
+    });
+	$(".tip-text-1").click(function(){
+        $(".check-tip-text-1").show();
+    });
+	$(".tip-text-2").click(function(){
+        $(".check-tip-text-2").show();
+    });
+	$(".tip-text-3").click(function(){
+        $(".check-tip-text-3").show();
+    });
+	$(".tip-text-4").click(function(){
+        $(".check-tip-text-4").show();
+    });
+	$(".tip-text-5").click(function(){
+        $(".check-tip-text-5").show();
+    });
+	$(".check-bu-green,.check-bu-red").click(function(){
+        $(".check-tip-bg,.check-tip-text-1,.check-tip-text-2,.check-tip-text-3,.check-tip-text-4").hide();
+    });		
+	$(".em-change").click(function(){
+        $("#em-change-window").fadeIn(500);
+    });
+	$("#em-change-window-close").click(function(){
+        $("#em-change-window").fadeOut(500);
+		$(".check-tip-bg,.check-tip-bg,.check-tip-text-1,.check-tip-text-2,.check-tip-text-3,.check-tip-text-4").hide();
+    });
+	$(".unit-container-border").click(function(){
+        $("#em-list").fadeIn(500);
+    });
+	$("#em-list-close").click(function(){
+        $("#em-list").fadeOut(500);
+		$(".check-tip-bg,.check-tip-bg,.check-tip-text-1,.check-tip-text-2,.check-tip-text-3,.check-tip-text-4").hide();
+    });
+	$(".em-choice").click(function(){
+        $("#em-choice-window").fadeIn(500);
+    });
+	$("#em-choice-window-close").click(function(){
+        $("#em-choice-window").fadeOut(500);
+    });	
+	$("#choice-unit").click(function(){
+        $("#choice-unit-window").fadeIn(500);
+    });
+	$("#choice-position").click(function(){
+        $("#choice-position-window").fadeIn(500);
+    });	
+	$(".search-bu-fin").click(function(){
+        $("#choice-unit-window,#choice-position-window").hide();
+    });										
+    });	
+</script>
+<script type="text/javascript">
+	$(function(){	
+		var showTab = 0;
+		var defaultLi = $('ul.tabs li').eq(showTab).addClass('active');
+		$(defaultLi.find('div').attr('href')).siblings().hide();		
+		$('ul.tabs li').click(function() {
+			var $this = $(this),
+			    clickTab = $this.find('div').attr('href');
+		    $this.addClass('active').siblings('.active').removeClass('active');
+			$(clickTab).stop(false, true).show().siblings().hide();
+            return false;
+		}).find('div').focus(function(){
+			this.blur();
+		});
+	});
+</script>
+</head>
+
+<body>
+<!-- ... top bar ... -->
+<div class="top-bar">
+<div class="top-logo-area"><img src="image/page-logo.png" alt="學習王科技"/></div>
+<div class="top-search-area">
+<div class="top-search-container">
+<input type="text" class="search-input" placeholder="依手機或姓名搜尋">
+<div class="search-bu"><i class="fa fa-search"></i></div>
+</div>
+</div>
+<span class="top-bar-information">管理員工數：0</span>
+<span class="top-bar-information">待審核總數：<span>0</span></span>
+<span class="top-bar-information" style="display:none;">編輯中總數：<span>0</span></span>
+</div>
+<!-- ... top bar end ... -->
+<div class="main">
+<!-- ... 左側 ... -->
+<div class="main-left-area">
+<div class="main-left-container">
+<div class="head-pic top-manager-pic"></div><!-- 總管理員class為top-manager-pic 單位管理員class為manager-pic -->
+<div class="manager-type">總管理員</div><!-- 名稱替換 -->
+<div class="tool-bu-area"><div class="tool-bu hvr-top em-change">異動人員<div class="red-dot"><span>!</span></div></div></div><!-- 提示紅點red-dot -->
+<div class="tool-bu-area" style="display:none;"><div class="tool-bu hvr-top">待審通知<div class="red-dot"><span>!</span></div></div></div><!-- 提示紅點red-dot --><!-- ... 單位管理員-待審通知 ... -->
+<div class="tool-bu-area"><div class="tool-bu hvr-top em-choice">篩選員工</div></div>
+<div class="tool-bu-area" style="display:none;"><div class="tool-bu hvr-top">新增員工</div></div><!-- ... 單位管理員-新增員工 ... -->
+<div class="tool-bu-area"><div class="tool-bu hvr-top" onclick="javascript:location.href='login.html'">登出系統</div></div>
+</div>
+<div class="login-time">上次登入時間<br/>2017/11/29&nbsp;12:23</div>
+</div>
+<!-- ... 左側 end ... -->
+<!-- ... 右側 ... -->
+<div class="main-right-area">
+<!-- ... 總公司直屬單位 ... -->
+<div class="units">
+<div class="unit-title-area">
+<img src="image/unit-title-icon-1.jpg" alt=""/>
+<span>總公司直屬</span>
+<div class="unit-title-line"></div>
+</div>
+<div class="unit-area">
+
+<!-- ... 單位 ... -->
+<div class="hvr-top">
+<div class="unit-container-border hvr-top">
+<div class="unit-green-check green-bu-line">
+<div class="green-bu">
+<div class="unit-check-name">待審核</div>
+<div class="unit-check-number"><span>0</span>人</div>
+</div>
+</div>
+<div class="unit-container">
+<div class="unit-name">桃園學習中心<span class="unit-number">B45</span></div>
+<div class="unit-infor"><span>在職&nbsp;:&nbsp;140</span><span style="display:none;">編輯&nbsp;:&nbsp;99</span></div>
+</div>
+</div>
+</div>
+<!-- ... 單位 end... -->
+<!-- ... 單位 ... -->
+<div class="hvr-top">
+<div class="unit-container-border">
+<div class="unit-red-check red-bu-line">
+<div class="red-bu">
+<div class="unit-check-name">待審核</div>
+<div class="unit-check-number"><span>1</span>人</div>
+</div>
+</div>
+<div class="unit-container">
+<div class="unit-name">桃園學習中心<span class="unit-number">B45</span></div>
+<div class="unit-infor"><span>在職&nbsp;:&nbsp;140</span><span style="display:none;">編輯&nbsp;:&nbsp;99</span></div>
+</div>
+</div>
+</div>
+<!-- ... 單位 end... -->
+<!-- ... 單位 ... -->
+<div class="hvr-top">
+<div class="unit-container-border">
+<div class="unit-green-check green-bu-line">
+<div class="green-bu">
+<div class="unit-check-name">待審核</div>
+<div class="unit-check-number"><span>0</span>人</div>
+</div>
+</div>
+<div class="unit-container">
+<div class="unit-name">桃園學習中心<span class="unit-number">B45</span></div>
+<div class="unit-infor"><span>在職&nbsp;:&nbsp;140</span><span style="display:none;">編輯&nbsp;:&nbsp;99</span></div>
+</div>
+</div>
+</div>
+<!-- ... 單位 end... -->
+<!-- ... 單位 ... -->
+<div class="hvr-top">
+<div class="unit-container-border">
+<div class="unit-green-check green-bu-line">
+<div class="green-bu">
+<div class="unit-check-name">待審核</div>
+<div class="unit-check-number"><span>0</span>人</div>
+</div>
+</div>
+<div class="unit-container">
+<div class="unit-name">桃園學習中心<span class="unit-number">B45</span></div>
+<div class="unit-infor"><span>在職&nbsp;:&nbsp;140</span><span style="display:none;">編輯&nbsp;:&nbsp;99</span></div>
+</div>
+</div>
+</div>
+<!-- ... 單位 end... -->
+
+</div>
+</div>
+<!-- ... 總公司直屬單位 end ... -->
+<!-- ... 業務單位 ... -->
+<div class="units">
+<div class="unit-title-area">
+<img src="image/unit-title-icon-2.jpg" alt=""/>
+<span>業務單位</span>
+<div class="unit-title-line" style="width:calc(100% - 123px);"></div>
+</div>
+<div class="unit-area">
+<!-- ... 單位 ... -->
+<div class="hvr-top">
+<div class="unit-container-border">
+<div class="unit-green-check green-bu-line">
+<div class="green-bu">
+<div class="unit-check-name">待審核</div>
+<div class="unit-check-number"><span>0</span>人</div>
+</div>
+</div>
+<div class="unit-container">
+<div class="unit-name">桃園學習中心<span class="unit-number">B45</span></div>
+<div class="unit-infor"><span>在職&nbsp;:&nbsp;140</span><span style="display:none;">編輯&nbsp;:&nbsp;99</span></div>
+</div>
+</div>
+</div>
+<!-- ... 單位 end... -->
+<!-- ... 單位 ... -->
+<div class="hvr-top">
+<div class="unit-container-border">
+<div class="unit-green-check green-bu-line">
+<div class="green-bu">
+<div class="unit-check-name">待審核</div>
+<div class="unit-check-number"><span>0</span>人</div>
+</div>
+</div>
+<div class="unit-container">
+<div class="unit-name">桃園學習中心<span class="unit-number">B45</span></div>
+<div class="unit-infor"><span>在職&nbsp;:&nbsp;140</span><span style="display:none;">編輯&nbsp;:&nbsp;99</span></div>
+</div>
+</div>
+</div>
+<!-- ... 單位 end... -->
+<!-- ... 單位 ... -->
+<div class="hvr-top">
+<div class="unit-container-border">
+<div class="unit-green-check green-bu-line">
+<div class="green-bu">
+<div class="unit-check-name">待審核</div>
+<div class="unit-check-number"><span>0</span>人</div>
+</div>
+</div>
+<div class="unit-container">
+<div class="unit-name">桃園學習中心<span class="unit-number">B45</span></div>
+<div class="unit-infor"><span>在職&nbsp;:&nbsp;140</span><span style="display:none;">編輯&nbsp;:&nbsp;99</span></div>
+</div>
+</div>
+</div>
+<!-- ... 單位 end... -->
+<!-- ... 單位 ... -->
+<div class="hvr-top">
+<div class="unit-container-border">
+<div class="unit-green-check green-bu-line">
+<div class="green-bu">
+<div class="unit-check-name">待審核</div>
+<div class="unit-check-number"><span>0</span>人</div>
+</div>
+</div>
+<div class="unit-container">
+<div class="unit-name">桃園學習中心<span class="unit-number">B45</span></div>
+<div class="unit-infor"><span>在職&nbsp;:&nbsp;140</span><span style="display:none;">編輯&nbsp;:&nbsp;99</span></div>
+</div>
+</div>
+</div>
+<!-- ... 單位 end... -->
+<!-- ... 單位 ... -->
+<div class="hvr-top">
+<div class="unit-container-border">
+<div class="unit-green-check green-bu-line">
+<div class="green-bu">
+<div class="unit-check-name">待審核</div>
+<div class="unit-check-number"><span>0</span>人</div>
+</div>
+</div>
+<div class="unit-container">
+<div class="unit-name">桃園學習中心<span class="unit-number">B45</span></div>
+<div class="unit-infor"><span>在職&nbsp;:&nbsp;140</span><span style="display:none;">編輯&nbsp;:&nbsp;99</span></div>
+</div>
+</div>
+</div>
+<!-- ... 單位 end... -->
+<!-- ... 單位 ... -->
+<div class="hvr-top">
+<div class="unit-container-border">
+<div class="unit-green-check green-bu-line">
+<div class="green-bu">
+<div class="unit-check-name">待審核</div>
+<div class="unit-check-number"><span>0</span>人</div>
+</div>
+</div>
+<div class="unit-container">
+<div class="unit-name">桃園學習中心<span class="unit-number">B45</span></div>
+<div class="unit-infor"><span>在職&nbsp;:&nbsp;140</span><span style="display:none;">編輯&nbsp;:&nbsp;99</span></div>
+</div>
+</div>
+</div>
+<!-- ... 單位 end... -->
+<!-- ... 單位 ... -->
+<div class="hvr-top">
+<div class="unit-container-border">
+<div class="unit-green-check green-bu-line">
+<div class="green-bu">
+<div class="unit-check-name">待審核</div>
+<div class="unit-check-number"><span>0</span>人</div>
+</div>
+</div>
+<div class="unit-container">
+<div class="unit-name">桃園學習中心<span class="unit-number">B45</span></div>
+<div class="unit-infor"><span>在職&nbsp;:&nbsp;140</span><span style="display:none;">編輯&nbsp;:&nbsp;99</span></div>
+</div>
+</div>
+</div>
+<!-- ... 單位 end... -->
+<!-- ... 單位 ... -->
+<div class="hvr-top">
+<div class="unit-container-border">
+<div class="unit-green-check green-bu-line">
+<div class="green-bu">
+<div class="unit-check-name">待審核</div>
+<div class="unit-check-number"><span>0</span>人</div>
+</div>
+</div>
+<div class="unit-container">
+<div class="unit-name">桃園學習中心<span class="unit-number">B45</span></div>
+<div class="unit-infor"><span>在職&nbsp;:&nbsp;140</span><span style="display:none;">編輯&nbsp;:&nbsp;99</span></div>
+</div>
+</div>
+</div>
+<!-- ... 單位 end... -->
+</div>
+</div>
+<!-- ... 業務單位 end ... -->
+
+
+
+
+</div>
+<div style="clear:both;"></div>
+</div>
+<!-- ... 右側 end... -->
+
+<!-- ... 視窗-搜尋結果 ... -->
+<div id="search-result" style="display:none;">
+<div class="pup-bg"></div>
+<div class="pup-window-container">
+<div class="pup-window">
+<img src="image/pup-window-close.png" id="search-result-close" class="pup-window-close hvr-top-small" alt="關閉"/>
+<div class="pup-window-title"><i class="fa fa-list"></i>搜尋結果列表</div>
+<div class="pup-list-container">
+<div class="pup-list-title-container">
+<div class="pup-list-title">姓名-編號</div>
+<div class="pup-list-title">單位</div>
+<div class="pup-list-title">公司別</div>
+<div class="pup-list-title">職務-類別</div>
+<div class="pup-list-title">狀態</div>
+<div class="pup-list-title">手機號碼</div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明-AA0011</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell">經理-業務</div>
+<div class="pup-list-cell">在職</div>
+<div class="pup-list-cell">0912-236-333</div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明-AA0011</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell">經理-業務</div>
+<div class="pup-list-cell">在職</div>
+<div class="pup-list-cell">0912-236-333</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ... 視窗-搜尋結果 end ... -->
+<!-- ... 視窗-待審核總數 ... -->
+<div id="wait-check-window" style="display:none;">
+<div class="pup-bg"></div>
+<div class="pup-window-container">
+<div class="pup-window">
+<img src="image/pup-window-close.png" id="wait-check-window-close" class="pup-window-close hvr-top-small" alt="關閉"/>
+<div class="pup-window-title"><i class="fa fa-list"></i>待審核總數列表</div>
+<div class="pup-list-container">
+<div class="pup-list-title-container">
+<div class="pup-list-title">姓名-編號</div>
+<div class="pup-list-title">單位</div>
+<div class="pup-list-title">公司別</div>
+<div class="pup-list-title">狀態</div>
+<div class="pup-list-title">日期</div>
+<div class="pup-list-title">操作</div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明-AA0011</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell red-word">資料待審</div>
+<div class="pup-list-cell">2017/11/11</div>
+<div class="pup-list-cell"><div class="cell-green-bu green-bu hvr-top-small tip-text-1">核可</div><div class="cell-red-bu red-bu hvr-top-small tip-text-1">退回</div></div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell red-word">資料待審</div>
+<div class="pup-list-cell">2017/11/11</div>
+<div class="pup-list-cell"><div class="cell-green-bu green-bu hvr-top-small tip-text-1">核可</div><div class="cell-red-bu red-bu hvr-top-small tip-text-2">退回</div></div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell red-word">待補紙本</div>
+<div class="pup-list-cell">2017/11/11</div>
+<div class="pup-list-cell"><div class="cell-green-bu green-bu hvr-top-small tip-text-3">完成</div><div class="cell-red-bu red-bu hvr-top-small tip-text-4">重補</div></div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell red-word">待補紙本</div>
+<div class="pup-list-cell">2017/11/11</div>
+<div class="pup-list-cell"><div class="cell-green-bu green-bu hvr-top-small tip-text-3">完成</div><div class="cell-red-bu red-bu hvr-top-small tip-text-4">重補</div></div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell red-word">退回</div>
+<div class="pup-list-cell">2017/11/11</div>
+<div class="pup-list-cell"><div class="cell-gray-bu gray-bu hvr-top-small tip-text-5">說明</div></div>
+</div>
+</div>
+<!-- ... 視窗-操作提示 ... -->
+<div class="check-tip-bg" style="display:none;">
+<div class="check-tip-window">
+<div class="check-tip">
+<!-- ... 總管理員-操作提示 ... -->
+<div class="check-tip-text-1" style="display:none;">確定核可&nbsp;<span>王小明</span><br/>處理狀態轉為&nbsp;待補紙本</div><!-- ... 待審核可 ... -->
+<div class="check-tip-text-2" style="display:none;">確定將&nbsp;<span>王小明</span>&nbsp;退回</div><!-- ... 待審退回 ... -->
+<div class="check-tip-text-3" style="display:none;">確定&nbsp;待補紙本&nbsp;無誤<br/>完成&nbsp;<span>王小明</span>&nbsp;變動</div><!-- ... 待補紙本完成 ... -->
+<div class="check-tip-text-4" style="display:none;">確定&nbsp;<span>王小明</span>&nbsp;需重補紙本</div><!-- ... 紙本重補 ... -->
+<div class="check-tip-text-5" style="display:none;">說明修改</div><!-- ... 說明修改 ... -->
+<!-- ... 總管理員-操作提示 ... -->
+<!-- ... 單位管理員-操作提示 ... -->
+<div style="display:none;">確定編輯&nbsp;<span>王小明</span><br/>該人員將移至編輯名單</div><!-- ... 待審編輯 ... -->
+<div style="display:none;">紙本有誤</div><!-- ... 紙本有誤-說明 ... -->
+<div style="display:none;">待審退回</div><!-- ... 待審退回-說明 ... -->
+<div style="display:none;">確定刪除&nbsp;<span>王小明</span><br/>待審名單將移除該人員</div><!-- ... 刪除 ... -->
+<!-- ... 單位管理員-操作提示 ... -->
+</div>
+<div class="check-reason check-tip-text-5" style="display:none;">
+<textarea placeholder="在此輸入原因說明"></textarea>
+</div>
+<div class="check-bu-container">
+<div class="check-bu-green green-bu-line hvr-top"><div class="green-bu">確&nbsp;定</div></div><div class="check-bu-red red-bu-line hvr-top"><div class="red-bu">取&nbsp;消</div></div>
+</div>
+</div>
+</div>
+<!-- ... 視窗-操作提示 ... -->
+</div>
+</div>
+</div>
+<!-- ... 視窗-待審核總數 end ... -->
+
+<!-- ... 頁籤視窗-異動人員 ... -->
+<div id="em-change-window" style="display:none;">
+<div class="pup-bg"></div>
+<div class="pup-window-container">
+<div class="pup-change-container">
+<img src="image/pup-window-close.png" id="em-change-window-close" class="pup-window-close hvr-top-small" style="top:15px;" alt="關閉"/>
+<ul class="tabs">
+<li class="active"><div href="#tab1"><span>今日異動<span class="em-amount">(3)</span></span></div></li>
+<li><div href="#tab2"><span>異動查詢</span></div></li>
+</ul>
+
+<div>
+<!-- ... 今日異動 ... -->
+<div id="tab1" class="pup-change-page">
+<div class="pup-list-container" style="border-radius:10px;">
+<div class="pup-list-title-container">
+<div class="pup-list-title">姓名-編號</div>
+<div class="pup-list-title">單位</div>
+<div class="pup-list-title">公司別</div>
+<div class="pup-list-title">職務-類別</div>
+<div class="pup-list-title">異動狀態</div>
+<div class="pup-list-title">異動說明</div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明-AA0011</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell">經理-業務</div>
+<div class="pup-list-cell red-word">升等</div>
+<div class="pup-list-cell"><div class="cell-blue-bu blue-bu hvr-top-small">查看</div></div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明-AA0011</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell">經理-業務</div>
+<div class="pup-list-cell red-word">升等</div>
+<div class="pup-list-cell"><div class="cell-blue-bu blue-bu hvr-top-small">查看</div></div>
+</div>
+<!-- ... 視窗-異動說明 ... -->
+<div class="check-tip-bg" style="border-radius:10px;display:none;">
+<div class="check-tip-window">
+<div class="check-tip">
+<div>異動說明</div>
+</div>
+<div class="check-reason">
+<textarea class="input-locked" disabled="disabled">2017年度業績達成，依升等規章升等經理。</textarea>
+</div>
+<div class="check-bu-container">
+<div class="check-bu-green green-bu-line hvr-top" style="margin-right:0px;"><div class="green-bu">確&nbsp;定</div></div>
+</div>
+</div>
+</div>
+<!-- ... 視窗-異動說明 end ... -->
+</div>
+</div>
+<!-- ... 今日異動 end... -->
+<!-- ... 異動查詢 ... -->
+<div id="tab2" class="pup-change-page" style="display:none;">
+<div class="search-point-area">
+<div class="from-input-container" style="width:462px;margin-left:0px;">
+<span>選擇單位</span><div class="from-input" style="width:375px;"><input type="text" class="select-arrow" style="padding-right:47px;" value="不限" disabled="disabled"></div>
+</div>
+<div class="from-input-container" style="width:462px;">
+<span>異動狀態</span><div class="from-input" style="width:375px;"><input type="text" class="select-arrow" style="padding-right:47px;" value="不限" disabled="disabled"></div>
+</div>
+<div class="from-input-container" style="width:100%;margin-left:0px;margin-top:20px;">
+<span style="margin-right:2px;">日期起迄</span>
+<div class="from-input" style="width:175px;"><div class="calendar-bu"><i class="fa fa-calendar"></i></div><input type="text" style="padding-right:46px;"></div>
+<span style="margin:0px 3px;">-</span>
+<div class="from-input" style="width:175px;"><div class="calendar-bu"><i class="fa fa-calendar"></i></div><input type="text" style="padding-right:46px;"></div>
+<div class="search-bu-red"><div><i class="fa fa-search"></i>搜尋</div></div>
+</div>
+</div>
+<div class="pup-list-container" style="height:calc(100vh - 255px);border-radius:10px;">
+<div class="pup-list-title-container">
+<div class="pup-list-title">異動日期</div>
+<div class="pup-list-title">姓名-編號</div>
+<div class="pup-list-title">單位</div>
+<div class="pup-list-title">公司別</div>
+<div class="pup-list-title">職務-類別</div>
+<div class="pup-list-title">異動狀態-說明</div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell">2017/11/11</div>
+<div class="pup-list-cell"><a href="#">王小明-AA0011</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell">經理-業務</div>
+<div class="pup-list-cell red-word">升等&nbsp;-&nbsp;<div class="cell-blue-bu blue-bu hvr-top-small">查看</div></div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell">2017/11/11</div>
+<div class="pup-list-cell"><a href="#">王小明-AA0011</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell">經理-業務</div>
+<div class="pup-list-cell red-word">升等&nbsp;-&nbsp;<div class="cell-blue-bu blue-bu hvr-top-small">查看</div></div>
+</div>
+<!-- ... 視窗-搜尋選項-選擇單位 ... -->
+<div class="search-choice-bg" style="border-radius:10px;display:none;">
+<div class="search-choice-window">
+<div class="search-choice-title"><i class="fa fa-check-square"></i>選擇單位<label><input type="checkbox"><span>全選</span></label></div>
+<div class="search-choice-line"></div>
+<div class="search-choice-container">
+<div>
+<div class="search-choice"><label><input type="checkbox"><span>桃園學習中心</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>桃園學習中心</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>桃園學習中心</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>桃園學習中心</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>桃園學習中心</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>桃園學習中心</span></label></div>
+</div>
+<div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+</div>
+</div>
+<div class="search-choice-line"></div>
+<div class="search-bu-container">
+<div class="search-bu-fin green-bu-line hvr-top"><div class="green-bu">確&nbsp;定</div></div>
+<div class="search-bu-fin red-bu-line hvr-top"><div class="red-bu">取&nbsp;消</div></div>
+</div>
+</div>
+</div>
+<!-- ... 視窗-搜尋選項-選擇單位 end ... -->
+<!-- ... 視窗-搜尋選項-異動狀態 ... -->
+<div class="search-choice-bg" style="border-radius:10px;display:none;">
+<div class="search-choice-window">
+<div class="search-choice-title"><i class="fa fa-check-square"></i>異動狀態<label><input type="checkbox"><span>全選</span></label></div>
+<div class="search-choice-line"></div>
+<div class="search-choice-container">
+<div>
+<div class="search-choice"><label><input type="checkbox"><span>入職</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>離職</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>升等</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>降等</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>類別變更</span></label></div>
+</div>
+</div>
+<div class="search-choice-line"></div>
+<div class="search-bu-container">
+<div class="search-bu-fin green-bu-line hvr-top"><div class="green-bu">確&nbsp;定</div></div>
+<div class="search-bu-fin red-bu-line hvr-top"><div class="red-bu">取&nbsp;消</div></div>
+</div>
+</div>
+</div>
+<!-- ... 視窗-搜尋選項-異動狀態 end ... -->
+<!-- ... 視窗-操作提示-異動說明 ... -->
+<div class="check-tip-bg" style="border-radius:10px;display:none;">
+<div class="check-tip-window">
+<div class="check-tip">
+<div>異動說明</div>
+</div>
+<div class="check-reason">
+<textarea class="input-locked" disabled="disabled">2017年度業績達成，依升等規章升等經理。</textarea>
+</div>
+<div class="check-bu-container">
+<div class="check-bu-green green-bu-line hvr-top" style="margin-right:0px;"><div class="green-bu">確&nbsp;定</div></div>
+</div>
+</div>
+</div>
+<!-- ... 視窗-操作提示-異動說明 ... -->
+</div>
+</div>
+<!-- ... 異動查詢 end... -->
+</div>
+
+</div>
+</div>
+</div>
+<!-- ... 頁籤視窗-異動人員 end ... -->
+
+<!-- ... 視窗-待審通知 ... -->
+<div style="display:none;">
+<div class="pup-bg"></div>
+<div class="pup-window-container">
+<div class="pup-window">
+<img src="image/pup-window-close.png" class="pup-window-close hvr-top-small" alt="關閉"/>
+<div class="pup-window-title"><i class="fa fa-list"></i>待審核通知</div>
+<div class="pup-list-container">
+<div class="pup-list-title-container">
+<div class="pup-list-title">姓名-編號</div>
+<div class="pup-list-title">單位</div>
+<div class="pup-list-title">公司別</div>
+<div class="pup-list-title">狀態變更</div>
+<div class="pup-list-title" style="width:24.6666%">時間</div>
+<div class="pup-list-title" style="width:8.6666%">操作</div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell red-word">資料待審</div>
+<div class="pup-list-cell" style="width:24.6666%">2017/11/11&nbsp;17:23:01</div>
+<div class="pup-list-cell" style="width:8.6666%"><div class="cell-red-bu red-bu hvr-top-small" style="margin-left:0px;">刪除</div></div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell red-word">待補紙本</div>
+<div class="pup-list-cell" style="width:24.6666%">2017/11/11&nbsp;17:23:01</div>
+<div class="pup-list-cell" style="width:8.6666%"><div class="cell-red-bu red-bu hvr-top-small" style="margin-left:0px;">刪除</div></div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell red-word">待補紙本</div>
+<div class="pup-list-cell" style="width:24.6666%">2017/11/11&nbsp;17:23:01</div>
+<div class="pup-list-cell" style="width:8.6666%"><div class="cell-red-bu red-bu hvr-top-small" style="margin-left:0px;">刪除</div></div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell red-word">資料待審</div>
+<div class="pup-list-cell" style="width:24.6666%">2017/11/11&nbsp;17:23:01</div>
+<div class="pup-list-cell" style="width:8.6666%"><div class="cell-red-bu red-bu hvr-top-small" style="margin-left:0px;">刪除</div></div>
+</div>
+</div>
+<!-- ... 視窗-操作提示 ... -->
+<div class="check-tip-bg" style="display:none;">
+<div class="check-tip-window">
+<div class="check-tip">
+<div>確定刪除此通知</div>
+</div>
+<div class="check-bu-container">
+<div class="check-bu-green green-bu-line hvr-top"><div class="green-bu">確&nbsp;定</div></div><div class="check-bu-red red-bu-line hvr-top"><div class="red-bu">取&nbsp;消</div></div>
+</div>
+</div>
+</div>
+<!-- ... 視窗-操作提示 ... -->
+</div>
+</div>
+</div>
+<!-- ... 視窗-待審通知 end ... -->
+
+<!-- ... 視窗-篩選員工 ... -->
+<div id="em-choice-window" style="display:none;">
+<div class="pup-bg"></div>
+<div class="pup-window-container">
+<div class="pup-window">
+<img src="image/pup-window-close.png" id="em-choice-window-close" class="pup-window-close hvr-top-small" alt="關閉"/>
+<div class="pup-window-title"><i class="fa fa-search-plus"></i>篩選員工</div>
+<div class="search-point-area">
+<div class="from-input-container" style="width:306px;margin-left:0px;">
+<span>選擇單位</span><div id="choice-unit" class="from-input" style="width:218px;"><input type="text" class="select-arrow" style="padding-right:34px;" value="不限" disabled="disabled"></div>
+</div>
+<div class="from-input-container" style="width:306px;">
+<span>選擇職稱</span><div id="choice-position" class="from-input" style="width:218px;"><input type="text" class="select-arrow" style="padding-right:34px;" value="不限" disabled="disabled"></div>
+</div>
+<div class="from-input-container" style="width:306px;">
+<span>選擇類別</span><div class="from-input" style="width:218px;"><select class="select-arrow"><option>不限</option><option>業務</option><option>電訪</option></select></div>
+</div>
+<div class="from-input-container" style="width:306px;margin-left:0px;margin-top:20px;">
+<span>在職狀態</span><div class="from-input" style="width:218px;"><select class="select-arrow"><option>不限</option><option>在職</option><option>離職</option></select></div>
+</div>
+<div class="from-input-container" style="width:calc(100% - 330px);margin-top:20px;">
+<span style="margin-right:2px;">在職日期</span>
+<div class="from-input" style="width:200px;"><div class="calendar-bu"><i class="fa fa-calendar"></i></div><input type="text" style="padding-right:46px;"></div>
+<span style="margin:0px 3px;">-</span>
+<div class="from-input" style="width:200px;"><div class="calendar-bu"><i class="fa fa-calendar"></i></div><input type="text" style="padding-right:46px;"></div>
+<div class="search-bu-red"><div><i class="fa fa-search"></i>搜尋</div></div>
+</div>
+</div>
+<div class="pup-list-container" style="height:calc(100vh - 255px);">
+<div class="pup-list-title-container">
+<div class="pup-list-title">姓名-編號</div>
+<div class="pup-list-title">單位</div>
+<div class="pup-list-title">公司別</div>
+<div class="pup-list-title">職務-類別</div>
+<div class="pup-list-title">狀態</div>
+<div class="pup-list-title">手機號碼</div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明-AA0011</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell">經理-業務</div>
+<div class="pup-list-cell">在職</div>
+<div class="pup-list-cell">0912-236-333</div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明-AA0011</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell">經理-業務</div>
+<div class="pup-list-cell">在職</div>
+<div class="pup-list-cell">0912-236-333</div>
+</div>
+<!-- ... 視窗-搜尋選項-選擇單位 ... -->
+<div id="choice-unit-window" class="search-choice-bg" style="border-radius:10px;display:none;">
+<div class="search-choice-window">
+<div class="search-choice-title"><i class="fa fa-check-square"></i>選擇單位<label><input type="checkbox"><span>全選</span></label></div>
+<div class="search-choice-line"></div>
+<div class="search-choice-container">
+<div>
+<div class="search-choice"><label><input type="checkbox"><span>桃園學習中心</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>桃園學習中心</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>桃園學習中心</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>桃園學習中心</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>桃園學習中心</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>桃園學習中心</span></label></div>
+</div>
+<div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>雪芳</span></label></div>
+</div>
+</div>
+<div class="search-choice-line"></div>
+<div class="search-bu-container">
+<div class="search-bu-fin green-bu-line hvr-top"><div class="green-bu">確&nbsp;定</div></div>
+<div class="search-bu-fin red-bu-line hvr-top"><div class="red-bu">取&nbsp;消</div></div>
+</div>
+</div>
+</div>
+<!-- ... 視窗-搜尋選項-選擇單位 end ... -->
+<!-- ... 視窗-搜尋選項-選擇職稱 ... -->
+<div id="choice-position-window" class="search-choice-bg" style="border-radius:10px;display:none;">
+<div class="search-choice-window">
+<div class="search-choice-title"><i class="fa fa-check-square"></i>選擇職稱<label><input type="checkbox"><span>全選</span></label></div>
+<div class="search-choice-line"></div>
+<div class="search-choice-container">
+<div>
+<div class="search-choice"><label><input type="checkbox"><span>經理一等</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>經理二等</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>經理三等</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>經理四等</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>經理五等</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>經理六等</span></label></div>
+</div>
+<div>
+<div class="search-choice"><label><input type="checkbox"><span>協理一等</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>協理二等</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>協理三等</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>協理四等</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>協理五等</span></label></div>
+<div class="search-choice"><label><input type="checkbox"><span>協理六等</span></label></div>
+</div>
+</div>
+<div class="search-choice-line"></div>
+<div class="search-bu-container">
+<div class="search-bu-fin green-bu-line hvr-top"><div class="green-bu">確&nbsp;定</div></div>
+<div class="search-bu-fin red-bu-line hvr-top"><div class="red-bu">取&nbsp;消</div></div>
+</div>
+</div>
+</div>
+<!-- ... 視窗-搜尋選項-選擇職稱 end ... -->
+<!-- ... 視窗-操作提示-異動說明 ... -->
+<div class="check-tip-bg" style="border-radius:10px;display:none;">
+<div class="check-tip-window">
+<div class="check-tip">
+<div>異動說明</div>
+</div>
+<div class="check-reason">
+<textarea class="input-locked" disabled="disabled">2017年度業績達成，依升等規章升等經理。</textarea>
+</div>
+<div class="check-bu-container">
+<div class="check-bu-green green-bu-line hvr-top" style="margin-right:0px;"><div class="green-bu">確&nbsp;定</div></div>
+</div>
+</div>
+</div>
+<!-- ... 視窗-操作提示-異動說明 ... -->
+</div>
+</div>
+</div>
+</div>
+<!-- ... 視窗-篩選員工 end ... -->
+
+<!-- ... 頁籤視窗-單位員工 ... -->
+<div id="em-list" style="display:none;">
+<div class="pup-bg"></div>
+<div class="pup-window-container">
+<div class="pup-em-change-container">
+<img src="image/pup-window-close.png" id="em-list-close" class="pup-window-close hvr-top-small" style="top:15px;" alt="關閉"/>
+<ul class="tabs">
+<li class="blue-bu-line active"><div href="#tab3" class="blue-bu"><span>在職總覽<span class="em-amount">(140)</span></span></div></li>
+<li class="red-bu-line"><div href="#tab4" class="red-bu"><span>待審核<span class="em-amount">(3)</span></span></div></li>
+<li class="green-bu-line" style="display:none;"><div href="#tab5" class="green-bu"><span>編輯中<span class="em-amount">(3)</span></span></div></li><!-- ... 單位管理員-編輯中 ... -->
+</ul>
+<div>
+<!-- ... 在職總覽 ... -->
+<div id="tab3" class="pup-change-page">
+<div class="pup-list-container" style="border-radius:10px;">
+<div class="pup-list-title-container">
+<div class="pup-list-title">員工編號</div>
+<div class="pup-list-title">姓名</div>
+<div class="pup-list-title">單位</div>
+<div class="pup-list-title">公司別</div>
+<div class="pup-list-title">職稱</div>
+<div class="pup-list-title">類別</div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell">AA0011</div>
+<div class="pup-list-cell"><a href="#">王小明</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell">經理</div>
+<div class="pup-list-cell">業務</div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell">AA0011</div>
+<div class="pup-list-cell"><a href="#">王小明</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell">經理</div>
+<div class="pup-list-cell">業務</div>
+</div>
+</div>
+</div>
+<!-- ... 在職總覽 end... -->
+<!-- ... 待審核 ... -->
+<div id="tab4" class="pup-change-page" style="display:none;">
+<div class="pup-list-container" style="border-radius:10px;">
+<div class="pup-list-title-container">
+<div class="pup-list-title">姓名-編號</div>
+<div class="pup-list-title">單位</div>
+<div class="pup-list-title">公司別</div>
+<div class="pup-list-title">狀態</div>
+<div class="pup-list-title">日期</div>
+<div class="pup-list-title">操作</div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明-AA0011</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell red-word">資料待審</div>
+<div class="pup-list-cell">2017/11/11</div>
+<div class="pup-list-cell"><div class="cell-green-bu green-bu hvr-top-small tip-text-1">核可</div><div class="cell-red-bu red-bu hvr-top-small tip-text-1">退回</div></div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell red-word">資料待審</div>
+<div class="pup-list-cell">2017/11/11</div>
+<div class="pup-list-cell"><div class="cell-green-bu green-bu hvr-top-small tip-text-1">核可</div><div class="cell-red-bu red-bu hvr-top-small tip-text-2">退回</div></div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell red-word">待補紙本</div>
+<div class="pup-list-cell">2017/11/11</div>
+<div class="pup-list-cell"><div class="cell-green-bu green-bu hvr-top-small tip-text-3">完成</div><div class="cell-red-bu red-bu hvr-top-small tip-text-4">重補</div></div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell red-word">待補紙本</div>
+<div class="pup-list-cell">2017/11/11</div>
+<div class="pup-list-cell"><div class="cell-green-bu green-bu hvr-top-small tip-text-3">完成</div><div class="cell-red-bu red-bu hvr-top-small tip-text-4">重補</div></div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell red-word">退回</div>
+<div class="pup-list-cell">2017/11/11</div>
+<div class="pup-list-cell"><div class="cell-gray-bu gray-bu hvr-top-small tip-text-5">說明</div></div>
+</div>
+</div>
+<!-- ... 視窗-操作提示 ... -->
+<div class="check-tip-bg" style="display:none;">
+<div class="check-tip-window">
+<div class="check-tip">
+<!-- ... 總管理員-操作提示 ... -->
+<div class="check-tip-text-1" style="display:none;">確定核可&nbsp;<span>王小明</span><br/>處理狀態轉為&nbsp;待補紙本</div><!-- ... 待審核可 ... -->
+<div class="check-tip-text-2" style="display:none;">確定將&nbsp;<span>王小明</span>&nbsp;退回</div><!-- ... 待審退回 ... -->
+<div class="check-tip-text-3" style="display:none;">確定&nbsp;待補紙本&nbsp;無誤<br/>完成&nbsp;<span>王小明</span>&nbsp;變動</div><!-- ... 待補紙本完成 ... -->
+<div class="check-tip-text-4" style="display:none;">確定&nbsp;<span>王小明</span>&nbsp;需重補紙本</div><!-- ... 紙本重補 ... -->
+<div class="check-tip-text-5" style="display:none;">說明修改</div><!-- ... 說明修改 ... -->
+<!-- ... 總管理員-操作提示 ... -->
+<!-- ... 單位管理員-操作提示 ... -->
+<div style="display:none;">確定編輯&nbsp;<span>王小明</span><br/>該人員將移至編輯名單</div><!-- ... 待審編輯 ... -->
+<div style="display:none;">紙本有誤</div><!-- ... 紙本有誤-說明 ... -->
+<div style="display:none;">待審退回</div><!-- ... 待審退回-說明 ... -->
+<div style="display:none;">確定刪除&nbsp;<span>王小明</span><br/>待審名單將移除該人員</div><!-- ... 刪除 ... -->
+<!-- ... 單位管理員-操作提示 ... -->
+</div>
+<div class="check-reason check-tip-text-5" style="display:none;">
+<textarea placeholder="在此輸入原因說明"></textarea>
+</div>
+<div class="check-bu-container">
+<div class="check-bu-green green-bu-line hvr-top"><div class="green-bu">確&nbsp;定</div></div><div class="check-bu-red red-bu-line hvr-top"><div class="red-bu">取&nbsp;消</div></div>
+</div>
+</div>
+</div>
+<!-- ... 視窗-操作提示 ... -->
+</div>
+<!-- ... 待審核 end... -->
+<!-- ... 編輯中 ... -->
+<div id="tab5" class="pup-change-page" style="display:none;">
+<div class="pup-list-container">
+<div class="pup-list-title-container">
+<div class="pup-list-title">姓名-編號</div>
+<div class="pup-list-title">單位</div>
+<div class="pup-list-title">公司別</div>
+<div class="pup-list-title">職稱-類別</div>
+<div class="pup-list-title">編輯日期</div>
+<div class="pup-list-title">操作</div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明-AA0011</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell">副理-業務</div>
+<div class="pup-list-cell">2017/11/11</div>
+<div class="pup-list-cell"><div class="cell-green-bu green-bu hvr-top-small">編輯</div></div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell">副理-業務</div>
+<div class="pup-list-cell">2017/11/11</div>
+<div class="pup-list-cell"><div class="cell-green-bu green-bu hvr-top-small">編輯</div></div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell">副理-業務</div>
+<div class="pup-list-cell">2017/11/11</div>
+<div class="pup-list-cell"><div class="cell-green-bu green-bu hvr-top-small">編輯</div></div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell">副理-業務</div>
+<div class="pup-list-cell">2017/11/11</div>
+<div class="pup-list-cell"><div class="cell-green-bu green-bu hvr-top-small">編輯</div></div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell"><a href="#">王小明</a></div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell">副理-業務</div>
+<div class="pup-list-cell">2017/11/11</div>
+<div class="pup-list-cell"><div class="cell-green-bu green-bu hvr-top-small">編輯</div></div>
+</div>
+</div>
+</div>
+<!-- ... 編輯中 end... -->
+</div>
+</div>
+</div>
+</div>
+<!-- ... 頁籤視窗-單位員工 end ... -->
+
+<!-- ... 視窗-員工資料 ... -->
+<div id="em-infor-window" style="display:none;">
+<div class="pup-bg"></div>
+<div class="pup-window-container">
+<div class="pup-window">
+<img src="image/pup-window-close.png" id="em-infor-window-close" class="pup-window-close hvr-top-small" alt="關閉"/>
+<div class="unit-choice-container">
+<select class="input-locked" disabled="disabled">
+<option>101桃園學習中心</option>
+</select>
+</div>
+<div class="pup-window-title"><img src="image/title-icon.jpg" class="title-icon" alt=""/>員工資料&nbsp;-&nbsp;<span class="title-em-number">編號AA0011</span></div>
+<form class="from-input-all">
+<div class="from-input-area top-manager-height"><!-- 總管理員class為top-manager-height 單位管理員class為manager-height -->
+<div class="from-input-title"><img src="image/input-title-icon-1.jpg" alt=""/><span>個人資料</span><div class="from-input-title-line"></div></div>
+<div class="from-input-part-area">
+<div class="from-input-container" style="width:294px;"><span>員工姓名</span><div class="from-input" style="width:206px;"><input type="text" class="input-locked" disabled="disabled" value="王小明"><span style="display:none;">*資料未填</span></div></div><!-- 單位管理員-欄位編輯提示 -->
+<div class="from-input-container" style="width:294px;"><span>員工性別</span><div class="from-input" style="width:206px;"><select class="input-locked" disabled="disabled"><option>男</option><option>女</option></select><span style="display:none;">*格式錯誤</span></div></div><!-- 單位管理員-欄位編輯提示 -->
+<div class="from-input-container" style="width:294px;"><span>出生日期</span><div class="from-input" style="width:206px;"><div class="calendar-bu"><i class="fa fa-calendar"></i></div><input type="text" class="input-locked" disabled="disabled" value="1980/11/11"></div></div>
+</div>
+<div class="from-input-part-area">
+<div class="from-input-container" style="width:294px;"><span>身分證號</span><div class="from-input" style="width:206px;"><input type="text" class="input-locked" disabled="disabled" value="F123456789"></div></div>
+<div class="from-input-container" style="width:294px;"><span>手機號碼</span><div class="from-input" style="width:206px;"><input type="text" class="input-locked" disabled="disabled" value="0912-345-678"></div></div>
+<div class="from-input-container" style="width:294px;"><span>手機號碼</span><div class="from-input" style="width:206px;"><input type="text" class="input-locked" disabled="disabled" value="0912-345-678"></div></div>
+</div>
+<div class="from-input-part-area">
+<div class="from-input-container" style="width:684px;">
+<span>戶籍地址</span><div class="from-input" style="width:101px;"><select class="input-locked" disabled="disabled" style="background-position:88% 53%;"><option>新北市</option></select></div><div class="from-input" style="width:101px;margin-left:10px;"><select class="input-locked" disabled="disabled" style="background-position:88% 53%;"><option>板橋區</option></select></div><div class="from-input" style="width:375px;margin-left:10px;"><input type="text" class="input-locked" disabled="disabled" value="文化路二段111巷125弄125號19樓之305"></div>
+</div>
+<div class="from-input-container" style="width:228px;margin-left:10px;"><span>戶籍電話</span><div class="from-input" style="width:140px;"><input type="text" class="input-locked" disabled="disabled" value="00-12345678"></div></div>
+</div>
+<div class="from-input-part-area">
+<div class="from-input-container" style="width:684px;">
+<span>通訊地址</span><div class="from-input" style="width:101px;"><select class="input-locked" disabled="disabled" style="background-position:88% 53%;"><option>新北市</option></select></div><div class="from-input" style="width:101px;margin-left:10px;"><select class="input-locked" disabled="disabled" style="background-position:88% 53%;"><option>板橋區</option></select></div><div class="from-input" style="width:375px;margin-left:10px;"><input type="text" class="input-locked" disabled="disabled" value="文化路二段111巷125弄125號19樓之305"></div>
+</div>
+<div class="from-input-container" style="width:228px;margin-left:10px;"><span>通訊電話</span><div class="from-input" style="width:140px;"><input type="text" class="input-locked" disabled="disabled" value="00-12345678"></div></div>
+</div>
+<div class="from-input-title"><img src="image/input-title-icon-2.jpg" alt=""/><span>職務資料</span><div class="from-input-title-line"></div></div>
+<div class="from-input-part-area">
+<div class="from-input-container" style="width:215px;"><span>員工職稱</span><div class="from-input" style="width:128px;"><select class="input-locked" disabled="disabled"><option>協理</option></select></div></div>
+<div class="from-input-container" style="width:215px;"><span>員工類別</span><div class="from-input" style="width:128px;"><select class="input-locked" disabled="disabled"><option>業務</option></select></div></div>
+<div class="from-input-container" style="width:215px;"><span>員工狀態</span><div class="from-input" style="width:128px;"><select class="input-locked" disabled="disabled"><option>在職</option></select></div></div>
+<div class="from-input-container" style="width:206px;margin-left:30px;"><div id="em-history" class="em-history"><div>查看異動歷程<span><i class="fa fa-eye"></i></span></div></div></div>
+</div>
+<div class="from-input-part-area">
+<div class="from-input-container" style="width:294px;"><span>公司別</span><div class="from-input" style="width:206px;"><select class="input-locked" disabled="disabled" style="margin-left:20px;"><option>B4a豐原大和書局</option></select></div></div>
+<div class="from-input-container" style="width:294px;"><span>直屬主管</span><div class="from-input" style="width:206px;"><select class="input-locked" disabled="disabled"><option>陳大華AA0012</option></select></div></div>
+<div class="from-input-container" style="width:294px;"><span>到職日期</span><div class="from-input" style="width:206px;"><div class="calendar-bu"><i class="fa fa-calendar"></i></div><input type="text" class="input-locked" disabled="disabled" value="2017/11/11"></div></div>
+</div>
+<div class="from-input-title"><img src="image/input-title-icon-3.jpg" alt=""/><span>薪轉資料</span><div class="from-input-title-line"></div></div>
+<div class="from-input-part-area">
+<div class="from-input-container" style="width:103px;"><div class="from-input" style="width:100%;"><select class="input-locked" disabled="disabled"><option>本人</option></select></div></div>
+<div class="from-input-container" style="width:344px;"><span>銀行</span><div class="from-input" style="width:99px;"><input type="text" class="input-locked" disabled="disabled" value="國泰世華"></div><div class="from-input" style="width:143px;margin-left:10px;"><input type="text" class="input-locked" disabled="disabled" value="南京東路"></div><span style="margin-left:5px;">分行</span></div>
+<div class="from-input-container" style="width:141px;"><span>銀行代號</span><div class="from-input" style="width:53px;"><input type="text" class="input-locked" disabled="disabled" value="013"></div></div>
+<div class="from-input-container" style="width:273px;"><span>銀行帳號</span><div class="from-input" style="width:185px;"><input type="text" class="input-locked" disabled="disabled" value="000-13-123456-3"></div></div>
+</div>
+<div class="from-input-part-area">
+<div class="from-input-container" style="width:124px;"><span>底薪</span><div class="from-input" style="width:76px;"><input type="text" class="input-locked" disabled="disabled" value="99000"></div></div>
+<div class="from-input-container" style="width:385px;"><span>起迄</span><div class="from-input" style="width:160px;"><div class="calendar-bu"><i class="fa fa-calendar"></i></div><input type="text" class="input-locked" disabled="disabled" value="1980/11/11"></div><span style="margin:0px 3px;">-</span><div class="from-input" style="width:160px;"><div class="calendar-bu"><i class="fa fa-calendar"></i></div><input type="text" class="input-locked" disabled="disabled" value="1980/11/11"></div></div>
+<div class="from-input-container" style="width:374px;">
+<span style="margin-right:0px;">業績%數&nbsp;:&nbsp;</span><span style="margin-right:5px;">組織</span><div class="from-input" style="width:44px;"><input type="text" class="input-locked" disabled="disabled" value="10"></div><span style="margin:0px 5px;">個人</span><div class="from-input" style="width:44px;"><input type="text" class="input-locked" disabled="disabled" value="10"></div><span style="margin:0px 5px;">加給</span><div class="from-input" style="width:44px;"><input type="text" class="input-locked" disabled="disabled" value="10"></div>
+</div>
+</div>
+<div class="from-input-title"><img src="image/input-title-icon-4.jpg" alt=""/><span>書面資料</span><div class="from-input-title-line"></div></div>
+<div class="from-input-part-area">
+
+<div class="from-input-file-area">
+<div class="from-input-file-container">
+<img src="image/infor-pic-test.jpg" alt="" style="display:none;"/>
+<div class="from-input-file-text">承攬合約<br/>第一頁<br/>點此上傳</div>
+<input type="file">
+<div class="from-input-file-black" style="display:none;">承攬合約<br/>第一頁<br/>點擊查看</div>
+</div>
+<div class="infor-pic-delete" style="display:none;">X刪除</div><!-- 單位管理員-編輯刪除圖片 -->
+</div>
+
+<div class="from-input-file-area">
+<div class="from-input-file-container">
+<img src="image/infor-pic-test.jpg" alt=""/>
+<div class="from-input-file-text" style="display:none;">承攬合約<br/>第一頁<br/>點此上傳</div>
+<input type="file" style="display:none;">
+<div class="from-input-file-black">承攬合約<br/>第二頁<br/>點擊查看</div>
+</div>
+<div class="infor-pic-delete" style="display:none;">X刪除</div><!-- 單位管理員-編輯刪除圖片 -->
+</div>
+
+<div class="from-input-file-area">
+<div class="from-input-file-container">
+<img src="image/infor-pic-test.jpg" alt=""/>
+<div class="from-input-file-text" style="display:none;">承攬合約<br/>第一頁<br/>點此上傳</div>
+<input type="file" style="display:none;">
+<div class="from-input-file-black">承攬合約<br/>第二頁<br/>點擊查看</div>
+</div>
+<div class="infor-pic-delete" style="display:none;">X刪除</div><!-- 單位管理員-編輯刪除圖片 -->
+</div>
+
+<div class="from-input-file-area">
+<div class="from-input-file-container">
+<img src="image/infor-pic-test.jpg" alt=""/>
+<div class="from-input-file-text" style="display:none;">承攬合約<br/>第一頁<br/>點此上傳</div>
+<input type="file" style="display:none;">
+<div class="from-input-file-black">承攬合約<br/>第二頁<br/>點擊查看</div>
+</div>
+<div class="infor-pic-delete" style="display:none;">X刪除</div><!-- 單位管理員-編輯刪除圖片 -->
+</div>
+
+<div class="from-input-file-area">
+<div class="from-input-file-container">
+<img src="image/infor-pic-test.jpg" alt=""/>
+<div class="from-input-file-text" style="display:none;">承攬合約<br/>第一頁<br/>點此上傳</div>
+<input type="file" style="display:none;">
+<div class="from-input-file-black">承攬合約<br/>第二頁<br/>點擊查看</div>
+</div>
+<div class="infor-pic-delete" style="display:none;">X刪除</div><!-- 單位管理員-編輯刪除圖片 -->
+</div>
+
+<div class="from-input-file-area">
+<div class="from-input-file-container">
+<img src="image/infor-pic-test.jpg" alt=""/>
+<div class="from-input-file-text" style="display:none;">承攬合約<br/>第一頁<br/>點此上傳</div>
+<input type="file" style="display:none;">
+<div class="from-input-file-black">承攬合約<br/>第二頁<br/>點擊查看</div>
+</div>
+<div class="infor-pic-delete" style="display:none;">X刪除</div><!-- 單位管理員-編輯刪除圖片 -->
+</div>
+
+<div class="from-input-file-area">
+<div class="from-input-file-container">
+<img src="image/infor-pic-test.jpg" alt=""/>
+<div class="from-input-file-text" style="display:none;">承攬合約<br/>第一頁<br/>點此上傳</div>
+<input type="file" style="display:none;">
+<div class="from-input-file-black">承攬合約<br/>第二頁<br/>點擊查看</div>
+</div>
+<div class="infor-pic-delete" style="display:none;">X刪除</div><!-- 單位管理員-編輯刪除圖片 -->
+</div>
+
+</div>
+</div>
+<div class="from-bu-container" style="display:none;"><!-- ... 單位管理員-按鈕 ... -->
+<div class="from-bu green-bu-line hvr-top"><div class="green-bu">儲存編輯</div></div>
+<div class="from-bu red-bu-line hvr-top"><div class="red-bu">確定送審</div></div>
+</div>
+</form>
+<!-- ... 操作提示 ... -->
+<div class="check-tip-bg" style="display:none;">
+<div class="check-tip-window">
+<div class="check-tip">
+<div style="display:none;">確定送審&nbsp;<span>王小明</span><br/>該人員將移至待審核名單</div><!-- ... 新增送審、修改送審 ... -->
+<div style="display:none;">確定儲存&nbsp;<span>王小明</span><br/>該人員將移至編輯名單</div><!-- ... 新增儲存 ... -->
+<div style="display:none;">確定取消編輯&nbsp;<span>王小明</span><br/>系統不做任何儲存</div><!-- ... 取消編輯 ... -->
+<div style="display:none;">確定關閉視窗<br/>系統不做任何儲存</div><!-- ... 修改關閉視窗 ... -->
+</div>
+<div class="check-bu-container">
+<div class="check-bu-green green-bu-line hvr-top"><div class="green-bu">確&nbsp;定</div></div><div class="check-bu-red red-bu-line hvr-top"><div class="red-bu">取&nbsp;消</div></div>
+</div>
+</div>
+</div>
+<!-- ... 員工新增、修改-操作提示-送審、儲存end ... -->
+</div>
+</div>
+</div>
+<!-- ... 視窗-員工資料 end ... -->
+
+<!-- ... 視窗-異動歷程 ... -->
+<div id="em-history-window" style="display:none;">
+<div class="pup-window-container">
+<div class="pup-window">
+<img src="image/pup-window-close.png" id="em-history-close" class="pup-window-close hvr-top-small" alt="關閉"/>
+<div class="pup-window-title"><img src="image/title-icon.jpg" class="title-icon" alt=""/>異動歷程&nbsp;-&nbsp;<span class="title-em-number">王小明</span></div>
+<div class="search-point-area" style="padding:30px;">
+<div class="from-input-container" style="width:100%;margin-left:0px;">
+<span>日期起迄</span>
+<div class="from-input" style="width:183px;"><div class="calendar-bu"><i class="fa fa-calendar"></i></div><input type="text" style="padding-right:48px;"></div>
+<span style="margin:0px 3px;">-</span>
+<div class="from-input" style="width:183px;"><div class="calendar-bu"><i class="fa fa-calendar"></i></div><input type="text" style="padding-right:48px;"></div>
+<div class="search-bu-red"><div><i class="fa fa-search"></i>搜尋</div></div>
+</div>
+</div>
+<div class="pup-list-container" style="height:calc(100vh - 195px);">
+<div class="pup-list-title-container">
+<div class="pup-list-title">異動日期</div>
+<div class="pup-list-title">單位</div>
+<div class="pup-list-title">公司別</div>
+<div class="pup-list-title">職務-類別</div>
+<div class="pup-list-title">異動狀態</div>
+<div class="pup-list-title">異動說明</div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell">2017/11/11</div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell">經理-業務</div>
+<div class="pup-list-cell red-word">升等</div>
+<div class="pup-list-cell"><div class="cell-blue-bu blue-bu hvr-top-small history-detail-open">查看</div></div>
+</div>
+<div class="pup-list-cell-container">
+<div class="pup-list-cell">2017/11/11</div>
+<div class="pup-list-cell">桃園學習中心</div>
+<div class="pup-list-cell">B4a豐原大和</div>
+<div class="pup-list-cell">經理-業務</div>
+<div class="pup-list-cell red-word">升等</div>
+<div class="pup-list-cell"><div class="cell-blue-bu blue-bu hvr-top-small history-detail-open">查看</div></div>
+</div>
+</div>
+<!-- ... 視窗-操作提示-異動說明 ... -->
+<div id="history-detail-window" class="check-tip-bg" style="display:none;">
+<div class="check-tip-window">
+<div class="check-tip">
+<div>異動說明</div>
+</div>
+<div class="check-reason">
+<textarea class="input-locked" disabled="disabled">2017年度業績達成，依升等規章升等經理。</textarea>
+</div>
+<div class="check-bu-container">
+<div class="check-bu-green green-bu-line hvr-top" style="margin-right:0px;"><div id="history-detail-close" class="green-bu">確&nbsp;定</div></div>
+</div>
+</div>
+</div>
+<!-- ... 視窗-操作提示-異動說明 ... -->
+</div>
+</div>
+</div>
+<!-- ... 視窗-異動歷程 end ... -->
+
+</body>
+</html>

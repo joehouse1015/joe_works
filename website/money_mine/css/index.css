@@ -1,0 +1,120 @@
+@charset "utf-8";
+/* reset */
+*{font-family:'arial',\5FAE\8EDF\6B63\9ED1\9AD4,\65B0\7D30\660E\9AD4;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+body{margin:0px;background:#f2f1f1;}
+ul{padding:0px;margin:0px;list-style:none;}
+li{padding:0px;margin:0px;}
+a{color:#0c5ba8;text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{border:none;}
+textarea:focus,input:focus,select:focus{outline:none;}
+select{ 
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+}
+select::-ms-expand{
+display: none;
+}
+/* reset end */
+
+.page_container{width:100%;height:auto;}
+.page_container img{max-width:100%;}
+
+.open_choice_btn{width:52px;position:fixed;top:0px;right:0px;cursor:pointer;opacity:0.7;}
+.open_choice_btn:hover{opacity:1;}
+
+.choice_btn_area_bg{width:100%;height:100%;background-color:rgba(0,0,0,0.7);position:fixed;top:0px;left:0px;}
+.choice_btn_area{width:360px;height:100vh;background-color:#ffffff;border-left:5px solid #e0e0e0;overflow:scroll;overflow-x:hidden;position:fixed;top:0px;right:-360px;transition-duration:1s;}
+.choice_btn_area::-webkit-scrollbar{width:10px;background-color:#ffffff;border-radius:10px;}
+.choice_btn_area::-webkit-scrollbar-thumb {background-color:#0071d1;}
+.choice_btn{width:50%;height:80px;font-size:18px;color:#1f1f1f;border-bottom:2px solid #e0e0e0;display:flex;justify-content:center;align-items:center;float:left;cursor:pointer;}
+.choice_btn:nth-child(odd){border-right:1px solid #e0e0e0;}
+.choice_btn:nth-child(even){border-left:1px solid #e0e0e0;}
+.choice_btn span{font-size:21px;color:#0071d1;margin-right:1px;position:relative;top:1px;}
+
+.open_choice_class{right:0px !important;}
+.close_icon{width:25px;position:fixed;top:30px;left:30px;cursor:pointer;}
+
+.page_choice{position:fixed;bottom:140px;left:10px;}
+.page_choice_btn{
+width:52px;height:52px;
+font-size:22px;color:#737373;
+background: #ffffff;
+background: -moz-linear-gradient(top, #ffffff 0%, #e0e0e0 100%);
+background: -webkit-linear-gradient(top, #ffffff 0%,#e0e0e0 100%);
+background: linear-gradient(to bottom, #ffffff 0%,#e0e0e0 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0e0e0',GradientType=0 );
+border:2px solid #e0e0e0;
+border-radius:50px;
+margin-bottom:20px;
+display:flex;justify-content:center;align-items:center;
+opacity:0.7;
+cursor:pointer;
+}
+.page_choice_btn:hover,.active{
+color:#ffffff;
+background: #0097e3;
+background: -moz-linear-gradient(top, #0097e3 0%, #004cbf 100%);
+background: -webkit-linear-gradient(top, #0097e3 0%,#004cbf 100%);
+background: linear-gradient(to bottom, #0097e3 0%,#004cbf 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0097e3', endColorstr='#004cbf',GradientType=0 );
+border:0px solid #e0e0e0;
+}
+.page_choice_btn:hover{
+opacity:1;
+}
+
+@media (max-width:1680px){
+.open_choice_btn{width:50px;}
+.choice_btn_area::-webkit-scrollbar{width:8px;}
+.choice_btn{font-size:17px;}
+.choice_btn span{font-size:19px;top:2px;}
+.choice_btn_area{width:320px;right:-320px;}
+.close_icon{width:20px;}
+
+.page_choice_btn{width:50px;height:50px;font-size:21px;}
+}
+@media (max-width:1400px){
+.choice_btn{height:70px;}
+}
+@media (max-width:1280px){
+.open_choice_btn{width:46px;}
+.page_choice_btn{width:46px;height:46px;font-size:20px;}
+}
+@media (max-width:1024px){
+.open_choice_btn{width:42px;}
+.page_choice_btn{width:42px;height:42px;font-size:19px;}
+
+.choice_btn_area{width:280px;right:-280px;}
+.choice_btn{height:60px;}
+.choice_btn{font-size:16px;}
+.choice_btn span{font-size:18px;top:2px;}
+
+.close_icon{width:18px;}
+}
+@media (max-width:800px){
+.open_choice_btn{width:38px;}
+.page_choice_btn{width:38px;height:38px;font-size:18px;}
+
+.choice_btn_area{width:240px;right:-240px;}
+.choice_btn{height:55px;}
+.choice_btn{font-size:15px;}
+.choice_btn span{font-size:17px;}
+}
+@media (max-width:600px){
+.open_choice_btn{width:34px;}
+.page_choice_btn{width:34px;height:34px;font-size:16px;}
+
+.choice_btn_area{width:220px;right:-220px;}
+.choice_btn{height:52px;}
+.choice_btn{font-size:14px;}
+.choice_btn span{font-size:16px;}
+}
+@media (max-width:480px){
+.open_choice_btn{width:30px;}
+.page_choice_btn{width:30px;height:30px;font-size:15px;}
+}
+
+
+

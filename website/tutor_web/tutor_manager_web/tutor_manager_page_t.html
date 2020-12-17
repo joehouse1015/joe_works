@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=Edge;chrome=1" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="學習王科技" name="author">
+	<meta content="學習王科技股份有限公司" name="copyright">
+	<meta content="好師到學習管理中心" name="description">
+	<meta content="好師到學習規劃中心" itemprop="name">
+	<meta content="image/og-img.jpg" itemprop="image">
+	<meta content="好師到學習管理中心" itemprop="description">
+	<meta content="好師到學習管理中心" property="og:title">
+	<meta content="" property="og:url">
+	<meta content="image/og-img.jpg" property="og:image">
+	<meta content="好師到學習管理中心" property="og:description">
+	<meta content="好師到, 一對一" name="keywords">
+	<link href="css/manager_center.css" rel="stylesheet" type="text/css">
+	<link href="image/shortcut.ico" rel="shoutcut icon">
+	<title>好師到學習管理中心</title>
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+	
+<div class="manager_main_area">
+<div class="manager_main_container">
+
+<div class="manager_nav_container">
+<div class="manager_nav_logo"><a href="#" target="_blank"><img src="image/member_login_logo.png" alt=""/></a></div>
+
+<div class="manager_nav_account_container">
+<div class="manager_nav_account">
+<div class="manager_nav_headpic"><div><img src="image/member_headpic.jpg" alt=""/></div></div>
+<div class="manager_nav_infor">
+<div><span>陳中信</span>&nbsp;<span>6117400104</span></div>
+<div><span class="manager_reset_passowrd_btn">修改密碼</span><img src="image/yellow_line.jpg" class="yellow_line" alt=""/><span class="manager_logout_btn"><a href="tutor_manager_login.html">帳號登出</a></span></div>
+</div>
+</div>
+</div>
+  
+</div>
+
+<!-- 中間區塊 上課紀錄 讀書規劃 聯絡紀錄  -->            
+<div class="manager_lesson_infor">
+    
+<div class="manager_lesson_tip_container">   
+<div class="manager_lesson_tip manager_lesson_date_tip">
+<span>尚未填上課資料<span class="manager_notice">(<span>2</span>)</span></span>
+</div>
+<!-- 0730新增 -->
+<div class="manager_lesson_tip manager_lesson_punch_tip">
+<span>上課20分鐘尚未打卡<span class="manager_notice">(<span>1</span>)</span></span>
+</div>
+<!-- 0730新增end -->
+</div>
+    
+<ul class="tabs">
+<li class="tab_li active">上課紀錄</li>
+</ul>
+<div class="manager_lesson_infor_container">
+
+<!-- 上課紀錄 -->
+<div id="infor3">
+<div class="manager_lesson_infor_title">上課紀錄：黃大可老師</div>
+<div class="manager_record_search_container">
+<div class="manager_record_search">
+<input type="text" placeholder="選擇月份">
+</div>
+</div>    
+<div class="manager_list_title">
+<div>上課日期</div>
+<div>上課時間</div>
+<div>上課科目</div>
+<div>上課回報</div>
+</div>
+<div class="manager_list_infor border_left_right_none">
+<div>2020/04/11</div>
+<div>14:00-15:00</div>
+<div>物理</div>
+<div><div class="manager_list_infor_btn class_report_btn">查看</div></div>
+</div>
+  
+</div>
+<!-- 上課紀錄end -->
+
+
+</div>
+</div>
+<!-- 中間區塊 學生列表 老師列表end -->  
+
+</div>
+</div>
+
+<!-- ... pup視窗-上課回報內容 ... -->    
+<div class="pup_class_report_t" style="display:none;">
+<div class="pup_manager_bg"></div>
+<div class="pup_manager_window">
+<div style="padding-bottom:90px;">
+<div class="pup_manager_container">
+    
+<div class="pup_class_report_title">2020/04/11&nbsp;黃大可-物理上課回報</div> 
+<div class="pup_class_report_textarea"><textarea></textarea></div>     
+<div class="pup_class_report_title" style="margin-top:20px;">上課影片檔案連結</div> 
+<div class="pup_class_report_textarea"><textarea></textarea></div> 
+    
+</div>
+<img src="image/close_icon.png" class="pup_manager_close" alt=""/>
+<div class="pup_manager_window_btn window_btn_reture">退回回報</div>
+<div class="pup_manager_window_btn window_btn_send">核可送出</div>
+
+</div>  
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+      $(".class_report_btn").click(function(){
+		  $(".pup_class_report_t").show();
+      });
+	  $(".pup_manager_close,.pup_manager_bg").click(function(){
+        $(".pup_class_report_t").hide();	
+      });
+    });
+</script>
+<!-- ... pup視窗-上課回報內容end ... -->
+    
+<!-- ... pup視窗-上課回報內容 ... -->    
+<div class="pup_report_reture" style="display:none;">
+<div class="pup_manager_bg"></div>
+<div class="pup_manager_window">
+<div style="padding-bottom:90px;">
+<div class="pup_manager_container">
+    
+<div class="pup_class_report_title">退回原因</div> 
+<div class="pup_class_report_textarea"><textarea></textarea></div>     
+
+</div>
+<img src="image/close_icon.png" class="pup_manager_close" alt=""/>
+<div class="pup_manager_window_btn">確認退回</div>
+</div>  
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+      $(".window_btn_reture").click(function(){
+		  $(".pup_report_reture").show();
+          $(".pup_class_report").hide();
+      });
+	  $(".pup_manager_close,.pup_manager_bg").click(function(){
+        $(".pup_report_reture").hide();	
+      });
+    });
+</script>
+<!-- ... pup視窗-上課回報內容end ... -->
+    
+</body>
+</html>
