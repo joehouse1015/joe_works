@@ -187,7 +187,7 @@ img{vertical-align:middle;}
 .intor_text_area{width:calc(100% - 140px);}
 .intor_text_title{font-size:22px;}
 .intor_text_name{font-size:16px;line-height:23px;}
-.intor_text{font-size:13px;line-height:18px;}
+.intor_text{line-height:18px;}
 }
 @media (max-width:380px){
 .intor_pic{width:120px;}
@@ -524,7 +524,7 @@ transition:0.5s ease;
 }
 @media (max-width:600px){.footer{font-size:15px;padding:0 20px;}.footer_middle{bottom:-33px;}}
 @media (max-width:450px){.footer{font-size:14px;}.footer_middle{bottom:-34px;}}
-@media (max-width:400px){.footer{font-size:13px;}.footer_middle{bottom:-24px;}.footer_container{height:60px;}.footer_infor{padding-top:11px;}.footer_infor span{top:11px;}.footer_rights{padding-top:4px;}}
+@media (max-width:400px){.footer_middle{bottom:-24px;}.footer_container{height:60px;}.footer_infor{padding-top:11px;}.footer_infor span{top:8px;}.footer_rights{padding-top:4px;}}
 
 .view_height{height:100vh;position:fixed;top:0px;left:0px;}
 /* footer end */
@@ -545,7 +545,6 @@ transition:0.5s ease;
 .pup_close_icon{width:30px;}
 .pup_img_container::-webkit-scrollbar{width:6px;}
 }
-
 /* pup end */
 
 
