@@ -1,0 +1,274 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link href="css/all_2.css" rel="stylesheet" type="text/css">
+    <link rel="shoutcut icon" href="image/yuanta.ico" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <title>元大期貨槓桿交易商</title>
+</head>
+
+<body>
+
+    <div class="top_bar">
+        <div class="top_bar_btn">
+            <div class="top_bar_btn_1 hvr-top-m"></div>
+            <div class="top_bar_btn_2 hvr-top-m"></div>
+            <div class="top_bar_btn_3 hvr-top-m"></div>
+            <div class="top_bar_btn_4 hvr-top-m"></div>
+        </div>
+        <div class="top_bar_social_media">
+            <div class="top_bar_social_media_1 hvr-top-m"></div>
+            <div class="top_bar_social_media_2 hvr-top-m"></div>
+            <div class="top_bar_social_media_3 hvr-top-m"></div>
+        </div>
+    </div>
+
+    <div class="nav_bar">
+        <div class="nav_bar_logo"><img src="image_2/logo.png" alt=""></div>
+        <div class="nav_bar_item">
+            <div class="nav_bar_choice">
+                <span>客戶專區</span>
+                <span>數位金融</span>
+                <span>市場資訊</span>
+                <span>槓桿交易</span>
+                <span>產業法人</span>
+                <span>投資學院</span>
+                <span>元大智能網</span>
+                <span>研究報告</span>
+            </div>
+            <div class="nav_bar_function">
+                <div class="nav_bar_search"></div>
+                <div class="nav_bar_language"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="marquee_container" style="display:none;">
+        <div>
+            <marquee><img src="image_2/marquee_img.png" alt=""></marquee>
+        </div>
+    </div>
+
+    <div class="marquee_container">
+        <div id="myDiv">
+            <table>
+                <tr>
+                    <td id="pic1">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="marquee_content marquee_animate"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td id="pic2"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript">
+        <!--
+        //變數Speed為設定捲軸的速度用 越小越快
+        var Speed = 50;
+        //接受setInterval所回傳的值
+        var timer;
+        //取得myDiv的參考用的變數
+        var myDiv = document.getElementById("myDiv");
+        //取得pic2的參考用的變數
+        var pic2 = document.getElementById("pic2");
+        //讓pic2的innerHTML等於pic1的innerHTML
+        pic2.innerHTML = document.getElementById("pic1").innerHTML;
+        //用來捲動myDiv捲軸用的主程式
+        function picMarquee() {
+            //若pic2的寬小於myDiv的scrollLeft，表示捲軸已經過了第一行
+            //所以讓Div的scrollLeft再回到原來的位置；反之 則繼續往右跑
+            if (pic2.offsetWidth - myDiv.scrollLeft <= 0) {
+                myDiv.scrollLeft = 0;
+            } else {
+                myDiv.scrollLeft++;
+            }
+        }
+        //每Speed毫秒就執行一次pciMarquee()
+        timer = setInterval(picMarquee, Speed);
+        //當滑鼠在myDiv上時 就停止捲動
+        myDiv.onmouseover = function() {
+            clearInterval(timer);
+        }
+        //當滑鼠離開myDiv上時 就繼續往右捲動
+        myDiv.onmouseout = function() {
+            timer = setInterval(picMarquee, Speed);
+        }
+        //
+
+        -->
+    </script>
+    <div class="banner_area">
+        <img src="image_2/hot_key.png" alt="" class="hot_key">
+        <div class="banner_area_btn_container"><img src="image_2/banner_area_btn.png" alt="" class="banner_area_btn hvr-top_l"></div>
+    </div>
+
+    <div class="main">
+
+        <div class="section_container">
+            <div class="section_1 block" data-move-y="0px" data-move-x="-400px">
+                <img src="image_2/section_1_item_title.png" alt="" style="margin-bottom:33px;">
+                <div class="section_1_item_row">
+                    <div class="section_1_item_1">
+                        <div class="section_1_item_1_btn hvr-top item_btn"></div>
+                    </div>
+                    <div class="section_1_item_2">
+                        <div class="section_1_item_2_btn hvr-top item_btn"></div>
+                    </div>
+                    <div class="section_1_item_3">
+                        <div class="section_1_item_3_btn hvr-top item_btn"></div>
+                    </div>
+                    <div class="section_1_item_4">
+                        <div class="section_1_item_4_btn hvr-top item_btn"></div>
+                    </div>
+                </div>
+                <div class="section_1_item_row">
+                    <div class="section_1_item_5">
+                        <div class="section_1_item_5_btn hvr-top item_btn"></div>
+                    </div>
+                    <div class="section_1_item_6">
+                        <div class="section_1_item_6_btn hvr-top item_btn"></div>
+                    </div>
+                    <div class="section_1_item_7">
+                        <div class="section_1_item_7_btn hvr-top item_btn"></div>
+                    </div>
+                    <div class="section_1_item_7" style="opacity:0;">
+                        <div class="section_1_item_7_btn hvr-top item_btn"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section_container">
+            <div class="section_2 block" data-move-y="0px" data-move-x="400px">
+                <div>
+                    <div class="section_2_position_1 hvr-top item_btn"></div>
+                    <div class="section_2_position_2 hvr-top item_btn"></div>
+                    <div class="section_2_position_3 hvr-top item_btn"></div>
+                    <div class="section_2_position_4 hvr-top item_btn"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section_container">
+            <div class="section_3 block" data-move-y="0px" data-move-x="-400px">
+                <img src="image_2/section_3_title.png" alt="">
+                <div class="section_3_item_row"><img src="image_2/section_3_item_1.png" alt=""><img src="image_2/section_3_item_2.png" alt=""></div>
+                <div class="section_3_item_row"><img src="image_2/section_3_item_3.png" alt=""><img src="image_2/section_3_item_4.png" alt=""></div>
+            </div>
+        </div>
+
+        <div class="section_container">
+            <div class="section_4">
+                <div class="section_4_row">
+                    <img src="image_2/section_4_card_1.png" alt="" class="block" data-rotate-y="180deg" data-move-z="-200px" data-move-x="-300px">
+                    <img src="image_2/section_4_card_2.png" alt="" class="block" data-rotate-x="180deg" data-rotate-y="180deg" data-move-z="-700px">
+                    <img src="image_2/section_4_card_3.png" alt="" class="block" data-rotate-x="180deg" data-rotate-y="45deg" data-move-z="-500px">
+                    <img src="image_2/section_4_card_4.png" alt="" class="block" data-rotate-y="180deg" data-move-z="-100px" data-move-x="500px">
+                </div>
+                <img src="image_2/section_4_item_2.png" alt="" class="block" data-move-y="200px" data-move-x="0px">
+            </div>
+        </div>
+
+        <div class="section_container">
+            <div class="section_5">
+                <div class="section_5_content" class="block" data-move-y="200px" data-move-x="0px">
+                    <div class="section_5_tab">
+                        <div class="active">交易公告<div class="tab_arrow"><img src="image_2/tab_arrow.png" alt=""></div>
+                        </div>
+                        <div>最新訊息</div>
+                    </div>
+                    <div class="section_5_choice_container">
+                        <div class="section_5_choice_row">
+                            <div><a href="#" class="active">國內交易公告</a></div>
+                            <div><a href="#">國外交易公告</a></div>
+                            <div><a href="#">交易平台公告</a></div>
+                            <div><a href="#">變更合約規格</a></div>
+                            <div><a href="#">商品價格調整</a></div>
+                            <div><a href="#">結算價公告</a></div>
+                        </div>
+                        <div class="section_5_choice_row">
+                            <div><a href="#">保證金調整通知</a></div>
+                            <div><a href="#">假期公告</a></div>
+                            <div><a href="#">商品到期通知</a></div>
+                            <div><a href="#">槓桿交易公告</a></div>
+                        </div>
+                    </div>
+                    <div class="section_5_news_list">
+                        <div class="list_item">
+                            <div class="dot"></div>
+                            <div class="title">本公司實施一定年齡以上客戶權益保護措施公告</div>
+                            <div class="date">2022/09/30</div>
+                        </div>
+                        <div class="list_item">
+                            <div class="dot"></div>
+                            <div class="title">HKEX香港交易所調整恆生科技指數期貨(HTI)可交易月份</div>
+                            <div class="date">2022/09/30</div>
+                        </div>
+                        <div class="list_item">
+                            <div class="dot"></div>
+                            <div class="title">國外期貨保證金調整通知</div>
+                            <div class="date">2022/09/30</div>
+                        </div>
+                        <div class="list_item">
+                            <div class="dot"></div>
+                            <div class="title">【差價契約】除權息作業通知</div>
+                            <div class="date">2022/09/30</div>
+                        </div>
+                        <div class="list_item">
+                            <div class="dot"></div>
+                            <div class="title">本公司實施一定年齡以上客戶權益保護措施公告</div>
+                            <div class="date">2022/09/30</div>
+                        </div>
+                        <div class="list_item">
+                            <div class="dot"></div>
+                            <div class="title">國外期貨保證金調整通知</div>
+                            <div class="date">2022/09/30</div>
+                        </div>
+
+                        <div class="section_5_btn">
+                            <img src="image/section_5_btn.png" alt="" class="hvr-top" style="cursor:pointer;">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer"></div>
+
+    <div class="right_nav_container">
+        <div class="nav_right_ar" onclick="window.open('https://gcp.goodarc.com:10050/');"></div>
+        <div class="nav_right_line"></div>
+        <div class="nav_right_account"></div>
+        <div class="nav_right_gotop"></div>
+    </div>
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.smoove.js"></script>
+<script>
+    $('.block').smoove({
+        offset: '40%'
+    });
+
+</script>
+
+</html>
