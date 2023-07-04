@@ -168,7 +168,7 @@ select::-ms-expand {
 }
 
 .page_main_note {
-    font-size: 24px;
+    font-size: 20px;
     color: #757575;
     text-align: center;
     margin-top: 10px;
@@ -316,7 +316,7 @@ select::-ms-expand {
     }
 
     .page_main_note {
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .page_main_text {
