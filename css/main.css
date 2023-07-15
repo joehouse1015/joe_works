@@ -36,6 +36,7 @@ img {
 /* top bar */
 .top_bar_area {
     width: 100%;
+    background:#1f1f1f;
 }
 
 .top_bar_container {
@@ -60,7 +61,7 @@ img {
     color: #bfbfbf;
     letter-spacing: 2px;
     position: absolute;
-    bottom: 27px;
+    top: 30px;
 }
 
 .top_bar_left {
@@ -314,7 +315,7 @@ img {
     width: 1440px;
     height: auto;
     margin: 0 auto;
-    padding: 80px 50px;
+    padding: 120px 50px;
 }
 
 .intor_container:after {
