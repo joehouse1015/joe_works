@@ -470,7 +470,7 @@ img {
 
 @media (max-width:900px) {
     .intor_pic {
-        border-radius: 0px;
+        border-radius: 10px;
     }
 
     .intor_text_area {
