@@ -571,3 +571,132 @@ select::-ms-expand {
     }
 
 }
+
+
+.page_choice {
+    position: fixed;
+    bottom: 140px;
+    left: 10px;
+}
+
+.page_choice_btn {
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
+    color: #392712;
+    background: #e9d63b;
+    background: -moz-linear-gradient(top, #fff6af 0%, #e3ad4f 100%);
+    background: -webkit-linear-gradient(top, #fff6af 0%, #e3ad4f 100%);
+    background: linear-gradient(to bottom, #fff6af 0%, #e3ad4f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff6af', endColorstr='#e3ad4f', GradientType=0);
+    border: 2px solid #e9d63b;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.page_choice_btn:hover,
+.page_choice_btn.active {
+    opacity: 1;
+}
+
+.page_choice_btn.active {
+    color: #ffffff;
+    background: #1f1f1f;
+    border: 0px solid #e0e0e0;
+    cursor: default;
+}
+
+.page_choice_btn:hover {
+    opacity: 1;
+}
+
+@media (max-width:1680px) {
+    .open_choice_btn {
+        width: 50px;
+    }
+
+    .choice_btn_area::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .choice_btn {
+        font-size: 17px;
+    }
+
+    .choice_btn span {
+        font-size: 19px;
+        top: 2px;
+    }
+
+    .choice_btn_area {
+        width: 320px;
+        right: -320px;
+    }
+
+    .close_icon {
+        width: 20px;
+    }
+
+    .page_choice_btn {
+        width: 50px;
+        height: 50px;
+        font-size: 21px;
+    }
+}
+
+@media (max-width:1400px) {
+    .choice_btn {
+        height: 70px;
+    }
+}
+
+@media (max-width:1280px) {
+    .open_choice_btn {
+        width: 46px;
+    }
+
+    .page_choice_btn {
+        width: 46px;
+        height: 46px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width:1024px) {
+    .open_choice_btn {
+        width: 42px;
+    }
+
+    .page_choice_btn {
+        width: 42px;
+        height: 42px;
+        font-size: 19px;
+    }
+
+    .choice_btn_area {
+        width: 280px;
+        right: -280px;
+    }
+
+    .choice_btn {
+        height: 60px;
+    }
+
+    .choice_btn {
+        font-size: 16px;
+    }
+
+    .choice_btn span {
+        font-size: 18px;
+        top: 2px;
+    }
+
+    .close_icon {
+        width: 18px;
+    }
+}
