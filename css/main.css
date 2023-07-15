@@ -36,7 +36,7 @@ img {
 /* top bar */
 .top_bar_area {
     width: 100%;
-    background:#1f1f1f;
+    background: #1f1f1f;
 }
 
 .top_bar_container {
@@ -353,7 +353,7 @@ img {
 .intor_text_container_2 {
     width: 50%;
     float: left;
-    padding-top: 18px;
+    padding-top: 20px;
 }
 
 .intor_text_container_1 {
@@ -388,6 +388,11 @@ img {
 .intor_text span {
     font-size: 18px;
     color: #1f1f1f;
+}
+
+.intor_text .intor_text_point {
+    color: #ef3e3e;
+    font-weight: bold;
 }
 
 .intor_title_1 {
@@ -441,7 +446,6 @@ img {
     .intor_text_container_1,
     .intor_text_container_2 {
         width: 100%;
-        padding-top: 11px;
     }
 
     .intor_text_container_1 {
@@ -452,10 +456,6 @@ img {
         padding-left: 0px;
     }
 
-    .intor_text {
-        line-height: 25px;
-        padding-top: 5px;
-    }
 }
 
 @media (max-width:1100px) {
@@ -465,6 +465,10 @@ img {
 
     .intor_text_area {
         padding-left: 30px;
+    }
+
+    .intor_text .intor_text_point {
+        font-weight: normal;
     }
 }
 
@@ -483,15 +487,12 @@ img {
     }
 
     .intor_text_name {
-        font-size: 21px;
         letter-spacing: 1px;
     }
 
     .intor_text {
         font-size: 16px;
-        line-height: 24px;
         letter-spacing: 1.5px;
-        padding-top: 7px;
     }
 }
 
@@ -502,10 +503,6 @@ img {
 
     .intor_text_area {
         width: calc(100% - 200px);
-    }
-
-    .intor_text {
-        padding-top: 7px;
     }
 }
 
@@ -548,14 +545,7 @@ img {
         width: 180px;
     }
 
-    .intor_text_name {
-        line-height: 29px;
-    }
 
-    .intor_text {
-        line-height: 23px;
-        padding-top: 6px;
-    }
 
     .intor_title_1 {
         display: block;
@@ -594,29 +584,10 @@ img {
         line-height: 28px;
     }
 
-    .intor_text {
-        font-size: 15px;
-        line-height: 23px;
-        letter-spacing: 1px;
-        padding-top: 5px;
-    }
+
 }
 
-@media (max-width:500px) {
-    .intor_text_title {
-        font-size: 26px;
-        padding-bottom: 9px;
-    }
 
-    .intor_text_name {
-        font-size: 19px;
-        line-height: 27px;
-    }
-
-    .intor_text {
-        line-height: 21px;
-    }
-}
 
 @media (max-width:450px) {
     .intor_container {
@@ -637,31 +608,13 @@ img {
         font-size: 16px;
     }
 
-    .intor_text {
-        font-size: 14px;
-        line-height: 20px;
-        padding-top: 3px;
-    }
+
 
     .intor_text_dis_2 {
         margin-top: 0px;
     }
 }
 
-@media (max-width:420px) {
-    .intor_text_title {
-        font-size: 23px;
-    }
-
-    .intor_text_name {
-        font-size: 17px;
-        line-height: 24px;
-    }
-
-    .intor_text {
-        padding-top: 4px;
-    }
-}
 
 @media (max-width:400px) {
     .intor_pic {
@@ -674,15 +627,6 @@ img {
 
     .intor_text_title {
         font-size: 22px;
-    }
-
-    .intor_text_name {
-        font-size: 16px;
-        line-height: 23px;
-    }
-
-    .intor_text {
-        line-height: 22px;
     }
 }
 
