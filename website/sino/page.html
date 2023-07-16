@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="shoutcut icon" href="image/favicon-jw.ico" />
+    <title>永豐網路投保網站專案</title>
+    <link href="css/page.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+
+    <div class="nav">
+        <div class="nav_note_text">
+            至我的<span class="infor_1">Figma</span>空間瀏覽
+            <div class="infor_window">
+                Figma是線上介面設計工具，可藉由網頁瀏覽器開啟，需要註冊figma或使用google帳號登入使用。
+            </div>
+        </div>
+        <div class="nav_btn">
+            <a href="https://www.figma.com/file/eAMUmaOZsZQUqmqTKaS2a3/%E6%B0%B8%E8%B1%90%E7%B6%B2%E6%8A%95%E9%A0%81%E9%9D%A2?type=design&node-id=1556%3A1126&mode=design&t=qSx99ZLMjBnQTtH7-1" target="_blank">設計規範</a>
+            <a href="https://www.figma.com/file/eAMUmaOZsZQUqmqTKaS2a3/%E6%B0%B8%E8%B1%90%E7%B6%B2%E6%8A%95%E9%A0%81%E9%9D%A2?type=design&node-id=1556%3A1126&mode=design&t=qSx99ZLMjBnQTtH7-1" target="_blank">RWD示意圖</a>
+            <a href="https://www.figma.com/proto/eAMUmaOZsZQUqmqTKaS2a3/%E6%B0%B8%E8%B1%90%E7%B6%B2%E6%8A%95%E9%A0%81%E9%9D%A2?type=design&node-id=6457-4128&t=AfnI6glZojj0TxCA-0&scaling=min-zoom&page-id=1556%3A1126&starting-point-node-id=6457%3A4128" target="_blank">原型展示</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="pic_container">
+            <div class="title">首頁</div>
+            <picture>
+                <source media="(max-width:540px)" srcset="image/index_534.png" />
+                <source media="(max-width:1365px)" srcset="image/index_1365.png" />
+                <img src="image/index.png">
+            </picture>
+        </div>
+        <div class="pic_container">
+            <div class="title">保險商品</div>
+            <picture>
+                <source media="(max-width:420px)" srcset="image/page1_534.png" />
+                <source media="(max-width:1365px)" srcset="image/page1_1365.png" />
+                <img src="image/page1.png">
+            </picture>
+        </div>
+        <div class="pic_container">
+            <div class="title">投保流程</div>
+            <picture>
+                <source media="(max-width:420px)" srcset="image/page2_534.png" />
+                <source media="(max-width:1365px)" srcset="image/page2_1365.png" />
+                <img src="image/page2.png">
+            </picture>
+            <picture>
+                <source media="(max-width:420px)" srcset="image/page3_534.png" />
+                <source media="(max-width:1365px)" srcset="image/page3_1365.png" />
+                <img src="image/page3.png">
+            </picture>
+            <picture>
+                <source media="(max-width:420px)" srcset="image/page4_534.png" />
+                <source media="(max-width:1365px)" srcset="image/page4_1365.png" />
+                <img src="image/page4.png">
+            </picture>
+            <picture>
+                <source media="(max-width:420px)" srcset="image/page5_534.png" />
+                <source media="(max-width:1365px)" srcset="image/page5_1365.png" />
+                <img src="image/page5.png">
+            </picture>
+            <picture>
+                <source media="(max-width:420px)" srcset="image/page6_534.png" />
+                <source media="(max-width:1365px)" srcset="image/page6_1365.png" />
+                <img src="image/page6.png">
+            </picture>
+            <picture>
+                <source media="(max-width:420px)" srcset="image/page7_534.png" />
+                <source media="(max-width:1365px)" srcset="image/page7_1365.png" />
+                <img src="image/page7.png">
+            </picture>
+        </div>
+        <div class="pic_container">
+            <div class="title">保險管理</div>
+            <picture>
+                <source media="(max-width:420px)" srcset="image/page8_534.png" />
+                <source media="(max-width:1365px)" srcset="image/page8_1365.png" />
+                <img src="image/page8.png">
+            </picture>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    $(document).ready(function() {
+        $(".infor_1").mouseover(function() {
+            $(".infor_window").fadeIn(300);
+        });
+        $(".infor_1").mouseleave(function() {
+            $(".infor_window").fadeOut(300);
+        });
+    });
+
+</script>
+<!-- ... 選項欄置頂用 ... -->
+<script>
+    $(document).ready(function() {
+        $(window).scroll(function(event) {
+            var scroll = $(window).scrollTop();
+            if (scroll > 45) {
+                $(".nav").addClass("top_nav_fixed");
+            } else {
+                $(".nav").removeClass("top_nav_fixed");
+            }
+        });
+    });
+
+</script>
+<!-- ... 選項欄置頂用end ... -->
+
+</html>
