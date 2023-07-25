@@ -328,7 +328,7 @@ img {
 .intor_pic {
     width: 220px;
     height: 220px;
-    background: #000000 url(../image/my_pic.jpg) no-repeat center center;
+    background: #000000 url(../image/my_pic_1.jpg) no-repeat center center;
     background-size: 100%;
     border-radius: 50%;
     float: left;
