@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="shoutcut icon" href="image/favicon-jw.ico" />
+    <title>鉅亨會員開戶註冊流程</title>
+    <link href="css/page.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+
+    <div class="nav" style="display:none;">
+        <div class="nav_note_text">
+            至我的<span class="infor_1">Figma</span>空間瀏覽
+            <div class="infor_window">
+                Figma是線上介面設計工具，可藉由網頁瀏覽器開啟，需要註冊figma或使用google帳號登入使用。
+            </div>
+        </div>
+        <div class="nav_btn">
+            <a href="https://www.figma.com/file/j3s7ERlv7uLTccntzXY4tF/%E9%89%85%E4%BA%A8%E8%B2%B7%E5%9F%BA%E9%87%91?type=design&node-id=0%3A1&mode=design&t=BFMmBgCTK4WjSWFD-1" target="_blank">Libary、Mock up</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="pic_container">
+            <div class="mockip_pic_group">
+                <div class="mockip_pic"><img src="image/p9_1.png"></div>
+                <div class="mockip_pic"><img src="image/p9_2.png"></div>
+                <div class="mockip_pic"><img src="image/p9_3.png"></div>
+                <div class="mockip_pic"><img src="image/p9_4.png"></div>
+                <div class="mockip_pic"><img src="image/p9_5.png"></div>
+                <div class="mockip_pic"><img src="image/p9_6.png"></div>
+                <div class="mockip_pic"><img src="image/p9_7.png"></div>
+                <div class="mockip_pic"><img src="image/p9_8.png"></div>
+                <div class="mockip_pic"><img src="image/p9_9.png"></div>
+                <div class="mockip_pic"><img src="image/p9_10.png"></div>
+                <div class="mockip_pic"><img src="image/p9_11.png"></div>
+                <div class="mockip_pic"><img src="image/p9_12.png"></div>
+                <div class="mockip_pic"><img src="image/p9_13.png"></div>
+            </div>
+        </div>
+        <div class="pic_container">
+            <div style="font-size:32px">感謝瀏覽</div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    $(document).ready(function() {
+        $(".infor_1").mouseover(function() {
+            $(".infor_window").fadeIn(300);
+        });
+        $(".infor_1").mouseleave(function() {
+            $(".infor_window").fadeOut(300);
+        });
+    });
+
+</script>
+<!-- ... 選項欄置頂用 ... -->
+<script>
+    $(document).ready(function() {
+        $(window).scroll(function(event) {
+            var scroll = $(window).scrollTop();
+            if (scroll > 45) {
+                $(".nav").addClass("top_nav_fixed");
+            } else {
+                $(".nav").removeClass("top_nav_fixed");
+            }
+        });
+    });
+
+</script>
+<!-- ... 選項欄置頂用end ... -->
+
+</html>
