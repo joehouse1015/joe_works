@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="shoutcut icon" href="image/favicon-jw.ico" />
+    <title>裕隆職福系統</title>
+    <link href="css/page.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="pic_container">
+            <div class="title">提案前期-風格提版</div>
+            <div class="title">採用CIS LOGO配色</div>
+            <div class="mockip_pic_group">
+                <div class="mockip_pic"><img src="image/logo.jpg"></div>
+            </div>
+        </div>
+        <div class="pic_container">
+            <div class="title">簡約風格</div>
+            <div class="mockip_pic_group">
+                <div class="mockip_pic"><img src="image/a1.png"></div>
+                <div class="mockip_pic"><img src="image/a2.png"></div>
+            </div>
+        </div>
+        <div class="pic_container">
+            <div class="title">活潑風格</div>
+            <div class="mockip_pic_group">
+                <div class="mockip_pic"><img src="image/b1.png"></div>
+                <div class="mockip_pic"><img src="image/b2.png"></div>
+            </div>
+        </div>
+        <div class="pic_container">
+            <div class="title">時尚風格</div>
+            <div class="mockip_pic_group">
+                <div class="mockip_pic"><img src="image/c1.png"></div>
+                <div class="mockip_pic"><img src="image/c2.png"></div>
+            </div>
+        </div>
+        <div class="pic_container">
+            <div style="font-size:32px">專案持續進行中</div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    $(document).ready(function() {
+        $(".infor_1").mouseover(function() {
+            $(".infor_window").fadeIn(300);
+        });
+        $(".infor_1").mouseleave(function() {
+            $(".infor_window").fadeOut(300);
+        });
+    });
+
+</script>
+<!-- ... 選項欄置頂用 ... -->
+<script>
+    $(document).ready(function() {
+        $(window).scroll(function(event) {
+            var scroll = $(window).scrollTop();
+            if (scroll > 45) {
+                $(".nav").addClass("top_nav_fixed");
+            } else {
+                $(".nav").removeClass("top_nav_fixed");
+            }
+        });
+    });
+
+</script>
+<!-- ... 選項欄置頂用end ... -->
+
+</html>
