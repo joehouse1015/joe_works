@@ -261,7 +261,7 @@
                                     <div class="works_item_sq"><img src="image/link_icon.png" alt="" /></div>
                                 </div>
                                 <div class="works_item_bar">
-                                    <span>裕隆員工福利系統</span><span style="font-size:14px;">(工作專案)</span><br/>
+                                    <span>裕隆員工福利系統</span><span style="font-size:14px;">(工作專案)</span><br />
                                     <span style="font-size:14px;">視覺設計</span>
                                 </div>
                             </div>
@@ -274,7 +274,7 @@
                                     <div class="works_item_sq"><img src="image/link_icon.png" alt="" /></div>
                                 </div>
                                 <div class="works_item_bar">
-                                    <span>註冊開戶流程</span><span style="font-size:14px;">(工作專案)</span><br/>
+                                    <span>註冊開戶流程</span><span style="font-size:14px;">(工作專案)</span><br />
                                     <span style="font-size:14px;">視覺設計、流程規劃</span>
                                 </div>
                             </div>
@@ -558,23 +558,13 @@
     $('.footer_icon').click(function() {
         $('.footer_icon').children().eq(0).toggleClass('icon_change_left icon_left');
         $('.footer_icon').children().eq(1).toggleClass('icon_change_right icon_right');
+        $('.footer_container').toggleClass('footer_bottom');
+        $('.footer_icon').toggleClass('footer_icon_open');
         $('.icon_sq').toggle();
     });
 
 </script>
 
-<script>
-    $('.footer_icon').toggle(function() {
-            $('.footer_container').removeClass('footer_bottom').addClass('footer_middle');
-            $('.footer_icon').removeClass('footer_icon_open');
-        },
-        function() {
-            $('.footer_container').removeClass('footer_middle').addClass('footer_bottom');
-            $('.footer_icon').addClass('footer_icon_open');
-        }
-    );
-
-</script>
 
 <script>
     $(window).scroll(function(event) {
