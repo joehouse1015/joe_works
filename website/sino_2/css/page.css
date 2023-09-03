@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+/* reset */
+* {
+    font-family: 'arial', \5FAE\8EDF\6B63\9ED1\9AD4, \65B0\7D30\660E\9AD4;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fafafa;
+    margin: 0px;
+    letter-spacing: 1px;
+    color: #3c3c3c;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+li {
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    color: #0c5ba8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    border: none;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+    outline: none;
+}
+
+.point_text {
+    color: #EA1111;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+/* reset end */
+
+
+
+.main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.text_container {
+    width: 1280px;
+    margin: 50px auto;
+    line-height: 1.7;
+}
+
+.text_container .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.text_container .note {
+    font-size: 20px;
+    text-align: left;
+}
+
+.text_container .link {
+    margin-top: 5px;
+    padding-left: 0px;
+}
+
+.text_container .link span {
+    color: #0c5ba8;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.arrow_left {
+    width: 9px;
+    margin-left: 10px;
+}
+
+.text_container .link span:hover {
+    text-decoration: underline;
+}
+
+@media (max-width:1360px) {
+    .text_container {
+        width: 100%;
+        padding: 0px 50px;
+    }
+}
+
+@media (max-width:768px) {
+    .text_container .title {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .text_container .note {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:540px) {
+
+    .text_container {
+        padding: 0px 30px;
+    }
+
+    .text_container .title {
+        font-size: 20px;
+    }
+
+    .text_container .note {
+        font-size: 16px;
+    }
+}
+
+.pup_window {
+    width: 95%;
+    height: calc(100vh - 80px);
+    background-color: #fafafa;
+    border-radius: 20px;
+    padding: 30px 30px;
+    position: fixed;
+    top: 50px;
+    left: 2.5%;
+    z-index: 99;
+}
+
+.pup_window_content {
+    width: 100%;
+    height: 100%;
+    padding-right: 10px;
+    overflow: auto;
+}
+
+.pup_window_content_text {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.pup_window_content::-webkit-scrollbar {
+    width: 12px;
+    background-color: #ffffff;
+}
+
+.pup_window_content::-webkit-scrollbar-thumb {
+    background-color: #737373;
+    border-radius: 12px;
+}
+
+.pup_window_content .content_text_list {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.pup_window_content .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.pup_window_content img {
+    max-width: 100%;
+}
+
+.content_tab_container {
+    width: 600px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0c5ba8;
+    border: 2px solid #e0e0e0;
+    border-radius: 99px;
+    margin: 0 auto;
+    margin-bottom:50px;
+    padding: 3px;
+    display: flex;
+}
+
+.content_tab_container .tab_item {
+    width: 33.333%;
+    height: 100%;
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.content_tab_container .tab_item:hover {
+    background: #ebebeb;
+}
+
+.content_tab_container .tab_item.active {
+    background: #0c5ba8;
+    color: #ffffff;
+}
+.pic_container{
+    text-align:center;
+    margin-bottom:30px;
+}
+.pic_container img{
+    margin-bottom:20px;
+}
+.phone_pic{
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+.phone_pic img{
+    margin:0px 20px;
+    margin-bottom:30px;
+    box-shadow:0px 3px 15px rgba(0,0,0,0.1);
+}
+.pup_window_close {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -50px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.pup_window_bg {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 50;
+}
