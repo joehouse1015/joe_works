@@ -1,0 +1,56 @@
+.ModalPopUpBackground_Color {
+    background-color: rgba(33, 37, 43, 0.6) !important;
+    opacity: 1 !important;
+}
+
+.ModalPopUpBackground_Color+div {
+    background: #fff;
+    padding: 1.17647em !important;
+    border-radius: 16px;
+    max-width: 400px;
+    height: auto !important;
+    width: calc(100% - 48px) !important;
+    left: 50% !important;
+    top: 15vh !important;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.ModalPopUpBackground_Color+div>[style="visibility: hidden;"] {
+    display: none;
+}
+
+.ModalPopUpBackground_Color+div .ModalPopUpBody {
+    border: none !important;
+    max-width: 100%;
+    height: auto !important;
+    position: fixed !important;
+    padding: 10px 0px 10px 0px !important;
+}
+
+.ModalPopUpBackground_Color+div input[type=button] {
+    width:calc(50% - 10px) !important;
+    background-color: #fff;
+    font-size: 20px;
+    font-weight:bold;
+    text-align: center;
+    text-decoration: none;
+    color: #757575;
+    border-radius: 99px;
+    border: 2px solid #757575;
+    margin: 24px 5px 0;
+    padding:10px 0px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.ModalPopUpBackground_Color+div input[type=button]:nth-child(2), .ModalPopUpBackground_Color+div input[type=button]:only-child {
+    background-color: #fff;
+    color: #254A91;
+    border: 2px solid #254A91;
+}
+
+#modalMessage2 {
+    padding: 0 !important;
+}
