@@ -1,0 +1,893 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <meta content="公司名稱" name="author">
+    <meta content="公司名稱" name="copyright">
+    <meta content="網站描述" name="description">
+    <meta content="網站描述" itemprop="name">
+    <meta content="image/og-img.jpg" itemprop="image">
+    <meta content="網站描述" itemprop="description">
+    <meta content="網站標題" property="og:title">
+    <meta content="網站網址" property="og:url">
+    <meta content="image/og-img.jpg" property="og:image">
+    <meta content="網站描述" property="og:description">
+    <meta content="網站關鍵字,網站關鍵字" name="keywords">
+
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/page.css" rel="stylesheet" type="text/css">
+    <link href="css/font_template.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/72630db2b5.js" crossorigin="anonymous"></script>
+
+    <!-- 區塊浮現動作套件 http://kenwheeler.github.io/slick/ -->
+    <link href="assets/theme-animate/css/theme-animate.css" rel="stylesheet" type="text/css">
+    <script src="assets/theme-animate/js/jquery.appear.min.js" type="text/javascript"></script>
+    <script src="assets/theme-animate/js/theme.js"></script>
+    <script src="assets/theme-animate/js/theme.init.js"></script>
+    <!-- 區塊浮現動作套件 end -->
+
+    <link rel="shoutcut icon" href="image/favicon.ico" />
+    <title>永豐網路投保</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- nav bar -->
+        <nav>
+            <div class="row nav_bar_row">
+                <div class="container nav_bar_container">
+                    <div class="logo_container">
+                        <div class="logo"><a href="index.html"><img src="image/logo.png" alt="logo"></a></div>
+                        <div class="logo_text">網路投保</div>
+                    </div>
+                    <div class="nav_btn_container">
+                        <div class="nav_btn" role="button">
+                            <div>
+                                <span class="nav_btn_text h6 open_nav_btn_window_large">網路專屬商品</span><i class="fas fa-caret-down"></i>
+                            </div>
+                            <hr>
+                            <div class="nav_btn_window_large" style="display:none;">
+                                <div>
+                                    <img src="image/sort-up.png" class="sort_up_arrow" alt="">
+                                    <div class="nav_btn_choice_group">
+                                        <div class="nav_btn_choice_title"><span>旅平險</span><i class="fas fa-caret-down"></i></div>
+                                        <div class="nav_btn_choice"><a href="page_product_travel_domestic_taian.html">泰玩美國內旅平險專案</a></div>
+                                        <div class="nav_btn_choice"><a href="page_product_travel_oversea_taian.html">泰享出國海外旅平險專案</a></div>
+                                    </div>
+                                    <div class="nav_btn_choice_group">
+                                        <div class="nav_btn_choice_title"><span>寵物險</span><i class="fas fa-caret-down"></i></div>
+                                        <div class="nav_btn_choice"><a href="page_product_pet.html">寵愛你寵物保險專案</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav_btn" role="button">
+                            <div>
+                                <span class="nav_btn_text h6"><a href="page_activity.html">好康活動</a></span>
+                            </div>
+                            <div class="nav_btn_window" style="display:none;">
+                                <a href="#">
+                                    <div class="nav_btn_choice">目前規劃六字</div>
+                                </a>
+                                <a href="#">
+                                    <div class="nav_btn_choice">目前規劃六字</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="nav_btn" role="button">
+                            <div>
+                                <span class="nav_btn_text h6"><a href="page_qa.html">常見問題</a></span>
+                            </div>
+                            <div class="nav_btn_window" style="display:none;">
+                                <div class="nav_btn_choice_group">
+                                    <a href="#">
+                                        <div class="nav_btn_choice">目前規劃六字</div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="nav_btn_choice">目前規劃六字</div>
+                                    </a>
+                                    <img src="image/sort-up.png" class="sort_up_arrow" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 至行動裝置時(寬1180)display:none -->
+                        <div class="nav_btn none_1180" role="button">
+                            <div>
+                                <span class="nav_btn_text h6"><a href="https://mma.sinopac.com/MemberPortal/Member/NextWebLogin.aspx" target="_blank">網路銀行</a></span>
+                            </div>
+                            <div class="nav_btn_window" style="display:none;">
+                                <a href="#">
+                                    <div class="nav_btn_choice">目前規劃六字</div>
+                                </a>
+                                <a href="#">
+                                    <div class="nav_btn_choice">目前規劃六字</div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 至行動裝置時(寬1180)display:none end -->
+                        <div class="nav_btn" role="button" style="display:none;">
+                            <div>
+                                <span class="nav_btn_text h6">保險知識家</span>
+                            </div>
+                            <div class="nav_btn_window" style="display:none;">
+                                <a href="#">
+                                    <div class="nav_btn_choice">目前規劃六字</div>
+                                </a>
+                                <a href="#">
+                                    <div class="nav_btn_choice">目前規劃六字</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="nav_btn" role="button" style="display:none;">
+                            <div>
+                                <span class="nav_btn_text h6">保障規劃</span>
+                            </div>
+                            <div class="nav_btn_window" style="display:none;">
+                                <a href="#">
+                                    <div class="nav_btn_choice">目前規劃六字</div>
+                                </a>
+                                <a href="#">
+                                    <div class="nav_btn_choice">目前規劃六字</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="nav_mobile_sq_btn_container">
+                            <a href="#">
+                                <div class="nav_mobile_sq_btn blue_line_btn set_middle">返回行動銀行</div>
+                            </a>
+                            <a href="https://mma.sinopac.com/MemberPortal/Member/MMALogin.aspx" target="_blank">
+                                <div class="nav_mobile_sq_btn blue_fill_btn set_middle">登入</div>
+                            </a>
+                        </div>
+
+                        <div class="nav_close_icon"><img src="image/close_icon.png" alt="關閉"></div>
+                    </div>
+                    <div class="nav_mobile_btn set_middle"><i class="fa fa-bars"></i></div>
+                    <a href="https://mma.sinopac.com/MemberPortal/Member/MMALogin.aspx" target="_blank">
+                        <div class="nav_log_btn set_middle"><i class="far fa-user"></i><span>登入</span></div>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!-- nav bar end -->
+    </header>
+
+
+    <main>
+
+        <div class="row">
+            <div class="container">
+                <div class="page_title_container page_insure_form_title_container">
+                    <div class="page_title page_title_insure_travel_width">
+                        <img src="image/pet_insure_title_icon.png" alt="已登入">
+                        <span class="h3">寵物綜合保險</span>
+                    </div>
+                    <div class="page_progress_bar page_progress_bar_insure_travel_width">
+                        <div class="active_dot set_middle"><i class="far fa-clipboard"></i></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="page_gray_section page_gray_section_bg_a_pet">
+                <div class="container page_insure_form_container">
+                    <div class="page_insure_title h4"><i class="far fa-id-card"></i>要保人/被保險人資料</div>
+                    <div class="page_title_hr"></div>
+                    <div class="page_insure_form">
+                        <div class="insure_form_item">
+                            <div class="form_item_title">姓名</div>
+                            <div class="form_item_infor_container">陳道*</div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title">國籍</div>
+                            <div class="form_item_infor_container">本國</div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title">身分證字號</div>
+                            <div class="form_item_infor_container">A12345****</div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title">出生日期</div>
+                            <div class="form_item_infor_container">1979/01/**</div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title">聯絡電話</div>
+                            <div class="form_item_infor_container">0987******</div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title title_input_height">電子信箱</div>
+                            <div class="form_item_infor_container">
+                                <div class="form_item_infor">
+                                    <div class="input_btn blue_line_btn set_middle hvr-top-m">修改</div>
+                                    <div>m***@goodarc.com</div>
+                                </div>
+                                <div class="form_item_address">
+                                    <div class="input_container input_container_email_detail">
+                                        <input type="text" placeholder="" class="input_for_text">
+                                    </div>
+                                    <div class="input_container input_container_btn">
+                                        <div class="input_btn_w50 set_middle input_btn blue_line_btn hvr-top-m">確定</div>
+                                        <div class="input_btn_w50 set_middle input_btn gray_line_btn hvr-top-m">取消</div>
+                                    </div>
+                                </div>
+                                <div class="form_item_tip">
+                                    <div><i class="fas fa-exclamation-circle"></i>欄位未填寫</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title title_input_height">通訊地址</div>
+                            <div class="form_item_infor_container">
+                                <div class="form_item_infor">
+                                    <div class="input_btn blue_line_btn set_middle hvr-top-m">修改</div>
+                                    <div>102台北市大安區敦化南***********</div>
+                                </div>
+                                <div class="form_item_address">
+                                    <div class="input_container input_container_w33">
+                                        <input type="text" placeholder="102" readonly class="input_for_text not_allow">
+                                    </div>
+                                    <div class="input_container input_container_w33">
+                                        <select>
+                                            <option>縣市</option>
+                                            <option>台北市</option>
+                                        </select>
+                                        <div class="input_select_placeholder">縣市</div>
+                                    </div>
+                                    <div class="input_container input_container_w33">
+                                        <select>
+                                            <option>區域</option>
+                                            <option>大安區</option>
+                                        </select>
+                                        <div class="input_select_placeholder">區域</div>
+                                    </div>
+                                    <div class="input_container input_container_address_detail">
+                                        <input type="text" placeholder="" class="input_for_text">
+                                    </div>
+                                    <div class="input_container input_container_btn">
+                                        <div class="input_btn_w50 set_middle input_btn blue_line_btn hvr-top-m">確定</div>
+                                        <div class="input_btn_w50 set_middle input_btn gray_line_btn hvr-top-m">取消</div>
+                                    </div>
+                                </div>
+                                <div class="form_item_tip">
+                                    <div>請勿留存郵政信箱、若非本行員工請勿留存本行辦公/營業處所</div>
+                                </div>
+                                <div class="form_item_choice input_check_margin">
+                                    <div class="item_checkbox_choice w100">
+                                        <div class="checkbox_frame"><input type="checkbox" id="normal_job"></div>
+                                        <label for="normal_job">永豐集團員工或眷屬</label>
+                                    </div>
+                                </div>
+
+                                <div class="form_item_tip">
+                                    <div><i class="fas fa-exclamation-circle"></i>欄位未填寫</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title">職業</div>
+                            <div class="form_item_infor_container">
+                                <div class="form_item_choice">
+                                    <div class="item_checkbox_choice">
+                                        <div class="checkbox_frame"><input type="checkbox" id="normal_job"></div>
+                                        <label for="normal_job">一般</label>
+                                    </div>
+                                    <div class="item_checkbox_choice">
+                                        <div class="checkbox_frame"><input type="checkbox" id="not_normal_job"></div>
+                                        <label for="not_normal_job">非一般</label>
+                                        <i class="fas fa-info-circle"></i>
+                                        <div class="infor_window" style="display:none;">
+                                            律師、會計師、公證人，或是其合夥人或受僱人。軍火商、不動產經紀人。當鋪業、融資從業人員。寶石及貴金屬交易商。藝術品／骨董交易商、拍賣公司。基金會、協會／寺廟、教會從業人員。博弈產業／公司。匯款公司、外幣兌換所。外交人員、大使館、辦事處。虛擬貨幣的發行者或交易商。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_item_tip">
+                                    <div><i class="fas fa-exclamation-circle"></i>欄位未填寫</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title">其他事項</div>
+                            <div class="form_item_infor_container">
+                                <div class="form_item_choice_group">
+                                    <div class="form_item_choice_title">目前是否受監護/受輔助宣告</div>
+                                    <div class="form_item_choice">
+                                        <div class="item_radio_choice">
+                                            <input type="radio" name="" id=""><label for="">是</label>
+                                        </div>
+                                        <div class="item_radio_choice">
+                                            <input type="radio" name="" id=""><label for="">否</label>
+                                        </div>
+                                    </div>
+                                    <div class="form_item_tip">
+                                        <div><i class="fas fa-exclamation-circle"></i>欄位未填寫</div>
+                                    </div>
+                                </div>
+                                <div class="form_item_choice_group">
+                                    <div class="form_item_choice_title">目前是否有投保其他公司寵物險</div>
+                                    <div class="form_item_choice">
+                                        <div class="item_radio_choice">
+                                            <input type="radio" name="" id=""><label for="">是</label>
+                                        </div>
+                                        <div class="item_radio_choice">
+                                            <input type="radio" name="" id=""><label for="">否</label>
+                                        </div>
+                                    </div>
+                                    <div class="form_item_tip">
+                                        <div><i class="fas fa-exclamation-circle"></i>欄位未填寫</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page_white_section page_white_section_bg_a_pet page_last_section">
+                <div class="container page_insure_form_container">
+                    <div class="page_insure_title h4"><i class="far fa-clipboard"></i>方案內容</div>
+                    <div class="page_title_hr"></div>
+                    <div class="page_insure_form">
+                        <div class="insure_form_item">
+                            <div class="form_item_title">專案名稱</div>
+                            <div class="form_item_infor_container">寵愛你寵物保險專案</div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title">寵物種類</div>
+                            <div class="form_item_infor_container">
+                                <div class="form_item_choice">
+                                    <div class="item_radio_choice">
+                                        <input type="radio" name="" id=""><label for="">狗</label>
+                                    </div>
+                                    <div class="item_radio_choice">
+                                        <input type="radio" name="" id=""><label for="">貓</label>
+                                    </div>
+                                </div>
+                                <div class="form_item_tip">
+                                    <div><i class="fas fa-exclamation-circle"></i>欄位未填寫</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title title_input_height">
+                                <div>寵物姓名<span class="span_br"><br /></span><span>(暱稱)</span></div>
+                            </div>
+                            <div class="form_item_infor_container">
+                                <div class="input_container">
+                                    <input type="text" class="input_for_text" placeholder="請輸入寵物姓名">
+                                </div>
+                                <div class="form_item_tip">
+                                    <div><i class="fas fa-exclamation-circle"></i>欄位未填寫</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title title_input_height">
+                                <div>晶片序號</div>
+                            </div>
+                            <div class="form_item_infor_container">
+                                <div class="input_container">
+                                    <input type="text" class="input_for_text" placeholder="請輸入晶片序號">
+                                </div>
+                                <div class="form_item_tip">
+                                    <div><i class="fas fa-exclamation-circle"></i>欄位未填寫</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title">寵物性別</div>
+                            <div class="form_item_infor_container">
+                                <div class="form_item_choice">
+                                    <div class="item_radio_choice">
+                                        <input type="radio" name="" id=""><label for="">公</label>
+                                    </div>
+                                    <div class="item_radio_choice">
+                                        <input type="radio" name="" id=""><label for="">母</label>
+                                    </div>
+                                </div>
+                                <div class="form_item_tip">
+                                    <div><i class="fas fa-exclamation-circle"></i>欄位未填寫</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title title_input_height">寵物出生年月日</div>
+                            <div class="form_item_infor_container">
+                                <div class="input_container input_container_w33">
+                                    <select>
+                                        <option>選擇年</option>
+                                        <option>2018年</option>
+                                    </select>
+                                    <div class="input_select_placeholder">年</div>
+                                </div>
+                                <div class="input_container input_container_w33">
+                                    <select>
+                                        <option>選擇月</option>
+                                        <option>08月</option>
+                                    </select>
+                                    <div class="input_select_placeholder">月</div>
+                                </div>
+                                <div class="input_container input_container_w33">
+                                    <select>
+                                        <option>選擇日</option>
+                                        <option>15日</option>
+                                    </select>
+                                    <div class="input_select_placeholder">日</div>
+                                </div>
+                                <div class="input_tip_age">10歲6個月</div>
+                                <div class="form_item_tip">
+                                    <div><i class="fas fa-exclamation-circle"></i>欄位未填寫</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title title_input_height">保障期間</div>
+                            <div class="form_item_infor_container">
+                                <div class="input_container">
+                                    <input type="text" placeholder="請選擇日期">
+                                    <span class="input_note">起</span>
+                                </div>
+                                <div>起保日期起，保期一年</div>
+                                <span class="form_item_infor_note">目前僅提供起保日期一週內</span>
+                                <div class="form_item_tip">
+                                    <div><i class="fas fa-exclamation-circle"></i>欄位未填寫</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title title_input_height">寵物品種</div>
+                            <div class="form_item_infor_container">
+                                <div class="input_container">
+                                    <input type="text" placeholder="請選擇品種">
+                                </div>
+                                <div class="form_item_tag_container">
+                                    <div class="form_item_tag">
+                                        米克斯
+                                    </div>
+                                    <div class="form_item_tag">
+                                        貴賓犬
+                                    </div>
+                                    <div class="form_item_tag">
+                                        博美犬
+                                    </div>
+                                    <div class="form_item_tag">
+                                        柴犬
+                                    </div>
+                                    <div class="form_item_tag">
+                                        拉不拉多尋回犬
+                                    </div>
+                                </div>
+                                <div class="form_item_tip">
+                                    <div><i class="fas fa-exclamation-circle"></i>欄位未填寫</div>
+                                </div>
+                            </div>
+                            <!-- 選擇寵物品種視窗 -->
+                            <div class="pup_window_bg" style="display:none;">
+                                <div class="country_choice_window">
+                                    <div>
+                                        <div class="pup_close_icon set_middle">
+                                            <img src="image/pup_close_icon.png" alt="" />
+                                        </div>
+                                        <div class="input_container">
+                                            <input type="text" placeholder="請輸入品種關鍵字" class="input_for_text">
+                                            <div class="search_input_btn set_middle"><img src="image/search_icon.png" alt="搜尋"></div>
+                                        </div>
+                                        <div class="country_choice_tab">
+                                            <div class="set_middle active">全部</div>
+                                            <div class="set_middle">超小型犬</div>
+                                            <div class="set_middle">小型犬</div>
+                                            <div class="set_middle">中型犬</div>
+                                            <div class="set_middle">大型犬</div>
+                                        </div>
+                                        <!-- 全部 -->
+                                        <div class="country_checkbox_container">
+                                            <div class="country_checkbox_choice w25">
+                                                <div class="checkbox_frame"><input type="checkbox" id=""></div>
+                                                <label for="">哈士奇</label>
+                                            </div>
+                                            <div class="country_checkbox_choice w25">
+                                                <div class="checkbox_frame"><input type="checkbox" id=""></div>
+                                                <label for="">藏獒</label>
+                                            </div>
+                                            <div class="country_checkbox_choice w25">
+                                                <div class="checkbox_frame"><input type="checkbox" id=""></div>
+                                                <label for="">貴賓犬</label>
+                                            </div>
+                                            <div class="country_checkbox_choice w25">
+                                                <div class="checkbox_frame"><input type="checkbox" id=""></div>
+                                                <label for="">拉不拉多</label>
+                                            </div>
+                                            <div class="country_checkbox_choice w25">
+                                                <div class="checkbox_frame"><input type="checkbox" id=""></div>
+                                                <label for="">薩摩耶</label>
+                                            </div>
+                                            <div class="country_checkbox_choice w25">
+                                                <div class="checkbox_frame"><input type="checkbox" id=""></div>
+                                                <label for="">博美</label>
+                                            </div>
+                                            <div class="country_checkbox_choice w25">
+                                                <div class="checkbox_frame"><input type="checkbox" id=""></div>
+                                                <label for="">雪納瑞</label>
+                                            </div>
+                                            <div class="country_checkbox_choice w25">
+                                                <div class="checkbox_frame"><input type="checkbox" id=""></div>
+                                                <label for="">牧羊犬</label>
+                                            </div>
+                                        </div>
+                                        <!-- 全部 end -->
+                                        <div class="country_choice_btn_container">
+                                            <div class="country_choice_btn blue_line_btn set_middle">確定</div>
+                                            <div class="country_choice_btn gray_line_btn set_middle" style="display:none;">關閉</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 選擇寵物品種視窗end -->
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title">毛色</div>
+                            <div class="form_item_infor_container">
+                                <div class="form_item_choice">
+                                    <div class="item_radio_choice">
+                                        <input type="radio" name="" id=""><label for="">黑色</label>
+                                    </div>
+                                    <div class="item_radio_choice">
+                                        <input type="radio" name="" id=""><label for="">白色</label>
+                                    </div>
+                                    <div class="item_radio_choice">
+                                        <input type="radio" name="" id=""><label for="">混色</label>
+                                    </div>
+                                    <div class="item_radio_choice">
+                                        <input type="radio" name="" id=""><label for="">其他</label>
+                                    </div>
+                                </div>
+                                <div class="input_container" style="margin-top:10px;">
+                                    <input type="text" class="input_for_text" placeholder="請描述毛色">
+                                </div>
+                                <div class="form_item_tip">
+                                    <div><i class="fas fa-exclamation-circle"></i>欄位未填寫</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="insure_form_item">
+                            <div class="form_item_title title_input_height">
+                                <div>體重<span class="span_br"><br /></span><span>(公斤)</span></div>
+                            </div>
+                            <div class="form_item_infor_container">
+                                <div class="input_container">
+                                    <input type="text" class="input_for_text" placeholder="請輸入公斤">
+                                </div>
+                                <div class="form_item_tip">
+                                    <div><i class="fas fa-exclamation-circle"></i>欄位未填寫</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title title_input_height">
+                                <div>寵物正面照片</div>
+                            </div>
+                            <div class="form_item_infor_container">
+                                <div class="input_container">
+                                    <input type="text" class="input_for_text" placeholder="請點此上傳">
+                                    <input type="file" class="input_for_file">
+                                    <div class="input_file_delete_icon set_middle"><i class="fas fa-times-circle fa-fw"></i></div>
+                                </div>
+                                <div class="form_item_tip">
+                                    <div><i class="fas fa-exclamation-circle"></i>欄位未填寫</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title title_input_height">
+                                精選方案
+                            </div>
+                            <div class="form_item_infor_container">
+                                <div class="input_container">
+                                    <select>
+                                        <option>請選擇方案</option>
+                                        <option>升級型</option>
+                                    </select>
+                                    <div class="input_select_placeholder">請選擇方案</div>
+                                </div>
+                                <div class="form_item_tip">
+                                    <div><i class="fas fa-exclamation-circle"></i>欄位未填寫</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="insure_form_item">
+                            <div class="form_item_title">寵物醫療費用保險<span class="span_br"><br /></span><span>(疾病、意外)</span></div>
+                            <div class="form_item_infor_container">
+                                <div class="form_item_infor_detail">
+                                    <div class="infor_detail_container">
+                                        <div class="infor_detail_title pet_ins_detail_width">保險期間內累積最高賠償限額</div>
+                                        <div class="infor_detail_text num">15萬</div>
+                                    </div>
+                                    <div class="infor_detail_container">
+                                        <div class="infor_detail_title pet_ins_detail_width">門診費用/次</div>
+                                        <div class="infor_detail_text num">2,000元</div>
+                                    </div>
+                                    <div class="infor_detail_container">
+                                        <div class="infor_detail_title pet_ins_detail_width">住院費用/次</div>
+                                        <div class="infor_detail_text num">1萬</div>
+                                    </div>
+                                    <div class="infor_detail_container">
+                                        <div class="infor_detail_title pet_ins_detail_width">手術費用/次</div>
+                                        <div class="infor_detail_text num">5萬</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title">寵物侵權責任保險</div>
+                            <div class="form_item_infor_container">
+                                <div class="form_item_infor_detail">
+                                    <div class="infor_detail_container">
+                                        <div class="infor_detail_title pet_ins_detail_width">保險期間內累積最高賠償</div>
+                                        <div class="infor_detail_text num">100萬</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title">寵物喪葬費用保險</div>
+                            <div class="form_item_infor_container">
+                                <div class="form_item_infor_detail">
+                                    <div class="infor_detail_container">
+                                        <div class="infor_detail_title pet_ins_detail_width">最高賠償限額</div>
+                                        <div class="infor_detail_text num">5,000元</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title">寵物協尋廣告費用保險</div>
+                            <div class="form_item_infor_container">
+                                <div class="form_item_infor_detail">
+                                    <div class="infor_detail_container">
+                                        <div class="infor_detail_title pet_ins_detail_width">最高賠償限額</div>
+                                        <div class="infor_detail_text num">2,000元</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title">寵物寄宿日額費用保險<span>(1年最多10日)</span></div>
+                            <div class="form_item_infor_container">
+                                <div class="form_item_infor_detail">
+                                    <div class="infor_detail_container">
+                                        <div class="infor_detail_title pet_ins_detail_width">最高賠償限額/日</div>
+                                        <div class="infor_detail_text num">1,000元</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insure_form_item insure_num_title">
+                            <div class="form_item_title">保費</div>
+                            <div class="form_item_infor_container">
+                                <div class="form_item_infor_detail" style="margin-top:0px;">
+                                    <div class="infor_detail_container infor_detail_insure_num">
+                                        <div class="infor_detail_title pet_ins_detail_width none_768"></div>
+                                        <div class="infor_detail_text insure_num">2,000<span>元</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="insure_form_item">
+                            <div class="form_item_title">保單寄送方式</div>
+                            <div class="form_item_infor_container">電子保單(m***@goodarc.com)</div>
+                        </div>
+
+                        <div class="insure_form_item">
+                            <div class="form_item_title title_input_height">
+                                <div>推薦人<span class="span_br"><br /></span><span>(選填)</span></div>
+                            </div>
+                            <div class="form_item_infor_container">
+                                <div class="input_container">
+                                    <input type="text" class="input_for_text" placeholder="請輸入員工編號">
+                                </div>
+                                <div class="form_item_tip">
+                                    <div><i class="fas fa-exclamation-circle"></i>欄位未填寫</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="page_insure_terms_check_container">
+                        <div>
+                            <div class="page_insure_terms_check">
+                                <div class="checkbox_frame"><input type="checkbox" id="reg_terms_check_1"></div>
+                                <label for="reg_terms_check_1">我已閱讀且<span>華南產物商品保單條款。</span></label>
+                            </div>
+                            <div class="page_insure_terms_check">
+                                <div class="checkbox_frame"><input type="checkbox" id="reg_terms_check_2"></div>
+                                <label for="reg_terms_check_2">我已閱讀且<span>個資同意聲明 、 網路投保聲明、投保人須知、聲明事項。</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page_end_btn_container">
+                        <div class="page_end_btn set_middle gold_fill_btn" style="margin-top:30px;">下一步</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer_gray_bar">
+            <div class="footer_gray_sitemap_open">
+                <img src="image/footer_icon_p.png" alt="" /><span class="footer_gray_text">服務條款 關於永豐銀行 永豐金控集團 線上服務</span><img src="image/footer_icon_p.png" alt="" />
+            </div>
+            <div class="footer_gray_sitemap_close" style="display:none;">
+                <img src="image/footer_icon_m.png" alt="" /><span class="footer_gray_text">關閉</span><img src="image/footer_icon_m.png" alt="" />
+            </div>
+            <div class="container footer_gray_sitemap" style="display:none;">
+                <div>
+                    <div class="sitemap_title">服務條款</div>
+                    <div class="sitemap_text">法定公告事項</div>
+                    <div class="sitemap_text">隱私權保護聲明</div>
+                    <div class="sitemap_text">著作權聲明</div>
+                    <div class="sitemap_text">客戶資料保護措施</div>
+                    <div class="sitemap_text">各項收費標準公告事項</div>
+                    <div class="sitemap_text">各項表單及文件下載</div>
+                </div>
+                <div>
+                    <div class="sitemap_title">關於本站</div>
+                    <div class="sitemap_text">網站導覽</div>
+                    <div class="sitemap_text">客服中心</div>
+                    <div class="sitemap_text">營業據點</div>
+                    <div class="sitemap_text">菁英招募</div>
+                    <div class="sitemap_text"><img src="image/footer_icon_fb.png" alt="" />永豐銀行</div>
+                </div>
+                <div>
+                    <div class="sitemap_title">永豐金控集團</div>
+                    <div class="sitemap_text">永豐金控</div>
+                    <div class="sitemap_text">永豐金證券</div>
+                    <div class="sitemap_text">永豐金租賃</div>
+                    <div class="sitemap_text">永豐投信</div>
+                    <div class="sitemap_text">永豐期貨</div>
+                    <div class="sitemap_text">永豐創投</div>
+                    <div class="sitemap_text">永豐銀行(中國)</div>
+                </div>
+                <div>
+                    <div class="sitemap_title">線上服務</div>
+                    <div class="sitemap_text">MMA金融交易網</div>
+                    <div class="sitemap_text">寰宇金融網</div>
+                    <div class="sitemap_text">MMAb2c華商個人金融網</div>
+                    <div class="sitemap_text">網路ATM</div>
+                    <div class="sitemap_text">數位支付整合服務</div>
+                    <div class="sitemap_text">繳費網</div>
+                    <div class="sitemap_text">永豐信託網</div>
+                    <div class="sitemap_text">永豐金證券理財網</div>
+                    <div class="sitemap_text">公共資訊網</div>
+                    <div class="sitemap_text">大戶DAWHO</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_blue_container">
+            <div>
+                <span class="copyright">©永豐銀行版權所有</span>
+                <span>建議瀏覽器設定IE11以上/解析度1024*768</span>
+                <span class="costomer_center">客服中心</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="pup_bg" style="display:none;"></div>
+    <!-- 條款聲明 -->
+    <div class="pup_window_bg" style="display:none;">
+        <div class="pup_window" style="border-radius:36px 36px 32px 32px;">
+            <div>
+                <div class="pup_close_icon set_middle">
+                    <img src="image/pup_close_icon.png" alt="" />
+                </div>
+                <div class="page_insure_terms_progress_bar set_middle">
+                    <div class="terms_progress_step">
+                        <div class="terms_progress_item">
+                            <div class="item_num set_middle"><i class="fas fa-check"></i></div>
+                            <div class="item_name">泰安產物商品保單條款</div>
+                            <div class="item_line">---</div>
+                        </div>
+                        <div class="terms_progress_item">
+                            <div class="item_num set_middle"><i class="fas fa-check"></i></div>
+                            <div class="item_name">個資同意聲明</div>
+                            <div class="item_line">---</div>
+                        </div>
+                        <div class="terms_progress_item">
+                            <div class="item_num set_middle">3</div>
+                            <div class="item_name">網路投保聲明</div>
+                            <div class="item_line">---</div>
+                        </div>
+                        <div class="terms_progress_item not_read">
+                            <div class="item_num set_middle">4</div>
+                            <div class="item_name">投保人須知</div>
+                            <div class="item_line">---</div>
+                        </div>
+                        <div class="terms_progress_item not_read">
+                            <div class="item_num set_middle">5</div>
+                            <div class="item_name">聲明事項</div>
+                        </div>
+                    </div>
+                    <div class="terms_progress_name">泰安產物商品保單條款</div>
+                </div>
+                <div class="page_insure_main_terms">
+                    <div class="terms_title">泰安產物商品保單條款</div>
+                    <div class="terms_text">
+                        申請人（以下簡稱本人）茲向永豐商業銀行股份有限公司(以下簡稱甲方)申辦網路投保服務，聲明同意下列事項：(本約定條款之審閱期為五日) 第一條 契約之適用範圍 當事人間依電子簽章法及相關法令之規定從事保險電子交易者，適用本契約之約定。但個別網路保險服務契約對本人之保護更有利者，從其約定。 第二條 名詞定義 一、「保險電子交易」：指本人經由網際網路與甲方資訊系統電腦連線，且利用電子簽章或其他足資辨識本人身分之方式，直接取得甲方所代理之各項保險服 務。 二、「電子訊息」：指甲方或本人經由網際網路連線傳遞之訊息。 三、「數位簽章」：指將電子文件以數學演算法或其他方式運算為一定長度之數位資料，以簽署人之私密金鑰對其加密，形成電子簽章，並得以公開金鑰加以 驗證者。 四、「私密金鑰」：指一組具有配對關係之數位資料中，由簽章製作者保有之數位資料，該數位資料係作電子訊息解密及製作數位簽章之用。 五、「公開金鑰」：指一組具有配對關係之數位資料中，用以對電子訊息加密、或驗證簽署者身分及數位簽章真偽之數位資料。 六、「加密」：指利用數學演算法或其他方法，將電子文件以亂碼方式處理。 七、「電子簽章」：指依附於電子文件並與其相關連，用以辨識及確認電子文件簽署人身分、資格及電子文件真偽者。 八、「憑證」：指載有簽章驗證資料，用以確認簽署人身分、資格之電子形式證明。 九、「資訊系統」：指產生、送出、收受、儲存或其他處理電子形式訊息資料之系統。 十、「電子文件」：指文字、聲音、圖片、影像、符號或其他資料，以電子或其他以人所知覺無法直接認識之方式，所製成足以表示其用意之紀錄，而供電子處 理之用者。 第三條 連線所使用之網路 甲方及本人應各自與網路業者簽訂網路服務契約，並各自負擔網路使用之費用。 第四條 網頁之確認 本人與甲方交易前，應先確認甲方正確之網址。甲方應盡善良管理人之注意義務，隨時維護網站的正確性與安全性，以避免本人之權益受損。 第五條 電子訊息之接收與回應 甲方接收含數位簽章或經甲方及本人同意用以辨識身分之電子訊息後，應立即以下列方式之ㄧ要求本人再確認： 一、 以資訊系統自動回覆通知本人。 二、 以資訊系統再次確認裝置提示本人。
+                        申請人（以下簡稱本人）茲向永豐商業銀行股份有限公司(以下簡稱甲方)申辦網路投保服務，聲明同意下列事項：(本約定條款之審閱期為五日) 第一條 契約之適用範圍 當事人間依電子簽章法及相關法令之規定從事保險電子交易者，適用本契約之約定。但個別網路保險服務契約對本人之保護更有利者，從其約定。 第二條 名詞定義 一、「保險電子交易」：指本人經由網際網路與甲方資訊系統電腦連線，且利用電子簽章或其他足資辨識本人身分之方式，直接取得甲方所代理之各項保險服 務。 二、「電子訊息」：指甲方或本人經由網際網路連線傳遞之訊息。 三、「數位簽章」：指將電子文件以數學演算法或其他方式運算為一定長度之數位資料，以簽署人之私密金鑰對其加密，形成電子簽章，並得以公開金鑰加以 驗證者。 四、「私密金鑰」：指一組具有配對關係之數位資料中，由簽章製作者保有之數位資料，該數位資料係作電子訊息解密及製作數位簽章之用。 五、「公開金鑰」：指一組具有配對關係之數位資料中，用以對電子訊息加密、或驗證簽署者身分及數位簽章真偽之數位資料。 六、「加密」：指利用數學演算法或其他方法，將電子文件以亂碼方式處理。 七、「電子簽章」：指依附於電子文件並與其相關連，用以辨識及確認電子文件簽署人身分、資格及電子文件真偽者。 八、「憑證」：指載有簽章驗證資料，用以確認簽署人身分、資格之電子形式證明。 九、「資訊系統」：指產生、送出、收受、儲存或其他處理電子形式訊息資料之系統。 十、「電子文件」：指文字、聲音、圖片、影像、符號或其他資料，以電子或其他以人所知覺無法直接認識之方式，所製成足以表示其用意之紀錄，而供電子處 理之用者。 第三條 連線所使用之網路 甲方及本人應各自與網路業者簽訂網路服務契約，並各自負擔網路使用之費用。 第四條 網頁之確認 本人與甲方交易前，應先確認甲方正確之網址。甲方應盡善良管理人之注意義務，隨時維護網站的正確性與安全性，以避免本人之權益受損。 第五條 電子訊息之接收與回應 甲方接收含數位簽章或經甲方及本人同意用以辨識身分之電子訊息後，應立即以下列方式之ㄧ要求本人再確認： 一、 以資訊系統自動回覆通知本人。 二、 以資訊系統再次確認裝置提示本人。
+                    </div>
+                </div>
+                <div class="page_reg_terms_note">
+                    <span class="terms_note_important">請閱讀下拉至最底端</span><br />
+                    我已閱讀且同意以上聲明事項，並知悉相關契約書有至少五日審閱期且完成審閱。
+                </div>
+                <div class="page_end_btn_container">
+
+                    <div class="page_end_btn gold_fill_btn not_allow" style="margin-top:20px;">
+                        我已審閱並同意以上文件<span class="comma_span">，</span><span class="br_span"><br /></span>查看下一份文件
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 條款聲明end -->
+
+</body>
+<!-- ... open nav bar ... -->
+<script>
+    $(document).ready(function() {
+        $(".nav_mobile_btn").click(function() {
+            $(".pup_bg").fadeIn(1000);
+            $(".nav_btn_container").addClass("open_nav_bar");
+        });
+        $(".pup_bg,.nav_close_icon").click(function() {
+            $(".pup_bg").fadeOut(1000);
+            $(".nav_btn_container").removeClass("open_nav_bar");
+        });
+    });
+
+</script>
+<!-- ... open nav bar end ... -->
+<!-- ... 開啟第二層選單 ... -->
+<script>
+    $(document).ready(function() {
+        $(".nav_btn_container .nav_btn").click(function() {
+            var clickIndex = $(".nav_btn_container .nav_btn").index(this);
+            $(".nav_btn_window").removeClass("open");
+            $($(".nav_btn_window")[clickIndex]).toggle().toggleClass("open");
+            $(".nav_btn_window").not(".open").hide();
+        });
+    });
+
+</script>
+<!-- ... 開啟第二層選單end ... -->
+
+<!-- ... open footer bar ... -->
+<script>
+    $(document).ready(function() {
+        $(".footer_gray_sitemap_open").click(function() {
+            $(".footer_gray_sitemap").slideDown(500);
+            $(".footer_gray_sitemap_open").hide();
+            $(".footer_gray_sitemap_close").show();
+        });
+        $(".footer_gray_sitemap_close").click(function() {
+            $(".footer_gray_sitemap").slideUp(500);
+            $(".footer_gray_sitemap_open").show();
+            $(".footer_gray_sitemap_close").hide();
+        });
+    });
+
+</script>
+<!-- ... open footer bar end ... -->
+
+</html>
