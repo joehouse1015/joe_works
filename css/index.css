@@ -85,7 +85,7 @@ select::-ms-expand {
 /*通用*/
 @font-face {
     font-family: SourceHanSerif-Bold;
-    src: url(../fonts/SourceHanSerif-Bold.ttc);
+    src: url(../fonts/SourceHanSerif-Bold.woff2);
 }
 
 .h1 {
@@ -3375,10 +3375,12 @@ select::-ms-expand {
 
 .sino_pic_6 {
     max-width: 100%;
+    display:block;
 }
 
 .sino_pic_7 {
     max-width: 100%;
+    display:block;
 }
 
 .pup_window_content_end_tip_container {
