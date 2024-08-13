@@ -115,6 +115,9 @@
             $(".illustrator_works_btn").click(function() {
                 $(".illustrator_works_pup,.pup_bg").fadeIn(800);
             });
+            $(".sino_works_1_btn").click(function() {
+                $(".sino_works_1_pup,.pup_bg").fadeIn(800);
+            });
             $(".pup_close_btn").click(function() {
                 $(".pup_window,.pup_bg").hide();
             });
@@ -145,7 +148,6 @@
         });
 
     </script>
-
 
 </head>
 
@@ -957,7 +959,9 @@
                             <div class="work_info_subtext">
                                 進行需求訪談，依記錄製定內容架構、使用流程、頁面布局並繪製wireframe，協助完成PRD文件使網站開發有所依據。
                             </div>
-                            <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp"><img src="images/pup_link_dot.png" class="pup_link_dot">內容展示<span></span></div>
+                            <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                <img src="images/pup_link_dot.png" class="pup_link_dot"><span class="sino_works_1_btn">內容展示</span>
+                            </div>
                             <div class="work_info_note">
                                 <div><span>*</span>說明個人執行事項與能力為主。</div>
                                 <div><span>*</span>PRD文件為團隊合作產出，含有資訊安全和業務邏輯資料，故不展示於作品集。</div>
@@ -1916,7 +1920,7 @@
     </div>
     <!-- ... p18 end ... -->
 
-    <div class="pup_bg"></div>
+    <div class="pup_bg" style="display:none;"></div>
 
     <!-- ... 合作夥伴對我的看法 ... -->
     <div class="pup_window info_attribute_tell_pup" style="display:none;">
@@ -2112,7 +2116,7 @@
     </div>
     <!-- ... Illustrator works end ... -->
     <!-- ... 永豐銀行網路投保 內容規劃 works  ... -->
-    <div class="pup_window sino_works_pup">
+    <div class="pup_window sino_works_1_pup" style="display:none;">
         <div class="pup_close_btn set_middle" role="button">
             <img src="images/close_icon.png" class="pup_close_icon" alt="關閉視窗">
         </div>
@@ -2128,6 +2132,16 @@
             <div class="pup_window_tab_content_container">
 
                 <div id="sino_tab_1" class="pup_window_tab_content">
+
+                    <div class="pup_window_content_part project_content_part" style="margin-bottom:30px;">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">前言</div>
+                            <div class="pup_normal_text">
+                                開發前需了解實際業務情境，藉此規劃網站操作流程與內容，使其貼合使用者的需求與習慣；<br>從操作流程定義功能、從內容釐清資料項目與來源，進而有效統整網站互動機制。
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="pup_window_content_part project_content_part">
                         <div class="pup_content">
                             <div class="part_title h5 font_bold emphasize_text">一、釐清業務流程與需求情境</div>
@@ -2529,7 +2543,7 @@
 
                     <div class="pup_window_content_part project_content_part">
                         <div class="pup_content">
-                            <div class="part_title h5 font_bold emphasize_text">六、釐清網站操作機制</div>
+                            <div class="part_title h5 font_bold emphasize_text">六、統整網站互動機制</div>
                             <div class="pup_content_text">
 
                                 <div class="text_row">
@@ -2547,7 +2561,7 @@
                         </div>
                     </div>
 
-                    <div class="pup_window_content_next_tip pup_tab_btn sino_pup_tab_btn_2">接續以規劃內容，建立<a href="#sino_tab_2">頁面布局</a></div>
+                    <div class="pup_window_content_next_tip pup_tab_btn sino_pup_tab_btn_2">接續以流程架構，建立<a href="#sino_tab_2">頁面布局</a></div>
                     <script>
                         $(document).ready(function() {
                             $(".sino_pup_tab_btn_2").click(function() {
@@ -2564,6 +2578,15 @@
                 </div>
 
                 <div id="sino_tab_2" class="pup_window_tab_content">
+
+                    <div class="pup_window_content_part project_content_part" style="margin-bottom:30px;">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">前言</div>
+                            <div class="pup_normal_text">
+                                將網站架構與流程內容視覺化
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="pup_window_content_part project_content_part">
                         <div class="pup_content">
@@ -2608,38 +2631,86 @@
 
                 <div id="sino_tab_3" class="pup_window_tab_content">
 
+                    <div class="pup_window_content_part project_content_part" style="margin-bottom:30px;">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">前言</div>
+                            <div class="pup_normal_text">
+                                於永豐保險業務窗口取得相關保險內容資料，將流程架構與頁面布局統整出線框稿(wireframe)。
+                            </div>
+                            <div class="pup_normal_text">
+                                <span class="emphasize_text">因版面規劃空間有限，以電腦裝置(桌記、筆電)瀏覽為佳；</span><br><a href="#" target="_blank">完整線框稿請至figma瀏覽</a>。
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="pup_window_content_part project_content_part">
                         <div class="pup_content">
                             <div class="part_title h5 font_bold emphasize_text">審閱指引</div>
-                            <div class="pup_content_text">
 
-                                <div class="text_row">
-                                    <div class="text_item">
-                                        <div>
-                                            <picture>
-                                                <source media="(max-width:768px)" srcset="images/sino_pic_5_768.png" />
-                                                <img src="images/sino_pic_5.png" class="sino_pic_5">
-                                            </picture>
-                                        </div>
+                            <div class="subject_group_content_item" style="margin-top:10px;">
+                                <div class="item_title font_bold">
+                                    <div class="dot"><i class="fa fa-circle"></i></div>提示色說明：
+                                </div>
+                                <div class="color_square_container">
+                                    <div class="color_square_item">
+                                        <div class="square_item blue_square"></div><span>連結&amp;CTA</span>
+                                    </div>
+                                    <div class="color_square_item">
+                                        <div class="square_item brown_square"></div><span>動態資料(由使用者操作輸入而變動)</span>
+                                    </div>
+                                    <div class="color_square_item">
+                                        <div class="square_item dark_blue_square"></div><span>當前選擇、所處步驟</span>
                                     </div>
                                 </div>
-
+                            </div>
+                            <div class="subject_group_content_item" style="margin-top:10px;">
+                                <div class="item_title font_bold">
+                                    <div class="dot"><i class="fa fa-circle"></i></div>本站使用API：
+                                </div>
+                                <div class="item_text large_item_text">
+                                    永豐保險業務API、永豐網銀會員API、各家保險公司商品API(泰安保險商品API)、台灣縣市地區API、台灣銀行名稱代碼API。
+                                </div>
+                            </div>
+                            <div class="subject_group_content_item" style="margin-top:10px;">
+                                <div class="item_title font_bold">
+                                    <div class="dot"><i class="fa fa-circle"></i></div>註記：
+                                </div>
+                                <div class="item_text large_item_text">
+                                    1.若網頁資料無說明來源，則為網站建置時人工寫入HTML。
+                                </div>
+                                <div class="item_text large_item_text">
+                                    2.必填欄位空值的錯誤提示：<br>
+                                    <div class="item_text_note">input text、input password、input number、input date&nbsp;=&nbsp;「請輸入+欄位名稱」。</div>
+                                    <div class="item_text_note">select&nbsp;=&nbsp;「請選擇+欄位名稱」。</div>
+                                </div>
+                                <div class="item_text large_item_text">
+                                    3.網頁狀態：<br>
+                                    <div class="item_text_note">初始狀態，使用者對網頁未有任何操作。</div>
+                                    <div class="item_text_note">理想狀態，使用者完成網頁操作。</div>
+                                    <div class="item_text_note">空白狀態，網頁中有資料無法呈現。</div>
+                                    <div class="item_text_note">局部資料狀態，非理想狀態之外的資料樣貌。</div>
+                                    <div class="item_text_note">錯誤狀態，網頁發生無法顯示。</div>
+                                </div>
+                                <div class="item_text large_item_text">
+                                    4.介面元件狀態：<br>
+                                    <div class="item_text_note">以文字說明，樣式於mockups設計呈現。</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="pup_window_content_part project_content_part" style="margin-bottom:0px;">
                         <div class="pup_content">
                             <div class="part_title h5 font_bold emphasize_text">線框稿內容</div>
-                            <div class="pup_text large_text" style="font-size:16px;">以旅平險投保流程為例。</div>
+                            <div class="pup_text large_text" style="font-size:16px;">以網站首頁為例。</div>
                             <div class="pup_content_text">
 
                                 <div class="text_row">
                                     <div class="text_item">
                                         <div>
-                                            <picture>
-                                                <source media="(max-width:768px)" srcset="images/sino_pic_5_768.png" />
-                                                <img src="images/sino_pic_5.png" class="sino_pic_5">
-                                            </picture>
+                                            <img src="images/sino_pic_9_1.png" class="sino_pic_9">
+                                            <img src="images/sino_pic_9_2.png" class="sino_pic_9">
+                                            <img src="images/sino_pic_9_3.png" class="sino_pic_9">
+                                            <img src="images/sino_pic_9_4.png" class="sino_pic_9">
                                         </div>
                                     </div>
                                 </div>
