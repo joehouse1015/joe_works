@@ -3390,7 +3390,7 @@ select::-ms-expand {
 }
 
 .sino_pic_9 {
-    width: 130vw;
+    width: 100%;
     margin-bottom: 20px;
     display: block;
 }
@@ -3422,6 +3422,9 @@ select::-ms-expand {
         max-width: 100%;
     }
 
+    .sino_pic_9 {
+        width: 100vw;
+    }
 }
 
 @media (max-width:1440px) {
@@ -3443,7 +3446,13 @@ select::-ms-expand {
     }
 
     .sino_pic_9 {
-        width: 140vw;
+        width: 120vw;
+    }
+}
+
+@media (max-width:1280px) {
+    .sino_pic_9 {
+        width: 130vw;
     }
 }
 
@@ -3454,6 +3463,10 @@ select::-ms-expand {
 
     .project_content_part {
         margin-bottom: 70px;
+    }
+
+    .sino_pic_9 {
+        width: 100%;
     }
 }
 
@@ -3472,9 +3485,6 @@ select::-ms-expand {
         margin: 10px 30px;
     }
 
-    .sino_pic_9 {
-        width: 150vw;
-    }
 }
 
 @media (max-width:768px) {
