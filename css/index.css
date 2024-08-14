@@ -4000,6 +4000,16 @@ select::-ms-expand {
     background: #7d7d7d;
 }
 
+@media (max-width:1024px) {
+    .pup_window_tab_content::-webkit-scrollbar-track {
+        background: none;
+    }
+
+    .pup_window_content_scroll::-webkit-scrollbar-track {
+        background: none;
+    }
+}
+
 @media (max-width:768px) {
     .pup_window_content::-webkit-scrollbar {
         width: 6px;
