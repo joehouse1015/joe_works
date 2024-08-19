@@ -3411,6 +3411,16 @@ select::-ms-expand {
     padding-right: 10px;
 }
 
+.pup_window_btn {
+    background-color: #ffffff;
+    color: #0076FF;
+    border: 3px solid #0076FF;
+    border-radius: 99px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
 @media (max-width:1780px) {
     .ps_works_pup .pup_content_pic img {
         max-width: 100%;
