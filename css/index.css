@@ -3265,7 +3265,7 @@ select::-ms-expand {
 
 .pup_window_content_tab a span {
     position: relative;
-    top: 2px;
+    top: 1px;
 }
 
 .pup_window_content_tab.active {
@@ -3490,7 +3490,7 @@ select::-ms-expand {
 }
 
 .pup_window_content_next_tip {
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
 .pup_window_content_end_tip {
@@ -3516,6 +3516,10 @@ select::-ms-expand {
     text-decoration: none;
 }
 
+.pup_normal_text_small {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
 
 @media (max-width:1780px) {
     .ps_works_pup .pup_content_pic img {
@@ -3593,6 +3597,10 @@ select::-ms-expand {
     .pup_close_btn {
         width: 40px;
         height: 40px;
+    }
+
+    .pup_window_content_tab {
+        min-width: 100px;
     }
 
     .pup_content_pic_container {
@@ -3694,7 +3702,9 @@ select::-ms-expand {
         margin-right: 5px;
         margin-left: 5px;
     }
-
+    .pup_short_tab{
+        width:65px;
+    }
     .pup_content_pic_container {
         margin-top: 25px;
     }
@@ -3748,6 +3758,11 @@ select::-ms-expand {
 
     .pup_normal_text {
         font-size: 16px;
+    }
+
+    .pup_normal_text_small {
+        font-size: 14px;
+        margin-bottom: 3px;
     }
 
     .sino_works_pup .pup_close_btn {
@@ -3845,7 +3860,7 @@ select::-ms-expand {
 .info_content_subject_text {
     font-size: 16px;
     line-height: 1.6;
-    margin-top: 10px;
+    margin-top: 15px;
     padding-left: 5px;
 }
 
@@ -3900,11 +3915,8 @@ select::-ms-expand {
 
 .subject_group_content_item .dot {
     font-size: 8px;
-    height: 100%;
-    display: flex;
-    align-items: center;
     position: absolute;
-    top: -1px;
+    top: 8px;
     left: 0px;
 }
 
