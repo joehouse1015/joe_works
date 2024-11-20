@@ -3430,6 +3430,7 @@ select::-ms-expand {
 .pup_content_pic_item_content {
     position: relative;
     display: inline-block;
+    vertical-align: top;
 }
 
 .pup_content_pic_item_content > span {
@@ -3479,6 +3480,11 @@ select::-ms-expand {
 
 .sino_pic_10 {
     max-width: 100%;
+}
+
+.sino_pic_11 {
+    max-width: 1024px;
+    width: 100%;
 }
 
 .pup_window_content_end_tip_container {
@@ -3573,6 +3579,11 @@ select::-ms-expand {
 
     .sino_pic_9 {
         width: 100%;
+    }
+
+    .sino_pic_11 {
+        max-width: 100%;
+        width: auto;
     }
 }
 
@@ -3702,9 +3713,11 @@ select::-ms-expand {
         margin-right: 5px;
         margin-left: 5px;
     }
-    .pup_short_tab{
-        width:65px;
+
+    .pup_short_tab {
+        width: 65px;
     }
+
     .pup_content_pic_container {
         margin-top: 25px;
     }
