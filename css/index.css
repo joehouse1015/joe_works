@@ -3526,7 +3526,10 @@ select::-ms-expand {
     font-size: 16px;
     margin-bottom: 5px;
 }
-
+.pup_info_link{
+    text-decoration: underline;
+    cursor: pointer;
+}
 @media (max-width:1780px) {
     .ps_works_pup .pup_content_pic img {
         max-width: 100%;
