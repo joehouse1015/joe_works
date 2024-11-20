@@ -59,7 +59,7 @@ select::-ms-expand {
 
 @font-face {
     font-family: GenJyuuGothic-Bold;
-    src: url(../fonts/GenJyuuGothic-Bold.ttf);
+    src: url(../fonts/GenJyuuGothic-Bold.woff2);
 }
 
 .red_text {
