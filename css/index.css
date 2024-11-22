@@ -521,7 +521,9 @@ select::-ms-expand {
     padding: 25px 30px 25px 20px;
 }
 
-.page_list_item_arrow {}
+.page_list_item_arrow {
+    display: none;
+}
 
 .page_list_item_title .title {
     width: calc(100% - 14px);
@@ -1380,10 +1382,10 @@ select::-ms-expand {
 }
 
 .info_attribute_item {
-    margin-bottom: 50px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
 .info_attribute_item > div {
@@ -1461,7 +1463,7 @@ select::-ms-expand {
     font-weight: bold;
     border-bottom: 4px solid #CBA039;
     border-radius: 40px;
-    margin: 80px auto 0px auto;
+    margin: 40px auto 0px auto;
     padding: 14px 0px;
     box-shadow: 0px 3px 8px rgba(62, 45, 13, 0.2);
     cursor: pointer;
@@ -1550,7 +1552,7 @@ select::-ms-expand {
     }
 
     .info_attribute_tell_btn {
-        margin-top: 80px;
+        margin-top: 30px;
     }
 }
 
@@ -1604,10 +1606,6 @@ select::-ms-expand {
     .item_row_2 > div:nth-child(3) {
         margin-left: 10px;
         margin-top: 60px;
-    }
-
-    .info_attribute_tell_btn {
-        margin-top: 100px;
     }
 }
 
@@ -3487,6 +3485,10 @@ select::-ms-expand {
     width: 100%;
 }
 
+.yuanta_pic_1 {
+    margin: 25px 5px 15px 5px;
+}
+
 .pup_window_content_end_tip_container {
     background-image: url(../images/pup_window_content_end_tip_line.png);
     background-repeat: repeat-x;
@@ -3526,10 +3528,12 @@ select::-ms-expand {
     font-size: 16px;
     margin-bottom: 5px;
 }
-.pup_info_link{
+
+.pup_info_link {
     text-decoration: underline;
     cursor: pointer;
 }
+
 @media (max-width:1780px) {
     .ps_works_pup .pup_content_pic img {
         max-width: 100%;
@@ -3673,6 +3677,10 @@ select::-ms-expand {
 
     .pup_window_tab_content_container {
         height: calc(100% - 85px)
+    }
+
+    .yuanta_pic_1 {
+        margin: 25px 0px 15px 0px;
     }
 }
 
