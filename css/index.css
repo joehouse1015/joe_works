@@ -3392,7 +3392,9 @@ select::-ms-expand {
 .pup_content_text .text_item_list {
     padding-left: 30px;
 }
-
+.text_item_list li {
+    margin-bottom: 5px;
+}
 .pup_content_text .text_item_list li {
     font-size: 16px;
     margin-bottom: 10px;
@@ -3533,7 +3535,18 @@ select::-ms-expand {
     text-decoration: underline;
     cursor: pointer;
 }
-
+.pup_title_text{
+    font-size:16px;
+    position:relative;
+}
+.pup_title_text .title{
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+.pup_title_text .text{
+    padding-left:57px;
+}
 @media (max-width:1780px) {
     .ps_works_pup .pup_content_pic img {
         max-width: 100%;
@@ -3682,6 +3695,9 @@ select::-ms-expand {
     .yuanta_pic_1 {
         margin: 25px 0px 15px 0px;
     }
+    .text_item_list{
+        font-size:16px;
+    }
 }
 
 @media (max-width:540px) {
@@ -3783,7 +3799,9 @@ select::-ms-expand {
     .pup_normal_text {
         font-size: 16px;
     }
-
+    .pup_title_text {
+        font-size: 14px;
+    }
     .pup_normal_text_small {
         font-size: 14px;
         margin-bottom: 3px;
