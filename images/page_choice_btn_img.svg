@@ -1,5 +1,14 @@
-<svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="28" height="4.5" rx="1" fill="#232323"/>
-<rect y="12" width="28" height="4.5" rx="1" fill="#232323"/>
-<rect y="24" width="28" height="4.5" rx="1" fill="#232323"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_1" data-name="圖層_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 28 28.5">
+  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #187ad8;
+      }
+    </style>
+  </defs>
+  <rect class="st0" width="28" height="4.5" rx="1" ry="1"/>
+  <rect class="st0" y="12" width="28" height="4.5" rx="1" ry="1"/>
+  <rect class="st0" y="24" width="28" height="4.5" rx="1" ry="1"/>
 </svg>
