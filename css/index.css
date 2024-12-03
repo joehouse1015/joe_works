@@ -320,7 +320,7 @@ select::-ms-expand {
 .page_choice_btn_container {
     width: 60px;
     height: 60px;
-    background-size: 28px auto;
+    background-size: 25px auto;
     background-color: #ffffff;
     background-image: url(../images/page_choice_btn_img.svg);
     background-position: center center;
@@ -434,6 +434,7 @@ select::-ms-expand {
     .page_choice_btn_container {
         width: 52px;
         height: 52px;
+        background-size: 22px auto;
     }
 
     .page_choice_btn_container img {
@@ -449,6 +450,7 @@ select::-ms-expand {
     .page_choice_btn_container {
         width: 48px;
         height: 48px;
+        background-size: 20px auto;
     }
 
     .page_choice_btn_container img {
@@ -471,6 +473,7 @@ select::-ms-expand {
     .page_choice_btn_container {
         width: 44px;
         height: 44px;
+        background-size: 18px auto;
     }
 
     .page_choice_btn_container img {
