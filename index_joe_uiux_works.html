@@ -141,6 +141,9 @@
             $(".taian_info_btn").click(function() {
                 $(".taian_info_pup,.pup_bg").fadeIn(500);
             });
+            $(".taian_works_btn").click(function() {
+                $(".taian_works_pup,.pup_bg").fadeIn(500);
+            });
             $(".gapp_works_1_btn").click(function() {
                 $(".gapp_works_1_pup,.pup_bg").fadeIn(500);
             });
@@ -150,6 +153,7 @@
             $(".gapp_works_3_btn").click(function() {
                 $(".gapp_works_3_pup,.pup_bg").fadeIn(500);
             });
+
             $(".pup_close_btn").click(function() {
                 $(".pup_window,.pup_bg").hide();
             });
@@ -1372,6 +1376,10 @@
                             </div>
                             <div class="work_info_subtext">
                                 依行銷人員提供的<span class="taian_info_btn pup_info_link">示意資料</span>，討論確認後，產出視覺稿。
+                            </div>
+                            <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                <span class="taian_works_btn">視覺稿</span>
                             </div>
                         </div>
                         <div class="work_info_subpart">
@@ -4776,6 +4784,7 @@
                                         $(".gapp_pup_tab_2").addClass("active");
                                     });
                                 });
+
                             </script>
                         </div>
                     </div>
@@ -5671,6 +5680,123 @@
         </div>
     </div>
     <!-- ... 泰安 行銷網頁資料提供 end ... -->
+    <!-- ... 泰安 視覺稿  ... -->
+    <script type="text/javascript">
+        $(function() {
+            var showTab = 0;
+            var defaultLi = $('.taian_works_pup .pup_tab_btn').eq(showTab).addClass('active');
+            $(defaultLi.find('a').attr('href')).siblings().hide();
+            $('.taian_works_pup .pup_tab_btn').click(function() {
+                var $this = $(this),
+                    clickTab = $this.find('a').attr('href');
+                $this.addClass('active').siblings('.active').removeClass('active');
+                $(clickTab).stop(false, true).fadeIn().siblings().hide();
+                return false;
+            }).find('a').focus(function() {
+                this.blur();
+            });
+        });
+
+    </script>
+    <div class="pup_window taian_works_pup" style="display:none;">
+        <div class="pup_close_btn set_middle pup_close_icon" role="button">
+
+        </div>
+        <div class="pup_window_content" style="overflow:inherit;">
+
+            <div class="pup_window_content_title h4 font_bold">行銷活動網頁&nbsp;視覺稿</div>
+
+            <div class="pup_window_content_tab_container">
+                <div class="pup_window_content_tab pup_tab_btn h5 font_bold pup_short_tab"><a href="#taian_tab_1" class="set_middle"><span>桌機</span></a></div>
+                <div class="pup_window_content_tab pup_tab_btn h5 font_bold pup_short_tab"><a href="#taian_tab_2" class="set_middle"><span>平板</span></a></div>
+                <div class="pup_window_content_tab pup_tab_btn h5 font_bold pup_short_tab"><a href="#taian_tab_3" class="set_middle"><span>手機</span></a></div>
+            </div>
+            <div class="pup_window_tab_content_container">
+
+                <div id="taian_tab_1" class="pup_window_tab_content">
+                    <div class="pup_window_content_part project_content_part" style="margin-bottom:0px;">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">桌機視覺稿</div>
+                            <div class="pup_text large_text" style="font-size:16px;">以螢幕解析度寬1920px為例。</div>
+
+                            <div class="pup_content_pic_container">
+                                <div class="pup_content_pic_item">
+                                    <div class="pup_content_pic_item_content">
+                                        <img src="images/taian_pic_2-1.png" style="max-width:100%">
+                                    </div>
+                                </div>
+                                <div class="pup_content_pic_item">
+                                    <div class="pup_content_pic_item_content">
+                                        <span>點擊挑戰答題，開啟答題視窗</span>
+                                        <img src="images/taian_pic_2-2.png" style="max-width:100%">
+                                    </div>
+                                </div>
+                                <div class="pup_content_pic_item">
+                                    <div class="pup_content_pic_item_content">
+                                        <span>完成答題，分享Facebook，即能進行抽獎</span>
+                                        <img src="images/taian_pic_2-3.png" style="max-width:100%">
+                                    </div>
+                                </div>
+                                <div class="pup_content_pic_item">
+                                    <div class="pup_content_pic_item_content">
+                                        <span>點擊轉動輪盤，開始抽獎</span>
+                                        <img src="images/taian_pic_2-4.png" style="max-width:100%">
+                                    </div>
+                                </div>
+                                <div class="pup_content_pic_item">
+                                    <div class="pup_content_pic_item_content">
+                                        <span>完成抽獎</span>
+                                        <img src="images/taian_pic_2-5.png" style="max-width:100%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pup_window_content_end_tip_container">
+                        <span class="pup_window_content_end_tip">已瀏覽完&nbsp;<span class="emphasize_text">桌機視覺稿</span></span>
+                    </div>
+                </div>
+                <div id="taian_tab_2" class="pup_window_tab_content">
+                    <div class="pup_window_content_part project_content_part" style="margin-bottom:0px;">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">平板視覺稿</div>
+                            <div class="pup_text large_text" style="font-size:16px;">以螢幕解析度寬768px為例。</div>
+
+                            <div class="pup_content_pic_container">
+                                <div class="pup_content_pic_item">
+                                    <div class="pup_content_pic_item_content">
+                                        <img src="images/taian_pic_3.png" style="max-width:1280px;width:100%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pup_window_content_end_tip_container">
+                        <span class="pup_window_content_end_tip">已瀏覽完&nbsp;<span class="emphasize_text">平板視覺稿</span></span>
+                    </div>
+                </div>
+                <div id="taian_tab_3" class="pup_window_tab_content">
+                    <div class="pup_window_content_part project_content_part" style="margin-bottom:0px;">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">手機視覺稿</div>
+                            <div class="pup_text large_text" style="font-size:16px;">以螢幕解析度寬430px為例。</div>
+                            <div class="pup_content_pic_container">
+                                <div class="pup_content_pic_item">
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <img src="images/taian_pic_4.png" style="max-width:100%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pup_window_content_end_tip_container">
+                        <span class="pup_window_content_end_tip">已瀏覽完&nbsp;<span class="emphasize_text">手機視覺稿</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ... 泰安 視覺稿 end ... -->
 </body>
 
 
