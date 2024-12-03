@@ -132,7 +132,7 @@
                     <div class="spin_wheel_frame">
                         <img src="image/spin_wheel_frame.png">
                         <img src="image/spin_wheel_content.png" class="spin_wheel_content">
-                        <img src="image/wheel_dot.png" class="spin_wheel_dot">
+                        <img src="image/wheel_dot.png" class="spin_wheel_dot spin_wheel">
                         <img src="image/wheel_dot_disable.png" class="spin_wheel_dot" style="display:none;">
                     </div>
 
@@ -395,7 +395,6 @@
             <div class="go_top_text">回頂端</div>
         </a>
     </div>
-
     <!-- ... 音樂祭答題 彈窗 ... -->
     <div class="pup_qa_window music_qa" style="display:none;">
         <div class="qa_content">
@@ -465,8 +464,8 @@
                 </div>
             </div>
             <div class="pup_btn_container">
-                <div class="btn yellow_btn hvr-top">再玩一次</div>
-                <div class="btn red_btn hvr-top">投保旅平險</div>
+                <div class="btn yellow_btn hvr-top play_again_btn">再玩一次</div>
+                <div class="btn red_btn hvr-top"><a href="https://www.taian.com.tw/Travel/Travel" target="_blank">投保旅平險</a></div>
                 <div class="btn blue_btn hvr-top">分享至facebook</div>
             </div>
         </div>
@@ -544,8 +543,8 @@
                 </div>
             </div>
             <div class="pup_btn_container">
-                <div class="btn yellow_btn hvr-top">再玩一次</div>
-                <div class="btn red_btn hvr-top">投保旅平險</div>
+                <div class="btn yellow_btn hvr-top play_again_btn">再玩一次</div>
+                <div class="btn red_btn hvr-top"><a href="https://www.taian.com.tw/Travel/Travel" target="_blank">投保旅平險</a></div>
                 <div class="btn blue_btn hvr-top">分享至facebook</div>
             </div>
         </div>
@@ -623,8 +622,8 @@
                 </div>
             </div>
             <div class="pup_btn_container">
-                <div class="btn yellow_btn hvr-top">再玩一次</div>
-                <div class="btn red_btn hvr-top">投保旅平險</div>
+                <div class="btn yellow_btn hvr-top play_again_btn">再玩一次</div>
+                <div class="btn red_btn hvr-top"><a href="https://www.taian.com.tw/Travel/Travel" target="_blank">投保旅平險</a></div>
                 <div class="btn blue_btn hvr-top">分享至facebook</div>
             </div>
         </div>
@@ -702,8 +701,8 @@
                 </div>
             </div>
             <div class="pup_btn_container">
-                <div class="btn yellow_btn hvr-top">再玩一次</div>
-                <div class="btn red_btn hvr-top">投保旅平險</div>
+                <div class="btn yellow_btn hvr-top play_again_btn">再玩一次</div>
+                <div class="btn red_btn hvr-top"><a href="https://www.taian.com.tw/Travel/Travel" target="_blank">投保旅平險</a></div>
                 <div class="btn blue_btn hvr-top">分享至facebook</div>
             </div>
         </div>
@@ -781,8 +780,8 @@
                 </div>
             </div>
             <div class="pup_btn_container">
-                <div class="btn yellow_btn hvr-top">再玩一次</div>
-                <div class="btn red_btn hvr-top">投保旅平險</div>
+                <div class="btn yellow_btn hvr-top play_again_btn">再玩一次</div>
+                <div class="btn red_btn hvr-top"><a href="https://www.taian.com.tw/Travel/Travel" target="_blank">投保旅平險</a></div>
                 <div class="btn blue_btn hvr-top">分享至facebook</div>
             </div>
         </div>
@@ -860,8 +859,8 @@
                 </div>
             </div>
             <div class="pup_btn_container">
-                <div class="btn yellow_btn hvr-top">再玩一次</div>
-                <div class="btn red_btn hvr-top">投保旅平險</div>
+                <div class="btn yellow_btn hvr-top play_again_btn">再玩一次</div>
+                <div class="btn red_btn hvr-top"><a href="https://www.taian.com.tw/Travel/Travel" target="_blank">投保旅平險</a></div>
                 <div class="btn blue_btn hvr-top">分享至facebook</div>
             </div>
         </div>
@@ -1133,6 +1132,35 @@
             $(".qa_content").show();
         });
 
+    });
+
+</script>
+<script>
+    $(document).ready(function() {
+        $(".music_qa .play_again_btn").click(function() {
+            $(".music_qa .qa_content").show();
+            $(".music_qa .qa_result").hide();
+        });
+        $(".camping_qa .play_again_btn").click(function() {
+            $(".camping_qa .qa_content").show();
+            $(".camping_qa .qa_result").hide();
+        });
+        $(".city_qa .play_again_btn").click(function() {
+            $(".city_qa .qa_content").show();
+            $(".city_qa .qa_result").hide();
+        });
+        $(".water_qa .play_again_btn").click(function() {
+            $(".water_qa .qa_content").show();
+            $(".water_qa .qa_result").hide();
+        });
+        $(".drive_qa .play_again_btn").click(function() {
+            $(".drive_qa .qa_content").show();
+            $(".drive_qa .qa_result").hide();
+        });
+        $(".food_qa .play_again_btn").click(function() {
+            $(".food_qa .qa_content").show();
+            $(".food_qa .qa_result").hide();
+        });
     });
 
 </script>
