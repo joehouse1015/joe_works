@@ -1714,6 +1714,11 @@ select::-ms-expand {
     background-color: #3a559f;
 }
 
+
+.pup_btn_container > .red_btn a {
+    color: #ffffff;
+}
+
 @media (max-width:1180px) {
     .pup_result_text .title {
         font-size: 28px;
