@@ -36,9 +36,12 @@ a {
 }
 
 a:hover {
+    color: #2486e4;
     text-decoration: underline;
 }
-
+a:active {
+    color: #1472cc;
+}
 img {
     border: none;
 }
@@ -317,7 +320,11 @@ select::-ms-expand {
 .page_choice_btn_container {
     width: 60px;
     height: 60px;
-    background-color: #F9F9F9;
+    background-size: 28px auto;
+    background-color: #ffffff;
+    background-image: url(../images/page_choice_btn_img.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
     border-radius: 50%;
     position: fixed;
     top: 20px;
@@ -327,7 +334,8 @@ select::-ms-expand {
 }
 
 .page_choice_btn_container:hover {
-    background-color: #f6c070;
+    background-color: #187AD8;
+    background-image: url(../images/page_choice_btn_img-hover.svg);
 }
 
 .page_choice_btn_container img {
@@ -360,9 +368,9 @@ select::-ms-expand {
 
 .page_choice_btn_note_btn {
     width: 100%;
-    background-color: #fec97a;
+    background-color: #187AD8;
     text-align: center;
-    color: #232323;
+    color: #ffffff;
     font-weight: bold;
     border-radius: 20px;
     margin-top: 5px;
@@ -372,7 +380,11 @@ select::-ms-expand {
 }
 
 .page_choice_btn_note_btn:hover {
-    background-color: #ffce86;
+    background-color: #2486e4;
+}
+
+.page_choice_btn_note_btn:active {
+    background-color: #1472cc;
 }
 
 .page_choice_btn_note_arrow {
@@ -579,9 +591,13 @@ select::-ms-expand {
 }
 
 .list_close_btn {
-    background-color: #ffffff;
     width: 45px;
     height: 45px;
+    background-color: #ffffff;
+    background-image: url(../images/close_icon.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 20px auto;
     border-radius: 50%;
     position: absolute;
     top: 10px;
@@ -589,11 +605,14 @@ select::-ms-expand {
     z-index: 101;
     cursor: pointer;
 }
-
 .list_close_btn:hover {
-    background-color: #f6c070;
+    background-color: #187AD8;
+    background-image: url(../images/close_icon-hover.png);
 }
-
+.list_close_btn:active {
+    background-color: #1472cc;
+    background-image: url(../images/close_icon-hover.png);
+}
 .list_close_btn img {
     width: 20px;
     height: 20px;
@@ -1456,21 +1475,25 @@ select::-ms-expand {
 
 .info_attribute_tell_btn {
     width: 300px;
-    background-color: #fec97a;
+    background-color: #187AD8;
     font-size: 20px;
     text-align: center;
-    color: #232323;
+    color: #ffffff;
     font-weight: bold;
-    border-bottom: 4px solid #CBA039;
+    border-bottom: 4px solid #1472cc;
     border-radius: 40px;
     margin: 40px auto 0px auto;
     padding: 14px 0px;
-    box-shadow: 0px 3px 8px rgba(62, 45, 13, 0.2);
+    box-shadow: 0px 3px 8px rgba(12, 74, 134, 0.2);
     cursor: pointer;
 }
 
 .info_attribute_tell_btn:hover {
-    background-color: #ffce86;
+    background-color: #2486e4;
+}
+
+.info_attribute_tell_btn:active {
+    background-color: #1472cc;
 }
 
 @media (max-width:1024px) {
@@ -3212,23 +3235,30 @@ select::-ms-expand {
 }
 
 .pup_close_btn {
-    background-color: #ffffff;
     width: 42px;
     height: 42px;
+    background-size: 20px auto;
+    background-color: #ffffff;
+    background-image: url(../images/close_icon.png);
+    background-position: center center;
+    background-repeat: no-repeat;
     border-radius: 50%;
     position: absolute;
     top: 15px;
     right: 20px;
     cursor: pointer;
 }
-
+.pup_close_btn:hover {
+    background-color: #187AD8;
+    background-image: url(../images/close_icon-hover.png);
+}
+.pup_close_btn:active {
+    background-color: #1472cc;
+    background-image: url(../images/close_icon-hover.png);
+}
 .pup_close_btn img {
     width: 20px;
     height: 20px;
-}
-
-.pup_close_btn:hover {
-    background-color: #ebb533;
 }
 
 .pup_window_content {
@@ -3514,8 +3544,9 @@ select::-ms-expand {
 }
 
 .pup_window_btn {
-    background-color: #ebb533;
-    color: #232323;
+    background-color: #ffffff;
+    color: #187AD8;
+    border: 3px solid #187AD8;
     border-radius: 99px;
     margin-top: 10px;
     padding: 10px 20px;
@@ -3524,10 +3555,13 @@ select::-ms-expand {
 }
 
 .pup_window_btn:hover {
-    background-color: #f4bf3e;
-    text-decoration: none;
+    color: #2486e4;
+    border: 3px solid #2486e4;
 }
-
+.pup_window_btn:active {
+    color: #1472cc;
+    border: 3px solid #1472cc;
+}
 .pup_normal_text_small {
     font-size: 16px;
     margin-bottom: 5px;
