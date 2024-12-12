@@ -126,6 +126,9 @@
             $(".sino_works_4_btn").click(function() {
                 $(".sino_works_4_pup,.pup_bg").fadeIn(500);
             });
+            $(".sino_works_5_btn").click(function() {
+                $(".sino_works_5_pup,.pup_bg_transparent").fadeIn(500);
+            });
             $(".yuanta_works_1_btn").click(function() {
                 $(".yuanta_works_1_pup,.pup_bg").fadeIn(500);
             });
@@ -155,7 +158,10 @@
             });
 
             $(".pup_close_btn").click(function() {
-                $(".pup_window,.pup_bg").hide();
+                $(".pup_window,.pup_bg,.pup_window_small,.pup_bg_transparent").hide();
+            });
+            $(".pup_bg_transparent").click(function() {
+                $(".pup_window_small,.pup_bg_transparent").hide();
             });
         });
 
@@ -209,7 +215,7 @@
                 <div class="page_list_item_page_choice">
                     <div><a href="#p7">永豐銀行&nbsp;網路投保網站</a></div>
                     <div><a href="#p8">元大期貨槓桿&nbsp;官方網站</a></div>
-                    <div><a href="#p9">裕隆集團&nbsp;員工APP&amp;管理後台</a></div>
+                    <div><a href="#p9">裕隆集團&nbsp;員工福利APP&amp;管理後台</a></div>
                     <div><a href="#p10">金融服務商&nbsp;投資交易APP</a></div>
                     <div><a href="#p11">泰安產物&nbsp;行銷活動網頁</a></div>
                 </div>
@@ -299,7 +305,7 @@
                                 <div class="list_note_tag">介面&amp;視覺設計</div>
                             </div>
                             <li>
-                                <div class="list_page_name">裕隆集團&nbsp;<br>員工APP&amp;管理後台</div>
+                                <div class="list_page_name">裕隆集團&nbsp;<br>員工福利APP&amp;管理後台</div>
                                 <div class="list_line"></div><a href="#p9" class="list_page_num appear-animation" data-appear-animation="fadeInLeft">9</a>
                             </li>
                             <div class="list_note_container">
@@ -551,7 +557,7 @@
                             <div>
                                 <div class="info_skill_item_title h5 font_bold">Figma：</div>
                                 <div class="info_skill_item_text">
-                                    4~5年製作網站、APP介面的使用經驗，懂Auto Layout、Component、Library、Phototype設置。
+                                    4~5年製作網站、APP介面的使用經驗，懂Auto Layout、Component、Library、Prototype設置。
                                 </div>
                                 <div class="info_skill_item_note" style="display:none;">*工作專案有成果展示</div>
                                 <div class="info_skill_item_pic">
@@ -566,7 +572,7 @@
                             <div>
                                 <div class="info_skill_item_title h5 font_bold">RWD網頁設計：</div>
                                 <div class="info_skill_item_text">
-                                    熟悉設計響應式網站介面，並以Html、Css切版成初步原型(Phototype)。
+                                    熟悉設計響應式網站介面，並以Html、Css切版成初步原型(Prototype)。
                                 </div>
                                 <div class="info_skill_item_note" style="display:none;">*工作專案有成果展示</div>
                                 <div class="info_skill_item_pic">
@@ -578,7 +584,7 @@
                             <div>
                                 <div class="info_skill_item_title h5 font_bold">Jquery：</div>
                                 <div class="info_skill_item_text">
-                                    能運用製作網站原型(Phototype)的操作元件，如：選單收合、彈跳視窗、Tab切換內容...等。
+                                    能運用製作網站原型(Prototype)的操作元件，如：選單收合、彈跳視窗、Tab切換內容...等。
                                 </div>
                                 <div class="info_skill_item_note" style="display:none;">*工作專案有成果展示</div>
                                 <div class="info_skill_item_pic">
@@ -932,18 +938,18 @@
                         </div>
                         <div class="work_info_subpart">
                             <div class="work_info_subtitle h4 font_bold">
-                                <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>原型<span>Phototype</span>：
+                                <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>原型<span>Prototype</span>：
                             </div>
                             <div class="work_info_subtext">
-                                以視覺稿運用figma功能，完成初步的phototype確認操作需求。
+                                以視覺稿運用figma功能，完成初步的Prototype確認操作需求。
+                            </div>
+                            <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                <span class="sino_works_5_btn">用戶原型-桌機(figma)</span>
                             </div>
                             <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
                                 <img src="images/pup_link_dot_disabled.png" class="pup_link_dot">
-                                <span class="disabled_link">用戶原型(figma)</span>
-                            </div>
-                            <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp" style="display:none;">
-                                <img src="images/pup_link_dot_disabled.png" class="pup_link_dot">
-                                <span class="disabled_link">實行性原型(前端切版)</span>
+                                <span class="disabled_link">實行性原型-首頁(前端切版)</span>
                             </div>
                         </div>
                     </div>
@@ -1061,14 +1067,14 @@
             </div>
             <div class="page_content_container">
                 <div class="page_content_title">
-                    <div class="page_content_title_name">裕隆集團&nbsp;員工APP和管理後台</div>
+                    <div class="page_content_title_name">裕隆員工福利APP和管理後台</div>
                     <div class="page_content_title_line"></div>
                 </div>
 
                 <div class="work_appinfo_container">
                     <div class="work_appinfo_img_container">
                         <picture>
-                            <img src="images/project_img_3.png" class="work_appinfo_img" alt="裕隆集團職工福利APP登入頁示意圖1">
+                            <img src="images/project_img_3.png" class="work_appinfo_img" alt="裕隆集團員工福利APP登入頁示意圖1">
                         </picture>
                     </div>
                     <div class="work_appinfo_describe">
@@ -1079,14 +1085,14 @@
                             </div>
                             <div class="work_appinfo_img_container_960 appear-animation" data-appear-animation="fadeInUp">
                                 <picture>
-                                    <img src="images/project_img_3.png" alt="裕隆集團職工福利APP登入頁示意圖2">
+                                    <img src="images/project_img_3.png" alt="裕隆集團員工福利APP登入頁示意圖2">
                                 </picture>
                             </div>
                         </div>
                         <div class="work_info_part display_flex_1200_2 display_none_960">
                             <div style="width:40%;">
                                 <picture>
-                                    <img src="images/project_img_3.png" class="work_appinfo_img" alt="裕隆集團職工福利APP登入頁示意圖3">
+                                    <img src="images/project_img_3.png" class="work_appinfo_img" alt="裕隆集團員工福利APP登入頁示意圖3">
                                 </picture>
                             </div>
                             <div style="width:60%;padding-top:20px;padding-left:30px;">
@@ -1363,7 +1369,7 @@
                         </div>
                         <div class="work_info_subpart">
                             <div class="work_info_subtitle h4 font_bold">
-                                <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>初步原型<span>Phototype</span>：
+                                <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>初步原型<span>Prototype</span>：
                             </div>
                             <div class="work_info_subtext">
                                 確認視覺稿後，進行前端切版製作初步原型。
@@ -1472,7 +1478,7 @@
                         </div>
                     </div>
                     <div class="work_info_part">
-                        <div class="work_info_title h3 font_bold">裕隆集團&nbsp;員工APP&amp;管理後台</div>
+                        <div class="work_info_title h3 font_bold">裕隆員工福利APP&amp;管理後台</div>
                         <div class="work_info_text">
                             --
                         </div>
@@ -1572,7 +1578,7 @@
                                     <div class="work_info_subtitle h4 font_bold" style="padding-left:15px;">
                                         回饋和建議
                                     </div>
-                                    <div style="margin-bottom:10px;padding-left:15px;">7項選擇題(僅4題必填)、3項開放式問答(非必填)，3~5分鐘推我一把！</div>
+                                    <div style="margin-bottom:10px;padding-left:15px;">7項選擇題(4題必填)、3項問答題(非必填)</div>
                                     <div class="work_info_subtext" style="padding-left:17px;">
                                         <ul>
                                             <li><span class="disabled_link font_bold" style="cursor:pointer;">Google線上表單</span></li>
@@ -1606,6 +1612,7 @@
     <!-- ... p14 end ... -->
 
     <div class="pup_bg" style="display:none;"></div>
+    <div class="pup_bg_transparent" style="display:none;"></div>
 
     <!-- ... 合作夥伴對我的看法 ... -->
     <div class="pup_window info_attribute_tell_pup" style="display:none;">
@@ -3995,6 +4002,38 @@
         </div>
     </div>
     <!-- ... 永豐銀行網路投保 設計亮點 end ... -->
+    <!-- ... 永豐網路投保 用戶原型選項 ... -->
+    <div class="pup_window_small sino_works_5_pup" style="display:none;">
+        <div class="pup_close_btn set_middle pup_close_icon" role="button">
+
+        </div>
+        <div class="pup_window_small_title_container">
+            <div class="pup_window_small_title emphasize_text">用戶原型</div>
+            <div class="pup_window_small_subtitle">選擇您目前的螢幕解析度</div>
+        </div>
+        <div class="pup_window_small_content">
+            <a href="https://www.figma.com/proto/wEkauSXWPLMvw6jZQfmbXR/%E6%B0%B8%E8%B1%90%E7%B6%B2%E8%B7%AF%E6%8A%95%E4%BF%9D%E7%B6%B2%E7%AB%99_prototype-%E6%A1%8C%E6%A9%9F?node-id=0-1&node-type=canvas&viewport=126%2C-364%2C0.02&t=gjPWu2OTWDAh27AY-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=11%3A6036" target="_blank">
+                <div class="pup_window_small_option">寬1920px<img src="images/arrow-left-link.png"></div>
+            </a>
+            <a href="https://www.figma.com/proto/wEkauSXWPLMvw6jZQfmbXR/%E6%B0%B8%E8%B1%90%E7%B6%B2%E8%B7%AF%E6%8A%95%E4%BF%9D%E7%B6%B2%E7%AB%99_prototype-%E6%A1%8C%E6%A9%9F?node-id=32-16553&node-type=canvas&viewport=340%2C316%2C0.02&t=gjPWu2OTWDAh27AY-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=237%3A268067" target="_blank">
+                <div class="pup_window_small_option">寬1440px<img src="images/arrow-left-link.png"></div>
+            </a>
+            <a href="https://www.figma.com/proto/wEkauSXWPLMvw6jZQfmbXR/%E6%B0%B8%E8%B1%90%E7%B6%B2%E8%B7%AF%E6%8A%95%E4%BF%9D%E7%B6%B2%E7%AB%99_prototype-%E6%A1%8C%E6%A9%9F?node-id=237-267666&node-type=canvas&viewport=16940%2C27766%2C0.27&t=gjPWu2OTWDAh27AY-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=237%3A844289" target="_blank">
+                <div class="pup_window_small_option">寬1366px<img src="images/arrow-left-link.png"></div>
+            </a>
+        </div>
+        <div class="pup_window_small_tip">
+            <span>進入用戶原型後，
+                <ul style="list-style:disc;margin:5px 0px;padding-left:20px;">
+                    <li>Window按「ctrl」+「\」</li>
+                    <li>Mac按「command」+「\」</li>
+                </ul>
+                可隱藏figma功能選單，便於完整介面操作。
+            </span>
+        </div>
+
+    </div>
+    <!-- ... 永豐網路投保 用戶原型選項 end ... -->
     <!-- ... 元大期貨槓桿 視覺風格(一)  ... -->
     <div class="pup_window yuanta_works_1_pup" style="display:none;">
         <div class="pup_close_btn set_middle pup_close_icon" role="button">
@@ -4886,16 +4925,6 @@
                                     <img src="images/gapp_pic_6-2.png" style="max-width:100%">
                                 </div>
                             </div>
-                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
-                                <div class="pup_content_pic_item_content yuanta_pic_1">
-                                    <span>點擊使用者代號的資訊符號</span>
-                                    <img src="images/gapp_pic_6-3.png" style="max-width:100%">
-                                </div>
-                                <div class="pup_content_pic_item_content yuanta_pic_1">
-                                    <span>點擊登入遇到困難 > 登入問題</span>
-                                    <img src="images/gapp_pic_6-4.png" style="max-width:100%">
-                                </div>
-                            </div>
                             <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
                                 選擇登入身分
                             </div>
@@ -5667,6 +5696,762 @@
         </div>
     </div>
     <!-- ... 泰安 視覺稿 end ... -->
+
+    <!-- ... 裕隆職福 內容規劃 ... -->
+    <script type="text/javascript">
+        $(function() {
+            var showTab = 0;
+            var defaultLi = $('.yulon_works_1_pup .pup_tab_btn').eq(showTab).addClass('active');
+            $(defaultLi.find('a').attr('href')).siblings().hide();
+            $('.yulon_works_1_pup .pup_tab_btn').click(function() {
+                var $this = $(this),
+                    clickTab = $this.find('a').attr('href');
+                $this.addClass('active').siblings('.active').removeClass('active');
+                $(clickTab).stop(false, true).fadeIn().siblings().hide();
+                return false;
+            }).find('a').focus(function() {
+                this.blur();
+            });
+        });
+
+    </script>
+    <div class="pup_window yulon_works_1_pup" style="display:none;">
+        <div class="pup_close_btn set_middle pup_close_icon" role="button">
+
+        </div>
+        <div class="pup_window_content" style="overflow:inherit;">
+
+            <div class="pup_window_content_title h4 font_bold">員工福利APP和管理後台&nbsp;規劃內容</div>
+
+            <div class="pup_window_content_tab_container">
+                <div class="pup_window_content_tab pup_tab_btn sino_pup_tab_1 h5 font_bold"><a href="#yulon_tab_1" class="set_middle"><span>資訊架構</span></a></div>
+                <div class="pup_window_content_tab pup_tab_btn sino_pup_tab_2 h5 font_bold"><a href="#yulon_tab_2" class="set_middle"><span>網站布局</span></a></div>
+                <div class="pup_window_content_tab pup_tab_btn sino_pup_tab_3 h5 font_bold"><a href="#yulon_tab_3" class="set_middle"><span>功能機制</span></a></div>
+            </div>
+            <div class="pup_window_tab_content_container">
+
+                <div id="yulon_tab_1" class="pup_window_tab_content">
+
+                    <div class="pup_window_content_part project_content_part" style="margin-bottom:30px;">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">前言</div>
+                            <div class="pup_content_text" style="margin-top:10px;">
+                                <div class="text_row">
+                                    <div class="text_item">
+                                        <div class="text_item_title h6">從3個方向進行資料收集</div>
+                                        <ul class="text_item_list" style="list-style:disc;padding-left:25px;margin:10px 0px;">
+                                            <li>從保險業務<span class="emphasize_text">了解客戶投保的業務情境</span>。</li>
+                                            <li><span class="emphasize_text">探訪相關類型網站</span>，分析架構、內容、流程。</li>
+                                            <li><span class="emphasize_text">從網路社群了解大眾</span>，對於網路投保的使用經驗。</li>
+                                        </ul>
+                                        <span style="font-size:16px;">使網站規劃內容，貼合市場需求與使用習慣。</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pup_window_content_part project_content_part">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">一、釐清業務流程與需求情境</div>
+                            <div class="pup_normal_text emphasize_text">從直面市場的業務單位，獲取資訊衍生網站內容。</div>
+                            <div class="pup_normal_text">訪談保險業務，認識簽訂保單過程。</div>
+                            <div class="pup_content_text">
+                                <div class="text_row">
+                                    <div class="text_item">
+                                        <div class="text_item_title h6 emphasize_text">由簽訂保單過程，整理重點事項</div>
+                                        <ul class="text_item_list" style="list-style:decimal">
+                                            <li>依客戶保險需求，介紹商品資訊。</li>
+                                            <li>評估客戶條件給予投保建議。</li>
+                                            <li>確定投保意願，說明相關條款和規定。</li>
+                                            <li>填寫客戶投保申請資料。</li>
+                                            <li>確認客戶同意相關條款和規定。</li>
+                                            <li>收取投保費用。</li>
+                                            <li>申請投保。</li>
+                                            <li>詢問客戶是否有投保相關問題。</li>
+                                            <li>推廣公司行銷活動。</li>
+                                        </ul>
+                                    </div>
+                                    <div class="text_item_arrow_960">
+                                        <i class="fa fa-long-arrow-right display_none_960"></i>
+                                        <i class="fa fa-long-arrow-down display_block_960"></i>
+                                    </div>
+                                    <div class="text_item">
+                                        <div class="text_item_title h6 emphasize_text">找出簽訂保單的認知需求</div>
+                                        <ul class="text_item_list" style="list-style:decimal">
+                                            <li>整理保險商品重點、理賠項目額度、投保規定。</li>
+                                            <li>依條件規劃方案、計算投保費用。</li>
+                                            <li>備妥商品條款和規定文件。</li>
+                                            <li>備妥申請投保資料表單。</li>
+                                            <li>於條款和規定文件中，讓客戶同意簽名。</li>
+                                            <li>取得付款資料。</li>
+                                            <li>將保險資料留存紀錄，寄送至核保單位。</li>
+                                            <li>了解客戶常有的問題並備妥回答內容。</li>
+                                            <li>備妥行銷活動文宣。</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pup_window_content_part project_content_part">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">二、規劃網站操作流程與功能內容</div>
+                            <div class="pup_content_text">
+                                <div class="text_row">
+                                    <div class="text_item">
+                                        <div class="text_item_title h6">確認網站使用目標</div>
+                                        <div>
+                                            <img src="images/sino_pic_1.png" class="sino_pic_1">
+                                        </div>
+                                    </div>
+                                    <div class="text_item_arrow_1440">
+                                        <i class="fa fa-long-arrow-right display_none_1440"></i>
+                                        <i class="fa fa-long-arrow-down display_block_1440"></i>
+                                    </div>
+                                    <div class="text_item">
+                                        <div class="text_item_title h6 emphasize_text">以投保業務流程、同類型網站，規劃網站操作流程</div>
+                                        <div>
+                                            <picture>
+                                                <source media="(max-width:430px)" srcset="images/sino_pic_2_540.png" />
+                                                <source media="(max-width:768px)" srcset="images/sino_pic_2_768.png" />
+                                                <source media="(max-width:1024px)" srcset="images/sino_pic_2_1024.png" />
+                                                <img src="images/sino_pic_2.png" class="sino_pic_2">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group_row">
+                                    <div class="group_item_title h6 emphasize_text">以投保業務的認知需求、同類型網站，盤點網站功能和內容</div>
+                                    <div class="group_item_container">
+                                        <div class="group_item group_item_50">
+                                            <div class="text_item_title large_text font_bold">保險商品</div>
+                                            <ul class="text_item_list" style="list-style:disc;">
+                                                <li>保險商品資訊。</li>
+                                                <li>投保費用試算。</li>
+                                                <li>商品條款和投保文件。</li>
+                                            </ul>
+                                        </div>
+                                        <div class="group_item group_item_50">
+                                            <div class="text_item_title large_text font_bold">投保流程</div>
+                                            <ul class="text_item_list" style="list-style:disc;">
+                                                <li>投保表單。</li>
+                                                <li>審閱文件機制。</li>
+                                                <li>繳納保費。</li>
+                                                <li>身分驗證。</li>
+                                                <li>投保申請紀錄。</li>
+                                            </ul>
+                                        </div>
+                                        <div class="group_item group_item_50">
+                                            <div class="text_item_title large_text font_bold">客戶服務</div>
+                                            <ul class="text_item_list" style="list-style:disc;">
+                                                <li>常見問答。</li>
+                                                <li>活動資訊。</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="pup_window_content_part project_content_part">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">三、以操作流程和功能內容，歸納資料項目</div>
+                            <div class="pup_content_text">
+
+                                <div class="text_row">
+                                    <div class="text_item sino_pic_4_item">
+                                        <div>
+                                            <picture>
+                                                <source media="(max-width:540px)" srcset="images/sino_pic_4_540.png" />
+                                                <source media="(max-width:768px)" srcset="images/sino_pic_4_768.png" />
+                                                <img src="images/sino_pic_4.png" class="sino_pic_4">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pup_window_content_part project_content_part">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">四、以資料項目規劃網站互動機制</div>
+                            <div class="pup_content_text">
+
+                                <div class="text_row">
+                                    <div class="text_item sino_pic_5_item">
+                                        <div>
+                                            <picture>
+                                                <source media="(max-width:768px)" srcset="images/sino_pic_5_768.png" />
+                                                <img src="images/sino_pic_5.png" class="sino_pic_5">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pup_window_content_part project_content_part">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">五、釐清資料項目來源、內容項目和互動機制</div>
+                            <div class="pup_content_text">
+
+                                <div class="system_data_info_container">
+                                    <div class="system_data_info_item">
+                                        <div class="system_data_info_title set_middle h5 font_bold">
+                                            <div>
+                                                <span>網<br></span><span>站</span><br><span>會<br></span><span>員</span>
+                                            </div>
+                                        </div>
+                                        <div class="system_data_info_content">
+                                            <div class="system_data_info_content_subject">
+                                                <div class="info_content_subject_title h6 font_bold">網站會員&nbsp;資料來源：</div>
+                                                <div class="info_content_subject_text">
+                                                    使用者登入永豐會員後，前端抓取使用者Token給予後端，以永豐網銀會員API抓取資料建立。
+                                                </div>
+                                            </div>
+                                            <div class="system_data_info_content_subject">
+                                                <div class="info_content_subject_title h6 font_bold">內容項目：</div>
+                                                <div class="info_content_subject_text">
+                                                    <div><span class="font_bold emphasize_text">個人資料</span></div>
+                                                    <div><span class="font_bold">姓名：</span><span class="text_note">陳大明</span></div>
+                                                    <div><span class="font_bold">性別：</span><span class="text_note">男</span></div>
+                                                    <div><span class="font_bold">國籍：</span><span class="text_note">本國</span></div>
+                                                    <div><span class="font_bold">身分證字號：</span><span class="text_note">A12345****</span></div>
+                                                    <div><span class="font_bold">出生日期：</span><span class="text_note">1989/01/**</span></div>
+                                                    <div><span class="font_bold">聯絡電話：</span><span class="text_note">0987******</span></div>
+                                                    <div><span class="font_bold">電子信箱：</span><span class="text_note">m****@sinopac.com</span></div>
+                                                    <div><span class="font_bold">通訊地址：</span><span class="text_note">104台北市中山區南京東路********</span></div>
+                                                </div>
+                                                <div class="info_content_subject_text">
+                                                    <div><span class="font_bold emphasize_text">身故受益人名單資料</span></div>
+                                                    <div><span class="font_bold">姓名：</span><span class="text_note">林美美</span></div>
+                                                    <div><span class="font_bold">順位：</span><span class="text_note">1(數字資料範圍根據身故受益人數而定)</span></div>
+                                                    <div><span class="font_bold">國籍：</span><span class="text_note">本國、外國</span></div>
+                                                    <div><span class="font_bold">與被保險人關係：</span><span class="text_note">配偶、子女、父母、(曾)祖父母、(曾)孫子女、其他</span></div>
+                                                    <div><span class="font_bold">身分證字號：</span><span class="text_note">B12345678</span></div>
+                                                    <div><span class="font_bold">出生日期：</span><span class="text_note">1987-12-10</span></div>
+                                                    <div><span class="font_bold">聯絡手機：</span><span class="text_note">0987******</span></div>
+                                                    <div><span class="font_bold">聯絡電話：</span><span class="text_note">02-2251111#506</span></div>
+                                                    <div><span class="font_bold">通訊地址：</span><span class="text_note">104台北市中山區南京東路********</span></div>
+                                                    <div><span class="font_bold">銀行帳戶：</span><span class="text_note">永豐銀行世貿分行0000222200002222</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="system_data_info_content_subject" style="margin-bottom:0px;">
+                                                <div class="info_content_subject_title h6 font_bold"><span class="display_inline_540">使用者</span>操作機制：</div>
+                                                <div class="info_content_subject_group">
+                                                    <div class="subject_group_pic">
+                                                        <img src="images/user_icon.png">
+                                                        <div class="font_bold">使用者</div>
+                                                    </div>
+                                                    <div class="subject_group_content">
+                                                        <div class="subject_group_content_item">
+                                                            <div class="item_title">
+                                                                <div class="dot"><i class="fa fa-circle"></i></div>可以註冊/登入網站會員。
+                                                            </div>
+                                                            <div class="item_text">
+                                                                將使用者導向永豐網銀登入頁，註冊會員登入後，導回至本站。
+                                                            </div>
+                                                        </div>
+                                                        <div class="subject_group_content_item">
+                                                            <div class="item_title">
+                                                                <div class="dot"><i class="fa fa-circle"></i></div>可以藉由手機簡訊驗證會員身分。
+                                                            </div>
+                                                            <div class="item_text">
+                                                                簡訊傳送驗證碼至會員手機，使用者於網頁欄位正確輸入後完成身分驗證。
+                                                            </div>
+                                                        </div>
+                                                        <div class="subject_group_content_item">
+                                                            <div class="item_title">
+                                                                <div class="dot"><i class="fa fa-circle"></i></div>可以輸入、上傳身故受益人名單資料。
+                                                            </div>
+                                                            <div class="item_text">
+                                                                使用者於投保時填寫身故受益人資料並儲存上傳至後端資料庫(方便下次投保無須重新填寫)。
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="system_data_info_container">
+                                    <div class="system_data_info_item">
+                                        <div class="system_data_info_title set_middle h5 font_bold">
+                                            <div>
+                                                <span>保<br></span><span>險</span><br><span>商<br></span><span>品</span>
+                                            </div>
+                                        </div>
+                                        <div class="system_data_info_content">
+                                            <div class="system_data_info_content_subject">
+                                                <div class="info_content_subject_title h6 font_bold">保險商品&nbsp;資料來源：</div>
+                                                <div class="info_content_subject_text">
+                                                    1.保險公司提供API，由後端透過API抓取保險資料至資料庫。<br />
+                                                    2.建立管理後台由永豐業務單位上傳至資料庫。
+                                                </div>
+                                            </div>
+                                            <div class="system_data_info_content_subject">
+                                                <div class="info_content_subject_title h6 font_bold">內容項目：(泰安旅平險為例)</div>
+                                                <div class="info_content_subject_text">
+                                                    <div><span class="font_bold emphasize_text">投保資訊</span></div>
+                                                    <div><span class="font_bold">種類：</span><span class="text_note">旅平險</span></div>
+                                                    <div><span class="font_bold">投保資格：</span><span class="text_note">要保人投保年齡限成年...。</span></div>
+                                                    <div><span class="font_bold">保障範圍：</span><span class="text_note">區域：國內和國外...。</span></div>
+                                                    <div><span class="font_bold">投保年齡：</span><span class="text_note">成年~保險年齡64歲...。</span></div>
+                                                    <div><span class="font_bold">投保金額：</span><span class="text_note">100萬~1000萬。</span></div>
+                                                    <div><span class="font_bold">繳費方式：</span><span class="text_note">永豐銀行信用卡，永豐銀行帳戶...。</span></div>
+                                                    <div><span class="font_bold">商品條款文件連結：</span><span class="text_note">https://xxx/xxx/xxxxx.pdf</span></div>
+                                                </div>
+                                                <div class="info_content_subject_text">
+                                                    <div><span class="font_bold emphasize_text">保險內容</span></div>
+                                                    <div><span class="font_bold">商品名稱：</span><span class="text_note">泰玩美旅遊平安保險</span></div>
+                                                    <div><span class="font_bold">商品方案：</span><span class="text_note">超值型</span></div>
+                                                    <div><span class="font_bold">投保期間：</span><span class="text_note">2024-05-20 03:00~2024-05-25 03:00</span></div>
+                                                    <div><span class="font_bold">投保天數：</span><span class="text_note">5天</span></div>
+                                                    <div><span class="font_bold">交通工具：</span><span class="text_note">汽車、火車、渡輪、飛機</span></div>
+                                                    <div><span class="font_bold">旅遊目的：</span><span class="text_note">娛樂、出差、探親、遊學</span></div>
+                                                    <div><span class="font_bold">投保額度：</span><span class="text_note">100萬、200萬、300萬、400萬、500萬、600萬、700萬、800萬、900萬、1000萬</span></div>
+                                                </div>
+                                                <div class="info_content_subject_text">
+                                                    <div><span class="font_bold emphasize_text">要保人/被保險人資料</span></div>
+                                                    <div><span class="font_bold">目前是否從事特殊職業：</span><span class="text_note">是、否</span></div>
+                                                    <div><span class="font_bold">目前是否受監護/受輔助宣告：</span><span class="text_note">是、否</span></div>
+                                                </div>
+                                                <div class="info_content_subject_text">
+                                                    <div><span class="font_bold emphasize_text">要保人/被保險人投保資料</span></div>
+                                                    <div><span class="font_bold">家庭主要經濟來源：</span><span class="text_note">本人、父母、祖父母、兄弟姊妹</span></div>
+                                                    <div><span class="font_bold">個人年收入：</span><span class="text_note">50萬(含)以下、50萬~100萬、100萬~300萬、300萬以上</span></div>
+                                                    <div><span class="font_bold">家庭年收入：</span><span class="text_note">50萬(含)以下、50萬~100萬、100萬~300萬、300萬以上</span></div>
+                                                    <div><span class="font_bold">保費來源：</span><span class="text_note">薪資、投資收入、儲蓄、財產繼承/贈與</span></div>
+                                                    <div><span class="font_bold">最近一年內是否居住於境外超過半年：</span><span class="text_note">是、否</span></div>
+                                                    <div><span class="font_bold">是否為國內、國外或國際組織重要政治性職務人士：</span><span class="text_note">是、否</span></div>
+                                                    <div><span class="font_bold">是否已投保其他商業實支實付型傷害醫療保險：</span><span class="text_note">是、否</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="system_data_info_content_subject" style="margin-bottom:0px;">
+                                                <div class="info_content_subject_title h6 font_bold"><span class="display_inline_540">使用者</span>操作機制：</div>
+                                                <div class="info_content_subject_group">
+                                                    <div class="subject_group_pic">
+                                                        <img src="images/user_icon.png">
+                                                        <div class="font_bold">使用者</div>
+                                                    </div>
+                                                    <div class="subject_group_content">
+                                                        <div class="subject_group_content_item">
+                                                            <div class="item_title">
+                                                                <div class="dot"><i class="fa fa-circle"></i></div>可以查看保險商品資訊。
+                                                            </div>
+                                                            <div class="item_text">
+                                                                於網站頁面查看。
+                                                            </div>
+                                                        </div>
+                                                        <div class="subject_group_content_item">
+                                                            <div class="item_title">
+                                                                <div class="dot"><i class="fa fa-circle"></i></div>可以對保險商品進行投保費用試算。
+                                                            </div>
+                                                            <div class="item_text">
+                                                                使用者於網站表單欄位輸入資料，根據計算規則得出保費金額。<br />
+                                                                欄位項目、計算規則來源來自保險公司API文件。
+                                                            </div>
+                                                        </div>
+                                                        <div class="subject_group_content_item">
+                                                            <div class="item_title">
+                                                                <div class="dot"><i class="fa fa-circle"></i></div>可以申請投保保險商品。
+                                                            </div>
+                                                            <div class="item_text">
+                                                                使用者登入永豐網銀會員，於網頁輸入保險商品欄位資料進行投保申請。<br />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="system_data_info_container">
+                                    <div class="system_data_info_item">
+                                        <div class="system_data_info_title set_middle h5 font_bold">
+                                            <div>
+                                                <span>投<br></span><span>保</span><br><span>申<br></span><span>請</span><br><span>資<br></span><span>料</span>
+                                            </div>
+                                        </div>
+                                        <div class="system_data_info_content">
+                                            <div class="system_data_info_content_subject">
+                                                <div class="info_content_subject_title h6 font_bold">投保申請&nbsp;資料來源：</div>
+                                                <div class="info_content_subject_text">
+                                                    由網站會員資料、保險商品資料、使用者網頁輸入的投保資料、後端產生的管理資料(如：保單編號)。
+                                                </div>
+                                            </div>
+                                            <div class="system_data_info_content_subject">
+                                                <div class="info_content_subject_title h6 font_bold">內容項目：</div>
+                                                <div class="info_content_subject_text">
+                                                    <div><span class="font_bold emphasize_text">管理資料</span></div>
+                                                    <div><span class="font_bold">申請時間：</span><span class="text_note">2024-07-10 14:00</span></div>
+                                                    <div><span class="font_bold">訂單號碼：</span><span class="text_note">ABCD0000123456789</span></div>
+                                                    <div><span class="font_bold">保單號碼：</span><span class="text_note">DBAC0000123456789</span></div>
+                                                    <div><span class="font_bold">處理狀態：</span><span class="text_note">投保完成、申請中、申請失敗</span></div>
+                                                </div>
+                                                <div class="info_content_subject_text">
+                                                    <div><span class="font_bold emphasize_text">保險資料</span></div>
+                                                    <div><span class="font_bold">要保險人&nbsp;/&nbsp;被保險人資料：</span><span class="text_note">(來源於網站會員、保險商品、使用者輸入的資料)</span></div>
+                                                    <div><span class="font_bold">保險內容：</span><span class="text_note">(來源於保險商品、使用者輸入的資料)</span></div>
+                                                    <div><span class="font_bold">要保人/被保險人投保資料：</span><span class="text_note">(來源於保險商品、使用者輸入的資料)</span></div>
+                                                </div>
+                                                <div class="info_content_subject_text">
+                                                    <div><span class="font_bold emphasize_text">身故受益人</span></div>
+                                                    <div><span class="font_bold">類型：</span><span class="text_note">指定受益人、法定繼承人</span></div>
+                                                    <div><span class="font_bold">給付方式：</span><span class="text_note">順位、均分</span></div>
+                                                    <div><span class="font_bold">名單資料：</span><span class="text_note">(來源於網站會員、使用者輸入的資料)</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="system_data_info_content_subject" style="margin-bottom:0px;">
+                                                <div class="info_content_subject_title h6 font_bold"><span class="display_inline_540">使用者</span>操作機制：</div>
+                                                <div class="info_content_subject_group">
+                                                    <div class="subject_group_pic">
+                                                        <img src="images/user_icon.png">
+                                                        <div class="font_bold">使用者</div>
+                                                    </div>
+                                                    <div class="subject_group_content">
+                                                        <div class="subject_group_content_item">
+                                                            <div class="item_title">
+                                                                <div class="dot"><i class="fa fa-circle"></i></div>可以填寫投保資料表單。
+                                                            </div>
+                                                            <div class="item_text">
+                                                                於網站投保頁面填寫。<br />
+                                                                表單內容來自會員資料、保險商品資料。
+                                                            </div>
+                                                        </div>
+                                                        <div class="subject_group_content_item">
+                                                            <div class="item_title">
+                                                                <div class="dot"><i class="fa fa-circle"></i></div>可以儲存投保申請資料，成為網站會員資料。
+                                                            </div>
+                                                            <div class="item_text">
+                                                                於網站投保頁面填寫。<br />
+                                                                資料為電子信箱、通訊地址、身故受益人-名單資料。
+                                                            </div>
+                                                        </div>
+                                                        <div class="subject_group_content_item">
+                                                            <div class="item_title">
+                                                                <div class="dot"><i class="fa fa-circle"></i></div>可以查看投保申請紀錄。
+                                                            </div>
+                                                            <div class="item_text">
+                                                                於網站頁面查看。<br />
+                                                                內容為申請資料、保險資料、身故受益人。
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="system_data_info_container">
+                                    <div class="system_data_info_item">
+                                        <div class="system_data_info_title set_middle h5 font_bold">
+                                            <div>
+                                                <span>常<br></span><span>見</span><br><span>問<br></span><span>答</span>
+                                            </div>
+                                        </div>
+                                        <div class="system_data_info_content">
+                                            <div class="system_data_info_content_subject">
+                                                <div class="info_content_subject_title h6 font_bold">常見問答&nbsp;資料來源：</div>
+                                                <div class="info_content_subject_text">
+                                                    建立管理後台，由永豐業務單位上傳至資料庫。
+                                                </div>
+                                            </div>
+                                            <div class="system_data_info_content_subject">
+                                                <div class="info_content_subject_title h6 font_bold">內容項目：</div>
+                                                <div class="info_content_subject_text">
+                                                    <div><span class="font_bold emphasize_text">問答管理</span></div>
+                                                    <div><span class="font_bold">類別：</span><span class="text_note">會員須知、投保申請、保險資訊</span></div>
+                                                    <div><span class="font_bold">題號：</span><span class="text_note">1(數字資料範圍根據問題題數而定)</span></div>
+                                                    <div><span class="font_bold">問題描述：</span><span class="text_note">透過網路申請投保好處...？</span></div>
+                                                    <div><span class="font_bold">答題內容：</span><span class="text_note">申請資料直送保險公司...。</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="system_data_info_content_subject" style="margin-bottom:0px;">
+                                                <div class="info_content_subject_title h6 font_bold"><span class="display_inline_540">使用者</span>操作機制：</div>
+                                                <div class="info_content_subject_group">
+                                                    <div class="subject_group_pic">
+                                                        <img src="images/user_icon.png">
+                                                        <div class="font_bold">使用者</div>
+                                                    </div>
+                                                    <div class="subject_group_content">
+                                                        <div class="subject_group_content_item">
+                                                            <div class="item_title">
+                                                                <div class="dot"><i class="fa fa-circle"></i></div>可以查看常見問答內容。
+                                                            </div>
+                                                            <div class="item_text">
+                                                                於網站頁面查看。<br />
+                                                                內容為類別、題號、問題描述、答題內容。
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="system_data_info_container">
+                                    <div class="system_data_info_item">
+                                        <div class="system_data_info_title set_middle h5 font_bold">
+                                            <div>
+                                                <span>活<br></span><span>動</span><br><span>資<br></span><span>訊</span>
+                                            </div>
+                                        </div>
+                                        <div class="system_data_info_content">
+                                            <div class="system_data_info_content_subject">
+                                                <div class="info_content_subject_title h6 font_bold">活動資訊&nbsp;資料來源：</div>
+                                                <div class="info_content_subject_text">
+                                                    建立管理後台，由永豐業務單位上傳資料。
+                                                </div>
+                                            </div>
+                                            <div class="system_data_info_content_subject">
+                                                <div class="info_content_subject_title h6 font_bold">內容項目：</div>
+                                                <div class="info_content_subject_text">
+                                                    <div><span class="font_bold emphasize_text">活動管理</span></div>
+                                                    <div><span class="font_bold">名稱：</span><span class="text_note">e起得LINE點數。</span></div>
+                                                    <div><span class="font_bold">期間：</span><span class="text_note">2021-10-1 ~ 2021-12-31</span></div>
+                                                    <div><span class="font_bold">內容介紹：</span><span class="text_note">活動期間成功投保任一...。</span></div>
+                                                    <div><span class="font_bold">布告事項：</span><span class="text_note">得獎名單將於2022.01...。</span></div>
+                                                    <div><span class="font_bold">注意事項：</span><span class="text_note">本活動為機率抽獎，不...。</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="system_data_info_content_subject" style="margin-bottom:0px;">
+                                                <div class="info_content_subject_title h6 font_bold"><span class="display_inline_540">使用者</span>操作機制：</div>
+                                                <div class="info_content_subject_group">
+                                                    <div class="subject_group_pic">
+                                                        <img src="images/user_icon.png">
+                                                        <div class="font_bold">使用者</div>
+                                                    </div>
+                                                    <div class="subject_group_content">
+                                                        <div class="subject_group_content_item">
+                                                            <div class="item_title">
+                                                                <div class="dot"><i class="fa fa-circle"></i></div>可以查看活動資訊。
+                                                            </div>
+                                                            <div class="item_text">
+                                                                於網站頁面查看。<br />
+                                                                內容為名稱、期間、內容介紹、布告事項、注意事項。
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pup_window_content_next_tip pup_tab_btn yulon_pup_tab_btn_2">接續以資訊架構，建立<a href="#yulon_tab_2">網站布局</a></div>
+                    <script>
+                        $(document).ready(function() {
+                            $(".yulon_pup_tab_btn_2").click(function() {
+                                $(".yulon_pup_tab_1").removeClass("active");
+                                $(".yulon_pup_tab_2").addClass("active");
+                            });
+                        });
+
+                    </script>
+                    <div class="pup_window_content_end_tip_container">
+                        <span class="pup_window_content_end_tip">已瀏覽完&nbsp;<span class="emphasize_text">資訊架構&nbsp;規劃內容</span></span>
+                    </div>
+
+                </div>
+
+                <div id="yulon_tab_2" class="pup_window_tab_content">
+
+                    <div class="pup_window_content_part project_content_part" style="margin-bottom:30px;">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">前言</div>
+                            <div class="pup_normal_text">
+                                以資訊架構內容為基礎，進行圖像化呈現。
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pup_window_content_part project_content_part">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">一、規劃網站地圖</div>
+                            <div class="pup_content_text">
+
+                                <div class="text_row">
+                                    <div class="text_item">
+                                        <div>
+                                            <img src="images/sino_pic_6.png" class="sino_pic_6">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pup_window_content_part project_content_part" style="margin-bottom:0px;">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">二、由網站地圖繪製頁面藍圖</div>
+                            <div class="pup_text large_text" style="font-size:16px;">以投保流程為例。</div>
+                            <div class="pup_content_text">
+                                <div class="text_row">
+                                    <div class="text_item">
+                                        <div>
+                                            <img src="images/sino_pic_7_1.png" class="sino_pic_7">
+                                            <img src="images/sino_pic_7_2.png" class="sino_pic_7">
+                                            <img src="images/sino_pic_7_3.png" class="sino_pic_7">
+                                            <img src="images/sino_pic_7_4.png" class="sino_pic_7">
+                                            <img src="images/sino_pic_7_5.png" class="sino_pic_7">
+                                            <img src="images/sino_pic_7_6.png" class="sino_pic_7">
+                                            <img src="images/sino_pic_7_7.png" class="sino_pic_7">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pup_window_content_part project_content_part">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">三、以網站頁面藍圖，定義功能流程圖</div>
+                            <div class="pup_text large_text" style="font-size:16px;">以繳納保費到完成投保申請為例。</div>
+                            <div class="pup_content_text">
+
+                                <div class="text_row">
+                                    <div class="text_item">
+                                        <div>
+                                            <picture>
+                                                <source media="(max-width:768px)" srcset="images/sino_pic_3_768.png" />
+                                                <img src="images/sino_pic_3.png" class="sino_pic_3">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pup_window_content_next_tip pup_tab_btn yulon_pup_tab_btn_3">接續繪製線框稿呈現<a href="#yulon_tab_3">功能機制</a></div>
+                    <script>
+                        $(document).ready(function() {
+                            $(".yulon_pup_tab_btn_3").click(function() {
+                                $(".yulon_pup_tab_2").removeClass("active");
+                                $(".yulon_pup_tab_3").addClass("active");
+                            });
+                        });
+
+                    </script>
+                    <div class="pup_window_content_end_tip_container">
+                        <span class="pup_window_content_end_tip">已瀏覽完&nbsp;<span class="emphasize_text">網站布局&nbsp;規劃內容</span></span>
+                    </div>
+                </div>
+
+                <div id="yulon_tab_3" class="pup_window_tab_content">
+
+                    <div class="pup_window_content_part project_content_part" style="margin-bottom:30px;">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">前言</div>
+                            <div class="pup_normal_text">
+                                彙整網站各項資料文件，以資訊架構與網站布局為基礎，<br /><span class="emphasize_text">繪製線框稿(介面化)說明功能機制。</span><br />
+                                <span style="font-size:16px;">版面空間有限，以首頁線框稿示意(電腦裝置瀏覽為佳)。</span>
+                            </div>
+                            <div class="pup_normal_text">
+                                <a href="https://www.figma.com/design/iBEclKLRC0BWhdVneCdE7h/%E7%B6%B2%E7%AB%99%E5%85%A7%E5%AE%B9%E8%A6%8F%E5%8A%83?node-id=0-1&t=gTP4YLRqzrOp1k9r-1" target="_blank" class="pup_window_btn">前往<img src="images/figma_logo.svg" style="width:24px;">figma瀏覽完整線框稿</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pup_window_content_part project_content_part">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">審閱指引</div>
+
+                            <div class="subject_group_content_item" style="margin-top:10px;">
+                                <div class="item_title font_bold">
+                                    <div class="dot"><i class="fa fa-circle"></i></div>提示色說明：
+                                </div>
+                                <div class="color_square_container">
+                                    <div class="color_square_item">
+                                        <div class="square_item blue_square"></div><span>連結&amp;CTA</span>
+                                    </div>
+                                    <div class="color_square_item">
+                                        <div class="square_item brown_square"></div><span>動態資料(由使用者操作輸入而變動)</span>
+                                    </div>
+                                    <div class="color_square_item">
+                                        <div class="square_item dark_blue_square"></div><span>當前選擇、所處步驟</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subject_group_content_item" style="margin-top:10px;">
+                                <div class="item_title font_bold">
+                                    <div class="dot"><i class="fa fa-circle"></i></div>本站使用API：
+                                </div>
+                                <div class="item_text large_item_text">
+                                    永豐保險業務API、永豐網銀會員API、各家保險公司商品API(泰安保險商品API)、台灣縣市地區API、台灣銀行名稱代碼API、世界國家API、電子信箱檢核API。
+                                </div>
+                            </div>
+                            <div class="subject_group_content_item" style="margin-top:10px;">
+                                <div class="item_title font_bold">
+                                    <div class="dot"><i class="fa fa-circle"></i></div>註記：
+                                </div>
+                                <div class="item_text large_item_text">
+                                    1.若網頁資料無說明來源，則為網站建置時人工寫入HTML。
+                                </div>
+                                <div class="item_text large_item_text">
+                                    2.網頁狀態：<br>
+                                    <div class="item_text_note">初始狀態，網頁(使用者)未輸入資料。</div>
+                                    <div class="item_text_note">理想狀態，網頁(使用者)完整功能操作、資料輸入。</div>
+                                    <div class="item_text_note">錯誤狀態，網頁操作、資料錯誤。</div>
+                                    <div class="item_text_note">空白狀態，網頁無功能、資料呈現。</div>
+                                    <div class="item_text_note">局部資料狀態，理想狀態之外的資料呈現。</div>
+                                    <div class="item_text_note">局部狀態，理想狀態之外的功能操作、資料輸入。</div>
+                                </div>
+                                <div class="item_text large_item_text">
+                                    3.頁面狀態樣貌，以後續Mockups設計呈現為準。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pup_window_content_part project_content_part" style="margin-bottom:0px;">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">線框稿內容</div>
+                            <div class="pup_text large_text" style="font-size:16px;">以網站首頁為例。</div>
+                            <div class="pup_content_text">
+
+                                <div class="text_row">
+                                    <div class="text_item">
+                                        <div>
+                                            <img src="images/sino_pic_9_0.png" class="sino_pic_9">
+                                            <img src="images/sino_pic_9_1.png" class="sino_pic_9">
+                                            <img src="images/sino_pic_9_2.png" class="sino_pic_9">
+                                            <img src="images/sino_pic_9_3.png" class="sino_pic_9">
+                                            <img src="images/sino_pic_9_4.png" class="sino_pic_9">
+                                            <img src="images/sino_pic_9_5.png" class="sino_pic_9">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pup_window_content_end_tip_container">
+                        <span class="pup_window_content_end_tip">已瀏覽完&nbsp;<span class="emphasize_text">功能機制&nbsp;規劃內容</span></span>
+                    </div>
+                    <div class="pup_window_content_next_tip">前往figma<a href="https://www.figma.com/design/iBEclKLRC0BWhdVneCdE7h/%E7%B6%B2%E7%AB%99%E5%85%A7%E5%AE%B9%E8%A6%8F%E5%8A%83?node-id=0-1&t=gTP4YLRqzrOp1k9r-1" target="_blank">瀏覽完整線框稿</a></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- ... 裕隆職福 內容規劃 end ... -->
 </body>
 
 
