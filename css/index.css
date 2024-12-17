@@ -3610,7 +3610,9 @@ select::-ms-expand {
 .yuanta_pic_1 {
     margin: 25px 10px 15px 10px;
 }
-
+.yulon_pic_1 {
+    max-width: 100%;
+}
 .pup_window_content_end_tip_container {
     background-image: url(../images/pup_window_content_end_tip_line.png);
     background-repeat: repeat-x;
