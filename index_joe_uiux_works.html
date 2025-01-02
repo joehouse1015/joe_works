@@ -153,6 +153,9 @@
             $(".yulon_works_2_btn").click(function() {
                 $(".yulon_works_2_pup,.pup_bg").fadeIn(500);
             });
+            $(".yulon_works_3_btn").click(function() {
+                $(".yulon_works_3_pup,.pup_bg").fadeIn(500);
+            });
             $(".gapp_works_1_btn").click(function() {
                 $(".gapp_works_1_pup,.pup_bg").fadeIn(500);
             });
@@ -1138,8 +1141,12 @@
                                             線框稿Wireframe定案後，與需求方討論風格、配色、介面布局...等規劃，並產出APP&amp;管理後台視覺稿給予確認。
                                         </div>
                                         <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                            <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                            <span class="yulon_works_3_btn">APP視覺稿</span>
+                                        </div>
+                                        <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
                                             <img src="images/pup_link_dot_disabled.png" class="pup_link_dot">
-                                            <span class="disabled_link">視覺稿</span>
+                                            <span class="disabled_link">後台視覺稿</span>
                                         </div>
                                         <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
                                             <img src="images/pup_link_dot_disabled.png" class="pup_link_dot">
@@ -1173,8 +1180,12 @@
                                     線框稿Wireframe定案後，與需求方討論風格、配色、介面布局...等規劃，並產出APP&amp;管理後台視覺稿給予確認。
                                 </div>
                                 <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                    <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                    <span class="yulon_works_3_btn">APP視覺稿</span>
+                                </div>
+                                <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
                                     <img src="images/pup_link_dot_disabled.png" class="pup_link_dot">
-                                    <span class="disabled_link">視覺稿</span>
+                                    <span class="disabled_link">後台視覺稿</span>
                                 </div>
                                 <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
                                     <img src="images/pup_link_dot_disabled.png" class="pup_link_dot">
@@ -7236,6 +7247,949 @@
         </div>
     </div>
     <!-- ... 裕隆員工資訊APP 線框稿 end ... -->
+
+    <!-- ... 裕隆員工資訊APP 視覺稿  ... -->
+    <script type="text/javascript">
+        $(function() {
+            var showTab = 0;
+            var defaultLi = $('.yulon_works_3_pup .pup_tab_btn').eq(showTab).addClass('active');
+            $(defaultLi.find('a').attr('href')).siblings().hide();
+            $('.yulon_works_3_pup .pup_tab_btn').click(function() {
+                var $this = $(this),
+                    clickTab = $this.find('a').attr('href');
+                $this.addClass('active').siblings('.active').removeClass('active');
+                $(clickTab).stop(false, true).fadeIn().siblings().hide();
+                return false;
+            }).find('a').focus(function() {
+                this.blur();
+            });
+        });
+
+    </script>
+    <div class="pup_window yulon_works_3_pup" style="display:none;">
+        <div class="pup_close_btn set_middle pup_close_icon" role="button">
+
+        </div>
+        <div class="pup_window_content" style="overflow:inherit;">
+
+            <div class="pup_window_content_title h4 font_bold">裕隆員工資訊APP&nbsp;視覺稿</div>
+
+            <div class="pup_window_content_tab_container">
+                <div class="pup_window_content_tab pup_tab_btn yulon_pup_tab_6 h5 font_bold"><a href="#yulon_tab_6" class="set_middle"><span>內容(一)</span></a></div>
+                <div class="pup_window_content_tab pup_tab_btn yulon_pup_tab_7 h5 font_bold"><a href="#yulon_tab_7" class="set_middle"><span>內容(二)</span></a></div>
+                <div class="pup_window_content_tab pup_tab_btn yulon_pup_tab_8 h5 font_bold"><a href="#yulon_tab_8" class="set_middle"><span>樣式庫</span></a></div>
+            </div>
+            <div class="pup_window_tab_content_container">
+
+                <div id="yulon_tab_6" class="pup_window_tab_content">
+                    <div class="pup_window_content_part project_content_part" style="margin-bottom:0px;">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">APP前台視覺稿</div>
+                            <div class="pup_text large_text" style="font-size:16px;">以ios螢幕解析度寬375px為例</div>
+                            <div class="pup_text large_text font_bold emphasize_text" style="margin:20px 0px 0px 0px;">
+                                前導-頁面架構
+                            </div>
+                            <div class="pup_normal_text_small">視覺稿展示內容，為亮色區塊之頁面</div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1" style="margin-top:15px;">
+                                    <img src="images/yulon_pic_6-0.png" style="max-width:100%;">
+                                </div>
+                            </div>
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                L1登入
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>L1.1.1登入&nbsp;初始狀態</span>
+                                    <img src="images/yulon_pic_6-1.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>L1.1.2登入&nbsp;理想狀態</span>
+                                    <img src="images/yulon_pic_6-2.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>L1.1.3登入&nbsp;欄位顯示密碼</span>
+                                    <img src="images/yulon_pic_6-3.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>L1.1.4登入&nbsp;輸入框極限狀態</span>
+                                    <img src="images/yulon_pic_6-4.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>L1.1.5登入&nbsp;檢核登入資料</span>
+                                    <img src="images/yulon_pic_6-5.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>L1.1.6登入&nbsp;錯誤狀態</span>
+                                    <img src="images/yulon_pic_6-6.png" style="max-width:100%">
+                                </div>
+                            </div>
+
+                            <div class="slidedown_btn_7 slide_btn" style="text-align:center;">展開「R1註冊」流程頁面-視覺稿</div>
+                            <div class="slide_content_7" style="display:none;">
+                                <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                    R1註冊_啟用帳號
+                                </div>
+                                <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>R1.1.1註冊_啟用帳號&nbsp;初始狀態</span>
+                                        <img src="images/yulon_pic_6-7.png" style="max-width:100%">
+                                    </div>
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>R1.1.2註冊_啟用帳號&nbsp;理想狀態</span>
+                                        <img src="images/yulon_pic_6-8.png" style="max-width:100%">
+                                    </div>
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>R1.1.3註冊_啟用帳號&nbsp;錯誤狀態</span>
+                                        <img src="images/yulon_pic_6-9.png" style="max-width:100%">
+                                    </div>
+                                </div>
+
+                                <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                    R2註冊_身分驗證
+                                </div>
+                                <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>R2.1.1註冊_身分驗證&nbsp;初始狀態</span>
+                                        <img src="images/yulon_pic_6-10.png" style="max-width:100%">
+                                    </div>
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>R2.1.2註冊_身分驗證&nbsp;理想狀態</span>
+                                        <img src="images/yulon_pic_6-11.png" style="max-width:100%">
+                                    </div>
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>R2.1.3註冊_身分驗證&nbsp;錯誤狀態</span>
+                                        <img src="images/yulon_pic_6-12.png" style="max-width:100%">
+                                    </div>
+                                </div>
+                                <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>R2.2.1註冊_身分驗證&nbsp;收不到驗證碼說明</span>
+                                        <img src="images/yulon_pic_6-13.png" style="max-width:100%">
+                                    </div>
+                                </div>
+                                <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                    R3註冊_設置密碼
+                                </div>
+                                <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>R3.1.1註冊_設置密碼&nbsp;空白狀態</span>
+                                        <img src="images/yulon_pic_6-14.png" style="max-width:100%">
+                                    </div>
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>R3.1.2註冊_設置密碼&nbsp;理想狀態</span>
+                                        <img src="images/yulon_pic_6-15.png" style="max-width:100%">
+                                    </div>
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>R3.1.3註冊_設置密碼&nbsp;錯誤狀態</span>
+                                        <img src="images/yulon_pic_6-16.png" style="max-width:100%">
+                                    </div>
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>R3.1.4註冊_設置密碼&nbsp;欄位顯示密碼</span>
+                                        <img src="images/yulon_pic_6-17.png" style="max-width:100%">
+                                    </div>
+                                </div>
+                                <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>R3.2.1註冊-個資法聲明&nbsp;初始狀態</span>
+                                        <img src="images/yulon_pic_6-18.png" style="max-width:100%">
+                                    </div>
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>R3.2.2註冊-個資法聲明&nbsp;理想狀態</span>
+                                        <img src="images/yulon_pic_6-19.png" style="max-width:100%">
+                                    </div>
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>R3.2.3註冊-個資法聲明&nbsp;錯誤狀態</span>
+                                        <img src="images/yulon_pic_6-20.png" style="max-width:100%">
+                                    </div>
+                                </div>
+                                <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                    R4註冊結果
+                                </div>
+                                <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>R4.1.1註冊結果&nbsp;成功</span>
+                                        <img src="images/yulon_pic_6-21.png" style="max-width:100%">
+                                    </div>
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>R4.1.2註冊結果&nbsp;失敗</span>
+                                        <img src="images/yulon_pic_6-22.png" style="max-width:100%">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slideup_btn_7 slide_btn" style="text-align:center;display:none;">收起「R1註冊」流程頁面-視覺稿</div>
+                            <script>
+                                $(document).ready(function() {
+                                    $(".slidedown_btn_7").click(function() {
+                                        $(".slide_content_7").slideDown(500);
+                                        $(".slidedown_btn_7").hide();
+                                        $(".slideup_btn_7").fadeIn(1000);
+                                    });
+                                    $(".slideup_btn_7").click(function() {
+                                        $(".slide_content_7").hide();
+                                        $(".slideup_btn_7").hide();
+                                        $(".slidedown_btn_7").fadeIn(1000);
+                                    });
+                                });
+
+                            </script>
+                            <div class="slidedown_btn_8 slide_btn" style="text-align:center;">展開「P1設置新密碼」(忘記密碼)流程頁面-視覺稿</div>
+                            <div class="slide_content_8" style="display:none;">
+                                <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                    P1設置新密碼_提供帳號
+                                </div>
+                                <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>P1.1.1註冊_提供帳號&nbsp;初始狀態</span>
+                                        <img src="images/yulon_pic_6-23.png" style="max-width:100%">
+                                    </div>
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>P1.1.2註冊_提供帳號&nbsp;理想狀態</span>
+                                        <img src="images/yulon_pic_6-24.png" style="max-width:100%">
+                                    </div>
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>P1.1.3註冊_提供帳號&nbsp;錯誤狀態</span>
+                                        <img src="images/yulon_pic_6-25.png" style="max-width:100%">
+                                    </div>
+                                </div>
+
+                                <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                    P2設置新密碼_身分驗證
+                                </div>
+                                <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>P2.1.1設置新密碼_身分驗證&nbsp;初始狀態</span>
+                                        <img src="images/yulon_pic_6-26.png" style="max-width:100%">
+                                    </div>
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>P2.1.2設置新密碼_身分驗證&nbsp;理想狀態</span>
+                                        <img src="images/yulon_pic_6-27.png" style="max-width:100%">
+                                    </div>
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>P2.1.3設置新密碼_身分驗證&nbsp;錯誤狀態</span>
+                                        <img src="images/yulon_pic_6-28.png" style="max-width:100%">
+                                    </div>
+                                </div>
+                                <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>P2.2.1設置新密碼_身分驗證&nbsp;收不到驗證碼說明</span>
+                                        <img src="images/yulon_pic_6-29.png" style="max-width:100%">
+                                    </div>
+                                </div>
+                                <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                    P3設置新密碼_設置密碼
+                                </div>
+                                <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>R3.1.1註冊_設置密碼&nbsp;空白狀態</span>
+                                        <img src="images/yulon_pic_6-30.png" style="max-width:100%">
+                                    </div>
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>R3.1.2註冊_設置密碼&nbsp;理想狀態</span>
+                                        <img src="images/yulon_pic_6-31.png" style="max-width:100%">
+                                    </div>
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>R3.1.3註冊_設置密碼&nbsp;錯誤狀態</span>
+                                        <img src="images/yulon_pic_6-32.png" style="max-width:100%">
+                                    </div>
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>R3.1.4註冊_設置密碼&nbsp;欄位顯示密碼</span>
+                                        <img src="images/yulon_pic_6-33.png" style="max-width:100%">
+                                    </div>
+                                </div>
+                                <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                    P4設置新密碼_設置密碼結果
+                                </div>
+                                <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>P4.1.1設置密碼結果&nbsp;成功</span>
+                                        <img src="images/yulon_pic_6-34.png" style="max-width:100%">
+                                    </div>
+                                    <div class="pup_content_pic_item_content yuanta_pic_1">
+                                        <span>P4.1.2設置密碼結果&nbsp;失敗</span>
+                                        <img src="images/yulon_pic_6-35.png" style="max-width:100%">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slideup_btn_8 slide_btn" style="text-align:center;display:none;">收起「P1設置新密碼」流程頁面-視覺稿</div>
+                            <script>
+                                $(document).ready(function() {
+                                    $(".slidedown_btn_8").click(function() {
+                                        $(".slide_content_8").slideDown(500);
+                                        $(".slidedown_btn_8").hide();
+                                        $(".slideup_btn_8").fadeIn(1000);
+                                    });
+                                    $(".slideup_btn_8").click(function() {
+                                        $(".slide_content_8").hide();
+                                        $(".slideup_btn_8").hide();
+                                        $(".slidedown_btn_8").fadeIn(1000);
+                                    });
+                                });
+
+                            </script>
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 10px 0px;">
+                                接續展示頁面
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1" style="margin-top:0px;">
+                                    <img src="images/yulon_pic_6-36.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                B1員工福利
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B1.1.1員工福利&nbsp;理想狀態</span>
+                                    <img src="images/yulon_pic_6-37.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B1.1.2員工福利&nbsp;向上滑動載入(每10項)</span>
+                                    <img src="images/yulon_pic_6-38.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B1.1.3員工福利&nbsp;已呈現所有項目提示</span>
+                                    <img src="images/yulon_pic_6-39.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B1.1.4員工福利&nbsp;加入收藏提示</span>
+                                    <img src="images/yulon_pic_6-40.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B1.1.5員工福利&nbsp;移除收藏提示</span>
+                                    <img src="images/yulon_pic_6-41.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B1.1.6員工福利&nbsp;空白狀態</span>
+                                    <img src="images/yulon_pic_6-42.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B1.2.1員工福利&nbsp;排序視窗</span>
+                                    <img src="images/yulon_pic_6-43.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B1.3.1員工福利&nbsp;篩選視窗</span>
+                                    <img src="images/yulon_pic_6-44.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B1.4.1員工福利-搜尋&nbsp;初始狀態</span>
+                                    <img src="images/yulon_pic_6-45.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B1.4.2員工福利-搜尋&nbsp;輸入關鍵字</span>
+                                    <img src="images/yulon_pic_6-46.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B1.4.3員工福利-搜尋&nbsp;輸入框極限狀態</span>
+                                    <img src="images/yulon_pic_6-47.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B1.5.1員工福利-搜尋結果&nbsp;理想狀態</span>
+                                    <img src="images/yulon_pic_6-48.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B1.5.2員工福利-搜尋結果&nbsp;空白狀態</span>
+                                    <img src="images/yulon_pic_6-49.png" style="max-width:100%">
+                                </div>
+                            </div>
+
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:40px 0px 20px 0px;">
+                                B2福利內容
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B2.1.1福利內容&nbsp;理想狀態</span>
+                                    <img src="images/yulon_pic_6-50.png" style="max-width:100%">
+                                </div>
+                            </div>
+
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B2.1.2福利內容&nbsp;加入收藏提示</span>
+                                    <img src="images/yulon_pic_6-51.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B2.1.3福利內容&nbsp;移除收藏提示</span>
+                                    <img src="images/yulon_pic_6-52.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B2.2.1福利內容&nbsp;申請提示-未符合條件</span>
+                                    <img src="images/yulon_pic_6-53.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B2.3.1福利內容&nbsp;申請提示-已達數量限制</span>
+                                    <img src="images/yulon_pic_6-54.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B2.4.1福利內容-留言&nbsp;理想狀態</span>
+                                    <img src="images/yulon_pic_6-56.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B2.4.2福利內容-留言&nbsp;空白狀態</span>
+                                    <img src="images/yulon_pic_6-57.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B2.4.3福利內容-留言&nbsp;輸入留言</span>
+                                    <img src="images/yulon_pic_6-58.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B2.4.4福利內容-留言&nbsp;發生錯誤</span>
+                                    <img src="images/yulon_pic_6-59.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B2.4.5福利內容-留言&nbsp;已呈現所有內容</span>
+                                    <img src="images/yulon_pic_6-60.png" style="max-width:100%">
+                                </div>
+                            </div>
+
+
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:40px 0px 20px 0px;">
+                                B3申請福利
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B3.1.1申請福利&nbsp;初始狀態</span>
+                                    <img src="images/yulon_pic_6-61.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B3.1.2申請福利&nbsp;理想狀態</span>
+                                    <img src="images/yulon_pic_6-62.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B3.1.3申請福利&nbsp;錯誤狀態</span>
+                                    <img src="images/yulon_pic_6-63.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:40px 0px 20px 0px;">
+                                B4送出申請
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B4.1.1送出申請-成功</span>
+                                    <img src="images/yulon_pic_6-64.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>B4.2.1送出申請-失敗</span>
+                                    <img src="images/yulon_pic_6-65.png" style="max-width:100%">
+                                </div>
+                            </div>
+
+                            <div class="pup_window_content_end_tip_container">
+                                <span class="pup_window_content_end_tip">已瀏覽完&nbsp;<span class="emphasize_text">內容(一)視覺稿</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="yulon_tab_7" class="pup_window_tab_content">
+                    <div class="pup_window_content_part project_content_part" style="margin-bottom:0px;">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">APP前台視覺稿</div>
+                            <div class="pup_text large_text" style="font-size:16px;">以ios螢幕解析度寬375px為例</div>
+                            <div class="pup_text large_text font_bold emphasize_text" style="margin:20px 0px 0px 0px;">
+                                前導-頁面架構
+                            </div>
+                            <div class="pup_normal_text_small">視覺稿展示內容，為亮色區塊之頁面</div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1" style="margin-top:15px;">
+                                    <img src="images/yulon_pic_7-0.png" style="max-width:100%;">
+                                </div>
+                            </div>
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 10px 0px;">
+                                接續展示頁面
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1" style="margin-top:0px;">
+                                    <img src="images/yulon_pic_7-40.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                M1專屬員工資料
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>M1.1.1專屬員工資料&nbsp;理想狀態</span>
+                                    <img src="images/yulon_pic_7-36.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                M10職務項目
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>N1.2.1內部訊息-系統&nbsp;理想狀態</span>
+                                    <img src="images/yulon_pic_7-37.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                N11數位名片
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>N11.1.1數位名片-中文</span>
+                                    <img src="images/yulon_pic_7-38.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>N11.2.1數位名片-英文</span>
+                                    <img src="images/yulon_pic_7-39.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 10px 0px;">
+                                接續展示頁面
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1" style="margin-top:0px;">
+                                    <img src="images/yulon_pic_7-27.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                N1內部訊息
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>N1.1.1內部訊息-集團&nbsp;理想狀態</span>
+                                    <img src="images/yulon_pic_7-28.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>N1.1.2內部訊息-集團&nbsp;向上滑動載入</span>
+                                    <img src="images/yulon_pic_7-29.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>N1.1.3內部訊息-集團&nbsp;已呈現所有訊息</span>
+                                    <img src="images/yulon_pic_7-30.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>N1.2.1內部訊息-系統&nbsp;理想狀態</span>
+                                    <img src="images/yulon_pic_7-32.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>N1.3.2內部訊息-個人&nbsp;理想狀態</span>
+                                    <img src="images/yulon_pic_7-33.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>N1.1.4內部訊息-集團&nbsp;空白狀態</span>
+                                    <img src="images/yulon_pic_7-31.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                N2閱讀訊息
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>N1.1.1閱讀訊息-集團&nbsp;理想狀態</span>
+                                    <img src="images/yulon_pic_7-34.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>N1.2.1閱讀訊息-系統、個人&nbsp;理想狀態</span>
+                                    <img src="images/yulon_pic_7-35.png" style="max-width:100%">
+                                </div>
+                            </div>
+
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 10px 0px;">
+                                接續展示頁面
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1" style="margin-top:0px;">
+                                    <img src="images/yulon_pic_7-1-a.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                J1集團職缺
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J1.1.1集團職缺&nbsp;理想狀態</span>
+                                    <img src="images/yulon_pic_7-1.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J1.1.2集團職缺&nbsp;向上滑動載入(每10項)</span>
+                                    <img src="images/yulon_pic_7-2.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J1.1.3集團職缺&nbsp;已呈現所有項目提示</span>
+                                    <img src="images/yulon_pic_7-3.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J1.1.4集團職缺&nbsp;加入收藏提示</span>
+                                    <img src="images/yulon_pic_7-4.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J1.1.5集團職缺&nbsp;移除收藏提示</span>
+                                    <img src="images/yulon_pic_7-5.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J1.1.6集團職缺&nbsp;空白狀態</span>
+                                    <img src="images/yulon_pic_7-6.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J1.2.1集團職缺&nbsp;排序視窗</span>
+                                    <img src="images/yulon_pic_7-7.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J1.3.1集團職缺&nbsp;篩選視窗</span>
+                                    <img src="images/yulon_pic_7-8.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J1.1.7集團職缺&nbsp;篩選提示</span>
+                                    <img src="images/yulon_pic_7-9.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J1.4.1集團職缺-搜尋&nbsp;初始狀態</span>
+                                    <img src="images/yulon_pic_7-10.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J1.4.2集團職缺-搜尋&nbsp;輸入關鍵字</span>
+                                    <img src="images/yulon_pic_7-11.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J1.4.3集團職缺-搜尋&nbsp;輸入框極限狀態</span>
+                                    <img src="images/yulon_pic_7-12.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J1.5.1集團職缺-搜尋結果&nbsp;理想狀態</span>
+                                    <img src="images/yulon_pic_7-13.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J1.5.2集團職缺-搜尋結果&nbsp;空白狀態</span>
+                                    <img src="images/yulon_pic_7-14.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                J2職缺內容
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J2.1.1職缺內容&nbsp;理想狀態</span>
+                                    <img src="images/yulon_pic_7-15.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J2.1.2職缺內容&nbsp;加入收藏提示</span>
+                                    <img src="images/yulon_pic_7-16.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J2.1.3職缺內容&nbsp;移除收藏提示</span>
+                                    <img src="images/yulon_pic_7-17.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J2.2.1職缺內容&nbsp;已應徵提示</span>
+                                    <img src="images/yulon_pic_7-18.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                J3應徵職缺
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J3.1.1應徵職缺&nbsp;初始狀態</span>
+                                    <img src="images/yulon_pic_7-19.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J3.1.2應徵職缺&nbsp;理想狀態</span>
+                                    <img src="images/yulon_pic_7-20.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J3.1.3應徵職缺&nbsp;錯誤狀態</span>
+                                    <img src="images/yulon_pic_7-21.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J3.1.1應徵職缺-親友&nbsp;初始狀態</span>
+                                    <img src="images/yulon_pic_7-22.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J3.1.2應徵職缺-親友&nbsp;理想狀態</span>
+                                    <img src="images/yulon_pic_7-23.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J3.1.3應徵職缺-親友&nbsp;錯誤狀態</span>
+                                    <img src="images/yulon_pic_7-24.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                J4送出應徵
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J4.1.1送出應徵-成功</span>
+                                    <img src="images/yulon_pic_7-25.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>J4.2.1送出應徵-失敗</span>
+                                    <img src="images/yulon_pic_7-26.png" style="max-width:100%">
+                                </div>
+                            </div>
+
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 10px 0px;">
+                                接續展示頁面
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1" style="margin-top:0px;">
+                                    <img src="images/yulon_pic_7-41.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                前導情境
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>載入頁面</span>
+                                    <img src="images/yulon_pic_7-42.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>頁面發生錯誤</span>
+                                    <img src="images/yulon_pic_7-43.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                Q1常見問題
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>Q1.1.1常見問題&nbsp;理想狀態</span>
+                                    <img src="images/yulon_pic_7-44.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_text large_text font_bold emphasize_text" style="text-align:center;margin:20px 0px 30px 0px;">
+                                Q2問題回報
+                            </div>
+                            <div class="pup_content_pic_item" style="margin-bottom:30px;">
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>Q2.1.1問題回報&nbsp;初始狀態</span>
+                                    <img src="images/yulon_pic_7-45.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>Q2.1.2問題回報&nbsp;理想狀態</span>
+                                    <img src="images/yulon_pic_7-46.png" style="max-width:100%">
+                                </div>
+                                <div class="pup_content_pic_item_content yuanta_pic_1">
+                                    <span>Q2.1.3問題回報&nbsp;錯誤狀態</span>
+                                    <img src="images/yulon_pic_7-47.png" style="max-width:100%">
+                                </div>
+                            </div>
+                            <div class="pup_window_content_end_tip_container">
+                                <span class="pup_window_content_end_tip">已瀏覽完&nbsp;<span class="emphasize_text">內容(二)視覺稿</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="yulon_tab_8" class="pup_window_tab_content">
+                    <div class="pup_window_content_part project_content_part" style="margin-bottom:0px;">
+                        <div class="pup_content">
+                            <div class="part_title h5 font_bold emphasize_text">視覺稿樣式庫</div>
+                            <div class="pup_text large_text" style="font-size:16px;">以ios為例</div>
+
+                            <div class="pup_window_content_part project_content_part" style="margin-top:30px;">
+                                <div class="pup_content">
+                                    <div class="part_title h5 font_bold emphasize_text">一、文字</div>
+                                    <div class="pup_content_pic_container" style="margin-top:20px;">
+                                        <div class="pup_content_pic_item">
+                                            <div class="pup_content_pic_item" style="text-align:left;">
+                                                <div class="pup_content_pic_item_content">
+                                                    <picture>
+                                                        <img src="images/yulon_pic_8-1.png" class="sino_pic_10">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pup_window_content_part project_content_part">
+                                <div class="pup_content">
+                                    <div class="part_title h5 font_bold emphasize_text">二、顏色</div>
+                                    <div class="pup_content_pic_container" style="margin-top:20px;">
+                                        <div class="pup_content_pic_item">
+                                            <div class="pup_content_pic_item" style="text-align:left;">
+                                                <div class="pup_content_pic_item_content">
+                                                    <picture>
+                                                        <img src="images/yulon_pic_8-2.png" class="sino_pic_10">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pup_window_content_part project_content_part">
+                                <div class="pup_content">
+                                    <div class="part_title h5 font_bold emphasize_text">三、元件(部分)</div>
+                                    <div class="pup_content_pic_container" style="margin-top:20px;">
+                                        <div class="pup_content_pic_item">
+                                            <div class="pup_content_pic_item" style="text-align:left;margin-bottom:20px;">
+                                                <div class="pup_content_pic_item_content">
+                                                    <picture>
+                                                        <img src="images/yulon_pic_8-4.png" class="sino_pic_7">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="pup_content_pic_item" style="text-align:left;margin-bottom:20px;">
+                                                <div class="pup_content_pic_item_content">
+                                                    <picture>
+                                                        <img src="images/yulon_pic_8-5.png" class="sino_pic_7">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="pup_content_pic_item" style="text-align:left;margin-bottom:20px;">
+                                                <div class="pup_content_pic_item_content">
+                                                    <picture>
+                                                        <img src="images/yulon_pic_8-6.png" class="sino_pic_7">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="pup_content_pic_item" style="text-align:left;margin-bottom:20px;">
+                                                <div class="pup_content_pic_item_content">
+                                                    <picture>
+                                                        <img src="images/yulon_pic_8-7.png" class="sino_pic_7">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="pup_content_pic_item" style="text-align:left;margin-bottom:20px;">
+                                                <div class="pup_content_pic_item_content">
+                                                    <picture>
+                                                        <img src="images/yulon_pic_8-8.png" class="sino_pic_7">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="pup_content_pic_item" style="text-align:left;margin-bottom:20px;">
+                                                <div class="pup_content_pic_item_content">
+                                                    <picture>
+                                                        <img src="images/yulon_pic_8-9.png" class="sino_pic_7">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="pup_content_pic_item" style="text-align:left;margin-bottom:20px;">
+                                                <div class="pup_content_pic_item_content">
+                                                    <picture>
+                                                        <img src="images/yulon_pic_8-10.png" class="sino_pic_7">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="pup_content_pic_item" style="text-align:left;margin-bottom:20px;">
+                                                <div class="pup_content_pic_item_content">
+                                                    <picture>
+                                                        <img src="images/yulon_pic_8-11.png" class="sino_pic_7">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="pup_content_pic_item" style="text-align:left;margin-bottom:20px;">
+                                                <div class="pup_content_pic_item_content">
+                                                    <picture>
+                                                        <img src="images/yulon_pic_8-12.png" class="sino_pic_7">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="pup_content_pic_item" style="text-align:left;margin-bottom:20px;">
+                                                <div class="pup_content_pic_item_content">
+                                                    <picture>
+                                                        <img src="images/yulon_pic_8-13.png" class="sino_pic_7">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="pup_content_pic_item" style="text-align:left;margin-bottom:20px;">
+                                                <div class="pup_content_pic_item_content">
+                                                    <picture>
+                                                        <img src="images/yulon_pic_8-14.png" class="sino_pic_7">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="pup_content_pic_item" style="text-align:left;margin-bottom:20px;">
+                                                <div class="pup_content_pic_item_content">
+                                                    <picture>
+                                                        <img src="images/yulon_pic_8-15.png" class="sino_pic_7">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="pup_content_pic_item" style="text-align:left;margin-bottom:20px;">
+                                                <div class="pup_content_pic_item_content">
+                                                    <picture>
+                                                        <img src="images/yulon_pic_8-16.png" class="sino_pic_7">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="pup_content_pic_item" style="text-align:left;margin-bottom:20px;">
+                                                <div class="pup_content_pic_item_content">
+                                                    <picture>
+                                                        <img src="images/yulon_pic_8-17.png" class="sino_pic_7">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="pup_content_pic_item" style="text-align:left;margin-bottom:20px;">
+                                                <div class="pup_content_pic_item_content">
+                                                    <picture>
+                                                        <img src="images/yulon_pic_8-18.png" class="sino_pic_7">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="pup_content_pic_item" style="text-align:left;margin-bottom:20px;">
+                                                <div class="pup_content_pic_item_content">
+                                                    <picture>
+                                                        <img src="images/yulon_pic_8-19.png" class="sino_pic_7">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="pup_content_pic_item" style="text-align:left;margin-bottom:20px;">
+                                                <div class="pup_content_pic_item_content">
+                                                    <picture>
+                                                        <img src="images/yulon_pic_8-20.png" class="sino_pic_7">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="pup_content_pic_item" style="text-align:left;">
+                                                <div class="pup_content_pic_item_content">
+                                                    <picture>
+                                                        <img src="images/yulon_pic_8-21.png" class="sino_pic_7">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pup_window_content_end_tip_container">
+                                <span class="pup_window_content_end_tip">已瀏覽完&nbsp;<span class="emphasize_text">視覺稿樣式庫</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ... 裕隆員工資訊APP 視覺稿 end ... -->
 </body>
 
 
