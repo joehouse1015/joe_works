@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-body {
+.body {
     font-family: 'arial', \5FAE\8EDF\6B63\9ED1\9AD4, \65B0\7D30\660E\9AD4;
     background-image: url(../images/body_bg.jpg);
     background-repeat: repeat-y;
@@ -16,6 +16,15 @@ body {
     line-height: 1.6;
     letter-spacing: 1px;
     color: #232323;
+}
+
+.body_page {
+    background-color: #232323;
+    font-family: 'arial', \5FAE\8EDF\6B63\9ED1\9AD4, \65B0\7D30\660E\9AD4;
+    font-size: 16px;
+    margin: 0px;
+    line-height: 1.6;
+    letter-spacing: 1px;
 }
 
 ul {
@@ -83,7 +92,25 @@ select::-ms-expand {
 }
 
 /*scroll bar setting end*/
+/*scroll bar setting*/
+.body_page::-webkit-scrollbar {
+    width: 15px;
+}
 
+.body_page::-webkit-scrollbar-track {
+    background: #191919;
+}
+
+.body_page::-webkit-scrollbar-thumb {
+    background: #4b4b4b;
+    border-radius: 15px;
+}
+
+.body_page::-webkit-scrollbar-thumb:hover {
+    background: #4b4b4b;
+}
+
+/*scroll bar setting end*/
 /* reset end */
 
 
@@ -739,6 +766,24 @@ select::-ms-expand {
     top: 1px;
 }
 
+.page_back_btn {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+.page_back_btn img {
+    margin-left:2px;
+    position:relative;
+    top:2px;
+}
+
+.page_back_btn:hover img {
+    right: -3px;
+}
+
 @media (max-width:768px) {
     .page_content {
         width: 100%;
@@ -753,6 +798,14 @@ select::-ms-expand {
     .catalog_part_page_num > div {
         width: 26px;
         height: 26px;
+    }
+
+    .page_back_btn {
+        font-size: 16px;
+    }
+
+    .page_back_btn img {
+        width: 16px;
     }
 }
 
@@ -782,6 +835,10 @@ select::-ms-expand {
     .catalog_part_page_num > div {
         width: 24px;
         height: 24px;
+    }
+
+    .page_back_btn {
+        margin-top:0px;
     }
 }
 
@@ -3358,7 +3415,7 @@ select::-ms-expand {
     line-height: 1.65;
     color: #c5c5c5;
     border-radius: 20px;
-    padding: 20px 50px;
+    padding: 20px 50px 0px 50px;
 
 }
 
@@ -3400,7 +3457,7 @@ select::-ms-expand {
 }
 
 .pup_window_tab_content_container {
-    height: calc(100% - 87px)
+    height: calc(100vh - 126px)
 }
 
 .pup_window_tab_content {
@@ -3409,7 +3466,7 @@ select::-ms-expand {
 }
 
 .pup_window_content_scroll {
-    height: calc(100% - 31px);
+    height: calc(100vh - 70px);
     overflow: auto;
 }
 
@@ -3418,7 +3475,7 @@ select::-ms-expand {
 }
 
 .pup_window_content_part {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     padding-left: 10px;
 }
 
@@ -3628,7 +3685,7 @@ select::-ms-expand {
     background-repeat: repeat-x;
     background-position: center center;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .pup_window_content_next_tip {
@@ -3670,6 +3727,8 @@ select::-ms-expand {
 }
 
 .pup_info_link {
+    color:#232323;
+    font-weight:normal;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -3719,7 +3778,7 @@ select::-ms-expand {
 
 @media (max-width:1440px) {
     .pup_window_content {
-        padding: 20px 30px;
+        padding: 20px 30px 0px 30px;
     }
 
     .info_attribute_tell_pup .pup_content_pic img {
@@ -3793,7 +3852,7 @@ select::-ms-expand {
     }
 
     .pup_window_content_scroll {
-        height: calc(100% - 28px);
+        height: calc(100vh - 66px);
     }
 
     .pup_window_content_part {
@@ -3843,7 +3902,7 @@ select::-ms-expand {
     }
 
     .pup_window_tab_content_container {
-        height: calc(100% - 85px)
+        height: calc(100vh - 122px)
     }
 
     .yuanta_pic_1 {
@@ -3878,15 +3937,15 @@ select::-ms-expand {
 
 @media (max-width:540px) {
     .pup_window_content {
-        padding: 20px 20px;
+        padding: 20px 20px 0px 20px;
     }
 
     .pup_window_content_scroll {
-        height: calc(100% - 23px);
+        height: calc(100vh - 66px);
     }
 
     .pup_window_tab_content_container {
-        height: calc(100% - 78px)
+        height: calc(100vh - 119px)
     }
 
     .pup_window_content_title {
@@ -3949,9 +4008,11 @@ select::-ms-expand {
     .sino_pic_5_item {
         text-align: center;
     }
+
     .yulon_pic_4 {
         margin-bottom: 20px;
     }
+
     .pup_content_pic_item {
         margin-bottom: 50px;
     }
@@ -3991,15 +4052,15 @@ select::-ms-expand {
     }
 
     .pup_window_content {
-        padding: 15px 10px;
+        padding: 15px 10px 0px 10px;
     }
 
     .pup_window_tab_content_container {
-        height: calc(100% - 80px)
+        height: calc(100vh - 115px)
     }
 
     .pup_window_content_scroll {
-        height: calc(100% - 25px);
+        height: calc(100vh - 58px);
     }
 
     .project_content_part {
