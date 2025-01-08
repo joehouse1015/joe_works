@@ -1252,7 +1252,10 @@ select::-ms-expand {
 .info_personal_pic {
     width: 220px;
     height: 220px;
-    background-color: #7D7D7D;
+    background-image: url(../images/info_personal_pic.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
     border-radius: 50%;
 }
 
@@ -3201,10 +3204,10 @@ select::-ms-expand {
     }
 
     .description_work_mypic {
-        width: 100%;
+        width: 350px;
+        margin:0 auto;
         margin-bottom: 20px;
     }
-
     .description_work_text {
         width: 100%;
         padding-left: 0px;
