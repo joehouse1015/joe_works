@@ -1,0 +1,308 @@
+@charset "UTF-8";
+/* 文本色 */
+/* 文本主色，一般文字用於淺色底 */
+/* 文本色end */
+/* 字型 */
+body {
+  font-family: 'arial', \5FAE\8EDF\6B63\9ED1\9AD4, \65B0\7D30\660E\9AD4;
+  color: #3c3c3c; }
+
+/* 字型 */
+/* 標題 */
+h1,
+.h1 {
+  font-size: 38px;
+  line-height: 48px;
+  letter-spacing: 1.5px;
+  font-weight: bold; }
+  @media (max-width: 1023px) {
+    h1,
+    .h1 {
+      font-size: 36px;
+      line-height: 45px; } }
+  @media (max-width: 540px) {
+    h1,
+    .h1 {
+      font-size: 34px;
+      line-height: 42px; } }
+
+h2,
+.h2 {
+  font-size: 30px;
+  line-height: 38px;
+  letter-spacing: 1.5px;
+  font-weight: bold; }
+  @media (max-width: 1023px) {
+    h2,
+    .h2 {
+      font-size: 28px;
+      line-height: 35px;
+      letter-spacing: 1px; } }
+  @media (max-width: 540px) {
+    h2,
+    .h2 {
+      font-size: 26px;
+      line-height: 32px; } }
+
+h3,
+.h3 {
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  font-weight: bold; }
+  @media (max-width: 540px) {
+    h3,
+    .h3 {
+      font-size: 22px;
+      line-height: 28px; } }
+
+h4,
+.h4 {
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 1px;
+  font-weight: bold; }
+  @media (max-width: 540px) {
+    h4,
+    .h4 {
+      font-size: 20px;
+      line-height: 30px; } }
+
+h5,
+.h5_1 {
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 1px;
+  font-weight: bold; }
+  @media (max-width: 540px) {
+    h5,
+    .h5_1 {
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: 0.5px; } }
+
+.h5_2 {
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 1px;
+  font-weight: bold; }
+  @media (max-width: 540px) {
+    .h5_2 {
+      font-size: 16px;
+      line-height: 25px;
+      letter-spacing: 0.5px;
+      font-weight: normal; } }
+
+h6,
+.h6_1 {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  font-weight: bold; }
+
+.h6_2 {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  font-weight: bold; }
+  @media (max-width: 540px) {
+    .h6_2 {
+      font-size: 16px;
+      line-height: 25px;
+      font-weight: normal; } }
+
+/* 標題end */
+/* 文本 */
+.body_large_bold {
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 1px;
+  font-weight: bold; }
+  @media (max-width: 540px) {
+    .body_large_bold {
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: 0.5px; } }
+
+.body_large {
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 1px; }
+  @media (max-width: 540px) {
+    .body_large {
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: 0.5px; } }
+
+.body_bold {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  font-weight: bold; }
+  @media (max-width: 540px) {
+    .body_bold {
+      font-size: 16px;
+      line-height: 25px; } }
+
+.body {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.5px; }
+  @media (max-width: 540px) {
+    .body {
+      font-size: 16px;
+      line-height: 25px; } }
+
+/* 文本end */
+/* 備註 */
+.caption_bold {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.5px;
+  font-weight: bold; }
+  @media (max-width: 540px) {
+    .caption_bold {
+      font-size: 14px;
+      line-height: 23px; } }
+
+.caption {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.5px; }
+  @media (max-width: 540px) {
+    .caption {
+      font-size: 14px;
+      line-height: 23px; } }
+
+/* 備註end */
+/* 按鈕 */
+.btn_large {
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  font-weight: bold; }
+  @media (max-width: 540px) {
+    .btn_large {
+      font-size: 22px;
+      line-height: 28px; } }
+
+.btn_medium {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  font-weight: bold; }
+  @media (max-width: 540px) {
+    .btn_medium {
+      font-size: 18px;
+      line-height: 22px; } }
+
+.btn_small {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  font-weight: bold; }
+
+/* 按鈕end */
+/* 標籤 */
+.chips {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  font-weight: bold; }
+  @media (max-width: 540px) {
+    .chips {
+      font-size: 16px;
+      line-height: 20px; } }
+
+.chips_small {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  font-weight: bold; }
+  @media (max-width: 540px) {
+    .chips_small {
+      font-size: 14px;
+      line-height: 18px; } }
+
+/* 標籤end */
+/* 重要資訊 */
+.subject {
+  font-size: 46px;
+  line-height: 58px;
+  letter-spacing: 1.5px;
+  font-weight: bold; }
+  @media (max-width: 1023px) {
+    .subject {
+      font-size: 42px;
+      line-height: 52px; } }
+  @media (max-width: 540px) {
+    .subject {
+      font-size: 38px;
+      line-height: 48px; } }
+
+.topic {
+  font-size: 30px;
+  line-height: 38px;
+  letter-spacing: 1.5px;
+  font-weight: bold; }
+  @media (max-width: 1023px) {
+    .topic {
+      font-size: 28px;
+      line-height: 35px;
+      letter-spacing: 1px; } }
+  @media (max-width: 540px) {
+    .topic {
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: 1px; } }
+
+.comp {
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 1px;
+  font-weight: bold; }
+  @media (max-width: 540px) {
+    .comp {
+      font-size: 22px;
+      line-height: 32px; } }
+
+.info {
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 1px;
+  font-weight: bold; }
+  @media (max-width: 540px) {
+    .info {
+      font-size: 20px;
+      line-height: 30px; } }
+
+.sub-info {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  font-weight: bold; }
+
+/* 重要資訊end */
+/* 導覽條 */
+.nav-bar_page-link {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: bold; }
+  @media (max-width: 1023px) {
+    .nav-bar_page-link {
+      font-size: 20px;
+      line-height: 30px; } }
+
+.nav-bar_page-sub-link {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px; }
+  @media (max-width: 1023px) {
+    .nav-bar_page-sub-link {
+      font-size: 18px;
+      line-height: 28px; } }
+
+/* 導覽條end */
+
+/*# sourceMappingURL=text.css.map */

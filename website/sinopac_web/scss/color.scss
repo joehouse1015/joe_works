@@ -1,0 +1,107 @@
+/* 通用色 */
+
+$web-base-color:#254a91;/* 主色，一般提示 */
+
+$web-fade-color:#bfbfbf;/* 弱化色，失效、未完成提示 */
+
+$web-accent-color:#cd9b1d;/* 次要強調色，強調提示 */
+
+$web-super-accent-color:#c31826;/* 強調色，重要提示 */
+
+$web-warning-color:#f5091d;/* 警示色，警告提示 */
+
+/* 通用色end */
+
+
+/* 文本色 */
+
+$text-base-color_dark:#3c3c3c;/* 文本主色，一般文字用於淺色底 */
+
+$text-sub-color_dark:#757575;/* 文本輔助色，次要文字用於淺色底 */
+
+$text-accent-color_dark:#ba7d07;/* 文本強調色，強調文字用於淺色底 */
+
+$text-base-color_light:#ffffff;/* 文本主色，一般文字用於深色底 */
+
+$text-sub-color_light:rgba(255,255,255,0.7);/* 文本輔助色，次要文字用於深色底 */
+
+$text-accent-color_light:#cd9b1d;/* 文本強調色，強調文字用於深色底 */
+
+$text-link-color:#1a7def;/* 提示文字連結 */
+
+/* 文本色end */
+
+
+/* 背景色 */
+
+$bg-base-color_dark:#fafafa;/* 一般主題區域背景色，為區分相鄰主題區域為白色背景使用；主題項目區塊背景色，為區隔所在主題區域為白色背景使用。 */
+
+$bg-base-color_light:#ffffff;/* 一般主題區域背景色，為區分相鄰主題區域為灰白、淺藍色背景使用；主題項目區塊背景色，為區隔所在主題區域為灰白色背景使用。 */
+
+$bg-accent-color_light:#edf3ff;/* 重要主題區域背景色 */
+
+$bg-accent-color_dark:#f4f6fb;/* 重要主題項目區塊背景色，為區隔所在主題區域為淺藍色背景使用 */
+
+/* 背景色end */
+
+
+/* 元件用色 */
+
+$comp-bg:#ffffff;/* 元件底色 */
+
+$comp-disabled-bg:#f5f5f5;/* 元件底色，元件無法使用提示 */
+
+$comp-accent-bg:#f4f6fb;/* 元件底色，元件重要提示 */
+
+$comp-super-accent-bg:#ffe7b9;/* 元件底色，強調元件重要提示 */
+
+$scroll-bar:#bfbfbf;/* 滾動條控制區塊(Scroll Bar Trumb)底色 */
+
+/* 元件用色end */
+
+
+/* 元件框用色 */
+
+$comp-stroke_dark:#bfbfbf;/* 位於白色背景的元件框線色 */
+
+$comp-stroke_light:#e0e0e0;/* 位於非白色背景的元件框線色 */
+
+$comp-shadow-stroke:#f5f5f5;/* 增加元件陰影的框線色 */
+
+$comp-active-stroke:#a8b7d3;/* 元件為當前選擇的框線色 */
+
+/* 元件框用色end */
+
+
+/* 區隔線用色 */
+
+$hr-base_light:#ffffff;/* 淺藍、淺灰藍背景使用 */
+
+$hr-base_dark:#e0e0e0;/* 白、灰白背景使用 */
+
+$hr-accent:#cd9b1d;/* 強調區隔內容使用 */
+
+/* 區隔線用色end */
+
+
+/* 按鈕提示用色 */
+
+$regular-btn-hover:#2c59a7;/* 提示永豐藍按鈕為鼠標懸停(Hover)狀態 */
+
+$accent-btn-hover:#cf1d2e;/* 提示永豐紅按鈕為鼠標懸停(Hover)狀態 */
+
+$regular-btn-active:#214386;/* 提示永豐藍按鈕為點擊(Active)狀態 */
+
+$accent-btn-active:#bd1622;/* 提示永豐紅按鈕為點擊(Active)狀態 */
+
+/* 按鈕提示用色end */
+
+
+
+
+
+
+
+
+
+

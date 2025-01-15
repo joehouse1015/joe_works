@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/* 通用色 */
+/* 主色，一般提示 */
+/* 弱化色，失效、未完成提示 */
+/* 次要強調色，強調提示 */
+/* 強調色，重要提示 */
+/* 警示色，警告提示 */
+/* 通用色end */
+/* 文本色 */
+/* 文本主色，一般文字用於淺色底 */
+/* 文本輔助色，次要文字用於淺色底 */
+/* 文本強調色，強調文字用於淺色底 */
+/* 文本主色，一般文字用於深色底 */
+/* 文本輔助色，次要文字用於深色底 */
+/* 文本強調色，強調文字用於深色底 */
+/* 提示文字連結 */
+/* 文本色end */
+/* 背景色 */
+/* 一般主題區域背景色，為區分相鄰主題區域為白色背景使用；主題項目區塊背景色，為區隔所在主題區域為白色背景使用。 */
+/* 一般主題區域背景色，為區分相鄰主題區域為灰白、淺藍色背景使用；主題項目區塊背景色，為區隔所在主題區域為灰白色背景使用。 */
+/* 重要主題區域背景色 */
+/* 重要主題項目區塊背景色，為區隔所在主題區域為淺藍色背景使用 */
+/* 背景色end */
+/* 元件用色 */
+/* 元件底色 */
+/* 元件底色，元件無法使用提示 */
+/* 元件底色，元件重要提示 */
+/* 元件底色，強調元件重要提示 */
+/* 滾動條控制區塊(Scroll Bar Trumb)底色 */
+/* 元件用色end */
+/* 元件框用色 */
+/* 位於白色背景的元件框線色 */
+/* 位於非白色背景的元件框線色 */
+/* 增加元件陰影的框線色 */
+/* 元件為當前選擇的框線色 */
+/* 元件框用色end */
+/* 區隔線用色 */
+/* 淺藍、淺灰藍背景使用 */
+/* 白、灰白背景使用 */
+/* 強調區隔內容使用 */
+/* 區隔線用色end */
+/* 按鈕提示用色 */
+/* 提示永豐藍按鈕為鼠標懸停(Hover)狀態 */
+/* 提示永豐紅按鈕為鼠標懸停(Hover)狀態 */
+/* 提示永豐藍按鈕為點擊(Active)狀態 */
+/* 提示永豐紅按鈕為點擊(Active)狀態 */
+/* 按鈕提示用色end */
+.container {
+  width: 1280px;
+  text-align: center;
+  margin: 0 auto; }
+  @media (max-width: 1366px) {
+    .container {
+      width: 100%; } }
+
+.page_main-content_area .subject_content {
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 30px 0px 80px 0px; }
+  @media (max-width: 1023px) {
+    .page_main-content_area .subject_content {
+      padding: 30px 0px 60px 0px; } }
+  @media (max-width: 540px) {
+    .page_main-content_area .subject_content {
+      padding: 0px 0px 60px 0px; } }
+  @media (max-width: 430px) {
+    .page_main-content_area .subject_content {
+      padding: 0px 0px 50px 0px; } }
+  @media (max-width: 1366px) {
+    .page_main-content_area .subject_content .container {
+      padding: 0px 50px; } }
+  @media (max-width: 540px) {
+    .page_main-content_area .subject_content .container {
+      padding: 0px 30px; } }
+  @media (max-width: 430px) {
+    .page_main-content_area .subject_content .container {
+      padding: 0px 20px; } }
+  .page_main-content_area .subject_content .rect-tab-section {
+    width: 550px;
+    margin: 0 auto; }
+    @media (max-width: 768px) {
+      .page_main-content_area .subject_content .rect-tab-section {
+        width: 100%;
+        padding: 0px 50px; } }
+    @media (max-width: 540px) {
+      .page_main-content_area .subject_content .rect-tab-section {
+        padding: 0px 20px; } }
+    @media (max-width: 430px) {
+      .page_main-content_area .subject_content .rect-tab-section {
+        padding: 0px 10px; } }
+  .page_main-content_area .subject_content .ins-trial-content {
+    display: flex; }
+    @media (max-width: 1023px) {
+      .page_main-content_area .subject_content .ins-trial-content {
+        flex-direction: column;
+        align-items: center; } }
+    .page_main-content_area .subject_content .ins-trial-content .form-content {
+      width: calc(100% - 320px);
+      padding: 40px 0px 40px 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px 0px; }
+      @media (max-width: 1366px) {
+        .page_main-content_area .subject_content .ins-trial-content .form-content {
+          width: calc(100% - 280px);
+          padding: 40px 0px 40px 20px; } }
+      @media (max-width: 1023px) {
+        .page_main-content_area .subject_content .ins-trial-content .form-content {
+          width: 100%;
+          padding: 40px 0px 40px 0px; } }
+      @media (max-width: 768px) {
+        .page_main-content_area .subject_content .ins-trial-content .form-content {
+          width: 100%;
+          padding: 20px 30px 30px 30px; } }
+      @media (max-width: 540px) {
+        .page_main-content_area .subject_content .ins-trial-content .form-content {
+          gap: 25px 0px;
+          padding: 20px 20px 30px 20px; } }
+      @media (max-width: 430px) {
+        .page_main-content_area .subject_content .ins-trial-content .form-content {
+          gap: 25px 0px;
+          padding: 20px 10px 30px 10px; } }
+      .page_main-content_area .subject_content .ins-trial-content .form-content .data-frame-group {
+        width: 420px; }
+        @media (max-width: 1023px) {
+          .page_main-content_area .subject_content .ins-trial-content .form-content .data-frame-group {
+            width: calc(100% - 185px); } }
+        @media (max-width: 768px) {
+          .page_main-content_area .subject_content .ins-trial-content .form-content .data-frame-group {
+            width: 100%; } }
+        @media (max-width: 1023px) {
+          .page_main-content_area .subject_content .ins-trial-content .form-content .data-frame-group .data-frame {
+            width: 100%; } }
+        @media (max-width: 1023px) {
+          .page_main-content_area .subject_content .ins-trial-content .form-content .data-frame-group .input-data {
+            width: 100%; } }
+.page_main-content_area .subject_content.travel-bg {
+  background-image: url(../images/ins-trial_travel-bg.png); }
+  @media (max-width: 1023px) {
+    .page_main-content_area .subject_content.travel-bg {
+      background-image: url(../images/ins-trial_travel-bg-1023.png); } }
+  @media (max-width: 540px) {
+    .page_main-content_area .subject_content.travel-bg {
+      background-image: url(../images/ins-trial_travel-bg-540.png); } }
+.page_main-content_area .subject_content.pet-bg {
+  background-image: url(../images/ins-trial_pet-bg.png); }
+  @media (max-width: 1023px) {
+    .page_main-content_area .subject_content.pet-bg {
+      background-image: url(../images/ins-trial_pet-bg-1023.png); } }
+  @media (max-width: 540px) {
+    .page_main-content_area .subject_content.pet-bg {
+      background-image: url(../images/ins-trial_pet-bg-540.png); } }
+.page_main-content_area .subject_content.annuity-bg {
+  background-image: url(../images/ins-trial_annuity-bg.png); }
+  @media (max-width: 1023px) {
+    .page_main-content_area .subject_content.annuity-bg {
+      background-image: url(../images/ins-trial_annuity-bg-1023.png); } }
+  @media (max-width: 540px) {
+    .page_main-content_area .subject_content.annuity-bg {
+      background-image: url(../images/ins-trial_annuity-bg-540.png); } }
+.page_main-content_area .subject_content.ins-info {
+  background-color: #ffffff;
+  background-image: none;
+  padding: 80px 0px 80px 0px; }
+  @media (max-width: 1023px) {
+    .page_main-content_area .subject_content.ins-info {
+      padding: 60px 0px 60px 0px; } }
+
+.complex-input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 15px 0px; }
+  @media (max-width: 1023px) {
+    .complex-input-field {
+      gap: 10px 0px; } }
+  @media (max-width: 768px) {
+    .complex-input-field {
+      gap: 0px 0px; } }
+
+.note-section {
+  text-align: left;
+  margin-bottom: 40px; }
+  @media (max-width: 540px) {
+    .note-section {
+      margin-bottom: 30px; } }
+
+.ins-info-content {
+  display: flex;
+  gap: 0px 50px; }
+  @media (max-width: 1366px) {
+    .ins-info-content {
+      gap: 0px 30px; } }
+  @media (max-width: 1023px) {
+    .ins-info-content {
+      flex-direction: column;
+      gap: 30px 0px; } }
+  .ins-info-content .topic_content {
+    margin-top: 20px; }
+    @media (max-width: 1023px) {
+      .ins-info-content .topic_content {
+        margin-top: 10px; } }
+    @media (max-width: 540px) {
+      .ins-info-content .topic_content {
+        margin-top: 0px; } }
+
+/*# sourceMappingURL=index_n.css.map */
