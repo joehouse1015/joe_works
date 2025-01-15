@@ -71,10 +71,10 @@
     <!-- End Google Tag Manager -->
 </head>
 
-<body class="body_page">
+<body class="body_page sino_works_5_pup">
     <div class="pup_window_content" style="overflow:inherit;">
         <div style="display:flex;">
-            <div class="h4 font_bold">網路投保網站&nbsp;測試報告</div>
+            <div class="h4 font_bold">網路投保網站&nbsp;實行性原型</div>
             <a href="uiux_index.html#p7_title">
                 <div class="page_back_btn">
                     回作品集<img src="images/arrow-left-link.png" alt="">
@@ -82,24 +82,260 @@
             </a>
         </div>
 
-            <div class="pup_window_content_scroll">
-                <div class="pup_window_content_part">
+        <div class="pup_window_content_tab_container">
+            <div class="pup_window_content_tab pup_tab_btn h5 font_bold"><a href="#sino_tab_16" class="set_middle"><span>切版說明</span></a></div>
+            <div class="pup_window_content_tab pup_tab_btn h5 font_bold"><a href="#sino_tab_17" class="set_middle"><span>動效內容</span></a></div>
+        </div>
+        <div class="pup_window_tab_content_container">
+
+            <div id="sino_tab_16" class="pup_window_tab_content">
+                <div class="pup_window_content_part project_content_part" style="margin-bottom:0px;">
                     <div class="pup_content">
-                        <div class="pup_text large_text emphasize_text" style="margin-bottom:15px;">分析客戶營業屬性(網路金融交易、投資顧問)，導出「專業、理性、科技」形象進行設計。</div>
-                        <div class="pup_content_pic">
-                            <picture>
-                                <img src="images/yuanta_pic_1.png" style="max-width:100%">
-                            </picture>
+                        <div class="pup_window_content_part project_content_part" style="margin-bottom:50px;padding-left:0px;">
+                            <div class="pup_content">
+                                <div class="part_title h5 font_bold emphasize_text">前言</div>
+                                <div class="pup_text large_text">
+                                    根據設計規範文件<a href="https://www.figma.com/design/RSNBhP51ZdXt9ECUOnr1Eu/%E6%B0%B8%E8%B1%90%E7%B6%B2%E8%B7%AF%E6%8A%95%E4%BF%9D%E7%B6%B2%E7%AB%99_mockup?node-id=1140-3102&p=f&t=ZdGub9nPtzu8kDKC-0" target="_blank">(於figma瀏覽)</a>，<span class="emphasize_text">使用Html、SCSS完成RWD前端切版</span>。
+                                </div>
+                                <div class="pup_normal_text">
+                                    <a href="website/sinopac_web/index.html" target="_blank" class="pup_window_btn">前往網路投保首頁(切版範例)</a>
+                                </div>
+                            </div>
                         </div>
+                        <div class="pup_window_content_part project_content_part" style="margin-bottom:50px;padding-left:0px;">
+                            <div class="pup_content">
+                                <div class="part_title h5 font_bold emphasize_text">一、Html版面</div>
+
+                                <div class="pup_content_text" style="margin-top:10px;padding-left:0px;">
+                                    <div class="text_row">
+                                        <div class="text_item">
+                                            <ul class="text_item_list" style="list-style:decimal">
+                                                <li>依figma設計規範中圖層名稱，同步Html標籤class樣式名稱。</li>
+                                                <li>使用figma&nbsp;autolayout排版，使視覺搞圖層與Html巢狀寫法一致。</li>
+                                            </ul>
+                                            <div class="pup_normal_text_small" style="margin-top:20px;margin-bottom:5px;">
+                                                以頁面頂部條為例
+                                            </div>
+                                            <div>
+                                                <picture>
+                                                    <source media="(max-width:1280px)" srcset="images/sino_pic_15-1-1023.png" />
+                                                    <img src="images/sino_pic_15-1.png" class="sino_pic_6">
+                                                </picture>
+                                            </div>
+                                            <div class="pup_normal_text" style="margin-top:30px;">
+                                                如此，視覺稿和前端切版能相互貼合，<span class="emphasize_text">設計師和前端工程師有好的溝通基礎</span>，在開發工作上能緊密銜接。
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pup_window_content_part project_content_part" style="margin-bottom:0px;padding-left:0px;">
+                            <div class="pup_content">
+                                <div class="part_title h5 font_bold emphasize_text">二、SCSS樣式</div>
+                                <div class="pup_content_text" style="margin-top:10px;padding-left:0px;">
+                                    <div class="text_row">
+                                        <div class="text_item">
+                                            <div class="text_item_title h6 emphasize_text">巢狀特性</div>
+                                            <div class="pup_normal_text">
+                                                依SCSS為巢狀寫法特性，使視覺稿圖層、Html、SCSS能同步巢狀形式，使開發、維運工作增加執行效率。
+                                            </div>
+                                            <div class="pup_normal_text_small" style="margin-top:20px;margin-bottom:5px;">
+                                                以頁面頂部條為例
+                                            </div>
+                                            <div>
+                                                <picture>
+                                                    <img src="images/sino_pic_15-2.png" class="sino_pic_6">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text_row" style="margin-top:30px;">
+                                        <div class="text_item">
+                                            <div class="text_item_title h6 emphasize_text">變數功能</div>
+                                            <div class="pup_normal_text">
+                                                利用SCSS變數功能，使網頁樣式能同步參照設計規範(文字、色彩)進行設置。
+                                            </div>
+                                            <div class="pup_normal_text_small" style="margin-top:20px;margin-bottom:5px;">
+                                                文字樣式庫(部分)
+                                            </div>
+                                            <div>
+                                                <picture>
+                                                    <img src="images/sino_pic_15-3.png" class="sino_pic_6">
+                                                </picture>
+                                            </div>
+                                            <div class="pup_normal_text_small" style="margin-top:20px;margin-bottom:5px;">
+                                                色彩樣式庫(部分)
+                                            </div>
+                                            <div>
+                                                <picture>
+                                                    <img src="images/sino_pic_15-4.png" class="sino_pic_6">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text_row" style="margin-top:30px;">
+                                        <div class="text_item">
+                                            <div class="text_item_title h6 emphasize_text">三、figma&nbsp;component機制</div>
+                                            <div class="pup_normal_text">
+                                                依照設計規範(介面元件component)，搭配Html編寫SCSS樣式，使figma&nbsp;component機制，同樣運用在網頁前端切版。
+                                            </div>
+                                            <div class="pup_normal_text_small" style="margin-top:20px;margin-bottom:5px;">
+                                                以長形頁籤為例
+                                            </div>
+                                            <div>
+                                                <picture>
+                                                    <source media="(max-width:540px)" srcset="images/sino_pic_15-5-540.png" />
+                                                    <img src="images/sino_pic_15-5.png" class="sino_pic_6">
+                                                </picture>
+                                            </div>
+                                            <div class="pup_normal_text" style="margin-top:30px;">
+                                                如此，<span class="emphasize_text">視覺稿和前端切版能保持一致</span>，使設計師視覺能力能同步表現於網頁前端。
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pup_window_content_end_tip_container">
+                            <span class="pup_window_content_end_tip">已瀏覽完&nbsp;<span class="emphasize_text">實行性原型&nbsp;切版說明</span></span>
+                        </div>
+                        <div class="pup_window_content_next_tip"><a href="website/sinopac_web/index.html" target="_blank">前往網路投保首頁(切版範例)</a></div>
                     </div>
                 </div>
-                <div class="pup_window_content_end_tip_container">
-                    <span class="pup_window_content_end_tip">已瀏覽完&nbsp;<span class="emphasize_text">網路投保網站&nbsp;測試報告</span></span>
+            </div>
+            <div id="sino_tab_17" class="pup_window_tab_content">
+                <div class="pup_window_content_part project_content_part" style="margin-bottom:0px;">
+                    <div class="pup_content">
+                        <div class="pup_window_content_part project_content_part" style="margin-bottom:50px;padding-left:0px;">
+                            <div class="pup_content">
+                                <div class="part_title h5 font_bold emphasize_text">前言</div>
+                                <div class="pup_text large_text">
+                                    <span class="emphasize_text">使用CSS&nbsp;animation和Jquery</span>完成網頁動效展示。
+                                </div>
+                                <div class="pup_normal_text">
+                                    <a href="website/sinopac_web/index.html" target="_blank" class="pup_window_btn">前往網路投保首頁(切版範例)</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pup_window_content_part project_content_part" style="margin-bottom:50px;padding-left:0px;">
+                            <div class="pup_content">
+                                <div class="part_title h5 font_bold emphasize_text">一、頁面loading</div>
+                                <div class="pup_content_text" style="margin-top:0px;padding-left:0px;">
+                                    <div class="text_row">
+                                        <div class="text_item">
+                                            <div class="pup_normal_text_small" style="margin-top:10px;margin-bottom:5px;">
+                                                設計loading動畫
+                                            </div>
+                                            <div>
+                                                <picture>
+                                                    <source media="(max-width:540px)" srcset="images/sino_pic_15-6-430.png" />
+                                                    <source media="(max-width:1023px)" srcset="images/sino_pic_15-6-768.png" />
+                                                    <img src="images/sino_pic_15-6.png" class="sino_pic_6">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pup_window_content_part project_content_part" style="margin-bottom:50px;padding-left:0px;">
+                            <div class="pup_content">
+                                <div class="part_title h5 font_bold emphasize_text">二、頁面選單、漢堡選單</div>
+                                <div class="pup_content_text" style="margin-top:0px;padding-left:0px;">
+                                    <div class="text_row">
+                                        <div class="text_item">
+                                            <div class="pup_normal_text_small" style="margin-top:10px;margin-bottom:5px;">
+                                                開啟、關閉動畫
+                                            </div>
+                                            <div>
+                                                <picture>
+                                                    <img src="images/sino_pic_15-7.png" class="sino_pic_6">
+                                                </picture>
+                                            </div>
+                                            <div style="margin-top:20px;">
+                                                <picture>
+                                                    <img src="images/sino_pic_15-8.png" class="sino_pic_6">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pup_window_content_part project_content_part" style="margin-bottom:50px;padding-left:0px;">
+                            <div class="pup_content">
+                                <div class="part_title h5 font_bold emphasize_text">三、頁籤(Tab)選項切換內容</div>
+                                <div class="pup_content_text" style="margin-top:0px;padding-left:0px;">
+                                    <div class="text_row">
+                                        <div class="text_item">
+                                            <div class="pup_normal_text_small" style="margin-top:10px;margin-bottom:5px;">
+                                                內容顯示動畫
+                                            </div>
+                                            <div>
+                                                <picture>
+                                                    <img src="images/sino_pic_15-9.png" class="sino_pic_6">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pup_window_content_part project_content_part" style="margin-bottom:0px;padding-left:0px;">
+                            <div class="pup_content">
+                                <div class="part_title h5 font_bold emphasize_text">四、可點擊介面物件，鼠標懸停(hover)提示</div>
+                                <div class="pup_content_text" style="margin-top:0px;padding-left:0px;">
+                                    <div class="text_row">
+                                        <div class="text_item">
+                                            <div class="pup_normal_text_small" style="margin-top:10px;margin-bottom:5px;">
+                                                提示動畫
+                                            </div>
+                                            <div>
+                                                <picture>
+                                                    <img src="images/sino_pic_15-10.png" class="sino_pic_6">
+                                                </picture>
+                                            </div>
+                                            <div style="margin-top:20px;">
+                                                <picture>
+                                                    <img src="images/sino_pic_15-11.png" class="sino_pic_6">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pup_window_content_end_tip_container">
+                            <span class="pup_window_content_end_tip">已瀏覽完&nbsp;<span class="emphasize_text">實行性原型&nbsp;動效內容</span></span>
+                        </div>
+                        <div class="pup_window_content_next_tip"><a href="website/sinopac_web/index.html" target="_blank">前往網路投保首頁(切版範例)</a></div>
+                    </div>
                 </div>
             </div>
 
+        </div>
     </div>
-</body>
 
+</body>
+<script type="text/javascript">
+    $(function() {
+        var showTab = 0;
+        var defaultLi = $('.sino_works_5_pup .pup_tab_btn').eq(showTab).addClass('active');
+        $(defaultLi.find('a').attr('href')).siblings().hide();
+        $('.sino_works_5_pup .pup_tab_btn').click(function() {
+            var $this = $(this),
+                clickTab = $this.find('a').attr('href');
+            $this.addClass('active').siblings('.active').removeClass('active');
+            $(clickTab).stop(false, true).fadeIn().siblings().hide();
+            return false;
+        }).find('a').focus(function() {
+            this.blur();
+        });
+    });
+
+</script>
 
 </html>
