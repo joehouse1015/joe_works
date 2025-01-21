@@ -91,8 +91,8 @@
             $(".sino_works_6_btn").click(function() {
                 $(".sino_works_6_pup,.pup_bg_transparent").fadeIn(500);
             });
-            $(".sino_works_7_btn").click(function() {
-                $(".sino_works_7_pup,.pup_bg_transparent").fadeIn(500);
+            $(".prepare_works_btn").click(function() {
+                $(".prepare_works_pup,.pup_bg_transparent").fadeIn(500);
             });
             $(".yuanta_info_btn").click(function() {
                 $(".yuanta_info_pup,.pup_bg").fadeIn(500);
@@ -444,22 +444,22 @@
                         <div>
                             <div class="info_attribute_item_title">
                                 <img src="images/info_attribute_item_title_icon_3.png" alt="彈性靈活圖示">
-                                <div class="font_bold emphasize_text">彈性靈活</div>
+                                <div class="font_bold emphasize_text">資料統整</div>
                             </div>
                             <div class="info_attribute_item_text">
                                 <span>
-                                    依時程、需求、可行性，規劃執行計畫。
+                                    能依共通性、使用目的分類、整合資料。
                                 </span>
                             </div>
                         </div>
                         <div>
                             <div class="info_attribute_item_title">
                                 <img src="images/info_attribute_item_title_icon_2.png" alt="高學習力圖示">
-                                <div class="font_bold emphasize_text">高學習力</div>
+                                <div class="font_bold emphasize_text">視覺敏銳</div>
                             </div>
                             <div class="info_attribute_item_text">
                                 <span>
-                                    對工作事務相關知識，積極主動求知。
+                                    精準檢視畫面排版、配色和風格適配度。
                                 </span>
                             </div>
                         </div>
@@ -1525,9 +1525,9 @@
                     </div>
                     <div class="work_info_part" style="margin-bottom:0px;">
 
-                        <div class="work_info_title h3 font_bold">研究內容</div>
-                        <div id="p13_title-1" class="work_info_text" style="margin-bottom:30px;">
-                            <span class="work_info_text_p font_bold">提出議題</span>
+                        <div id="p13_title-1" class="work_info_title h3 font_bold">研究內容</div>
+                        <div class="work_info_text" style="margin-bottom:30px;">
+                            <span class="work_info_text_p font_bold">制定議題</span>
                             <div class="work_info_subtext" style="padding-left:0px;">事前我們UXR團隊先與專案負責人了解研究目標脈絡，接續訪談Oloo創辦人了解營運的市場經驗。</div>
                             <ul style="list-style: decimal;padding-left:5px;">
                                 <li style="margin-top:10px;">
@@ -1540,7 +1540,7 @@
                                 </li>
                                 <li style="margin-top:10px;">
                                     <span class="font_bold">萃取假設：</span><br />
-                                    將各自假設推演論述，<span class="font_bold">收斂出商業機會和風險</span>；<br/>利用機會句型：「相信...因此有好的結果。」、風險句型：「如果...可能有不好的結果。」輔助論述。
+                                    將各自假設推演論述，<span class="font_bold">收斂出商業機會和風險</span>；<br />利用機會句型：「相信...因此有好的結果。」、風險句型：「如果...可能有不好的結果。」輔助論述。
                                 </li>
                                 <li style="margin-top:10px;">
                                     <span class="font_bold">篩選假設：</span><br />
@@ -1548,63 +1548,81 @@
                                 </li>
                                 <li style="margin-top:10px;">
                                     <span class="font_bold">制定議題：</span><br />
-                                    觀察商業機會、風險依共通點分類1~3組，並篩選收斂出研究議題；<br/>以句型「透過研究該議題，可以達成某項研究目標...」、「因研究該議題能達成某項研究預期...」輔助解釋。
+                                    觀察商業機會、風險依共通點分類1~3組，並篩選收斂出研究議題；<br />以句型「透過研究該議題，可以達成某項研究目標...」、「因研究該議題能達成某項研究預期...」輔助解釋。
                                 </li>
                             </ul>
                             <div class="pup_link_area" style="margin-top:10px;">
                                 <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
-                                    <img src="images/pup_link_dot.png" class="pup_link_dot"><span><a href="oloo_works_1.html">詳細內容</a></span>
+                                    <img src="images/pup_link_dot.png" class="pup_link_dot"><span><a href="oloo_works_1.html">實作內容</a></span>
                                 </div>
                             </div>
                         </div>
-                        <div class="work_info_text" style="margin-bottom:30px;">
-                            <span class="work_info_text_p font_bold">訪談調查</span>
-                            <ul>
-                                <li>將於1/20上線展示，期望您耐心等候。</li>
-                                <li>--</li>
-                                <li>--</li>
+                        <div id="p13_title-2" class="work_info_text" style="margin-bottom:30px;">
+                            <span class="work_info_text_p font_bold">訪談行動</span>
+                            <ul style="list-style: decimal;padding-left:5px;">
+                                <li style="margin-top:10px;">
+                                    <span class="font_bold">拆解議題：</span><br />
+                                    將議題列出各種面向，如：本次議題「探查展區環境對於電動滑板車的適配度」面向有展區地貌、場館設施規劃、外部因素...等，<br />
+                                    將面向拆出次要面向，如：外部因素有天氣、周邊環境、交通連結、節慶活動、同行者。<br />
+                                    定義次要面向的指標，如：同行者有展區人潮、朋友同事、家人(老人、小孩)、情侶。
+                                </li>
+                                <li style="margin-top:10px;">
+                                    <span class="font_bold">招募受訪者：</span><br />
+                                    根據<span class="font_bold">議題重要面向設定招募條件</span>，如：同行者則招募條件為「有與各類關係者攜伴而行的逛展經驗」；<br />
+                                    並制定招募問卷內容，問題從<span class="font_bold">概念方向→明確具篩選性→開放式了解細節</span>為設計原則。
+                                </li>
+                                <li style="margin-top:10px;">
+                                    <span class="font_bold">規劃訪綱：</span><br />
+                                    以議題重要面向制定訪談問項，各面向<span class="font_bold">須含有ORID屬性「客觀事實、感受、意義/想法、決策/行動」</span>其中兩種屬性之問項，並以開放式問句作描述。
+                                </li>
+                                <li style="margin-top:10px;">
+                                    <span class="font_bold">訪談行動：</span><br />
+                                    成員互相配置主訪員、副訪員，事前進行模擬訪談培養默契，並確保成果能關聯貼合研究議題；<br />
+                                    實際訪談中，須牢記研究目標適時追問或拉回至研究目標，保持虛心、好奇心尊重受訪者的發言，只詢問表示興趣不給予任何評價。
+                                </li>
                             </ul>
-                            <div class="pup_link_area" style="margin-top:0px;display:none;">
+                            <div class="pup_link_area" style="margin-top:10px;">
                                 <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
-                                    <img src="images/pup_link_dot.png" class="pup_link_dot"><span>更多內容</span>
+                                    <img src="images/pup_link_dot.png" class="pup_link_dot"><span><a href="oloo_works_2.html">實作內容</a></span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="work_info_text" style="margin-bottom:30px;">
-                            <span class="work_info_text_p font_bold">研究洞見</span>
-                            <ul>
-                                <li>將於1/20上線展示，期望您耐心等候。</li>
-                                <li>--</li>
-                                <li>--</li>
+                        <div id="p13_title-3" class="work_info_text" style="margin-bottom:30px;">
+                            <span class="work_info_text_p font_bold">研究成果</span>
+                            <ul style="list-style: decimal;padding-left:5px;">
+                                <li style="margin-top:10px;">
+                                    <span class="font_bold">清洗訪談資料：</span><br />
+                                    將訪談記錄篩選出具研究目標相關之內容，<span class="font_bold">以一項獨立事件之文字描述為單位</span>，將事件依「客觀事實的明確關係」、「感受、決策、想法的因果關係」<span class="font_bold">切片成句子</span>。
+                                </li>
+                                <li style="margin-top:10px;">
+                                    <span class="font_bold">編碼事件切片：</span><br />
+                                    以「切片人員姓名」、「受訪者代號」、<span class="font_bold">「研究議題」、「ORID屬性」進行編碼</span>，後續作系統性分類方便發現洞見。
+                                </li>
+                                <li style="margin-top:10px;">
+                                    <span class="font_bold">發現洞見：</span><br />
+                                    彙整共六位受訪者訪談的<span class="font_bold">切片內容，以「親合圖」模式察覺有共通性的主題範圍</span>，思考主題當中的切片將有相同的原因、脈絡給予詮釋，和成員以「六頂思考帽」方式進行思辨驗證。<br/>
+                                    探討各<span class="font_bold">詮釋中共同的痛點、需求</span>，讓已知事情有新的認識、補充細節，讓未知事情被注意和認知，最後形成研究洞見<span class="font_bold">啟發成商業機會、風險。</span>
+                                </li>
+                                <li style="margin-top:10px;">
+                                    <span class="font_bold">研究呈現：</span><br />
+                                    根據研究目標和預期為方向，呈現研究洞見作為成果發表，以「<span class="font_bold">描述洞見內容→資料來源和證明根據→結論和行動建議」</span>為架構，鋪陳成果作為簡報內容。
+                                </li>
                             </ul>
-                            <div class="pup_link_area" style="margin-top:0px;display:none;">
+                            <div class="pup_link_area" style="margin-top:10px;">
                                 <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
-                                    <img src="images/pup_link_dot.png" class="pup_link_dot"><span>更多內容</span>
+                                    <img src="images/pup_link_dot.png" class="pup_link_dot"><span><a href="oloo_works_3.html">實作內容</a></span>
                                 </div>
                                 <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
-                                    <img src="images/pup_link_dot.png" class="pup_link_dot"><span>個人亮點</span>
+                                    <img src="images/pup_link_dot.png" class="pup_link_dot"><span><a href="https://drive.google.com/file/d/1j_4-eB7PA6byz0AXoQirV0H5_B0rabhz/view?usp=drive_link" target="_blank">簡報內容(可公開部分)</a></span>
+                                </div>
+                            </div>
+                            <div class="pup_link_area" style="margin-top:10px;">
+                                <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                    <img src="images/pup_link_dot.png" class="pup_link_dot"><span class="prepare_works_btn">專案個人亮點</span>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="work_info_text" style="margin-bottom:30px;">
-                            <span class="work_info_text_p font_bold">結果發表</span>
-                            <ul>
-                                <li>將於1/20上線展示，期望您耐心等候。</li>
-                                <li>--</li>
-                                <li>--</li>
-                            </ul>
-                            <div class="pup_link_area" style="margin-top:0px;display:none;">
-                                <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
-                                    <img src="images/pup_link_dot.png" class="pup_link_dot"><span>更多內容</span>
-                                </div>
-                                <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
-                                    <img src="images/pup_link_dot.png" class="pup_link_dot"><span>個人亮點</span>
-                                </div>
-                            </div>
-                        </div>
-                        
                     </div>
 
                 </div>
@@ -1743,6 +1761,19 @@
                             </ul>
                         </div>
                         <div class="work_info_text font_bold" style="margin-top:10px;">根據行銷人員規劃內容，完成符合形象概念之視覺稿並交付設計原型。</div>
+                    </div>
+                    <div class="work_info_part">
+                        <div class="work_info_title h3 font_bold">oloo共享交通&nbsp;UXR市場研究案</div>
+                        <div class="work_info_text">
+                            <ul>
+                                <li>根據UXR研究目標，進行桌面研究並收斂出研究議題。</li>
+                                <li>設計招募受訪者問卷，掌握訪綱要點並有效完成訪談行動。</li>
+                                <li>清洗訪談文字記錄，篩選出符合研究目標之資料。</li>
+                                <li>觀察資料詮釋原因脈絡，提出符合商業價值的研究洞見。</li>
+                                <li>了解「發表用簡報」架構要素，以圖文鋪陳故事性，呈現簡明易懂且具吸引力之內容。</li>
+                            </ul>
+                        </div>
+                        <div class="work_info_text font_bold" style="margin-top:10px;">完整且深度之UXR研究案實作，並邏輯論述具商業價值之研究洞見。</div>
                     </div>
                 </div>
 
@@ -1896,20 +1927,20 @@
 
     </div>
     <!-- ... 永豐網路投保 用戶原型選項 end ... -->
-    <!-- ... 永豐網路投保 預計上線說明  ... -->
-    <div class="pup_window_small sino_works_7_pup" style="display:none;">
+    <!-- ... 預計上線說明  ... -->
+    <div class="pup_window_small prepare_works_pup" style="display:none;">
         <div class="pup_close_btn set_middle pup_close_icon" role="button">
 
         </div>
         <div class="pup_window_small_title_container">
-            <div class="pup_window_small_title emphasize_text">投保網站&nbsp;實行性原型(前端切版)</div>
+            <div class="pup_window_small_title emphasize_text">UXR市場研究案&nbsp;專案個人亮點</div>
         </div>
         <div class="pup_window_small_content">
-            目前仍在編寫「切版製作」說明，<br />將於1/14上線展示，期望您的耐心等候。
+            目前整理編寫中，<br />將於1/23上線展示，期望您的耐心等候。
         </div>
 
     </div>
-    <!-- ... 永豐網路投保 預計上線說明 end ... -->
+    <!-- ... 預計上線說明 end ... -->
 
 </body>
 
