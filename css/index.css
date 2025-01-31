@@ -844,6 +844,184 @@ select::-ms-expand {
 }
 
 /*頁面通用end*/
+.give_evaluate_btn_container {
+    position: fixed;
+    right: 50%;
+    bottom: 20px;
+    z-index: 10;
+    transform: translateX(50%);
+    transition-duration: 1s;
+    display: none;
+}
+
+.give_evaluate_btn {
+    background-color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    color: #187AD8;
+    border: 0px solid #187AD8;
+    border-right: 0px;
+    border-radius: 99px 99px 99px 99px;
+    padding: 5px 5px 5px 10px;
+    cursor: pointer;
+}
+
+.give_evaluate_btn_show {
+    border-radius: 99px 0px 0px 99px !important;
+}
+
+.give_evaluate_btn_close_container {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    position: absolute;
+    right: 113px;
+    top: 1px;
+    display: none;
+}
+
+.give_evaluate_btn_close img {
+    width: 14px;
+}
+
+.give_evaluate_btn:hover {
+    text-decoration: underline;
+}
+
+.pull_out_give_evaluate {
+    right: 0px;
+    bottom: 20px;
+    display: block !important;
+}
+
+.give_evaluate_pup,.done_evaluate_pup {
+    width: 430px;
+    height: auto;
+    background-color: #232323;
+    color: #c5c5c5;
+    border-radius: 20px;
+    padding: 30px;
+    position: fixed;
+    top: calc(50% + 10px);
+    left: 50%;
+    z-index: 102;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition-duration: 0.75s;
+
+}
+.give_evaluate_pup {
+    transition-duration: 0.75s;
+}
+.done_evaluate_pup {
+    transition-duration: 1s;
+}
+.give_evaluate_pup > .pup_close_btn {
+    width: 34px;
+    height: 34px;
+    background-size: 16px auto;
+}
+
+.open-pup {
+    opacity: 1 !important;
+    top: 50%;
+}
+
+@media (max-width:540px) {
+    .give_evaluate_pup {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+/* Wobble Vertical */
+@-webkit-keyframes hvr-wobble-vertical {
+    16.65% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+
+    33.3% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+
+    49.95% {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+    }
+
+    66.6% {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+    }
+
+    83.25% {
+        -webkit-transform: translateY(1px);
+        transform: translateY(1px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes hvr-wobble-vertical {
+    16.65% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+
+    33.3% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+
+    49.95% {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+    }
+
+    66.6% {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+    }
+
+    83.25% {
+        -webkit-transform: translateY(1px);
+        transform: translateY(1px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.hvr-wobble-vertical {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.hvr-wobble-vertical {
+    -webkit-animation-name: hvr-wobble-vertical;
+    animation-name: hvr-wobble-vertical;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 2;
+    animation-iteration-count: 2;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
 
 /*封面*/
 .page_content .work_title_img_container {
@@ -1946,7 +2124,7 @@ select::-ms-expand {
 
 .progress_item_time span {
     font-size: 16px;
-    font-weight:normal;
+    font-weight: normal;
 }
 
 .progress_item_content {
@@ -3386,6 +3564,31 @@ select::-ms-expand {
 .pup_window_small_content a:hover {
     color: #187ad8;
     text-decoration: none;
+}
+
+.pup_window_content_btn {
+    width: 100%;
+    height: 42px;
+    background-color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    color: #187AD8;
+    border-radius: 99px;
+    margin-top: 20px;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+
+.pup_window_content_btn span {
+    position: relative;
+    top: 1px;
+}
+
+.pup_window_content_btn:hover,
+.pup_window_content_btn.active
+{
+    background-color: #187AD8;
+    color: #ffffff;
 }
 
 .pup_window_small_tip {
