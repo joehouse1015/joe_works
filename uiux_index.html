@@ -200,10 +200,11 @@
         $(document).ready(function() {
             $(window).scroll(function(event) {
                 var scroll = $(window).scrollTop();
-                if (scroll > parseInt($(".p14_page").offset().top)) {
-                    $(".page_choice_btn_container").addClass("hvr-wobble-vertical");
+                var pagechoice = $(".page_choice_btn_container");
+                if (scroll > parseInt($(".p15_page").offset().top)) {
+                    $(".page_choice_btn_container").addClass("wobble-vertical");
                 } else {
-                    $(".page_choice_btn_container").removeClass("hvr-wobble-vertical");
+                    $(".page_choice_btn_container").removeClass("wobble-vertical");
                 }
             });
         });
@@ -1759,7 +1760,7 @@
     </div>
     <!-- ... p14 end ... -->
     <!-- ... p15 ... -->
-    <div id="p15" class="page_area">
+    <div id="p15" class="page_area p15_page">
         <div class="page_content">
             <div class="page_num_container">
                 第15頁<img src="images/page_num_line_img.png" class="page_num_line_img" alt="區隔線"><span style="color:#7D7D7D">UI.UX作品集 ‧ 共16頁</span>
