@@ -362,7 +362,8 @@ select::-ms-expand {
     cursor: pointer;
 }
 
-.page_choice_btn_container:hover {
+.page_choice_btn_container:hover,
+.page_choice_btn_container.active {
     background-color: #187AD8;
     background-image: url(../images/page_choice_btn_img-hover.svg);
 }
@@ -894,7 +895,8 @@ select::-ms-expand {
     display: block !important;
 }
 
-.give_evaluate_pup,.done_evaluate_pup {
+.give_evaluate_pup,
+.done_evaluate_pup {
     width: 430px;
     height: auto;
     background-color: #232323;
@@ -910,12 +912,15 @@ select::-ms-expand {
     transition-duration: 0.75s;
 
 }
+
 .give_evaluate_pup {
     transition-duration: 0.75s;
 }
+
 .done_evaluate_pup {
     transition-duration: 1s;
 }
+
 .give_evaluate_pup > .pup_close_btn {
     width: 34px;
     height: 34px;
@@ -1021,6 +1026,95 @@ select::-ms-expand {
     animation-iteration-count: 2;
     -webkit-animation-delay: 1.5s;
     animation-delay: 1.5s;
+}
+
+@-webkit-keyframes wobble-vertical {
+    16.65% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+
+    33.3% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+
+    49.95% {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+    }
+
+    66.6% {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+    }
+
+    83.25% {
+        -webkit-transform: translateY(1px);
+        transform: translateY(1px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes wobble-vertical {
+    16.65% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+
+    33.3% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+
+    49.95% {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+    }
+
+    66.6% {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+    }
+
+    83.25% {
+        -webkit-transform: translateY(1px);
+        transform: translateY(1px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+
+
+    }
+}
+
+.wobble-vertical {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.5s;
+}
+
+.wobble-vertical {
+    -webkit-animation-name: wobble-vertical;
+    animation-name: wobble-vertical;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 3;
+    animation-iteration-count: 3;
 }
 
 /*封面*/
@@ -3585,8 +3679,7 @@ select::-ms-expand {
 }
 
 .pup_window_content_btn:hover,
-.pup_window_content_btn.active
-{
+.pup_window_content_btn.active {
     background-color: #187AD8;
     color: #ffffff;
 }
