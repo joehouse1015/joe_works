@@ -202,9 +202,9 @@
                 var scroll = $(window).scrollTop();
                 var pagechoice = $(".page_choice_btn_container");
                 if (scroll > parseInt($(".p15_page").offset().top)) {
-                    $(".page_choice_btn_container").addClass("wobble-vertical");
+                    $(".page_choice_btn_container").addClass("wobble-vertical active");
                 } else {
-                    $(".page_choice_btn_container").removeClass("wobble-vertical");
+                    $(".page_choice_btn_container").removeClass("wobble-vertical active");
                 }
             });
         });
