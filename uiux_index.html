@@ -110,6 +110,50 @@
         });
 
     </script>
+    <script>
+        $(document).ready(function() {
+            var giveevaluate = $(".give_evaluate_pup");
+            $(".give_evaluate_btn").click(function() {
+                $(".pup_bg_transparent,.give_evaluate_pup").show();
+                setTimeout(function() {
+                    giveevaluate.addClass("open-pup");
+                }, 100);
+            });
+            $(".pup_bg_transparent,.pup_close_icon").click(function() {
+                $(".give_evaluate_pup").removeClass("open-pup");
+                $(".pup_bg_transparent").hide();
+                setTimeout(function() {
+                    giveevaluate.hide();
+                }, 1100);
+            });
+            $(".done_evaluate_btn").click(function() {
+                $(".give_evaluate_pup").removeClass("open-pup");
+                setTimeout(function() {
+                    giveevaluate.hide();
+                }, 1100);
+            });
+        });
+
+    </script>
+    <script>
+        $(document).ready(function() {
+            var doneevaluate = $(".done_evaluate_pup");
+            $(".done_evaluate_btn").click(function() {
+                $(".done_evaluate_pup").show();
+                setTimeout(function() {
+                    doneevaluate.addClass("open-pup");
+                }, 1000);
+            });
+            $(".pup_bg_transparent,.close_done_evaluate_pup").click(function() {
+                $(".done_evaluate_pup").hide()
+                $(".pup_bg_transparent").hide();
+                setTimeout(function() {
+                    doneevaluate.removeClass("open-pup");
+                }, 100);
+            });
+        });
+
+    </script>
     <!-- Global site tag (gtag.js) - Google Analytics
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5C5BZ9NLJ0"></script>
     <script>
@@ -152,11 +196,31 @@
     <div id="menu_btn" class="page_choice_btn_container set_middle" role="button">
 
     </div>
+    <!-- 回饋瀏覽感受 -->
+    <div class="give_evaluate_btn_container">
+        <div class="give_evaluate_btn_close_container set_middle">
+            <div class="give_evaluate_btn_close set_middle"><img src="images/close_icon.png" alt="關閉回饋瀏覽感受按鈕"></div>
+        </div>
+        <div class="give_evaluate_btn set_middle">回饋瀏覽感受</div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function(event) {
+                var scroll = $(window).scrollTop();
+                if (scroll > parseInt($(".p4_page").offset().top)) {
+                    $(".give_evaluate_btn_container").fadeIn(1000).addClass("hvr-wobble-vertical pull_out_give_evaluate");
+                    $(".give_evaluate_btn").addClass("give_evaluate_btn_show");
+                } else {
+                    $(".give_evaluate_btn_container").hide().removeClass("hvr-wobble-vertical pull_out_give_evaluate");
+                }
+            });
+        });
 
+    </script>
+    <!-- 回饋瀏覽感受end -->
     <div class="page_choice_btn_note" style="display:none;">
         <div>點擊&nbsp;<span class="page_choice_btn_icon">≡</span>&nbsp;可以<br>開啟頁面選單</div>
         <div class="page_choice_btn_note_btn" role="button"><span>了解，</span>關閉提示</div>
-
     </div>
 
     <!-- ... 選單 ... -->
@@ -518,7 +582,7 @@
     <!-- ... p3 end ... -->
 
     <!-- ... p4 ... -->
-    <div id="p4" class="page_area">
+    <div id="p4" class="page_area p4_page">
         <div class="page_content">
             <div class="page_num_container">
                 第4頁<img src="images/page_num_line_img.png" class="page_num_line_img" alt="區隔線"><span style="color:#7D7D7D">UI.UX作品集 ‧ 共16頁</span>
@@ -816,7 +880,7 @@
     <!-- ... p5 end ... -->
 
     <!-- ... p6 ... -->
-    <div class="page_area">
+    <div class="page_area p6_page">
         <div class="page_content">
             <div class="page_num_container">
                 第6頁<img src="images/page_num_line_img.png" class="page_num_line_img" alt="區隔線"><span style="color:#7D7D7D">UI.UX作品集 ‧ 共16頁</span>
@@ -1895,7 +1959,7 @@
             <a href="https://www.figma.com/proto/wEkauSXWPLMvw6jZQfmbXR/%E6%B0%B8%E8%B1%90%E7%B6%B2%E8%B7%AF%E6%8A%95%E4%BF%9D%E7%B6%B2%E7%AB%99_prototype-%E6%A1%8C%E6%A9%9F?node-id=32-16553&node-type=canvas&viewport=340%2C316%2C0.02&t=gjPWu2OTWDAh27AY-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=237%3A268067" target="_blank">
                 <div class="pup_window_small_option">寬1440px<img src="images/arrow-left-link.png"></div>
             </a>
-            <a href="https://www.figma.com/proto/wEkauSXWPLMvw6jZQfmbXR/%E6%B0%B8%E8%B1%90%E7%B6%B2%E8%B7%AF%E6%8A%95%E4%BF%9D%E7%B6%B2%E7%AB%99_prototype-%E6%A1%8C%E6%A9%9F?node-id=237-267666&node-type=canvas&viewport=16940%2C27766%2C0.27&t=gjPWu2OTWDAh27AY-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=237%3A844289" target="_blank" >
+            <a href="https://www.figma.com/proto/wEkauSXWPLMvw6jZQfmbXR/%E6%B0%B8%E8%B1%90%E7%B6%B2%E8%B7%AF%E6%8A%95%E4%BF%9D%E7%B6%B2%E7%AB%99_prototype-%E6%A1%8C%E6%A9%9F?node-id=237-267666&node-type=canvas&viewport=16940%2C27766%2C0.27&t=gjPWu2OTWDAh27AY-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=237%3A844289" target="_blank">
                 <div class="pup_window_small_option">寬1366px<img src="images/arrow-left-link.png"></div>
             </a>
         </div>
@@ -1941,6 +2005,33 @@
 
     </div>
     <!-- ... 預計上線說明 end ... -->
+    <!-- ... 回饋瀏覽感受  ... -->
+    <div class="give_evaluate_pup" style="display:none;">
+        <div class="pup_close_btn set_middle pup_close_icon" role="button">
+
+        </div>
+        <div class="pup_window_small_title_container">
+            <div class="pup_window_small_title emphasize_text">閱讀、理解作者能力，<br />您的感受是？</div>
+        </div>
+        <div class="pup_window_small_content">
+            <div id="good_read" class="pup_window_content_btn set_middle done_evaluate_btn" role="button"><span>A.清晰易懂</span></div>
+            <div id="normal_read" class="pup_window_content_btn set_middle done_evaluate_btn" role="button"><span>B.還算好懂</span></div>
+            <div id="bad_read" class="pup_window_content_btn set_middle done_evaluate_btn" role="button"><span>C.複雜難懂</span></div>
+        </div>
+    </div>
+    <!-- ... 回饋瀏覽感受 end ... -->
+    <!-- ... 完成回饋瀏覽感受  ... -->
+    <div class="done_evaluate_pup" style="display:none;">
+        <div class="pup_window_small_title_container">
+            <div class="pup_window_small_title emphasize_text" style="text-align:center;">已完成回饋，感謝您</div>
+        </div>
+        <div class="pup_window_small_tip">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScLUUrjDiHP_veNITIwouQITFz3aXFL_tX_TLLcaVVOBH9TvQ/viewform" target="_blank"><div class="pup_window_content_btn set_middle" role="button" style="margin-top:10px;"><span>給予完整回饋，10分鐘填寫表單</span></div></a>
+            <div style="text-align:center;margin-top:5px;">僅4題必填選擇題</div>
+            <div class="pup_window_content_btn set_middle close_done_evaluate_pup active" role="button"><span>繼續瀏覽作品集</span></div>
+        </div>
+    </div>
+    <!-- ... 完成回饋瀏覽感受 end ... -->
 
 </body>
 
