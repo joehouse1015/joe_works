@@ -4063,7 +4063,6 @@ select::-ms-expand {
 .pup_info_link {
     color: #187AD8;
     font-weight: normal;
-    text-decoration: underline;
     cursor: pointer;
 }
 
