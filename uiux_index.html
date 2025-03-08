@@ -100,12 +100,17 @@
             $(".taian_info_btn").click(function() {
                 $(".taian_info_pup,.pup_bg").fadeIn(500);
             });
-
+            $(".ae_works_btn").click(function() {
+                $(".ae_works_pup,.pup_bg").fadeIn(500);
+            });
             $(".pup_close_btn").click(function() {
                 $(".pup_window,.pup_bg,.pup_window_small,.pup_bg_transparent").hide();
             });
             $(".pup_bg_transparent").click(function() {
                 $(".pup_window_small,.pup_bg_transparent").hide();
+            });
+            $(".pup_bg").click(function() {
+                $(".pup_window_small,.pup_bg").hide();
             });
         });
 
@@ -684,12 +689,12 @@
                                     <img src="images/info_skill_pic_3-2.png" alt="Figma logo">
                                 </div>
                             </div>
-                            <div>
+                            <div class="item_check_padding">
                                 <div class="info_skill_item_title h5 font_bold">After effects</div>
                                 <div class="info_skill_item_text">
                                     可展示產品原型的介面動態效果。
                                 </div>
-                                <div class="info_skill_item_note" style="display:none;">*工作專案有成果展示</div>
+                                <div class="info_skill_item_check font_bold appear-animation ae_works_btn" data-appear-animation="fadeInUp">觀看相關製作</div>
                                 <div class="info_skill_item_pic">
                                     <img src="images/info_skill_pic_14.png" alt="Figma logo">
                                 </div>
@@ -2135,6 +2140,20 @@
         </div>
     </div>
     <!-- ... 完成回饋瀏覽感受 end ... -->
+    <!-- ... 預計上線說明  ... -->
+    <div class="pup_window_small pup_window_small_ae ae_works_pup" style="display:none;">
+        <div class="pup_close_btn set_middle pup_close_icon" role="button">
+
+        </div>
+        <div class="pup_window_small_title_container">
+            <div class="pup_window_small_title emphasize_text">UI動效圖</div>
+        </div>
+        <div class="pup_window_small_content">
+            <img src="images/sino_pic_15-12.gif" style="width:100%;max-width:100%;" alt="After effectsUI動效圖">
+        </div>
+
+    </div>
+    <!-- ... 預計上線說明 end ... -->
 
 </body>
 
