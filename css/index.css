@@ -1574,7 +1574,7 @@ select::-ms-expand {
     margin-bottom: 10px;
 }
 
-.info_personal_detail > ul li:nth-child(4) {
+.info_personal_detail > ul li:nth-child(5) {
     margin-bottom: 0px;
 }
 
@@ -4139,10 +4139,6 @@ select::-ms-expand {
     .illustrator_works_pup .pup_content_pic img {
         max-width: 100%;
     }
-
-    .sino_pic_9 {
-        width: 100vw;
-    }
 }
 
 @media (max-width:1440px) {
@@ -4161,16 +4157,6 @@ select::-ms-expand {
 
     .pup_content_text .text_item_arrow_1440 i {
         display: none !important;
-    }
-
-    .sino_pic_9 {
-        width: 120vw;
-    }
-}
-
-@media (max-width:1280px) {
-    .sino_pic_9 {
-        width: 130vw;
     }
 }
 
