@@ -3444,7 +3444,7 @@ select::-ms-expand {
 }
 
 .description_work_mypic {
-    width: 35%;
+    width: 33%;
 }
 
 .description_work_mypic img {
@@ -3512,7 +3512,7 @@ select::-ms-expand {
     }
 
     .description_work_mypic {
-        width: 350px;
+        width: 300px;
         margin: 0 auto;
         margin-bottom: 20px;
     }
