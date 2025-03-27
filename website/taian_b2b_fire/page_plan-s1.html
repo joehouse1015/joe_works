@@ -1,0 +1,689 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <meta content="公司名稱" name="author">
+    <meta content="公司名稱" name="copyright">
+    <meta content="網站描述" name="description">
+    <meta content="網站描述" itemprop="name">
+    <meta content="image/og-img.jpg" itemprop="image">
+    <meta content="網站描述" itemprop="description">
+    <meta content="網站標題" property="og:title">
+    <meta content="網站網址" property="og:url">
+    <meta content="image/og-img.jpg" property="og:image">
+    <meta content="網站描述" property="og:description">
+    <meta content="網站關鍵字,網站關鍵字" name="keywords">
+
+    <script src="https://kit.fontawesome.com/72630db2b5.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/b2b_main.js"></script>
+
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/b2b_main.css" rel="stylesheet" type="text/css">
+    <link href="css/b2b_form.css" rel="stylesheet" type="text/css">
+
+    <link rel="shoutcut icon" href="image/favicon.ico" />
+    <title>泰安商業火災保險報價系統</title>
+</head>
+
+<body>
+
+    <div class="top_bar">
+        <a href="index.html">
+            <div class="top_bar_logo">
+                <img src="image/logo.png" alt="">
+                <div class="top_bar_system_title"><span>商業火災保險報價系統</span></div>
+            </div>
+        </a>
+        <div class="top_bar_user">
+            <div class="top_bar_user_headpic"><img src="image/head_pic.png" alt=""></div>
+            <div class="top_bar_user_name"><span>Jason Wu</span><i class="fas fa-sort-down"></i></div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="left_bar">
+            <div class="left_bar_btn active">
+                <div>
+                    <div class="left_bar_btn_icon left_bar_icon_1"></div>
+                    <div class="left_bar_btn_text">方案報價</div>
+                </div>
+            </div>
+            <div class="left_bar_btn">
+                <div>
+                    <div class="left_bar_btn_icon left_bar_icon_2"></div>
+                    <div class="left_bar_btn_text">自由配報價</div>
+                </div>
+            </div>
+            <div class="left_bar_btn">
+                <div>
+                    <div class="left_bar_btn_icon left_bar_icon_3"></div>
+                    <div class="left_bar_btn_text">報價明細</div>
+                </div>
+            </div>
+            <div class="left_bar_btn">
+                <div>
+                    <div class="left_bar_btn_icon left_bar_icon_4"></div>
+                    <div class="left_bar_btn_text">商品資訊</div>
+                </div>
+            </div>
+            <div class="left_bar_btn">
+                <div>
+                    <div class="left_bar_btn_icon left_bar_icon_5"></div>
+                    <div class="left_bar_btn_text">最新消息</div>
+                </div>
+            </div>
+            <div class="left_bar_clock" style="display:none;">
+                <span class="left_bar_time">01:50 PM</span>
+                <span class="left_bar_date">2021/11/23</span>
+            </div>
+        </div>
+        <div class="main_container">
+
+            <div class="block_container w100">
+                <div class="block_title">基本資料<a href="#" id="f1" accesskey="1" tabindex="-1" title="基本資料">::</a></div>
+                <script>
+                    document.addEventListener("keydown", function(event) {
+                        if (event.altKey) {
+                            let targetId = null;
+
+                            if (event.key === "1") targetId = "f1";
+                            if (event.key === "2") targetId = "f2";
+                            if (event.key === "3") targetId = "f3";
+                            if (event.key === "4") targetId = "f4";
+                            if (event.key === "5") targetId = "f5";
+                            if (event.key === "6") targetId = "f6";
+                            if (event.key === "7") targetId = "f7";
+                            if (event.key === "8") targetId = "f8";
+
+                            if (targetId) {
+                                let el = document.getElementById(targetId);
+                                el.focus();
+
+                                // 延遲滾動，確保 `accesskey` 的焦點設定完成後再滾動
+                                setTimeout(() => {
+                                    el.scrollIntoView({
+                                        behavior: "smooth",
+                                        block: "center"
+                                    });
+                                }, 50);
+                            }
+                        }
+                    });
+
+                </script>
+                <div class="block_main_form">
+                    <div class="ins_form">
+                        <div class="ins_form_input_container w40">
+                            <div class="ins_form_input_title">是否續保</div>
+                            <div class="ins_form_input">
+                                <div class="ins_form_input_tab w50">
+                                    <button class="ins_form_input_tab_btn set_middle">否</button>
+                                    <button class="ins_form_input_tab_btn set_middle active">是</button>
+                                </div>
+                                <div class="ins_form_dash set_middle">-</div>
+                                <input type="text" class="w50" placeholder="輸入續保號碼">
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ins_form_block_dashline"></div>
+                    <div class="ins_form">
+                        <div class="ins_form_input_container w40">
+                            <div class="ins_form_input_title">保期開始日</div>
+                            <div class="ins_form_input">
+                                <select class="w33 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇年</option>
+                                    <option value="1">2014(民103)年</option>
+                                </select>
+                                <div class="ins_form_dash set_middle">-</div>
+                                <select class="w33 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇月</option>
+                                    <option value="1">8月</option>
+                                </select>
+                                <div class="ins_form_dash set_middle">-</div>
+                                <select class="w33 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇日</option>
+                                    <option value="1">15號</option>
+                                </select>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_input_container w40">
+                            <div class="ins_form_input_title">保期到期日</div>
+                            <div class="ins_form_input">
+                                <select class="w33 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇年</option>
+                                    <option value="1">2014(民103)年</option>
+                                </select>
+                                <div class="ins_form_dash set_middle">-</div>
+                                <select class="w33 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇月</option>
+                                    <option value="1">8月</option>
+                                </select>
+                                <div class="ins_form_dash set_middle">-</div>
+                                <select class="w33 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇日</option>
+                                    <option value="1">15號</option>
+                                </select>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+
+                        <div class="ins_form_input_container w60">
+                            <div class="ins_form_input_title">是否抵押</div>
+                            <div class="ins_form_input">
+                                <div class="ins_form_input_tab w33">
+                                    <button class="ins_form_input_tab_btn set_middle">否</button>
+                                    <button class="ins_form_input_tab_btn set_middle active">是</button>
+                                </div>
+                                <div class="ins_form_dash set_middle">-</div>
+                                <select class="w33 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇銀行</option>
+                                    <option value="1">台新銀行</option>
+                                </select>
+                                <div class="ins_form_dash set_middle">-</div>
+                                <select class="w33 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇分行</option>
+                                    <option value="1">中正分行</option>
+                                </select>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_input_container w20">
+                            <div class="ins_form_input_title">經手人代號</div>
+                            <div class="ins_form_input">
+                                <input type="text" class="w100" placeholder="輸入代號">
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_input_container w20">
+                            <div class="ins_form_input_title">業務來源</div>
+                            <div class="ins_form_input">
+                                <input type="text" class="w100" placeholder="選擇來源">
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_input_container w20">
+                            <div class="ins_form_input_title">統計代號</div>
+                            <div class="ins_form_input">
+                                <select class="w100 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇代號</option>
+                                    <option value="1">123</option>
+                                </select>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_input_container w20">
+                            <div class="ins_form_input_title">登入證字號</div>
+                            <div class="ins_form_input">
+                                <input type="text" class="w100" placeholder="輸入號碼">
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block_container w100">
+                <div class="block_title">商火險方案選擇(必選)<a href="#" id="f2" accesskey="2" tabindex="-1" title="商火險方案選擇">::</a></div>
+                <div class="block_main_form">
+                    <div class="ins_form">
+                        <div class="ins_form_input_container w40">
+                            <div class="ins_form_input_title">是否續保</div>
+                            <div class="ins_form_input">
+                                <select class="w100 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇方案</option>
+                                    <option value="1">方案1</option>
+                                </select>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block_container w100">
+                <div class="block_title">標的物<a href="#" id="f3" accesskey="3" tabindex="-1" title="標的物">::</a></div>
+                <div class="block_main_form">
+                    <div class="ins_form">
+                        <div class="ins_form_input_container w100">
+                            <div class="ins_form_input_title">地址</div>
+                            <div class="ins_form_input">
+                                <select class="w20 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇縣市</option>
+                                    <option value="1">台北市</option>
+                                </select>
+                                <div class="ins_form_dash set_middle">-</div>
+                                <select class="w20 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇區域</option>
+                                    <option value="1">104中正區</option>
+                                </select>
+                                <div class="ins_form_dash set_middle">-</div>
+                                <input type="text" class="w60" placeholder="輸入後續地址">
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_input_container w20">
+                            <div class="ins_form_input_title">坪數</div>
+                            <div class="ins_form_input">
+                                <input type="text" class="w100" placeholder="輸入坪數">
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_input_container w20">
+                            <div class="ins_form_input_title">構造</div>
+                            <div class="ins_form_input">
+                                <select class="w100 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇構造</option>
+                                    <option value="1">構造</option>
+                                </select>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_input_container w20">
+                            <div class="ins_form_input_title">屋頂</div>
+                            <div class="ins_form_input">
+                                <select class="w100 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇屋頂</option>
+                                    <option value="1">屋頂</option>
+                                </select>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_input_container w20">
+                            <div class="ins_form_input_title">層樓(總樓層數)</div>
+                            <div class="ins_form_input">
+                                <input type="text" class="w100" placeholder="輸入樓層">
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_input_container w20">
+                            <div class="ins_form_input_title">該棟樓有無行號店鋪、工廠</div>
+                            <div class="ins_form_input">
+                                <div class="ins_form_input_tab w100">
+                                    <button class="ins_form_input_tab_btn set_middle">有</button>
+                                    <button class="ins_form_input_tab_btn set_middle active">無</button>
+                                </div>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_input_container w20">
+                            <div class="ins_form_input_title">投保標的物所在樓層</div>
+                            <div class="ins_form_input">
+                                <input type="text" class="w100" placeholder="輸入所在樓層">
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block_container w100">
+                <div class="block_title">商火方案設定(必選)<a href="#" id="f4" accesskey="4" tabindex="-1" title="商火方案設定">::</a></div>
+                <div class="block_main_form">
+                    <div class="ins_form">
+                        <div class="ins_form_input_container w33">
+                            <div class="ins_form_input_title">使用性質</div>
+                            <div class="ins_form_input">
+                                <select class="w100 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇性質</option>
+                                    <option value="1">性質</option>
+                                </select>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_input_container w33">
+                            <div class="ins_form_input_title">標的物1金額</div>
+                            <div class="ins_form_input">
+                                <select class="w50 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇金額</option>
+                                    <option value="1">1000萬</option>
+                                    <option value="1">其他</option>
+                                </select>
+                                <div class="ins_form_dash set_middle">-</div>
+                                <input type="text" class="w50" placeholder="輸入金額" disabled>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_input_container w33">
+                            <div class="ins_form_input_title">標的物2金額</div>
+                            <div class="ins_form_input">
+                                <select class="w50 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇金額</option>
+                                    <option value="1">1000萬</option>
+                                    <option value="1">其他</option>
+                                </select>
+                                <div class="ins_form_dash set_middle">-</div>
+                                <input type="text" class="w50" placeholder="輸入金額" disabled>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_input_container w33">
+                            <div class="ins_form_input_title">標的物3金額</div>
+                            <div class="ins_form_input">
+                                <select class="w50 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇金額</option>
+                                    <option value="1">1000萬</option>
+                                    <option value="1">其他</option>
+                                </select>
+                                <div class="ins_form_dash set_middle">-</div>
+                                <input type="text" class="w50" placeholder="輸入金額" disabled>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_input_container w33">
+                            <div class="ins_form_input_title">標的物4金額</div>
+                            <div class="ins_form_input">
+                                <select class="w50 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇金額</option>
+                                    <option value="1">1000萬</option>
+                                    <option value="1">其他</option>
+                                </select>
+                                <div class="ins_form_dash set_middle">-</div>
+                                <input type="text" class="w50" placeholder="輸入金額" disabled>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_input_container w33">
+                            <div class="ins_form_input_title">標的物5金額</div>
+                            <div class="ins_form_input">
+                                <select class="w50 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇金額</option>
+                                    <option value="1">1000萬</option>
+                                    <option value="1">其他</option>
+                                </select>
+                                <div class="ins_form_dash set_middle">-</div>
+                                <input type="text" class="w50" placeholder="輸入金額" disabled>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_input_container w100">
+                            <div class="ins_form_input_title">是否加選停業損失</div>
+                            <div class="ins_form_input">
+                                <div class="ins_form_input_tab w20">
+                                    <button class="ins_form_input_tab_btn set_middle">否</button>
+                                    <button class="ins_form_input_tab_btn set_middle active">是</button>
+                                </div>
+                                <div class="ins_form_dash set_middle">-</div>
+                                <select class="w80 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇方案內容</option>
+                                    <option value="1">方案1</option>
+                                </select>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_block_dashline"></div>
+                        <div class="ins_form_result_container">
+                            <div class="ins_form_result">火險自負額為每一事故/每一地址賠償金額：<span>10%</span>，最低<span>NT$--</span>元</div>
+                            <div class="ins_form_result">商火險保額共計：<span>NT$--</span>元</div>
+                            <div class="ins_form_result">商火險保費共計：<span>NT$--</span>元</div>
+                        </div>
+                        <div class="ins_form_note_container">
+                            <div class="ins_form_note">
+                                <i class="fas fa-exclamation-circle"></i>商火險保費已含爆炸險、煙燻險、罷工、暴動、民眾騷擾、惡意破壞行為險、航空器墜落、機動車輛碰撞險
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block_container w100">
+                <div class="block_title">附加險<a href="#" id="f5" accesskey="5" tabindex="-1" title="附加險">::</a></div>
+                <div class="block_main_form">
+                    <div class="block_main_form_title"><span class="cursor_pointer ins_describe_tip"><i class="far fa-clipboard"></i><span>第三責任保險</span><i class="fas fa-info-circle"></i></span></div>
+                    <div class="ins_form">
+                        <div class="ins_form_input_container w20">
+                            <div class="ins_form_input_title">選擇保額</div>
+                            <div class="ins_form_input">
+                                <select class="w100 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇保額</option>
+                                    <option value="1">保額</option>
+                                </select>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ins_form_result_container">
+                        <div class="ins_form_result">自負額：<span>NT$ --</span>元</div>
+                    </div>
+                    <div class="ins_form_block_dashline"></div>
+                    <div class="block_main_form_title"><span class="cursor_pointer ins_describe_tip"><i class="far fa-clipboard"></i><span>停業損失</span><i class="fas fa-info-circle"></i></span></div>
+                    <div class="ins_form">
+                        <div class="ins_form_input_container w20">
+                            <div class="ins_form_input_title">選擇保額</div>
+                            <div class="ins_form_input">
+                                <div class="ins_form_input_tab w100">
+                                    <button class="ins_form_input_tab_btn set_middle">否</button>
+                                    <button class="ins_form_input_tab_btn set_middle active">是</button>
+                                </div>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_input_container w20">
+                            <div class="ins_form_input_title">選擇保額</div>
+                            <div class="ins_form_input">
+                                <select class="w100 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇保額</option>
+                                    <option value="1">保額</option>
+                                </select>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block_container w100" style="display:none;">
+                <div class="block_title">附加條款<a href="#" id="f6" accesskey="6" tabindex="-1" title="附加條款">::</a></div>
+                <div class="block_main_form">
+                    <div class="ins_form_checkbox_list">
+                        <div class="ins_form_checkbox">
+                            <div class="checkbox_frame"><input type="checkbox" id="term_1" disabled></div>
+                            <label class="label_disabled" for="term_1">條款1</label>
+                        </div>
+                        <div class="ins_form_checkbox">
+                            <div class="checkbox_frame"><input type="checkbox" id="term_2" disabled checked></div>
+                            <label class="label_disabled" for="term_2">條款2</label>
+                        </div>
+                        <div class="ins_form_checkbox">
+                            <div class="checkbox_frame"><input type="checkbox" id="term_3"></div>
+                            <label class="label_pointer" for="term_3">條款3</label>
+                        </div>
+                        <div class="ins_form_checkbox">
+                            <div class="checkbox_frame"><input type="checkbox" id="term_4"></div>
+                            <label class="label_pointer" for="term_4">條款4</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block_container w100">
+                <div class="block_title">責任險<a href="#" id="f7" accesskey="7" tabindex="-1" title="責任險">::</a></div>
+                <div class="block_main_form">
+                    <div class="block_main_form_title"><i class="far fa-clipboard"></i><span>公共意外責任保險</span></div>
+                    <div class="ins_form">
+                        <div class="ins_form_input_container w20">
+                            <div class="ins_form_input_title">方案</div>
+                            <div class="ins_form_input">
+                                <select class="w100 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇方案</option>
+                                    <option value="1">方案</option>
+                                </select>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ins_form_block_dashline"></div>
+                    <div class="ins_form_plan_information">
+                        <div class="ins_form_plan_title">方案一<span>(新台幣元)</span></div>
+                        <div class="ins_form_plan_list">
+                            <div>每一個人體傷責任：<span>200萬元</span></div>
+                            <div>每一意外事故體傷責任：<span>1,000萬元</span></div>
+                            <div>每一意外事故財物損失責任：<span>200萬元</span></div>
+                            <div>本保險契約之最高賠償金額：<span>2,400萬元</span></div>
+                            <div>每一事故自負額：<span>2,500元</span></div>
+                        </div>
+                    </div>
+                    <div class="ins_form_result_container">
+                        <div class="ins_form_result">公共意外責任保險費共計：<span>NT$--</span>元</div>
+                    </div>
+                    <div class="ins_form_term_container">
+                        <div class="ins_form_term_title">
+                            固定附加條款
+                        </div>
+                        <ul class="ins_form_term_list">
+                            <li><a href="#">泰安產物恐怖主義除外附加條款</a></li>
+                            <li><a href="#">泰安產物電腦系統年序轉換除外不保附加條款</a></li>
+                            <li><a href="#">泰安產物公共意外責任保險懲罰性賠償責任除外附加條款</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block_container same_block_margin w100">
+                <div class="block_main_form">
+                    <div class="block_main_form_title"><i class="far fa-clipboard"></i><span>雇主意外責任保險</span></div>
+                    <div class="ins_form">
+                        <div class="ins_form_input_container w20">
+                            <div class="ins_form_input_title">是否選配</div>
+                            <div class="ins_form_input">
+                                <div class="ins_form_input_tab w100">
+                                    <button class="ins_form_input_tab_btn set_middle">否</button>
+                                    <button class="ins_form_input_tab_btn set_middle active">是</button>
+                                </div>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_input_container w20">
+                            <div class="ins_form_input_title">方案</div>
+                            <div class="ins_form_input">
+                                <select class="w100 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇方案</option>
+                                    <option value="1">方案</option>
+                                </select>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_input_container w20">
+                            <div class="ins_form_input_title">投保人數(至少3人)</div>
+                            <div class="ins_form_input">
+                                <input type="text" class="w100" placeholder="輸入人數">
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ins_form_block_dashline"></div>
+                    <div class="ins_form_plan_information">
+                        <div class="ins_form_plan_title">方案一<span>(新台幣元)</span></div>
+                        <div class="ins_form_plan_list">
+                            <div>每一個人體傷責任：<span>200萬元</span></div>
+                            <div>每一意外事故體傷責任：<span>1,000萬元</span></div>
+                            <div>每一意外事故財物損失責任：<span>200萬元</span></div>
+                            <div>本保險契約之最高賠償金額：<span>2,400萬元</span></div>
+                            <div>每一事故自負額：<span>2,500元</span></div>
+                        </div>
+                    </div>
+                    <div class="ins_form_result_container">
+                        <div class="ins_form_result">公共意外責任保險費共計：<span>NT$--</span>元</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block_container same_block_margin w100">
+                <div class="block_main_form">
+                    <div class="block_main_form_title"><i class="far fa-clipboard"></i><span>現金保險</span></div>
+                    <div class="ins_form">
+                        <div class="ins_form_input_container w20">
+                            <div class="ins_form_input_title">是否選配</div>
+                            <div class="ins_form_input">
+                                <div class="ins_form_input_tab w100">
+                                    <button class="ins_form_input_tab_btn set_middle">否</button>
+                                    <button class="ins_form_input_tab_btn set_middle active">是</button>
+                                </div>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                        <div class="ins_form_input_container w20">
+                            <div class="ins_form_input_title">方案</div>
+                            <div class="ins_form_input">
+                                <select class="w100 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇方案</option>
+                                    <option value="1">方案</option>
+                                </select>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ins_form_block_dashline"></div>
+                    <div class="ins_form_plan_information">
+                        <div class="ins_form_plan_title">方案一<span>(新台幣元)</span></div>
+                        <div class="ins_form_plan_list">
+                            <div>每一個人體傷責任：<span>200萬元</span></div>
+                            <div>每一意外事故體傷責任：<span>1,000萬元</span></div>
+                            <div>每一意外事故財物損失責任：<span>200萬元</span></div>
+                            <div>本保險契約之最高賠償金額：<span>2,400萬元</span></div>
+                            <div>每一事故自負額：<span>2,500元</span></div>
+                        </div>
+                    </div>
+                    <div class="ins_form_result_container">
+                        <div class="ins_form_result">公共意外責任保險費共計：<span>NT$--</span>元</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block_container w100">
+                <div class="block_title">佣金<a href="#" id="f8" accesskey="8" tabindex="-1" title="佣金">::</a></div>
+                <div class="block_main_form">
+                    <div class="ins_form">
+                        <div class="ins_form_input_container w40">
+                            <div class="ins_form_input">
+                                <select class="w100 select_arrow_icon">
+                                    <option style="color:#A4A4A4" value="null">選擇佣金%數</option>
+                                    <option value="1">5%</option>
+                                </select>
+                                <div class="ins_form_input_wrong_tip"><i class="fas fa-exclamation-circle" aria-hidden="true"></i>請輸入資料</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ins_total_result_container">
+                總保費試算共計：<span>NT$--</span>元
+            </div>
+            <div class="ins_form_finalcheck_note">
+                <div>警語提示警語提示警語提示警語提示警語提示警語提示警語提示警語提示警語提示警語提示警語提示警語提示</div>
+            </div>
+            <div class="ins_form_fin_btn_container" style="margin-top:20px;">
+                <div class="ins_form_fin_btn fill_btn set_middle">
+                    下一步
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--  訊息彈跳視窗 -->
+    <div class="pup_bg ins_describe_pup" style="display:none;">
+        <div class="pup_window_small">
+            <div class="pup_window_title set_middle">
+                說明標題
+                <div class="pup_window_close_container set_middle">
+                    <div class="pup_window_close set_middle"><i class="fas fa-times"></i></div>
+                </div>
+            </div>
+            <div class="pup_window_main">
+                <div class="pup_window_text">
+                    說明文字
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  訊息彈跳視窗end -->
+</body>
+
+</html>
