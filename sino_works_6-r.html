@@ -1,0 +1,602 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <meta name="author" content="Joe Wang">
+    <meta name="copyright" content="Joe Wang">
+    <link rel="author" href="Joe Wang">
+    <meta name="description" content="網站&APP產品規劃與視覺設計">
+    <meta itemprop="name" content="Joe Wang UI.UX作品集">
+    <meta itemprop="image" content="images/og-img.jpg">
+    <meta itemprop="description" content="網站&APP產品規劃與視覺設計">
+    <meta property="og:title" content="Joe Wang UI.UX作品集">
+    <meta property="og:image" content="images/og-img.jpg">
+    <meta property="og:description" content="網站&APP產品規劃與視覺設計">
+
+    <link rel="shoutcut icon" href="images/favicon-jw.ico" />
+    <title>投保網站-易用性測試</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+    <!-- 區塊浮現動作套件 http://kenwheeler.github.io/slick/ -->
+    <link href="css/theme-animate.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery.appear.min.js" type="text/javascript"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/theme.init.js"></script>
+    <!-- 區塊浮現動作套件 end -->
+
+    <!-- font icon -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
+    <!-- font icon end -->
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5C5BZ9NLJ0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-5C5BZ9NLJ0');
+
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NCFK3CZ');
+
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body class="body_page sino_works_6_pup">
+    <div class="pup_window_content" style="overflow:inherit;">
+        <div style="display:flex;">
+            <div class="h4 font_bold" style="margin-bottom:10px;">投保網站&nbsp;易用性測試</div>
+        </div>
+
+        <div class="pup_window_content_tab_container">
+            <div class="pup_window_content_tab pup_tab_btn h5 font_bold"><a href="#sino_tab_13" class="set_middle" id="sino_w6_tab1"><span>內容說明</span></a></div>
+            <div class="pup_window_content_tab pup_tab_btn h5 font_bold"><a href="#sino_tab_14" class="set_middle" id="sino_w6_tab2"><span>行動建議</span></a></div>
+            <div class="pup_window_content_tab pup_tab_btn h5 font_bold"><a href="#sino_tab_15" class="set_middle" id="sino_w6_tab3"><span>開發決策</span></a></div>
+        </div>
+        <div class="pup_window_tab_content_container">
+
+            <div id="sino_tab_13" class="pup_window_tab_content">
+                <div class="pup_window_content_part project_content_part" style="margin-bottom:0px;">
+                    <div class="pup_content">
+                        <div class="pup_window_content_part project_content_part" style="margin-bottom:30px;padding-left:0px;">
+                            <div class="pup_content">
+                                <div class="part_title h5 font_bold emphasize_text">前言</div>
+                                <div class="pup_text large_text">
+                                    此次測試目標為<span class="emphasize_text">了解使用者於網站完成投保，過程中的感受、內容理解和操作行為；</span>
+                                </div>
+                                <div class="pup_content_text" style="margin-top:10px;padding-left:0px;">
+                                    <div class="text_row">
+                                        <div class="text_item">
+                                            <div class="text_item_title h6">根據目標客群條件，制定招募問卷進行受測者招募。</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pup_window_content_part project_content_part" style="margin-bottom:30px;padding-left:0px;">
+                            <div class="pup_content">
+                                <div class="part_title h5 font_bold emphasize_text">測試前</div>
+                                <div class="pup_content_text" style="margin-top:10px;padding-left:0px;">
+                                    <div class="text_row">
+                                        <div class="text_item">
+                                            <ul class="text_item_list" style="list-style:decimal">
+                                                <li>讓受測者填寫問卷了解背景資料，並訪談相關產品的使用經驗和習慣。</li>
+                                                <li><span class="emphasize_text">向受測者描述故事情境。</span><br />如：您明天將搭乘「早上10點的航班，前往日本為期5天的自助旅遊行程」，因此以手機方式投保旅遊平安保險。<br />過程中您需要：<br />
+                                                    a.以保費試算方式，選擇價格最低的旅平險投保方案。<br />
+                                                    b.填寫投保資料時，變更您的會員電子信箱和通訊地址。<br />
+                                                    c.填寫投保資料時，指定身故受益人，完成受益人的資料填寫。<br />
+                                                    d.線上繳納保費時，選擇信用卡方式付款。
+                                                </li>
+                                                <li>mobile&nbsp;first為原則，優先以手機裝置進行測試。</li>
+                                                <li>設置好錄音、錄影器材或軟體設置。</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pup_window_content_part project_content_part" style="margin-bottom:30px;padding-left:0px;">
+                            <div class="pup_content">
+                                <div class="part_title h5 font_bold emphasize_text">測試後，彙整資料</div>
+                                <div class="pup_text large_text">
+                                    以其中一名受測者為範例。
+                                </div>
+                                <div class="pup_content_text" style="margin-top:10px;padding-left:0px;">
+                                    <div class="text_row">
+                                        <div class="text_item">
+                                            <div class="text_item_title h6 font_bold emphasize_text">一、人物誌</div>
+                                            <div class="pup_normal_text_small emphasize_text" style="margin-bottom:5px;">測試前填寫背景資料問卷、訪談相關產品的使用經驗和習慣。</div>
+                                            <div>
+                                                <picture>
+                                                    <source media="(max-width:768px)" srcset="images/sino_pic_14-1-768.png" />
+                                                    <source media="(max-width:1024px)" srcset="images/sino_pic_14-1-1024.png" />
+                                                    <img src="images/sino_pic_14-1.png" class="sino_pic_6">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pup_content_text" style="margin-top:30px;padding-left:0px;">
+                                    <div class="text_row">
+                                        <div class="text_item">
+                                            <div class="text_item_title h6 font_bold emphasize_text">二、操作紀錄</div>
+                                            <div class="pup_normal_text_small" style="margin-bottom:5px;">完成每一步驟和情境目標的量化紀錄。</div>
+                                            <div>
+                                                <picture>
+                                                    <source media="(max-width:768px)" srcset="images/sino_pic_14-23-768.png" />
+                                                    <source media="(max-width:1024px)" srcset="images/sino_pic_14-23-1024.png" />
+                                                    <img src="images/sino_pic_14-23.png" class="sino_pic_6">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pup_content_text" style="margin-top:30px;padding-left:0px;">
+                                    <div class="text_row">
+                                        <div class="text_item">
+                                            <div class="text_item_title h6 font_bold emphasize_text">三、步驟任務</div>
+                                            <div class="pup_normal_text_small" style="margin-bottom:5px;">ASQ方式詢問，量化每一步驟的操作感受。</div>
+                                            <div>
+                                                <picture>
+                                                    <source media="(max-width:768px)" srcset="images/sino_pic_14-24-768.png" />
+                                                    <source media="(max-width:1024px)" srcset="images/sino_pic_14-24-1024.png" />
+                                                    <img src="images/sino_pic_14-24.png" class="sino_pic_6">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pup_content_text" style="margin-top:30px;padding-left:0px;">
+                                    <div class="text_row">
+                                        <div class="text_item">
+                                            <div class="text_item_title h6 font_bold emphasize_text">四、使用旅程</div>
+                                            <div class="pup_normal_text_small" style="margin-bottom:5px;">測試回饋統整。</div>
+                                            <div>
+                                                <picture>
+                                                    <source media="(max-width:768px)" srcset="images/sino_pic_14-2-768.png" />
+                                                    <source media="(max-width:1024px)" srcset="images/sino_pic_14-2-1024.png" />
+                                                    <img src="images/sino_pic_14-2.png" class="sino_pic_6">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pup_content_text" style="margin-top:30px;padding-left:0px;">
+                                    <div class="text_row">
+                                        <div class="text_item">
+                                            <div class="text_item_title h6 font_bold emphasize_text">五、狩野分析</div>
+                                            <div class="pup_normal_text_small">詢問受測者，了解痛點屬性。</div>
+                                            <div class="pup_normal_text_small" style="margin-top:10px;margin-bottom:5px;">統整痛點</div>
+                                            <div>
+                                                <picture>
+                                                    <source media="(max-width:768px)" srcset="images/sino_pic_14-25-768.png" />
+                                                    <source media="(max-width:1024px)" srcset="images/sino_pic_14-25-1024.png" />
+                                                    <img src="images/sino_pic_14-25.png" class="sino_pic_6">
+                                                </picture>
+                                            </div>
+                                            <div class="pup_normal_text_small emphasize_text" style="margin-top:20px;margin-bottom:5px;">以狩野分析的形式詢問受測者。</div>
+                                            <div class="pup_normal_text_small" style="margin-top:10px;margin-bottom:5px;">
+                                                如果改善「A.痛點描述」，您覺得如何？
+                                                <ul class="text_item_list" style="list-style:decimal">
+                                                    <li style="margin-bottom:0px;">喜歡</li>
+                                                    <li style="margin-bottom:0px;">應該的</li>
+                                                    <li style="margin-bottom:0px;">無所謂</li>
+                                                    <li style="margin-bottom:0px;">能忍受</li>
+                                                    <li style="margin-bottom:0px;">不喜歡</li>
+                                                </ul>
+                                            </div>
+                                            <div class="pup_normal_text_small" style="margin-top:10px;margin-bottom:5px;">
+                                                如果不改善「A.痛點描述」，您覺得如何？
+                                                <ul class="text_item_list" style="list-style:decimal">
+                                                    <li style="margin-bottom:0px;">喜歡</li>
+                                                    <li style="margin-bottom:0px;">應該的</li>
+                                                    <li style="margin-bottom:0px;">無所謂</li>
+                                                    <li style="margin-bottom:0px;">能忍受</li>
+                                                    <li style="margin-bottom:0px;">不喜歡</li>
+                                                </ul>
+                                            </div>
+                                            <div class="pup_normal_text_small emphasize_text" style="margin-top:20px;margin-bottom:5px;">根據分析準則，分類各痛點屬性。</div>
+                                            <div>
+                                                <picture>
+                                                    <img src="images/sino_pic_14-20.png" class="sino_pic_6">
+                                                </picture>
+                                            </div>
+                                            <div class="pup_normal_text_small" style="margin-top:15px;margin-bottom:5px;">
+                                                <ul class="text_item_list" style="list-style:disc">
+                                                    <li style="margin-bottom:5px;">M：改善後，不太會增加使用滿意度；若不改善，會降低使用滿意度。</li>
+                                                    <li style="margin-bottom:5px;">O：改善後，會增加使用滿意度；若不改善，會降低使用滿意度。</li>
+                                                    <li style="margin-bottom:5px;">A：改善後，會增加使用滿意度；若不改善，不太會降低使用滿意度。</li>
+                                                    <li style="margin-bottom:5px;">I：改不改善，都不會影響使用滿意度。</li>
+                                                    <li style="margin-bottom:5px;">R：改善後，會降低使用滿意度；若不改善，會增加使用滿意度。</li>
+                                                    <li style="margin-bottom:5px;">Q：無法辨認。</li>
+                                                </ul>
+                                                <div>※當痛點有R、Q屬性，須向受測者重新確認是否有理解偏誤的地方。</div>
+                                            </div>
+                                            <div class="pup_normal_text emphasize_text font_bold" style="margin-top:20px;margin-bottom:5px;">受測者各痛點屬性。</div>
+                                            <div class="pup_normal_text_small">
+                                                <ul class="text_item_list" style="list-style:disc">
+                                                    <li>M屬性：痛點D、痛點E、痛點F。</li>
+                                                    <li>O屬性：痛點C。</li>
+                                                    <li>A屬性：痛點A、痛點B。</li>
+                                                    <li>I屬性：痛點G。</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pup_content_text" style="margin-top:30px;padding-left:0px;">
+                                    <div class="text_row" style="margin-top:20px;">
+                                        <div class="text_item">
+                                            <div class="text_item_title h6 font_bold emphasize_text">六、SUS易用性量表</div>
+                                            <div class="pup_normal_text_small" style="margin-bottom:5px;">測試後填寫，作為整體操作流程的量化資料。</div>
+                                            <div>
+                                                <picture>
+                                                    <source media="(max-width:430px)" srcset="images/sino_pic_14-4-430.png" />
+                                                    <img src="images/sino_pic_14-4.png" class="sino_pic_6">
+                                                </picture>
+                                            </div>
+                                            <ul class="text_item_list" style="list-style:disc;margin-top:10px;">
+                                                <li>非常不同意為1分依序到非常同意為5分。</li>
+                                                <li>正向題：第1,3,5,7,9題，將各題的分數減1，得到每題的分數，例如第一題原始分數是3分，減1後是2分。</li>
+                                                <li>負向題：第2,4,6,8,10題，用5減去每一題的分數，例如第二題是4，5減4等於1，這題分數就是1分。</li>
+                                                <li>最後將所有題目分數加總乘以2.5，得到SUS總分。</li>
+                                                <li class="emphasize_text">SUS分數均值在68分，以此標準作為網站能否上線之參考。</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pup_content_text" style="margin-top:30px;padding-left:0px;">
+                                    <div class="text_row" style="margin-top:20px;">
+                                        <div class="text_item">
+                                            <div class="text_item_title h6 font_bold emphasize_text">七、測試結果概要</div>
+                                            <div class="pup_normal_text_small" style="margin-bottom:5px;">將5位受訪者的測試資料統整成表格。</div>
+                                            <div>
+                                                <picture>
+                                                    <source media="(max-width:768px)" srcset="images/sino_pic_14-26-768.png" />
+                                                    <source media="(max-width:1024px)" srcset="images/sino_pic_14-26-1024.png" />
+                                                    <img src="images/sino_pic_14-26.png" class="sino_pic_6">
+                                                </picture>
+                                            </div>
+                                            <div class="pup_normal_text_small emphasize_text" style="margin-top:20px;">可做為後續易用性測試、競品分析比較使用。</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pup_window_content_end_tip_container">
+                            <span class="pup_window_content_end_tip">已瀏覽完&nbsp;<span class="emphasize_text">測試報告&nbsp;內容說明</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sino_tab_14" class="pup_window_tab_content">
+                <div class="pup_window_content_part project_content_part" style="margin-bottom:50px;padding-left:0px;">
+                    <div class="pup_content">
+                        <div class="part_title h5 font_bold emphasize_text">前言</div>
+                        <div class="pup_content_text" style="margin-top:10px;padding-left:0px;">
+                            <div class="text_row">
+                                <div class="text_item">
+                                    <div class="text_item_title h6">將相似痛點進行統整，提出行動建議。</div>
+                                    <div>
+                                        <picture>
+                                            <source media="(max-width:768px)" srcset="images/sino_pic_14-3-768.png" />
+                                            <source media="(max-width:1024px)" srcset="images/sino_pic_14-3-1024.png" />
+                                            <img src="images/sino_pic_14-3.png" class="sino_pic_6">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pup_window_content_part project_content_part" style="padding-left:0px;">
+                    <div class="pup_content">
+                        <div class="part_title h5 font_bold emphasize_text">A.痛點：</div>
+                        <div class="pup_text">
+                            <span class="emphasize_text">不清楚一些保險專有名詞和資料欄位用途，</span>所以不確定輸入的資料有沒有符合自己的投保狀況。
+                        </div>
+                        <div class="pup_normal_text" style="margin-top:10px;margin-bottom:5px;"><span class="h5 font_bold emphasize_text">A1.短期行動：</span><br />在保險專有名詞、資訊<span class="emphasize_text">附加「提示說明」圖示按鈕。</span><br /><span class="pup_normal_text_small">以使用者瀏覽的角度，使用「？」疑問圖示。</span></div>
+                        <div>
+                            <picture>
+                                <source media="(max-width:430px)" srcset="images/sino_pic_14-5-430.png" />
+                                <source media="(max-width:768px)" srcset="images/sino_pic_14-5-768.png" />
+                                <img src="images/sino_pic_14-5.png" class="sino_pic_6">
+                            </picture>
+                        </div>
+                        <div class="pup_normal_text" style="margin-top:20px;margin-bottom:5px;">點擊「提示說明」圖示按鈕，<span class="emphasize_text">顯示說明視窗，提供使用者瀏覽</span>。</div>
+                        <div>
+                            <picture>
+                                <source media="(max-width:430px)" srcset="images/sino_pic_14-7-430.png" />
+                                <source media="(max-width:768px)" srcset="images/sino_pic_14-7-768.png" />
+                                <img src="images/sino_pic_14-7.png" class="sino_pic_6">
+                            </picture>
+                        </div>
+                        <div class="pup_normal_text" style="margin-top:20px;"><span class="h5 font_bold emphasize_text">A2.中期行動：<br /></span>以Google&nbsp;NotebookLM模式為例。<br /><span class="pup_normal_text_small">Google的AI模型Gemini&nbsp;1.5&nbsp;Pro，能快速回覆使用者問題。</span></div>
+                        <div class="pup_normal_text" style="margin-top:20px;margin-bottom:5px;">將保險文件匯入NotebookLM。</div>
+                        <div>
+                            <picture>
+                                <img src="images/sino_pic_14-8.jpg" class="sino_pic_6">
+                            </picture>
+                        </div>
+                        <div class="pup_normal_text" style="margin-top:20px;margin-bottom:5px;">之後詢問AI問題時，其會完全照著使用者提供的資料回答問題，並附上出處。</div>
+                        <div>
+                            <picture>
+                                <img src="images/sino_pic_14-9.jpg" class="sino_pic_6">
+                            </picture>
+                        </div>
+                        <div class="pup_normal_text emphasize_text" style="margin-top:20px;margin-bottom:5px;">將Google&nbsp;NotebookLM對話機制串接至網站中。</div>
+                        <div>
+                            <picture>
+                                <source media="(max-width:430px)" srcset="images/sino_pic_14-10-430.jpg" />
+                                <source media="(max-width:768px)" srcset="images/sino_pic_14-10-768.jpg" />
+                                <img src="images/sino_pic_14-10.jpg" class="sino_pic_6">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pup_window_content_part project_content_part" style="padding-left:0px;">
+                    <div class="pup_content">
+                        <div class="part_title h5 font_bold emphasize_text">B.痛點：</div>
+                        <div class="pup_text">
+                            <span class="emphasize_text">同意保單條款的數量和步驟太多</span>，有想放棄投保的衝動。
+                        </div>
+                        <div style="margin-top:10px;">
+                            <picture>
+                                <source media="(max-width:430px)" srcset="images/sino_pic_14-11-430.png" />
+                                <source media="(max-width:768px)" srcset="images/sino_pic_14-11-768.png" />
+                                <img src="images/sino_pic_14-11.png" class="sino_pic_6">
+                            </picture>
+                        </div>
+                        <div class="pup_normal_text" style="margin-top:30px;margin-bottom:5px;"><span class="h5 font_bold emphasize_text">B.行動：將條款文件集中，讓使用者能一次瀏覽。</span><br /><span class="pup_normal_text_small">須向法務確認，此作法是否具同意條款的法律效力。</span></div>
+                        <div>
+                            <picture>
+                                <source media="(max-width:430px)" srcset="images/sino_pic_14-12-430.png" />
+                                <source media="(max-width:768px)" srcset="images/sino_pic_14-12-768.png" />
+                                <img src="images/sino_pic_14-12.png" class="sino_pic_6">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="pup_window_content_part project_content_part" style="padding-left:0px;">
+                    <div class="pup_content">
+                        <div class="part_title h5 font_bold emphasize_text">C.痛點：</div>
+                        <div class="pup_text">
+                            確認投保資料，<span class="emphasize_text">不知道該怎麼到下一步驟，<br/>要滑動到最下方才看到「繳納保險費用」按鈕。</span>
+                        </div>
+                        <div style="margin-top:10px;">
+                            <picture>
+                                <img src="images/sino_pic_14-13.png" class="sino_pic_6">
+                            </picture>
+                        </div>
+                        <div style="margin-top:20px;">
+                            <picture>
+                                <img src="images/sino_pic_14-14.png" class="sino_pic_6">
+                            </picture>
+                        </div>
+                        <div class="pup_normal_text" style="margin-top:30px;margin-bottom:5px;">
+                            <span class="h5 font_bold emphasize_text">C.行動：</span><br />於行動裝置版面(media1024px)時，<br /><span class="emphasize_text">將「繳納保險費用」按鈕設置浮動置底</span>(position:fixed;bottom:0px;)。
+                        </div>
+                        <div>
+                            <picture>
+                                <img src="images/sino_pic_14-15.png" class="sino_pic_6">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="pup_window_content_part project_content_part" style="padding-left:0px;display:none;">
+                    <div class="pup_content">
+                        <div class="part_title h5 font_bold emphasize_text">E.痛點：</div>
+                        <div class="pup_text">
+                            輸入付款資料，投保時不知道只能用永豐銀行的帳戶跟信用卡，如果帳戶沒錢、信用卡停用那該怎麼辦。
+                        </div>
+                        <div style="margin-top:10px;" style="margin-top:10px;">
+                            <picture>
+                                <source media="(max-width:430px)" srcset="images/sino_pic_10_6-430.png" />
+                                <source media="(max-width:768px)" srcset="images/sino_pic_10_6-768.png" />
+                                <img src="images/sino_pic_10_6.png" class="sino_pic_6">
+                            </picture>
+                        </div>
+                        <div class="part_title h5 font_bold emphasize_text" style="margin-top:20px;">F.痛點：</div>
+                        <div class="pup_text">
+                            投保身分驗證，手機無法使用或更換門號，前面不就白花時間輸入投保資料。
+                        </div>
+                        <div style="margin-top:10px;">
+                            <picture>
+                                <source media="(max-width:430px)" srcset="images/sino_pic_10_7-430.png" />
+                                <source media="(max-width:768px)" srcset="images/sino_pic_10_7-768.png" />
+                                <img src="images/sino_pic_10_7.png" class="sino_pic_6">
+                            </picture>
+                        </div>
+                        <div class="pup_normal_text" style="margin-top:30px;margin-bottom:5px;">
+                            <span class="h5 font_bold emphasize_text">E.F.行動：</span><br />進入申請投保流程前，顯示彈跳視窗說明申請須知。
+                        </div>
+                        <div>
+                            <picture>
+                                <source media="(max-width:430px)" srcset="images/sino_pic_14-16-430.png" />
+                                <source media="(max-width:768px)" srcset="images/sino_pic_14-16-768.png" />
+                                <img src="images/sino_pic_14-16.png" class="sino_pic_6">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="pup_window_content_part project_content_part" style="padding-left:0px;">
+                    <div class="pup_content">
+                        <div class="part_title h5 font_bold emphasize_text">D.痛點：</div>
+                        <div class="pup_text">
+                            投保身分驗證，<span class="emphasize_text">容易忽略「發送驗證碼」按鈕，先去點擊「確認驗證碼」按鈕。</span>
+                        </div>
+                        <div style="margin-top:10px;">
+                            <picture>
+                                <source media="(max-width:430px)" srcset="images/sino_pic_14-17-430.png" />
+                                <source media="(max-width:768px)" srcset="images/sino_pic_14-17-768.png" />
+                                <img src="images/sino_pic_14-17.png" class="sino_pic_6">
+                            </picture>
+                        </div>
+                        <div class="pup_normal_text" style="margin-top:30px;margin-bottom:5px;">
+                            <span class="h5 font_bold emphasize_text">D.行動：</span><br />「身分驗證」初始狀態，<span class="emphasize_text">隱藏「確認驗證碼」按鈕</span>。
+                        </div>
+                        <div>
+                            <picture>
+                                <source media="(max-width:430px)" srcset="images/sino_pic_14-18-430.png" />
+                                <source media="(max-width:768px)" srcset="images/sino_pic_14-18-768.png" />
+                                <img src="images/sino_pic_14-18.png" class="sino_pic_6">
+                            </picture>
+                        </div>
+                        <div class="pup_normal_text" style="margin-top:20px;margin-bottom:5px;"><span class="emphasize_text">點擊「發送驗證碼」按鈕後</span>，顯示「確認驗證碼」按鈕。</div>
+                        <div>
+                            <picture>
+                                <source media="(max-width:430px)" srcset="images/sino_pic_14-19-430.png" />
+                                <source media="(max-width:768px)" srcset="images/sino_pic_14-19-768.png" />
+                                <img src="images/sino_pic_14-19.png" class="sino_pic_6">
+                            </picture>
+                        </div>
+                        <div class="pup_window_content_end_tip_container">
+                            <span class="pup_window_content_end_tip">已瀏覽完&nbsp;<span class="emphasize_text">測試報告&nbsp;行動建議</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sino_tab_15" class="pup_window_tab_content">
+                <div class="pup_window_content_part project_content_part" style="margin-bottom:50px;padding-left:0px;">
+                    <div class="pup_content">
+                        <div class="part_title h5 font_bold emphasize_text">前言</div>
+                        <div class="pup_content_text" style="margin-top:10px;padding-left:0px;">
+                            <div class="text_row">
+                                <div class="text_item">
+                                    <div class="text_item_title h6">確立痛點屬性和行動建議後，與團隊成員討論開發事宜。</div>
+                                    <div class="pup_normal_text_small" style="margin-top:10px;margin-bottom:5px;">
+                                        <span class="emphasize_text">痛點屬性</span>
+                                        <ul class="text_item_list" style="list-style:disc">
+                                            <li>M屬性：痛點C</li>
+                                            <li>O屬性：痛點B</li>
+                                            <li>A屬性：痛點A</li>
+                                            <li>I屬性：痛點D</li>
+                                        </ul>
+                                    </div>
+                                    <div class="pup_normal_text_small" style="margin-top:10px;margin-bottom:5px;">
+                                        <span class="emphasize_text">行動建議</span>
+                                        <ul class="text_item_list" style="list-style:disc">
+                                            <li>行動A1：在保險專有名詞、資訊附加「提示說明」圖示按鈕，點擊後，顯示說明視窗，。</li>
+                                            <li>行動A2：以Google&nbsp;NotebookLM模式，將AI應答功能串接至網站，使用者能於視窗介面詢問而得到回答。</li>
+                                            <li>行動B：將條款文件集中，讓使用者能一次瀏覽。</li>
+                                            <li>行動C：確認投保資料頁，於行動裝置版面(media1024px)時，<br />將「繳納保險費用」按鈕設置浮動置底(position:fixed;bottom:0px;)。</li>
+                                            <li>行動D：頁面初始狀態隱藏「確認驗證碼」按鈕，點擊「發送驗證碼」按鈕後，顯示「確認驗證碼」按鈕。</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pup_window_content_part project_content_part" style="padding-left:0px;">
+                    <div class="pup_content">
+                        <div class="part_title h5 font_bold emphasize_text">一、依改善重要度，排列痛點屬性</div>
+                        <div class="pup_normal_text" style="margin-top:10px;"><span class="h5 font_bold emphasize_text">M&nbsp;&gt;&nbsp;O&nbsp;&gt;&nbsp;A&nbsp;&gt;&nbsp;I。</span></div>
+                    </div>
+                </div>
+                <div class="pup_window_content_part project_content_part" style="padding-left:0px;">
+                    <div class="pup_content">
+                        <div class="part_title h5 font_bold emphasize_text">二、依十字量表，分類行動建議</div>
+                        <div style="margin-top:10px;">
+                            <picture>
+                                <img src="images/sino_pic_14-21.png" class="sino_pic_6">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="pup_window_content_part project_content_part" style="padding-left:0px;">
+                    <div class="pup_content">
+                        <div class="part_title h5 font_bold emphasize_text">三、團隊綜合評估後，決定行動開發順序</div>
+                        <div class="pup_content_text" style="margin-top:0px;padding-left:0px;">
+                            <div class="text_row">
+                                <div class="text_item">
+                                    <div class="pup_normal_text_small" style="margin-top:10px;margin-bottom:5px;">
+                                        <ul class="text_item_list" style="list-style:decimal">
+                                            <li>行動C</li>
+                                            <li>行動B、行動D</li>
+                                            <li>行動A1</li>
+                                            <li>行動A2</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pup_window_content_part project_content_part" style="padding-left:0px;">
+                    <div class="pup_content">
+                        <div class="part_title h5 font_bold emphasize_text">四、完成開發後，執行第二次招募、易用性測試</div>
+                        <div class="pup_content_text" style="margin-top:10px;padding-left:0px;">
+                            <div class="text_row">
+                                <div class="text_item">
+                                    <div class="text_item_title h6 emphasize_text">二次測試要點</div>
+                                    <ul class="text_item_list" style="list-style:disc;">
+                                        <li>與前次測試對比，平均操作停頓點、時間、痛點是否有所減少。</li>
+                                        <li>SUS易用性量表分數是否增加</li>
+                                        <li>讓受測者了解產品改善的前後對比，詢問其想法和建議。</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pup_window_content_end_tip_container">
+                            <span class="pup_window_content_end_tip">已瀏覽完&nbsp;<span class="emphasize_text">測試報告&nbsp;行動決策</span></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript">
+    $(function() {
+        var showTab = 0;
+        var defaultLi = $('.sino_works_6_pup .pup_tab_btn').eq(showTab).addClass('active');
+        $(defaultLi.find('a').attr('href')).siblings().hide();
+        $('.sino_works_6_pup .pup_tab_btn').click(function() {
+            var $this = $(this),
+                clickTab = $this.find('a').attr('href');
+            $this.addClass('active').siblings('.active').removeClass('active');
+            $(clickTab).stop(false, true).fadeIn().siblings().hide();
+            return false;
+        }).find('a').focus(function() {
+            this.blur();
+        });
+    });
+
+</script>
+
+</html>
