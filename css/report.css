@@ -85,6 +85,22 @@ select::-ms-expand {
 
 /*scroll bar setting end*/
 /* reset end */
+.line_btn_small {
+    background-color: #ffffff;
+    width:107px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #187AD8;
+    border: 2px solid #187AD8;
+    border-radius: 99px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
 .line_btn {
     background-color: #ffffff;
     height: 45px;
@@ -98,6 +114,30 @@ select::-ms-expand {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.fill_btn {
+    background-color: #187AD8;
+    height: 65px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 99px;
+    margin: 0px 10px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.fill_btn:hover {
+    background-color: #2486e4;
+}
+
+.fill_btn:active {
+    background-color: #1472cc;
 }
 
 .line_btn_large {
@@ -121,13 +161,21 @@ select::-ms-expand {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    color: #187AD8;
+    color: #ffffff;
     border-radius: 99px;
     padding: 0 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.fill_btn_large:hover {
+    background-color: #2486e4;
+}
+
+.fill_btn_large:active {
+    background-color: #1472cc;
 }
 
 .btn_note {
@@ -151,6 +199,10 @@ select::-ms-expand {
     position: absolute;
 }
 
+.sub_btn_container {
+    position: absolute;
+}
+
 .work_infor .btn_container {
     bottom: 7px;
     left: 10px;
@@ -160,8 +212,107 @@ select::-ms-expand {
     bottom: 7px;
     left: 0px;
 }
+
 .gapp_work-5 .btn_container {
     bottom: 7px;
+    left: 0px;
+}
+
+.sino_work-4 .btn_container {
+    bottom: 0px;
+    left: 0px;
+}
+
+.sino_work-5 .btn_container {
+    bottom: 7px;
+    left: 0px;
+}
+
+.sino_work-6 .btn_container {
+    bottom: 7px;
+    left: 0px;
+}
+
+.sino_work-7 .btn_container {
+    bottom: 50px;
+    left: 0px;
+}
+
+.sino_work-8 .btn_container {
+    bottom: 0px;
+    left: 0px;
+}
+
+.sino_work-9 .btn_container {
+    bottom: 0px;
+    left: 0px;
+}
+
+.sino_work-10 .btn_container {
+    bottom: 0px;
+    left: 0px;
+}
+
+.sino_work-11 .btn_container {
+    bottom: 0px;
+    left: 0px;
+}
+
+.sino_work-11 .sub_btn_container {
+    top: 143px;
+    left: 40px;
+}
+
+.sino_work-12 .btn_container {
+    bottom: 10px;
+    left: 0px;
+}
+
+.sino_work-13 .btn_container {
+    bottom: 10px;
+    left: 0px;
+}
+
+.yulon_work-2 .btn_container {
+    bottom: 0px;
+    left: 0px;
+}
+
+.yulon_work-3 .btn_container {
+    bottom: 0px;
+    left: 0px;
+}
+
+.yulon_work-4 .btn_container {
+    bottom: 0px;
+    left: 0px;
+}
+
+.yulon_work-6 .btn_container {
+    bottom: 0px;
+    left: 0px;
+}
+.ollo_work_btn-1{
+    position:absolute;
+    bottom:96px;
+    left:503px;
+}
+.ollo_work_btn-2{
+    position:absolute;
+    bottom:96px;
+    right:0px;
+}
+.ollo_work_btn-3{
+    position:absolute;
+    bottom:7px;
+    left:503px;
+}
+.yuanta_work .btn_container {
+    bottom: 7px;
+    left: 0px;
+}
+.taian_work .btn_container {
+    bottom: -85px;
     left: 0px;
 }
 .page_dashed_line {
@@ -271,4 +422,145 @@ select::-ms-expand {
 .page_content_img {
     padding-left: 20px;
     position: relative;
+}
+
+.set_middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emphasize_text {
+    color: #CBA039;
+}
+
+.pup_bg_transparent {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+}
+
+.pup_close_btn {
+    width: 42px;
+    height: 42px;
+    background-size: 20px auto;
+    background-color: #ffffff;
+    background-image: url(../images/close_icon.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.pup_window_small {
+    width: 430px;
+    height: auto;
+    background-color: #232323;
+    color: #c5c5c5;
+    border-radius: 20px;
+    padding: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 102;
+    transform: translate(-50%, -50%);
+}
+
+.pup_window_small_ae {
+    width: auto;
+    height: calc(100vh - 50px);
+}
+
+.pup_window_small_ae {
+    width: auto;
+    height: calc(100vh - 50px);
+}
+
+.pup_window_small_ae .pup_window_small_content {
+    height: calc(100vh - 130px);
+    overflow: auto;
+}
+
+.pup_window_small_ae .pup_window_small_content::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+}
+
+.pup_window_small_ae .pup_window_small_content::-webkit-scrollbar-track {
+    background: #232323;
+    border-radius: 0px;
+}
+
+.pup_window_small_ae .pup_window_small_content::-webkit-scrollbar-thumb {
+    background: #7d7d7d;
+    border-radius: 10px;
+}
+
+.pup_window_small_ae .pup_window_small_content::-webkit-scrollbar-thumb:hover {
+    background: #7d7d7d;
+}
+
+.pup_window_small > .pup_close_btn {
+    width: 34px;
+    height: 34px;
+    background-size: 16px auto;
+}
+
+.pup_window_small_title_container {
+    border-bottom: 1px solid #3E3E3E;
+    padding-bottom: 15px;
+}
+
+.pup_window_small_title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.pup_window_small_subtitle {
+    font-size: 16px;
+    color: #c5c5c5;
+}
+
+.pup_window_small_content {
+    padding: 15px 5px 15px 5px;
+}
+
+.pup_window_small_option {
+    font-size: 18px;
+    padding: 10px 0px;
+    position: relative;
+}
+
+.pup_window_small_option img {
+    position: absolute;
+    top: 17px;
+    right: 3px;
+    transition-duration: 0.2s;
+}
+
+.pup_window_small_option:hover img {
+    right: -2px;
+}
+
+.pup_window_small_content a {
+    color: #c5c5c5;
+}
+
+.pup_window_small_content a:hover {
+    color: #187ad8;
+    text-decoration: none;
+}
+
+.pup_window_small_tip {
+    font-size: 14px;
+    padding-top: 15px;
+    border-top: 1px solid #3E3E3E;
 }
