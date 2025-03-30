@@ -1134,6 +1134,7 @@ select::-ms-expand {
 
     .desktop_none_tip .text {
         font-size: 20px;
+        line-height: 1.7;
     }
 
     .desktop_none_tip .note {
@@ -1148,7 +1149,7 @@ select::-ms-expand {
     }
 }
 
-@media (max-width:420px) {
+@media (max-width:540px) {
     .desktop_none_tip .title {
         font-size: 20px;
     }
