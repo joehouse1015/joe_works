@@ -46,27 +46,6 @@
         });
 
     </script>
-    <script>
-        $(document).ready(function() {
-            $(window).scroll(function(event) {
-                var scroll = $(window).scrollTop();
-                if (scroll > parseInt($(".p4_page").offset().top)) {
-                    $(".page_choice_btn_note").fadeIn(1500);
-                } else {
-                    $(".page_choice_btn_note").fadeOut(1500);
-                }
-            });
-        });
-
-    </script>
-    <script>
-        $(document).ready(function() {
-            $(".page_choice_btn_note_btn,.page_choice_btn_container").click(function() {
-                $(".page_choice_btn_note").addClass("display_none_all");
-            });
-        });
-
-    </script>
     <!-- Global site tag (gtag.js) - Google Analytics
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5C5BZ9NLJ0"></script>
     <script>
@@ -104,7 +83,27 @@
 </head>
 
 <body class="body">
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function(event) {
+                var scroll = $(window).scrollTop();
+                if (scroll > parseInt($(".p4_page").offset().top)) {
+                    $(".page_choice_btn_note").fadeIn(1500);
+                } else {
+                    $(".page_choice_btn_note").fadeOut(1500);
+                }
+            });
+        });
 
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".page_choice_btn_note_btn,.page_choice_btn_container").click(function() {
+                $(".page_choice_btn_note").addClass("display_none_all");
+            });
+        });
+
+    </script>
     <div class="page_choice_btn_note" style="display:none;">
         <div>點擊&nbsp;<span class="page_choice_btn_icon">≡</span>&nbsp;選單，可點選主題前往</div>
         <div class="page_choice_btn_note_btn" role="button"><span>了解，</span>關閉提示</div>
