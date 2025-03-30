@@ -295,20 +295,20 @@ select::-ms-expand {
 
 .ollo_work_btn-1 {
     position: absolute;
-    bottom: 96px;
-    left: 503px;
+    bottom: 93px;
+    left: 483px;
 }
 
 .ollo_work_btn-2 {
     position: absolute;
-    bottom: 96px;
+    bottom: 93px;
     right: 0px;
 }
 
 .ollo_work_btn-3 {
     position: absolute;
-    bottom: 7px;
-    left: 503px;
+    bottom: 3px;
+    left: 483px;
 }
 
 .yuanta_work .btn_container {
