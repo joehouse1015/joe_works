@@ -188,6 +188,115 @@
                         });
 
                     </script>
+                    <script>
+                        $(document).ready(function() {
+                            // 定義所有的標籤對應關係
+                            const tabPairs = [{
+                                    tab1: 'taian',
+                                    tab2: 'fubon'
+                                },
+                                {
+                                    tab1: 'hncb',
+                                    tab2: 'cathay'
+                                },
+                                {
+                                    tab1: 'skl',
+                                    tab2: 'globe'
+                                }
+                            ];
+
+                            // 為每組標籤設置點擊事件
+                            tabPairs.forEach(pair => {
+                                [pair.tab1, pair.tab2].forEach((tabName, index) => {
+                                    $(`.rect-tab_${tabName}`).click(function() {
+                                        const otherTab = index === 0 ? pair.tab2 : pair.tab1;
+
+                                        $(`.ins-trial-content_${tabName}`).show();
+                                        $(`.ins-trial-content_${otherTab}`).hide();
+                                        $(`.rect-tab_${tabName}`).addClass('active');
+                                        $(`.rect-tab_${otherTab}`).removeClass('active');
+                                    });
+                                });
+                            });
+                        });
+
+                    </script>
+
+                    <script>
+                        $(document).ready(function() {
+                            // 定義表單欄位配置
+                            const formConfig = {
+                                taian: {
+                                    selector: '.form-content-taian',
+                                    fieldCount: 5,
+                                    triggers: ['.rect-tab_taian', '.circle-tab_travel.unchecked']
+                                },
+                                fubon: {
+                                    selector: '.form-content-fubon',
+                                    fieldCount: 5,
+                                    triggers: ['.rect-tab_fubon']
+                                },
+                                hncb: {
+                                    selector: '.form-content-hncb',
+                                    fieldCount: 5,
+                                    triggers: ['.rect-tab_hncb', '.circle-tab_pet.unchecked']
+                                },
+                                cathay: {
+                                    selector: '.form-content-cathay',
+                                    fieldCount: 5,
+                                    triggers: ['.rect-tab_cathay']
+                                },
+                                skl: {
+                                    selector: '.form-content-skl',
+                                    fieldCount: 7,
+                                    triggers: ['.rect-tab_skl', '.circle-tab_annuity.unchecked']
+                                },
+                                globe: {
+                                    selector: '.form-content-globe',
+                                    fieldCount: 7,
+                                    triggers: ['.rect-tab_globe']
+                                }
+                            };
+
+                            // 初始化欄位參照
+                            const fields = {};
+                            Object.keys(formConfig).forEach(key => {
+                                fields[key] = [];
+                                for (let i = 0; i < formConfig[key].fieldCount; i++) {
+                                    fields[key][i] = $(`${formConfig[key].selector} .form-field_${i}`);
+                                }
+                            });
+
+                            // 處理點擊事件
+                            Object.keys(formConfig).forEach(currentForm => {
+                                formConfig[currentForm].triggers.forEach(trigger => {
+                                    $(trigger).click(function() {
+                                        // 新增當前表單的動畫類別
+                                        $(`${formConfig[currentForm].selector} .form-field`).addClass('works_item_add');
+
+                                        // 移除其他表單的所有動畫類別
+                                        Object.keys(formConfig).forEach(form => {
+                                            if (form !== currentForm) {
+                                                const maxDelay = formConfig[form].fieldCount - 1;
+                                                const classesToRemove = ['works_item_add']
+                                                    .concat([...Array(maxDelay + 1)].map((_, i) => `works_item_add_delay_${i}`))
+                                                    .join(' ');
+                                                $(`${formConfig[form].selector} .form-field`).removeClass(classesToRemove);
+                                            }
+                                        });
+
+                                        // 添加延遲動畫效果
+                                        setTimeout(function() {
+                                            fields[currentForm].forEach((field, index) => {
+                                                field.addClass(`works_item_add_delay_${index}`);
+                                            });
+                                        }, 100);
+                                    });
+                                });
+                            });
+                        });
+
+                    </script>
                     <!-- 旅平險 -->
                     <div class="ins-trial_travel">
                         <div class="rect-tab-section">
@@ -196,190 +305,6 @@
                                 <div class="rect-tab rect-tab_fubon h5_1" role="button">富邦產險</div>
                             </div>
                         </div>
-                        <script>
-                            $(document).ready(function() {
-                                $(".rect-tab_taian").click(function() {
-                                    $(".ins-trial-content_taian").show();
-                                    $(".ins-trial-content_fubon").hide();
-                                    $(".rect-tab_taian").addClass("active");
-                                    $(".rect-tab_fubon").removeClass("active");
-                                });
-                                $(".rect-tab_fubon").click(function() {
-                                    $(".ins-trial-content_fubon").show();
-                                    $(".ins-trial-content_taian").hide();
-                                    $(".rect-tab_fubon").addClass("active");
-                                    $(".rect-tab_taian").removeClass("active");
-                                });
-                            });
-
-                        </script>
-                        <script>
-                            $(document).ready(function() {
-                                var tfield0 = $(".form-content-taian .form-field_0"),
-                                    tfield1 = $(".form-content-taian .form-field_1"),
-                                    tfield2 = $(".form-content-taian .form-field_2"),
-                                    tfield3 = $(".form-content-taian .form-field_3"),
-                                    tfield4 = $(".form-content-taian .form-field_4")
-                                var ffield0 = $(".form-content-fubon .form-field_0"),
-                                    ffield1 = $(".form-content-fubon .form-field_1"),
-                                    ffield2 = $(".form-content-fubon .form-field_2"),
-                                    ffield3 = $(".form-content-fubon .form-field_3"),
-                                    ffield4 = $(".form-content-fubon .form-field_4")
-                                var hfield0 = $(".form-content-hncb .form-field_0"),
-                                    hfield1 = $(".form-content-hncb .form-field_1"),
-                                    hfield2 = $(".form-content-hncb .form-field_2"),
-                                    hfield3 = $(".form-content-hncb .form-field_3"),
-                                    hfield4 = $(".form-content-hncb .form-field_4")
-                                var cfield0 = $(".form-content-cathay .form-field_0"),
-                                    cfield1 = $(".form-content-cathay .form-field_1"),
-                                    cfield2 = $(".form-content-cathay .form-field_2"),
-                                    cfield3 = $(".form-content-cathay .form-field_3"),
-                                    cfield4 = $(".form-content-cathay .form-field_4")
-                                var sfield0 = $(".form-content-skl .form-field_0"),
-                                    sfield1 = $(".form-content-skl .form-field_1"),
-                                    sfield2 = $(".form-content-skl .form-field_2"),
-                                    sfield3 = $(".form-content-skl .form-field_3"),
-                                    sfield4 = $(".form-content-skl .form-field_4"),
-                                    sfield5 = $(".form-content-skl .form-field_5"),
-                                    sfield6 = $(".form-content-skl .form-field_6")
-                                var gfield0 = $(".form-content-globe .form-field_0"),
-                                    gfield1 = $(".form-content-globe .form-field_1"),
-                                    gfield2 = $(".form-content-globe .form-field_2"),
-                                    gfield3 = $(".form-content-globe .form-field_3"),
-                                    gfield4 = $(".form-content-globe .form-field_4"),
-                                    gfield5 = $(".form-content-globe .form-field_5"),
-                                    gfield6 = $(".form-content-globe .form-field_6")
-
-                                $(".rect-tab_taian,.circle-tab_travel.unchecked").click(function() {
-                                    $(".form-content-taian .form-field").addClass("works_item_add");
-
-                                    $(".form-content-fubon .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4");
-
-                                    $(".form-content-hncb .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4");
-
-                                    $(".form-content-cathay .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4");
-
-                                    $(".form-content-skl .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4 works_item_add_delay_5 works_item_add_delay_6");
-
-                                    $(".form-content-globe .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4 works_item_add_delay_5 works_item_add_delay_6");
-
-                                    setTimeout(function() {
-                                        tfield0.addClass("works_item_add_delay_0");
-                                        tfield1.addClass("works_item_add_delay_1");
-                                        tfield2.addClass("works_item_add_delay_2");
-                                        tfield3.addClass("works_item_add_delay_3");
-                                        tfield4.addClass("works_item_add_delay_4");
-                                    }, 100);
-                                });
-                                $(".rect-tab_fubon").click(function() {
-                                    $(".form-content-fubon .form-field").addClass("works_item_add");
-
-                                    $(".form-content-taian .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4");
-
-                                    $(".form-content-hncb .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4");
-
-                                    $(".form-content-cathay .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4");
-
-                                    $(".form-content-skl .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4 works_item_add_delay_5 works_item_add_delay_6");
-
-                                    $(".form-content-globe .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4 works_item_add_delay_5 works_item_add_delay_6");
-
-                                    setTimeout(function() {
-                                        ffield0.addClass("works_item_add_delay_0");
-                                        ffield1.addClass("works_item_add_delay_1");
-                                        ffield2.addClass("works_item_add_delay_2");
-                                        ffield3.addClass("works_item_add_delay_3");
-                                        ffield4.addClass("works_item_add_delay_4");
-                                    }, 100);
-                                });
-                                $(".rect-tab_hncb,.circle-tab_pet.unchecked").click(function() {
-                                    $(".form-content-hncb .form-field").addClass("works_item_add");
-
-                                    $(".form-content-taian .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4");
-
-                                    $(".form-content-fubon .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4");
-
-                                    $(".form-content-cathay .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4");
-
-                                    $(".form-content-skl .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4 works_item_add_delay_5 works_item_add_delay_6");
-
-                                    $(".form-content-globe .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4 works_item_add_delay_5 works_item_add_delay_6");
-
-                                    setTimeout(function() {
-                                        hfield0.addClass("works_item_add_delay_0");
-                                        hfield1.addClass("works_item_add_delay_1");
-                                        hfield2.addClass("works_item_add_delay_2");
-                                        hfield3.addClass("works_item_add_delay_3");
-                                        hfield4.addClass("works_item_add_delay_4");
-                                    }, 100);
-                                });
-                                $(".rect-tab_cathay").click(function() {
-                                    $(".form-content-cathay .form-field").addClass("works_item_add");
-
-                                    $(".form-content-taian .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4");
-
-                                    $(".form-content-fubon .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4");
-
-                                    $(".form-content-hncb .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4");
-
-                                    $(".form-content-skl .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4 works_item_add_delay_5 works_item_add_delay_6");
-
-                                    $(".form-content-globe .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4 works_item_add_delay_5 works_item_add_delay_6");
-                                    setTimeout(function() {
-                                        cfield0.addClass("works_item_add_delay_0");
-                                        cfield1.addClass("works_item_add_delay_1");
-                                        cfield2.addClass("works_item_add_delay_2");
-                                        cfield3.addClass("works_item_add_delay_3");
-                                        cfield4.addClass("works_item_add_delay_4");
-                                    }, 100);
-                                });
-                                $(".rect-tab_skl,.circle-tab_annuity.unchecked").click(function() {
-                                    $(".form-content-skl .form-field").addClass("works_item_add");
-
-                                    $(".form-content-taian .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4");
-
-                                    $(".form-content-fubon .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4");
-
-                                    $(".form-content-hncb .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4");
-
-                                    $(".form-content-cathay .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4");
-
-                                    $(".form-content-globe .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4 works_item_add_delay_5 works_item_add_delay_6");
-                                    setTimeout(function() {
-                                        sfield0.addClass("works_item_add_delay_0");
-                                        sfield1.addClass("works_item_add_delay_1");
-                                        sfield2.addClass("works_item_add_delay_2");
-                                        sfield3.addClass("works_item_add_delay_3");
-                                        sfield4.addClass("works_item_add_delay_4");
-                                        sfield5.addClass("works_item_add_delay_5");
-                                        sfield6.addClass("works_item_add_delay_6");
-                                    }, 100);
-                                });
-                                $(".rect-tab_globe").click(function() {
-                                    $(".form-content-globe .form-field").addClass("works_item_add");
-
-                                    $(".form-content-taian .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4");
-
-                                    $(".form-content-fubon .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4");
-
-                                    $(".form-content-hncb .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4");
-
-                                    $(".form-content-cathay .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4");
-
-                                    $(".form-content-skl .form-field").removeClass("works_item_add works_item_add_delay_0 works_item_add_delay_1 works_item_add_delay_2 works_item_add_delay_3 works_item_add_delay_4 works_item_add_delay_5 works_item_add_delay_6");
-                                    setTimeout(function() {
-                                        gfield0.addClass("works_item_add_delay_0");
-                                        gfield1.addClass("works_item_add_delay_1");
-                                        gfield2.addClass("works_item_add_delay_2");
-                                        gfield3.addClass("works_item_add_delay_3");
-                                        gfield4.addClass("works_item_add_delay_4");
-                                        gfield5.addClass("works_item_add_delay_5");
-                                        gfield6.addClass("works_item_add_delay_6");
-                                    }, 100);
-                                });
-                            });
-
-                        </script>
                         <!-- 泰安 -->
                         <div class="ins-trial-content_taian">
                             <div class="ins-trial-content">
