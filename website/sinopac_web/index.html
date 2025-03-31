@@ -171,26 +171,19 @@
                     </div>
                     <script>
                         $(document).ready(function() {
-                            $(".ins-travel").click(function() {
-                                $(".ins-trial_travel").show();
-                                $(".ins-trial_pet,.ins-trial_annuity").hide();
-                                $(".circle-tab_travel").addClass("active").removeClass("unchecked");
-                                $(".circle-tab_pet,.circle-tab_annuity").removeClass("active").addClass("unchecked");
-                                $(".subject_content").addClass("travel-bg").removeClass("pet-bg").removeClass("annuity-bg");
-                            });
-                            $(".ins-pet").click(function() {
-                                $(".ins-trial_pet").show();
-                                $(".ins-trial_travel,.ins-trial_annuity").hide();
-                                $(".circle-tab_pet").addClass("active").removeClass("unchecked");
-                                $(".circle-tab_travel,.circle-tab_annuity").removeClass("active").addClass("unchecked");
-                                $(".subject_content").addClass("pet-bg").removeClass("travel-bg").removeClass("annuity-bg");
-                            });
-                            $(".ins-annuity").click(function() {
-                                $(".ins-trial_annuity").show();
-                                $(".ins-trial_pet,.ins-trial_travel").hide();
-                                $(".circle-tab_annuity").addClass("active").removeClass("unchecked");
-                                $(".circle-tab_travel,.circle-tab_pet").removeClass("active").addClass("unchecked");
-                                $(".subject_content").addClass("annuity-bg").removeClass("pet-bg").removeClass("travel-bg");
+                            $(".circle-tab").click(function() {
+                                let type = $(this).find(".icon-frame").attr("class").split(" ").pop().replace("ins-", "");
+
+                                // 顯示對應內容，隱藏其他
+                                $(".ins-trial_travel, .ins-trial_pet, .ins-trial_annuity").hide();
+                                $(".ins-trial_" + type).show();
+
+                                // 更新 tab 樣式
+                                $(".circle-tab").removeClass("active").addClass("unchecked");
+                                $(this).addClass("active").removeClass("unchecked");
+
+                                // 更新背景樣式
+                                $(".subject_content").removeClass("travel-bg pet-bg annuity-bg").addClass(type + "-bg");
                             });
                         });
 
