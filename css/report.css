@@ -459,7 +459,7 @@ select::-ms-expand {
 }
 
 .page_content_img {
-    padding-left: 0px;
+    padding-left: 20px;
     position: relative;
 }
 
