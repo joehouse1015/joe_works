@@ -436,7 +436,11 @@ select::-ms-expand {
     margin: 0 auto;
     padding: 60px 0px 130px 0px;
 }
-
+.page_content-h {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 60px 0px 60px 0px;
+}
 .page_content_title {
     width: 100%;
     height: 36px;
