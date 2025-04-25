@@ -1,0 +1,2329 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <meta name="author" content="Joe Wang">
+    <meta name="copyright" content="Joe Wang">
+    <link rel="author" href="Joe Wang">
+    <meta name="description" content="網站&APP產品規劃與視覺設計">
+    <meta itemprop="name" content="Joe Wang UI.UX作品集">
+    <meta itemprop="image" content="images/og-img.jpg">
+    <meta itemprop="description" content="網站&APP產品規劃與視覺設計">
+    <meta property="og:title" content="Joe Wang UI.UX作品集">
+    <meta property="og:image" content="images/og-img.jpg">
+    <meta property="og:description" content="網站&APP產品規劃與視覺設計">
+
+    <link rel="shoutcut icon" href="images/favicon-jw.ico" />
+    <title>Joe Wang UI.UX作品集</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+    <!-- 區塊浮現動作套件 http://kenwheeler.github.io/slick/ -->
+    <link href="css/theme-animate.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery.appear.min.js" type="text/javascript"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/theme.init.js"></script>
+    <!-- 區塊浮現動作套件 end -->
+
+    <!-- font icon -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
+    <!-- font icon end -->
+
+    <script>
+        $(document).ready(function() {
+            $(".page_choice_btn_container").click(function() {
+                $(".page_menu_bg,.list_close_icon").fadeIn(1000);
+                $(".page_list_container").addClass("open_list");
+            });
+        });
+
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".list_close_icon,.page_list_item a,.page_menu_bg").click(function() {
+                $(".page_menu_bg,.list_close_icon").fadeOut(1000);
+                $(".page_list_container").removeClass("open_list");
+            });
+        });
+
+    </script>
+    <!-- ... 開啟第二層選單 ... -->
+    <script>
+        $(document).ready(function() {
+            $(".page_list_item .page_list_item_title").click(function() {
+                var clickIndex = $(".page_list_item .page_list_item_title").index(this);
+                $(".page_list_item_page_choice").removeClass("open");
+                $($(".page_list_item_page_choice")[clickIndex]).toggle().toggleClass("open");
+            });
+        });
+
+    </script>
+    <!-- ... 開啟第二層選單end ... -->
+    <script>
+        $(document).ready(function() {
+            $(".list_page_num").click(function() {
+                $(".pup_bg_transform").show().delay(200).fadeOut(1200);
+            });
+        });
+
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".page_choice_btn_note_btn,.page_choice_btn_container").click(function() {
+                $(".page_choice_btn_note").addClass("display_none_all");
+            });
+        });
+
+    </script>
+
+    <script>
+        $(document).ready(function() {
+
+            $(".sino_works_5_btn").click(function() {
+                $(".sino_works_5_pup,.pup_bg_transparent").fadeIn(500);
+            });
+            $(".sino_works_6_btn").click(function() {
+                $(".sino_works_6_pup,.pup_bg_transparent").fadeIn(500);
+            });
+            $(".prepare_works_btn").click(function() {
+                $(".prepare_works_pup,.pup_bg_transparent").fadeIn(500);
+            });
+            $(".yuanta_info_btn").click(function() {
+                $(".yuanta_info_pup,.pup_bg").fadeIn(500);
+            });
+            $(".taian_info_btn").click(function() {
+                $(".taian_info_pup,.pup_bg").fadeIn(500);
+            });
+            $(".ae_works_btn").click(function() {
+                $(".ae_works_pup,.pup_bg").fadeIn(500);
+            });
+            $(".taian_works_btn").click(function() {
+                $(".taian_works_pup,.pup_bg").fadeIn(500);
+            });
+            $(".pup_close_btn").click(function() {
+                $(".pup_window,.pup_bg,.pup_window_small,.pup_bg_transparent").hide();
+            });
+            $(".pup_bg_transparent").click(function() {
+                $(".pup_window_small,.pup_bg_transparent").hide();
+            });
+            $(".pup_bg").click(function() {
+                $(".pup_window_small,.pup_bg").hide();
+            });
+        });
+
+    </script>
+    <script>
+        $(document).ready(function() {
+            var giveevaluate = $(".give_evaluate_pup");
+            $(".give_evaluate_btn").click(function() {
+                $(".pup_bg_transparent,.give_evaluate_pup").show();
+                setTimeout(function() {
+                    giveevaluate.addClass("open-pup");
+                }, 100);
+            });
+            $(".pup_bg_transparent,.pup_close_icon").click(function() {
+                $(".give_evaluate_pup").removeClass("open-pup");
+                $(".pup_bg_transparent").hide();
+                setTimeout(function() {
+                    giveevaluate.hide();
+                }, 1100);
+            });
+            $(".done_evaluate_btn").click(function() {
+                $(".give_evaluate_pup").removeClass("open-pup");
+                setTimeout(function() {
+                    giveevaluate.hide();
+                }, 1100);
+            });
+        });
+
+    </script>
+    <script>
+        $(document).ready(function() {
+            var doneevaluate = $(".done_evaluate_pup");
+            $(".done_evaluate_btn").click(function() {
+                $(".done_evaluate_pup").show();
+                setTimeout(function() {
+                    doneevaluate.addClass("open-pup");
+                }, 1000);
+            });
+            $(".pup_bg_transparent,.close_done_evaluate_pup").click(function() {
+                $(".done_evaluate_pup").hide()
+                $(".pup_bg_transparent").hide();
+                setTimeout(function() {
+                    doneevaluate.removeClass("open-pup");
+                }, 100);
+            });
+        });
+
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5C5BZ9NLJ0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-5C5BZ9NLJ0');
+
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NCFK3CZ');
+
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body class="body">
+
+    <div class="pup_bg_transform" style="display:none;"></div>
+
+    <div id="menu_btn" class="page_choice_btn_container set_middle" role="button">
+
+    </div>
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function(event) {
+                var scroll = $(window).scrollTop();
+                var pagechoice = $(".page_choice_btn_container");
+                if (scroll > parseInt($(".p15_page").offset().top)) {
+                    $(".page_choice_btn_container").addClass("wobble-vertical active");
+                } else {
+                    $(".page_choice_btn_container").removeClass("wobble-vertical active");
+                }
+            });
+        });
+
+    </script>
+    <!-- 回饋瀏覽感受 -->
+    <div class="give_evaluate_btn_container">
+        <div class="give_evaluate_btn_close_container set_middle">
+            <div class="give_evaluate_btn_close set_middle"><img src="images/close_icon.png" alt="關閉回饋瀏覽感受按鈕"></div>
+        </div>
+        <div class="give_evaluate_btn set_middle">回饋瀏覽感受</div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function(event) {
+                var scroll = $(window).scrollTop();
+                if (scroll > parseInt($(".p4_page").offset().top)) {
+                    $(".give_evaluate_btn_container").fadeIn(1000).addClass("hvr-wobble-vertical pull_out_give_evaluate");
+                    $(".give_evaluate_btn").addClass("give_evaluate_btn_show");
+                } else {
+                    $(".give_evaluate_btn_container").hide().removeClass("hvr-wobble-vertical pull_out_give_evaluate");
+                }
+            });
+        });
+
+    </script>
+    <!-- 回饋瀏覽感受end -->
+
+    <div class="page_choice_btn_note" style="display:none;">
+        <div>點擊&nbsp;<span class="page_choice_btn_icon">≡</span>&nbsp;可以<br>開啟頁面選單</div>
+        <div class="page_choice_btn_note_btn" role="button"><span>了解，</span>關閉提示</div>
+    </div>
+
+    <!-- ... 選單 ... -->
+    <div id="menu_bg" class="page_menu_bg" style="display:none;">
+
+    </div>
+    <div class="page_list_container">
+        <div id="menu_close_btn" class="list_close_btn set_middle list_close_icon" role="button">
+
+        </div>
+        <div class="page_list">
+
+            <div class="page_list_item">
+                <span><a href="#p1">目錄</a></span>
+            </div>
+            <div class="page_list_item">
+                <div class="page_list_item_title" role="button">
+                    <span class="title">作者資料</span>
+                    <span><img src="images/page_list_item_arrow.png" class="page_list_item_arrow" alt="下拉選單"></span>
+                </div>
+                <div class="page_list_item_page_choice" style="display:none;">
+                    <div id="p3_menu"><a href="#p3">職能樣貌</a></div>
+                    <div id="p4_menu"><a href="#p4">專長技能</a></div>
+                    <div id="p5_menu"><a href="#p5">職涯與規劃</a></div>
+                </div>
+            </div>
+            <div class="page_list_item">
+                <div class="page_list_item_title" role="button">
+                    <span class="title">工作專案</span>
+                    <span><img src="images/page_list_item_arrow.png" class="page_list_item_arrow" alt="下拉選單"></span>
+                </div>
+                <div class="page_list_item_page_choice">
+                    <div id="p7_menu"><a href="#p7">永豐銀行&nbsp;網路投保網站</a></div>
+                    <div id="p8_menu"><a href="#p8">元大期貨&nbsp;槓桿交易商官網</a></div>
+                    <div id="p9_menu"><a href="#p9">裕隆集團&nbsp;2B員工APP&amp;管理後台</a></div>
+                    <div id="p10_menu"><a href="#p10">金融服務商&nbsp;投資交易APP</a></div>
+                    <div id="p11_menu"><a href="#p11">泰安產物&nbsp;商品行銷、網站維運</a></div>
+                </div>
+            </div>
+            <div class="page_list_item">
+                <div class="page_list_item_title" role="button">
+                    <span class="title">外部專案</span>
+                    <span><img src="images/page_list_item_arrow.png" class="page_list_item_arrow" alt="下拉選單"></span>
+                </div>
+                <div class="page_list_item_page_choice">
+                    <div id="p13_menu"><a href="#p13">共享交通&nbsp;市場開發UXR研究</a></div>
+                </div>
+            </div>
+            <div class="page_list_item">
+                <div class="page_list_item_title" role="button">
+                    <span class="title">總結</span>
+                    <span><img src="images/page_list_item_arrow.png" class="page_list_item_arrow" alt="下拉選單"></span>
+                </div>
+                <div class="page_list_item_page_choice" style="display:none;">
+                    <div id="p15_menu"><a href="#p15">專案能力描述</a></div>
+                    <div id="p16_menu"><a href="#p16">聯絡作者</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ... 選單end ... -->
+
+    <!-- ... p0 封面 ... -->
+    <div class="page_area">
+        <div class="page_content">
+            <div class="work_title_img_container set_middle appear-animation" data-appear-animation="fadeInUp">
+                <picture>
+                    <source media="(max-width:768px)" srcset="images/work_title_img_mobile_768.png" />
+                    <source media="(max-width:960px)" srcset="images/work_title_img_960.png" />
+                    <source media="(max-width:1440px)" srcset="images/work_title_img_1440.png" />
+                    <img src="images/work_title_img.png" alt="網站&APP產品規劃與視覺設計">
+                </picture>
+            </div>
+        </div>
+        <div class="page_footer">
+            <div class="page_footer_left_part appear-animation shake_item" style="align-items:center;">
+                <img src="images/page_operate_tip_img_2.svg" class="page_operate_tip_img" alt="向下箭頭圖示">
+                <span class="large_text">往下方瀏覽內容</span>
+            </div>
+            <div class="page_footer_right_part h3">
+                <span class="font_bold">共16頁</span>
+            </div>
+        </div>
+    </div>
+    <!-- ... p0 封面end ... -->
+
+    <!-- ... p1 目錄 ... -->
+    <div id="p1" class="page_area">
+        <div class="page_content">
+            <div class="page_num_container">
+                第1頁<img src="images/page_num_line_img.png" class="page_num_line_img" alt="區隔線"><span style="color:#7D7D7D">UI.UX作品集 ‧ 共16頁</span>
+            </div>
+            <div class="page_content_container">
+                <div class="page_content_title">
+                    <div class="page_content_title_name">目錄</div>
+                    <div class="page_content_title_line"></div>
+                </div>
+                <div class="page_catalog_container">
+                    <div class="page_catalog_part">
+                        <div class="page_catalog_part_title h3">作者資料</div>
+                        <ul class="page_catalog_part_list">
+                            <li>
+                                <div class="list_page_name">職能樣貌</div>
+                                <div class="list_line"></div><a id="p3_list" href="#p3" class="list_page_num appear-animation" data-appear-animation="fadeInLeft">3</a>
+                            </li>
+                            <div class="list_note_container">
+                                <div class="list_note_tag" style="color:#232323;">專案成員對我的看法</div>
+                            </div>
+                            <li>
+                                <div class="list_page_name">專長技能</div>
+                                <div class="list_line"></div><a id="p4_list" href="#p4" class="list_page_num appear-animation" data-appear-animation="fadeInLeft">4</a>
+                            </li>
+                            <li>
+                                <div class="list_page_name">職涯與規劃</div>
+                                <div class="list_line"></div><a id="p5_list" href="#p5" class="list_page_num appear-animation" data-appear-animation="fadeInLeft">5</a>
+                            </li>
+                            <div class="list_note_container">
+                                <div class="list_note_tag" style="color:#232323;">產品規劃-案例分享</div>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="page_catalog_part">
+                        <div class="page_catalog_part_title h3">工作專案</div>
+                        <ul class="page_catalog_part_list">
+                            <li>
+                                <div class="list_page_name">永豐銀行&nbsp;網路投保網站</div>
+                                <div class="list_line"></div><a id="p7_list" href="#p7" class="list_page_num appear-animation" data-appear-animation="fadeInLeft">7</a>
+                            </li>
+                            <div class="list_note_container">
+                                <div class="list_note_tag" style="color:#232323;">產品規劃&nbsp;→&nbsp;介面設計、網站原型&nbsp;→&nbsp;測試、維運提案</div>
+                            </div>
+                            <li>
+                                <div class="list_page_name">元大期貨&nbsp;槓桿交易商官網</div>
+                                <div class="list_line"></div><a id="p8_list" href="#p8" class="list_page_num appear-animation" data-appear-animation="fadeInLeft">8</a>
+                            </li>
+                            <div class="list_note_container">
+                                <div class="list_note_tag">官網視覺、介面設計</div>
+                            </div>
+                            <li>
+                                <div class="list_page_name">裕隆集團&nbsp;<br>員工APP&amp;管理後台</div>
+                                <div class="list_line"></div><a id="p9_list" href="#p9" class="list_page_num appear-animation" data-appear-animation="fadeInLeft">9</a>
+                            </li>
+                            <div class="list_note_container">
+                                <div class="list_note_tag" style="color:#232323;">2B產品規劃(強化開發價值)&nbsp;→&nbsp;前、後台介面設計</div>
+                            </div>
+                            <li>
+                                <div class="list_page_name">金融服務商&nbsp;<br>投資交易APP</div>
+                                <div class="list_line"></div><a id="p10_list" href="#p10" class="list_page_num appear-animation" data-appear-animation="fadeInLeft">10</a>
+                            </li>
+                            <div class="list_note_container">
+                                <div class="list_note_tag" style="color:#232323;">2C產品提案(強化營利循環)&nbsp;→&nbsp;介面設計</div>
+                            </div>
+                            <li>
+                                <div class="list_page_name">泰安產物&nbsp;商品行銷、網站維運</div>
+                                <div class="list_line"></div><a id="p11_list" href="#p11" class="list_page_num appear-animation" data-appear-animation="fadeInLeft">11</a>
+                            </li>
+                            <div class="list_note_container">
+                                <div class="list_note_tag">視覺設計&nbsp;→&nbsp;網頁原型</div>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="page_catalog_part">
+                        <div class="page_catalog_part_title h3">外部專案</div>
+                        <ul class="page_catalog_part_list">
+                            <li>
+                                <div class="list_page_name">共享交通&nbsp;市場開發UXR研究</div>
+                                <div class="list_line"></div><a id="p13_list" href="#p13" class="list_page_num appear-animation" data-appear-animation="fadeInLeft">13</a>
+                            </li>
+                            <div class="list_note_container">
+                                <div class="list_note_tag">定義議題→訪談調查→論述洞見</div>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="page_catalog_part">
+                        <div class="page_catalog_part_title h3">總結</div>
+                        <ul class="page_catalog_part_list">
+                            <li>
+                                <div class="list_page_name">專案能力描述</div>
+                                <div class="list_line"></div><a id="p15_list" href="#p15" class="list_page_num appear-animation" data-appear-animation="fadeInLeft">15</a>
+                            </li>
+                            <li>
+                                <div class="list_page_name">聯絡作者</div>
+                                <div class="list_line"></div><a id="p16_list" href="#p16" class="list_page_num appear-animation" data-appear-animation="fadeInLeft">16</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page_footer">
+            <div class="page_footer_left_part appear-animation" data-appear-animation="shake" style="align-items:center;">
+                <img src="images/page_operate_tip_img_3.png" class="page_operate_tip_img" alt="點擊圖示">
+                <span class="large_text">點擊頁碼可前往該主題頁面</span>
+            </div>
+            <div class="page_footer_right_part h3">
+
+            </div>
+        </div>
+    </div>
+    <!-- ... p1 目錄end ... -->
+
+    <!-- ... p2 ... -->
+    <div class="page_area p2_page">
+        <div class="page_content">
+            <div class="page_num_container">
+                第2頁<img src="images/page_num_line_img.png" class="page_num_line_img" alt="區隔線"><span style="color:#7D7D7D">UI.UX作品集 ‧ 共16頁</span>
+            </div>
+            <div class="page_title_img_container set_middle">
+                <div class="appear-animation" data-appear-animation="fadeInUp">
+                    <div class="page_title_container">
+                        作者資料
+                    </div>
+                    <div class="page_subtitle_container h3 set_middle" style="margin-top:25px;">
+                        <div>
+                            職能樣貌
+                        </div>
+                        <div>
+                            <picture>
+                                <source media="(max-width:540px)" srcset="images/page_subtitle_arrow_540.png" />
+                                <img src="images/page_subtitle_arrow.png" alt="右箭頭">
+                            </picture>
+                        </div>
+                        <div>
+                            專長技能
+                        </div>
+                        <div>
+                            <picture>
+                                <source media="(max-width:540px)" srcset="images/page_subtitle_arrow_540.png" />
+                                <img src="images/page_subtitle_arrow.png" alt="右箭頭">
+                            </picture>
+                        </div>
+                        <div>
+                            職涯與規劃
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page_footer">
+        <div class="page_footer_left_part">
+
+        </div>
+        <div class="page_footer_right_part h3">
+            <span class="font_bold">共3頁</span>
+        </div>
+    </div>
+    <!-- ... p2 end ... -->
+
+    <!-- ... p3 ... -->
+    <div id="p3" class="page_area">
+        <div class="page_content">
+            <div class="page_num_container">
+                第3頁<img src="images/page_num_line_img.png" class="page_num_line_img" alt="區隔線"><span style="color:#7D7D7D">UI.UX作品集 ‧ 共16頁</span>
+            </div>
+            <div class="page_content_container">
+                <div id="p3_title" class="page_content_title">
+                    <div class="page_content_title_name page_content_title_name_4word">職能樣貌</div>
+                    <div class="page_content_title_line"></div>
+                </div>
+
+                <div class="info_personal_container">
+                    <div class="info_personal_pic"></div>
+                    <div class="info_personal_describe appear-animation" data-appear-animation="fadeInUp">
+                        <div class="info_personal_name h3 font_bold">王俊淵 Joe Wang<span class="large_text display_none_768">76/10/15</span></div>
+                        <div class="info_personal_call h2 font_bold">UI.UX設計師<span>&nbsp;‧&nbsp;</span><br>產品規劃到維運迭代</div>
+                        <div class="info_personal_detail display_none_768">
+                            <ul>
+                                <li>有步驟方法，將需求轉化數位產品</li>
+                                <li>近三年專案，客戶皆集團級企業</li>
+                                <li>觀察資料脈絡，提出產品策略</li>
+                                <li>分析產業面向，設計視覺風格</li>
+                                <li>熟易用、易讀原則，實踐產品介面</li>
+                                <li>懂前後端運作，與工程師溝通順暢</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="info_personal_detail display_block_768 appear-animation" data-appear-animation="fadeInUp">
+                    <ul>
+                        <li>有步驟方法，將需求轉化數位產品</li>
+                        <li>近三年專案，客戶皆集團級企業</li>
+                        <li>觀察資料脈絡，提出產品策略</li>
+                        <li>分析產業面向，設計視覺風格</li>
+                        <li>熟易用、易讀原則，實踐產品介面</li>
+                        <li>懂前後端運作，與工程師溝通順暢</li>
+                    </ul>
+                </div>
+                <a href="info_attribute_tell.html">
+                    <div class="info_attribute_tell_btn appear-animation" data-appear-animation="fadeInUp" role="button">專案合作成員對我的看法</div>
+                </a>
+                <div class="info_attribute_container">
+                    <div class="info_attribute_title h2 font_bold">工作特質</div>
+                    <div class="info_attribute_item item_row_1">
+                        <div>
+                            <div class="info_attribute_item_title">
+                                <img src="images/info_attribute_item_title_icon_3.png" alt="彈性靈活圖示">
+                                <div class="font_bold emphasize_text">資料統整</div>
+                            </div>
+                            <div class="info_attribute_item_text">
+                                <span>
+                                    能依共通性、使用目的分類、整合資料。
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="info_attribute_item_title">
+                                <img src="images/info_attribute_item_title_icon_2.png" alt="高學習力圖示">
+                                <div class="font_bold emphasize_text">視覺敏銳</div>
+                            </div>
+                            <div class="info_attribute_item_text">
+                                <span>
+                                    精準檢視畫面排版、配色和風格適配度。
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info_attribute_item item_row_2">
+                        <div>
+                            <div class="info_attribute_item_title">
+                                <img src="images/info_attribute_item_title_icon_1.png" alt="邏輯思維圖示">
+                                <div class="font_bold emphasize_text">邏輯思維</div>
+                            </div>
+                            <div class="info_attribute_item_text">
+                                <span>
+                                    有能力觀察資料，推演轉化成商業洞見。
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="info_attribute_item_title">
+                                <img src="images/info_attribute_item_title_icon_4.png" alt="樂於合作圖示">
+                                <div class="font_bold emphasize_text">樂於合作</div>
+                            </div>
+                            <div class="info_attribute_item_text">
+                                <span>
+                                    能與成員互動溝通，達成共識完成目標。
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="info_attribute_item_title">
+                                <img src="images/info_attribute_item_title_icon_5.png" alt="嚴謹負責圖示">
+                                <div class="font_bold emphasize_text">嚴謹負責</div>
+                            </div>
+                            <div class="info_attribute_item_text">
+                                <span>
+                                    專注完善成果細節，遵守交付時程。
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page_footer">
+        <div class="page_footer_left_part h4">
+            <span class="emphasize_text font_bold">作者資料</span>
+        </div>
+        <div class="page_footer_right_part">
+            <div class="catalog_part_page_num">
+                <div class="large_text set_middle active"><span>1</span></div>
+                <div class="large_text set_middle"><span>2</span></div>
+                <div class="large_text set_middle"><span>3</span></div>
+            </div>
+        </div>
+    </div>
+    <!-- ... p3 end ... -->
+
+    <!-- ... p4 ... -->
+    <div id="p4" class="page_area p4_page">
+        <div class="page_content">
+            <div class="page_num_container">
+                第4頁<img src="images/page_num_line_img.png" class="page_num_line_img" alt="區隔線"><span style="color:#7D7D7D">UI.UX作品集 ‧ 共16頁</span>
+            </div>
+            <div class="page_content_container">
+                <div class="page_content_title">
+                    <div class="page_content_title_name">專長技能</div>
+                    <div class="page_content_title_line"></div>
+                </div>
+                <div class="info_skill_part">
+                    <div class="info_skill_title h3 font_bold">數位產品開發流程</div>
+                    <div class="info_skill_item">
+                        <div>
+                            <div class="info_skill_item_title h5 font_bold">內容規劃</div>
+                            <div class="info_skill_item_text">
+                                透過桌面研究、訪談使用者，依需求情境轉化成資訊架構和操作流程，製作線框稿說明功能機制使開發有所依據、對焦共識。
+                            </div>
+                            <div class="info_skill_item_pic">
+                                <img src="images/info_skill_pic_11.png" alt="VI">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="info_skill_item_title h5 font_bold">原型製作</div>
+                            <div class="info_skill_item_text">
+                                運用視覺理論於專案實作，對產業類型規劃合適風格，並延伸至網站、APP介面設計，根據易用性原則完善操作體驗，並提供設計規範文件。
+                            </div>
+                            <div class="info_skill_item_note" style="display:none;">*工作專案有應用說明</div>
+                            <div class="info_skill_item_pic">
+                                <img src="images/info_skill_pic_12.png" alt="UI">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="info_skill_item_title h5 font_bold">維運更迭</div>
+                            <div class="info_skill_item_text">
+                                對目標客群進行易用性測試，並統整報告給予行動建議，和團隊討論執行成本和開發順序。
+                            </div>
+                            <div class="info_skill_item_note" style="display:none;">*工作專案有應用說明</div>
+                            <div class="info_skill_item_pic">
+                                <img src="images/info_skill_pic_13.png" alt="UX">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info_skill_container">
+                    <div class="info_skill_part">
+                        <div id="p4_title" class="info_skill_title h3 font_bold">軟體操作</div>
+                        <div class="info_skill_item">
+                            <div class="item_check_padding">
+                                <div class="info_skill_item_title h5 font_bold">Photoshop</div>
+                                <div class="info_skill_item_text">
+                                    熟悉軟體功能，配合圖庫網站和AI繪圖，有效率完成視覺設計。
+                                </div>
+                                <a href="ps_works.html">
+                                    <div class="info_skill_item_check font_bold appear-animation ps_works_btn" data-appear-animation="fadeInUp">觀看相關作品</div>
+                                </a>
+                                <div class="info_skill_item_pic">
+                                    <img src="images/info_skill_pic_1-2.png" alt="Photoshop logo">
+                                </div>
+                            </div>
+                            <div class="item_check_padding">
+                                <div class="info_skill_item_title h5 font_bold">Illustrator</div>
+                                <div class="info_skill_item_text">
+                                    能製作扁平風格的插畫素材、圖標Icon、Logo，轉為SVG圖檔用於介面設計。
+                                </div>
+                                <a href="illustrator_works.html">
+                                    <div class="info_skill_item_check font_bold appear-animation illustrator_works_btn" data-appear-animation="fadeInUp">觀看相關作品</div>
+                                </a>
+                                <div class="info_skill_item_pic">
+                                    <img src="images/info_skill_pic_2-2.png" alt="Illustrator logo">
+                                </div>
+                            </div>
+                            <div style="margin-top:15px;">
+                                <div class="info_skill_item_title h5 font_bold">Figma</div>
+                                <div class="info_skill_item_text">
+                                    4~5年製作網站、APP介面的使用經驗，懂Auto Layout、Component、Library、Prototype設置。
+                                </div>
+                                <div class="info_skill_item_note" style="display:none;">*工作專案有成果展示</div>
+                                <div class="info_skill_item_pic">
+                                    <img src="images/info_skill_pic_3-2.png" alt="Figma logo">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="info_skill_item_title h5 font_bold">After effects</div>
+                                <div class="info_skill_item_text">
+                                    可展示產品原型的介面動態效果。
+                                </div>
+                                <div class="info_skill_item_note" style="display:none;">*工作專案有成果展示</div>
+                                <div class="info_skill_item_pic">
+                                    <img src="images/info_skill_pic_14.png" alt="AE logo">
+                                </div>
+                            </div>
+                            <div class="item_check_padding" style="display:none;">
+                                <div class="info_skill_item_title h5 font_bold">After effects</div>
+                                <div class="info_skill_item_text">
+                                    可展示產品原型的介面動態效果。
+                                </div>
+                                <div class="info_skill_item_check font_bold appear-animation ae_works_btn" data-appear-animation="fadeInUp" style="display:none;">觀看相關製作</div>
+                                <div class="info_skill_item_pic">
+                                    <img src="images/info_skill_pic_14.png" alt="Figma logo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info_skill_part">
+                        <div class="info_skill_title h3 font_bold">網站建置</div>
+                        <div class="info_skill_item">
+                            <div>
+                                <div class="info_skill_item_title h5 font_bold">RWD前端切版</div>
+                                <div class="info_skill_item_text">
+                                    熟悉設計響應式網站介面，並以Html、Css切版前端原型(Prototype)。
+                                </div>
+                                <div class="info_skill_item_note" style="display:none;">*工作專案有成果展示</div>
+                                <div class="info_skill_item_pic">
+                                    <div>
+                                        <img src="images/info_skill_pic_4-2.png" alt="RWD">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item_check_padding">
+                                <div class="info_skill_item_title h5 font_bold">Jquery</div>
+                                <div class="info_skill_item_text">
+                                    製作網站原型(Prototype)介面互動效果，如：選單收合、彈跳視窗、Tab切換內容...等。
+                                </div>
+                                <a href="ui_animate-r2.html">
+                                    <div class="info_skill_item_check font_bold appear-animation illustrator_works_btn" data-appear-animation="fadeInUp">觀看介面互動效果</div>
+                                </a>
+                                <div class="info_skill_item_note" style="display:none;">*工作專案有成果展示</div>
+                                <div class="info_skill_item_pic">
+                                    <img src="images/info_skill_pic_6-2.png" alt="Jquery logo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info_skill_part">
+                        <div class="info_skill_title h3 font_bold">技術觀念</div>
+                        <div class="info_skill_item">
+                            <div>
+                                <div class="info_skill_item_title h5 font_bold">網站前、後端程式概念</div>
+                                <div class="info_skill_item_text">
+                                    有基礎和工程師討論網站功能開發之事務。
+                                </div>
+                                <div class="info_skill_item_note" style="display:none;">*工作專案有成果展示</div>
+                                <div class="info_skill_item_pic">
+                                    <img src="images/info_skill_pic_10-2.png" alt="code logo">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="info_skill_item_title h5 font_bold">iOS、Google設計規範</div>
+                                <div class="info_skill_item_text">
+                                    了解APP原生介面元件運用準則，使APP設計稿貼合程式開發。
+                                </div>
+                                <div class="info_skill_item_note" style="display:none;">*工作專案有成果展示</div>
+                                <div class="info_skill_item_pic">
+                                    <img src="images/info_skill_pic_15.png" alt="code logo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page_footer">
+        <div class="page_footer_left_part h4">
+            <span class="emphasize_text font_bold">作者資料</span>
+        </div>
+        <div class="page_footer_right_part">
+            <div class="catalog_part_page_num">
+                <div class="large_text set_middle"><span>1</span></div>
+                <div class="large_text set_middle active"><span>2</span></div>
+                <div class="large_text set_middle"><span>3</span></div>
+            </div>
+        </div>
+    </div>
+    <!-- ... p4 end ... -->
+
+    <!-- ... p5 ... -->
+    <div id="p5" class="page_area">
+        <div class="page_content">
+            <div class="page_num_container">
+                第5頁<img src="images/page_num_line_img.png" class="page_num_line_img" alt="區隔線"><span style="color:#7D7D7D">UI.UX作品集 ‧ 共16頁</span>
+            </div>
+            <div class="page_content_container">
+                <div class="page_content_title">
+                    <div id="p5_title" class="page_content_title_name">職涯與規劃</div>
+                    <div class="page_content_title_line"></div>
+                </div>
+
+                <div class="info_work_progress_container">
+
+                    <div class="info_work_progress_item">
+                        <div class="progress_item progress_small_item">
+                            <div class="progress_item_time font_bold"><span>2013.05&nbsp;-&nbsp;2014.05</span><br />視覺設計專員</div>
+                            <div class="progress_item_content"><span class="font_bold">多媒體、行銷公司(客戶有易遊網、長榮航空)</span>，製作客戶所需的媒體行銷素材，如：活動網頁、EDM、網路廣告banner、DM。</div>
+                            <div class="progress_item_spot progress_small_item_spot spot_left set_middle">
+                                <div>
+                                    <img src="images/small_item_spot_icon.png" alt="紙飛機圖案">
+                                    <div class="item_spot_title font_bold">起點</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress_item_line">
+                            <div class="right_line"></div>
+                        </div>
+                    </div>
+
+                    <div class="info_work_progress_item_arrow arrow_left_small display_block_540">
+                        <picture>
+                            <source media="(max-width:430px)" srcset="images/info_work_progress_item_arrow_420.png" />
+                            <img src="images/info_work_progress_item_arrow.png" alt="箭頭朝下">
+                        </picture>
+                    </div>
+
+                    <div class="info_work_progress_item">
+                        <div class="progress_item_line">
+                            <div class="left_line_large"></div>
+                        </div>
+                        <div class="progress_item progress_medium_item progress_medium_item_right_padding">
+                            <div class="progress_item_time font_bold"><span>2014.05&nbsp;-&nbsp;2016.04</span><br />網頁設計師</div>
+                            <div class="progress_item_content">
+                                <span class="font_bold">政府網站接案公司</span>，負責響應式網站設計和Html.Css無障礙前端切版。
+                            </div>
+                            <div class="progress_item_spot progress_medium_item_spot spot_right set_middle">
+                                <div>
+                                    <img src="images/mediuml_item_spot_icon_1.png" alt="旗標圖案">
+                                    <div class="item_spot_title font_bold">前期</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info_work_progress_item_arrow arrow_right_medium display_block_540">
+                        <picture>
+                            <source media="(max-width:430px)" srcset="images/info_work_progress_item_arrow_420.png" />
+                            <img src="images/info_work_progress_item_arrow.png" alt="箭頭朝下">
+                        </picture>
+                    </div>
+
+                    <div class="info_work_progress_item">
+                        <div class="progress_item progress_medium_item progress_medium_item_left_padding">
+                            <div class="progress_item_time font_bold"><span>2016.04&nbsp;-&nbsp;2021.03</span><br />網站設計師</div>
+                            <div class="progress_item_content">
+                                <span class="font_bold">教育類科技公司</span>，網站產品和管理後台規劃、介面設計製作、RWD網站版面建置、介面互動效果、APP產品維運更迭。
+                            </div>
+                            <div class="progress_item_content" style="margin-top:3px;">
+                                <ul style="list-style:disc;padding-left:23px;">
+                                    <li style="margin-bottom:3px;">規劃影音教材的活動網站，以考前猜題吸引學生註冊，收集註冊資料和GA、GTM數據；業務反饋對產品銷售有明顯幫助。</li>
+                                    <li>協助規劃人資、家教部管理後台，皆有正面評價。</li>
+                                </ul>
+                                <a href="study_1.html">
+                                    <div class="info_skill_item_check font_bold appear-animation ps_works_btn fadeInUp appear-animation-visible" style="text-align:left;margin-top:10px;position:relative;top:0px;left:0px;">
+                                        產品發想思維-案例展示
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="progress_item_spot progress_medium_item_spot spot_left set_middle">
+                                <div>
+                                    <img src="images/mediuml_item_spot_icon_1.png" alt="旗標圖案">
+                                    <div class="item_spot_title font_bold">中期</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress_item_line">
+                            <div class="right_line_large"></div>
+                        </div>
+                    </div>
+
+                    <div class="info_work_progress_item_arrow arrow_left_medium display_block_540">
+                        <picture>
+                            <source media="(max-width:430px)" srcset="images/info_work_progress_item_arrow_420.png" />
+                            <img src="images/info_work_progress_item_arrow.png" alt="箭頭朝下">
+                        </picture>
+                    </div>
+
+                    <div class="info_work_progress_item">
+                        <div class="progress_item_line">
+
+                        </div>
+                        <div class="progress_item progress_large_item progress_large_item_right_padding">
+                            <div class="progress_item_time font_bold"><span>2021.03&nbsp;-&nbsp;2024.05</span><br />UI.UX設計師</div>
+                            <div class="progress_item_content">
+                                <span class="font_bold">系統開發公司</span>，客戶皆為集團企業，2C&amp;2B網站、APP和管理後台規劃、介面設計；RWD網站版面建置、介面互動效果。
+                            </div>
+                            <div class="progress_item_content" style="margin-top:3px;">
+                                <ul style="list-style:disc;padding-left:23px;">
+                                    <li>業務訪談了解需求並規劃產品。</li>
+                                    <li>交付跨部門開發文件和介面設計規範。</li>
+                                    <li>實行易用性測試和行動建議報告。</li>
+                                </ul>
+                            </div>
+                            <div class="progress_item_spot progress_large_item_spot spot_right set_middle">
+                                <div>
+                                    <img src="images/large_item_spot_icon_1.png" alt="旗標圖案">
+                                    <div class="item_spot_title font_bold">近期</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info_work_progress_summary appear-animation" data-appear-animation="fadeInUp">
+                        <span><span class="font_bold">從平面視覺到網站設計建置，後續有能力規劃各類數位產品，持續提升專案影響力。</span></span>
+                    </div>
+
+                    <div class="progress_item_centerline_bg_xlarge"></div>
+
+                    <div class="info_work_progress_item">
+                        <div class="progress_item progress_xlarge_item progress_xlarge_item_left_padding appear-animation" data-appear-animation="fadeInUp" style="width:100%;">
+                            <div class="progress_item_time font_bold">方向與目標</div>
+                            <div class="progress_item_content">
+                                <div>深化UX領域知識，<span class="display_none_540">如：商業策略、市場調查、研究框架、產品測試...等，</span>擴展自身知識與能力，期許加入有設計思維的團隊， <span class="font_bold">透過UX研究優化迭代，打造符合商業價值的數位產品。</span></div>
+                            </div>
+                            <div class="progress_item_spot progress_xlarge_item_spot spot_left set_middle">
+                                <div>
+                                    <img src="images/xlarge_item_spot_icon_1.png" alt="火箭圖案">
+                                    <div class="item_spot_title font_bold">目前</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page_footer">
+        <div class="page_footer_left_part h4">
+            <span class="emphasize_text font_bold">作者資料</span>
+        </div>
+        <div class="page_footer_right_part">
+            <div class="catalog_part_page_num">
+                <div class="large_text set_middle"><span>1</span></div>
+                <div class="large_text set_middle"><span>2</span></div>
+                <div class="large_text set_middle active"><span>3</span></div>
+            </div>
+            <div class="next_topic_note h4" style="display:none;">接續<span class="font_bold">工作專案</span></div>
+        </div>
+    </div>
+    <!-- ... p5 end ... -->
+
+    <!-- ... p6 ... -->
+    <div class="page_area p6_page">
+        <div class="page_content">
+            <div class="page_num_container">
+                第6頁<img src="images/page_num_line_img.png" class="page_num_line_img" alt="區隔線"><span style="color:#7D7D7D">UI.UX作品集 ‧ 共16頁</span>
+            </div>
+            <div class="page_title_img_container set_middle">
+                <div class="appear-animation" data-appear-animation="fadeInUp">
+                    <div class="page_title_container">
+                        工作專案
+                    </div>
+                    <div class="page_subtitle_container h3 set_middle">
+                        <div>
+                            網站產品製作
+                        </div>
+                        <div>
+                            <picture>
+                                <source media="(max-width:540px)" srcset="images/page_subtitle_arrow_540.png" />
+                                <img src="images/page_subtitle_arrow.png" alt="右箭頭">
+                            </picture>
+                        </div>
+                        <div>
+                            APP產品製作
+                        </div>
+                    </div>
+                    <div class="page_subtitle_container h3 set_middle">
+                        <div>
+                            <picture>
+                                <source media="(max-width:540px)" srcset="images/page_subtitle_arrow_540.png" />
+                                <img src="images/page_subtitle_arrow.png" alt="右箭頭">
+                            </picture>
+                        </div>
+                        <div>
+                            行銷網頁製作
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page_footer">
+        <div class="page_footer_left_part">
+
+        </div>
+        <div class="page_footer_right_part h3">
+            <span class="font_bold">共6頁</span>
+        </div>
+    </div>
+    <!-- ... p6 end ... -->
+
+    <!-- ... p7 ... -->
+    <div id="p7" class="page_area">
+        <div class="page_content">
+            <div class="page_num_container">
+                第7頁<img src="images/page_num_line_img.png" class="page_num_line_img" alt="區隔線"><span style="color:#7D7D7D">UI.UX作品集 ‧ 共16頁</span>
+            </div>
+            <div class="page_content_container">
+                <div class="page_content_title">
+                    <div class="page_content_title_name">永豐銀行&nbsp;網路投保網站</div>
+                    <div class="page_content_title_line"></div>
+                </div>
+
+                <div class="work_info_container">
+
+                    <div class="work_info_part">
+                        <div class="work_info_title h3 font_bold">專案介紹</div>
+                        <div class="work_info_text">
+                            永豐銀行希望製作網站平台提供會員保險代理的服務，內容有保險方案、保費試算、線上繳費、投保紀錄...等，會員能以網路銀行的註冊資料，完成線上投保並獲得保險公司相關後續服務。
+                        </div>
+                        <div class="project_img_container">
+                            <picture>
+                                <source media="(max-width:540px)" srcset="images/project_img_1_540.png" />
+                                <source media="(max-width:1024px)" srcset="images/project_img_1_1024.png" />
+                                <img src="images/project_img_1.png" class="project_img" alt="永豐銀行 網路投保網站首頁示意圖">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="work_info_part">
+                        <div class="work_info_title h3 font_bold">商業價值<span>個人觀察解讀，非永豐銀行實際策略</span></div>
+                        <div class="work_info_text">
+                            <span class="work_info_text_p font_bold">永豐銀行角度</span>
+                            <ul>
+                                <li>會員無須額外註冊，享有多元的保險服務，提升品牌忠誠度。</li>
+                                <li>減輕銀行人員處理實體業務的負擔。</li>
+                                <li>以會員數向保險公司獲取仲介營收。</li>
+                                <li>了解保險產業與策略動向，從中規劃機會點擴大收益。</li>
+                            </ul>
+                            <span class="work_info_text_p font_bold" style="margin-top:10px;">保險公司角度</span>
+                            <ul>
+                                <li>提高品牌和商品曝光率。</li>
+                                <li>增加商品銷售管道。</li>
+                                <li>增加民眾成為自家保戶的轉換率。</li>
+                                <li>無須額外開發、維運網站的人力成本。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="p7_title" class="work_info_part" style="margin-bottom:0px;">
+                        <div class="work_info_title h3 font_bold">工作涵蓋範圍</div>
+                        <div class="work_info_subpart">
+                            <div class="work_info_subtitle h4 font_bold">
+                                <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>內容規劃
+                            </div>
+                            <div class="work_info_subtext">
+                                進行需求訪談並定義產品面向，規劃資訊架構、頁面布局、功能機制並繪製線框稿Wireframe，協助完成PRD文件使網站開發有所依據。
+                            </div>
+                            <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                <img src="images/pup_link_dot.png" class="pup_link_dot"><span><a href="sino_works_0.html">網站面向-UX分析</a></span>
+                            </div>
+                            <div style="margin-top:10px;">
+                                <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                    <img src="images/pup_link_dot.png" class="pup_link_dot"><span><a href="sino_works_1.html">網站框架-Wireframe產出</a></span>
+                                </div>
+                            </div>
+                            <div class="work_info_note">
+                                <div><span>*</span>內容展示為說明個人執行事項與能力為主。</div>
+                                <div><span>*</span>PRD文件為團隊合作產出，含有資訊安全和業務邏輯資料，故不展示於作品集。</div>
+                            </div>
+                        </div>
+                        <div class="work_info_subpart">
+                            <div class="work_info_subtitle h4 font_bold">
+                                <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>介面設計稿<span>Mockups</span>
+                            </div>
+                            <div class="work_info_subtext">
+                                線框稿定案後，為整合出美觀易用且符合業務形象之網站平台，與需求方討論進行風格、配色、介面布局...等規劃，並產出介面設計稿給予確認。
+                            </div>
+                            <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                <img src="images/pup_link_dot.png" class="pup_link_dot"><span><a href="sino_works_2.html">設計稿</a></span>
+                            </div>
+                            <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                <img src="images/pup_link_dot.png" class="pup_link_dot"><span><a href="sino_works_3.html">網站開發文件、設計規範介紹</a></span>
+                            </div>
+                            <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                <img src="images/pup_link_dot.png" class="pup_link_dot"><span><a href="https://www.figma.com/design/RSNBhP51ZdXt9ECUOnr1Eu/%E6%B0%B8%E8%B1%90%E7%B6%B2%E8%B7%AF%E6%8A%95%E4%BF%9D%E7%B6%B2%E7%AB%99_mockup?node-id=0-1&p=f&t=QwG6qnLmWYiPU3aM-0" target="_blank" id="sino_mockups_figma">網站開發文件、設計規範(figma)</a></span>
+                            </div>
+
+                            <div style="margin-top:10px;">
+                                <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                    <div class="pup_link_container_tip">點擊藍色文字可查看內容</div>
+                                    <img src="images/pup_link_dot.png" class="pup_link_dot"><span><a href="sino_works_4.html">易用性設計執行</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work_info_subpart">
+                            <div class="work_info_subtitle h4 font_bold">
+                                <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>原型<span>Prototype</span>
+                            </div>
+                            <div class="work_info_subtext">
+                                以介面設計稿運用figma功能，完成初步網站原型，確認整體操作流程；接續運用html、scss、jquery完成<span class="sino_works_6_btn pup_info_link">實行性原型</span>(前端切版部分)。
+                            </div>
+                            <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                <span id="sino_prototype_figma" class="sino_works_5_btn">用戶原型-桌機(figma)</span>
+                            </div>
+                            <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                <span><a href="website/sinopac_web/index.html" target="_blank" id="sino_prototype_html">實行性原型(前端切版)-RWD首頁範例</a></span>
+                            </div>
+                            <div style="margin-top:10px;">
+                                <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                    <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                    <span><a href="sino_works_5.html">前端切版說明</a></span>
+                                </div>
+                                <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                    <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                    <span><a href="ui_animate-r.html">介面互動效果展示</a></span>
+                                </div>
+                                <div class="work_info_note appear-animation" data-appear-animation="fadeInUp" style="font-size:16px;color:#232323;">
+                                    <div><span>*</span>設計稿與前端切版配合的實際應用。</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work_info_subpart">
+                            <div class="work_info_subtitle h4 font_bold">
+                                <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>易用性測試<span></span>
+                            </div>
+                            <div class="work_info_subtext">
+                                與前端工程師合作完成<span class="sino_works_6_btn pup_info_link">實行性原型</span>，依目標使用者特性招募受訪者，根據模擬情境取得使用反饋並給予行動建議和開發順序。
+                            </div>
+                            <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                <span><a href="sino_works_6.html">測試內容</a></span>
+                            </div>
+                            <div class="work_info_note appear-animation" data-appear-animation="fadeInUp" style="font-size:16px;color:#232323;margin-top:5px;">
+                                <div><a href="sino_works_7.html"><span>*</span>運用AI工具</a>作為行動建議，解決受訪者痛點。</div>
+                            </div>
+                        </div>
+                        <div class="work_info_subpart">
+                            <div class="work_info_subtitle h4 font_bold">
+                                <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>產品維運提案<span></span>
+                            </div>
+                            <div class="work_info_subtext">
+                                持續市場觀察、追蹤競品，評估目前產品型態、開發階段、優劣勢...等，根據決策者的商業目標，在專職領域上規劃執行方案。
+                            </div>
+                            <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                <span><a href="sino_works_8.html">維運提案-競品分析</a></span>
+                            </div>
+                        </div>
+                        <div class="work_info_subpart">
+                            <div class="work_info_subtitle h4 font_bold">
+                                <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>管理後台製作<span></span>
+                            </div>
+                            <div class="work_info_subtext">
+                                專案過程中，另有參與保單業務的管理後台規劃和介面設計。
+                            </div>
+                            <div class="work_info_note" style="padding-left:33px;">
+                                <div><span>*</span>涉及商業相關業務邏輯資料，故不展示於作品集。</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="page_footer">
+        <div class="page_footer_left_part h4">
+            <span class="emphasize_text font_bold">工作專案</span>
+        </div>
+        <div class="page_footer_right_part">
+            <div class="catalog_part_page_num">
+                <div class="large_text set_middle active"><span>1</span></div>
+                <div class="large_text set_middle"><span>2</span></div>
+                <div class="large_text set_middle"><span>3</span></div>
+                <div class="large_text set_middle"><span>4</span></div>
+                <div class="large_text set_middle"><span>5</span></div>
+            </div>
+        </div>
+    </div>
+    <!-- ... p7 end ... -->
+
+    <!-- ... p8 ... -->
+    <div id="p8" class="page_area">
+        <div class="page_content">
+            <div class="page_num_container">
+                第8頁<img src="images/page_num_line_img.png" class="page_num_line_img" alt="區隔線"><span style="color:#7D7D7D">UI.UX作品集 ‧ 共16頁</span>
+            </div>
+            <div class="page_content_container">
+                <div id="p8-1_title" class="page_content_title">
+                    <div class="page_content_title_name">元大期貨&nbsp;槓桿交易商官網</div>
+                    <div class="page_content_title_line"></div>
+                </div>
+
+                <div class="work_info_container">
+
+                    <div class="work_info_part">
+                        <div class="work_info_title h3 font_bold">專案介紹</div>
+                        <div class="work_info_text">
+                            參考<a href="yuanta_info.html" class="pup_info_link">元大期貨官網</a>架構內容，製作「槓桿交易商」的官方網站。
+                        </div>
+                        <div class="project_img_container">
+                            <picture>
+                                <source media="(max-width:540px)" srcset="images/project_img_2_540.png" />
+                                <source media="(max-width:1024px)" srcset="images/project_img_2_1024.png" />
+                                <img src="images/project_img_2.png" class="project_img" alt="元大期貨槓桿 官方網站首頁示意圖">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="work_info_part" style="margin-bottom:0px;">
+                        <div id="p8-2_title" class="work_info_title h3 font_bold">工作涵蓋範圍</div>
+                        <div class="work_info_subpart">
+                            <div class="work_info_subtitle h4 font_bold">
+                                <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>網站視覺提案
+                            </div>
+                            <div class="work_info_subtext">
+                                <span class="font_bold">與兩家設計公司競爭提案</span>，分析客戶營業屬性，發想製作兩款介面風格，設計符合客戶的期待並<span class="font_bold">取得標案</span>。
+                            </div>
+                            <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                <span><a href="yuanta_works_1.html">視覺風格(一)</a></span>
+                            </div>
+                            <div style="margin-top:10px;">
+                                <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                    <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                    <span><a href="yuanta_works_2.html">視覺風格(二)</a></span>
+                                </div>
+                            </div>
+                            <div class="work_info_note">
+                                <div><span>*</span>以桌機版網站首頁，製作介面設計稿進行提案。</div>
+                            </div>
+                        </div>
+                        <div class="work_info_subpart">
+                            <div class="work_info_subtitle h4 font_bold">
+                                <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>介面設計稿<span>Mockups</span>
+                            </div>
+                            <div class="work_info_subtext">
+                                專案以視覺風格(一)得標，進一步討論需求後，完成元大「期貨槓桿交易商」官網介面設計稿。
+                            </div>
+                            <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                <div class="pup_link_container_tip">點擊藍色文字可查看內容</div>
+                                <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                <span><a href="yuanta_works_3.html">介面設計稿</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="page_footer">
+        <div class="page_footer_left_part h4">
+            <span class="emphasize_text font_bold">工作專案</span>
+        </div>
+        <div class="page_footer_right_part">
+            <div class="catalog_part_page_num">
+                <div class="large_text set_middle"><span>1</span></div>
+                <div class="large_text set_middle active"><span>2</span></div>
+                <div class="large_text set_middle"><span>3</span></div>
+                <div class="large_text set_middle"><span>4</span></div>
+                <div class="large_text set_middle"><span>5</span></div>
+            </div>
+        </div>
+    </div>
+    <!-- ... p8 end ... -->
+
+    <!-- ... p9 ... -->
+    <div id="p9" class="page_area">
+        <div class="page_content">
+            <div class="page_num_container">
+                第9頁<img src="images/page_num_line_img.png" class="page_num_line_img" alt="區隔線"><span style="color:#7D7D7D">UI.UX作品集 ‧ 共16頁</span>
+            </div>
+            <div class="page_content_container">
+                <div class="page_content_title">
+                    <div class="page_content_title_name">裕隆員工App和管理後台</div>
+                    <div class="page_content_title_line"></div>
+                </div>
+
+                <div class="work_appinfo_container">
+                    <div class="work_appinfo_img_container">
+                        <picture>
+                            <img src="images/project_img_3.png" class="work_appinfo_img" alt="裕隆員工APP登入頁示意圖1">
+                        </picture>
+                    </div>
+                    <div id="p9_title" class="work_appinfo_describe">
+                        <div class="work_info_part display_none_1200_2 display_block_960_2">
+                            <div class="work_info_title h3 font_bold">專案介紹</div>
+                            <div class="work_info_text">
+                                將員工福利項目、內部營運訊息、集團職缺整合至APP，並提供2B管理後台給予維運單位進行管理；<br />藉由員工資訊APP，幫助集團與員工能更加貼近、相互契合，成為集團營運的一股助力。
+                            </div>
+                            <div class="work_appinfo_img_container_960 appear-animation" data-appear-animation="fadeInUp">
+                                <picture>
+                                    <img src="images/project_img_3.png" alt="裕隆員工資訊APP登入頁示意圖2">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="work_info_part display_flex_1200_2 display_none_960">
+                            <div style="width:40%;">
+                                <picture>
+                                    <img src="images/project_img_3.png" class="work_appinfo_img" alt="裕隆員工資訊APP登入頁示意圖3">
+                                </picture>
+                            </div>
+                            <div style="width:60%;padding-top:20px;padding-left:30px;">
+                                <div class="work_info_part">
+                                    <div class="work_info_title h3 font_bold">專案介紹</div>
+                                    <div class="work_info_text">
+                                        將員工福利項目、內部營運訊息、集團職缺整合至APP，並提供2B管理後台給予維運單位進行管理；<br />藉由員工資訊APP，幫助集團與員工能更加貼近、相互契合，成為集團營運的一股助力。
+                                    </div>
+                                </div>
+                                <div class="work_info_part" style="margin-bottom:0px;">
+                                    <div class="work_info_title h3 font_bold">工作涵蓋範圍</div>
+                                    <div class="work_info_subpart">
+                                        <div class="work_info_subtitle h4 font_bold">
+                                            <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>規劃APP&amp;管理後台
+                                        </div>
+                                        <div class="work_info_subtext">
+                                            進行需求訪談，依記錄規劃APP&amp;2B管理後台內容，繪製線框稿Wireframe使專案開發有所依據、對焦共識。
+                                        </div>
+                                        <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                            <img src="images/pup_link_dot.png" class="pup_link_dot"><span><a href="yulon_works_1.html">產品規劃(強化開發價值)</a></span>
+                                        </div>
+                                        <div style="margin-top:10px;">
+                                            <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                                <div class="pup_link_container_tip" style="width:110px;right:-115px;">功能機制說明</div>
+                                                <img src="images/pup_link_dot.png" class="pup_link_dot"><span><a href="yulon_works_2.html">前台、2B後台-線框稿</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="work_info_subpart">
+                                        <div class="work_info_subtitle h4 font_bold">
+                                            <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>介面設計稿<span>Mockups</span>
+                                        </div>
+                                        <div class="work_info_subtext">
+                                            線框稿Wireframe定案後，與需求方討論風格、配色、介面布局...等規劃，並產出APP&amp;管理後台介面設計稿給予確認。
+                                        </div>
+                                        <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                            <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                            <span><a href="yulon_works_3.html">前台APP設計稿</a></span>
+                                        </div>
+                                        <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                            <img src="images/pup_link_dot_disabled.png" class="pup_link_dot">
+                                            <span><a href="yulon_works_4.html">2B後台設計稿</a></span>
+                                        </div>
+                                        <div style="margin-top:10px;">
+                                            <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                                <img src="images/pup_link_dot_disabled.png" class="pup_link_dot">
+                                                <span><a href="yulon_works_6.html">產品需求檢核</a></span>
+                                            </div>
+                                            <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                                <div class="pup_link_container_tip">點擊藍色文字可查看內容</div>
+                                                <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                                <span><a href="yulon_works_5.html">產品設計亮點</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work_info_part display_none_1200_2 display_block_960_2" style="margin-bottom:0px;">
+                            <div class="work_info_title h3 font_bold">工作涵蓋範圍</div>
+                            <div class="work_info_subpart">
+                                <div class="work_info_subtitle h4 font_bold">
+                                    <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>規劃APP&amp;管理後台
+                                </div>
+                                <div class="work_info_subtext">
+                                    進行需求訪談，依記錄規劃APP&amp;2B管理後台內容，繪製線框稿Wireframe使專案開發有所依據、對焦共識。
+                                </div>
+                                <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                    <img src="images/pup_link_dot.png" class="pup_link_dot"><span><a href="yulon_works_1.html">產品規劃(強化開發價值)</a></span>
+                                </div>
+                                <div style="margin-top:10px;">
+                                    <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                        <div class="pup_link_container_tip" style="width:110px;right:-115px;">功能機制說明</div>
+                                        <img src="images/pup_link_dot.png" class="pup_link_dot"><span><a href="yulon_works_2.html">前台、2B後台-線框稿</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="work_info_subpart">
+                                <div class="work_info_subtitle h4 font_bold">
+                                    <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>介面設計稿<span>Mockups</span>
+                                </div>
+                                <div class="work_info_subtext">
+                                    線框稿Wireframe定案後，與需求方討論風格、配色、介面布局...等規劃，並產出APP&amp;2B管理後台介面設計稿給予確認。
+                                </div>
+                                <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                    <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                    <span><a href="yulon_works_3.html">前台APP設計稿</a></span>
+                                </div>
+                                <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                    <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                    <span><a href="yulon_works_4.html">2B後台設計稿</a></span>
+                                </div>
+                                <div style="margin-top:10px;">
+                                    <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                        <img src="images/pup_link_dot_disabled.png" class="pup_link_dot">
+                                        <span><a href="yulon_works_6.html">產品需求檢核</a></span>
+                                    </div>
+                                    <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                        <div class="pup_link_container_tip">點擊藍色文字可查看內容</div>
+                                        <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                        <span><a href="yulon_works_5.html">產品設計亮點</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="page_footer">
+        <div class="page_footer_left_part h4">
+            <span class="emphasize_text font_bold">工作專案</span>
+        </div>
+        <div class="page_footer_right_part">
+            <div class="catalog_part_page_num">
+                <div class="large_text set_middle"><span>1</span></div>
+                <div class="large_text set_middle"><span>2</span></div>
+                <div class="large_text set_middle active"><span>3</span></div>
+                <div class="large_text set_middle"><span>4</span></div>
+                <div class="large_text set_middle"><span>5</span></div>
+            </div>
+        </div>
+    </div>
+    <!-- ... p9 end ... -->
+    <!-- ... p10 ... -->
+    <div id="p10" class="page_area">
+        <div class="page_content">
+            <div class="page_num_container">
+                第10頁<img src="images/page_num_line_img.png" class="page_num_line_img" alt="區隔線"><span style="color:#7D7D7D">UI.UX作品集 ‧ 共16頁</span>
+            </div>
+            <div class="page_content_container">
+
+                <div class="page_content_title">
+                    <div class="page_content_title_name">金融服務商&nbsp;投資交易APP</div>
+                    <div class="page_content_title_line"></div>
+                </div>
+
+                <div class="work_appinfo_container">
+                    <div class="work_appinfo_img_container">
+                        <picture>
+                            <img src="images/project_img_4.png" class="work_appinfo_img" alt="金融交易服務APP首頁示意圖1">
+                        </picture>
+                    </div>
+                    <div id="p10_title" class="work_appinfo_describe">
+
+                        <div class="work_info_part display_none_1200_2 display_block_960_2">
+                            <div class="work_info_title h3 font_bold">專案介紹</div>
+                            <div class="work_info_text">
+                                Mobile First，客戶希望品牌網站的服務功能也可在APP使用，因此進行APP產品規劃和製作。
+                            </div>
+                            <div class="work_appinfo_img_container_960 appear-animation" data-appear-animation="fadeInUp">
+                                <picture>
+                                    <img src="images/project_img_4.png" alt="金融交易服務APP首頁示意圖2">
+                                </picture>
+                            </div>
+                        </div>
+
+                        <div class="work_info_part display_flex_1200_2 display_none_960">
+                            <div style="width:40%;">
+                                <picture>
+                                    <img src="images/project_img_4.png" class="work_appinfo_img" alt="金融交易服務APP首頁示意圖3">
+                                </picture>
+                            </div>
+                            <div style="width:60%;padding-top:20px;padding-left:30px;">
+                                <div class="work_info_part">
+                                    <div class="work_info_title h3 font_bold">專案介紹</div>
+                                    <div class="work_info_text">
+                                        Mobile First，客戶希望品牌網站的服務功能也可在APP使用，因此進行APP產品規劃和製作。
+                                    </div>
+                                </div>
+                                <div class="work_info_part" style="margin-bottom:0px;">
+                                    <div class="work_info_title h3 font_bold">工作涵蓋範圍</div>
+                                    <div class="work_info_subpart">
+                                        <div class="work_info_subtitle h4 font_bold">
+                                            <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>規劃內容架構
+                                        </div>
+                                        <div class="work_info_subtext">
+                                            參照品牌網站內容，發想APP產品核心概念、制定頁面架構內容、分析視覺形象，與客戶凝聚出設計共識和執行方向。
+                                        </div>
+                                        <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                            <div class="pup_link_container_tip">點擊藍色文字可查看內容</div>
+                                            <img src="images/pup_link_dot.png" class="pup_link_dot"><span><a href="gapp_works_1.html">產品提案(強化營利循環)</a></span>
+                                        </div>
+                                        <div class="work_info_note">
+                                            <div style="font-size:16px;color:#232323;"><span>*</span>以加速使用者旅程，提高營利循環效率作為產品規劃方向。</div>
+                                        </div>
+                                    </div>
+                                    <div class="work_info_subpart">
+                                        <div class="work_info_subtitle h4 font_bold">
+                                            <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>介面設計稿<span>Mockups</span>
+                                        </div>
+                                        <div class="work_info_subtext">
+                                            提案由客戶的營運單位考量歸納後，持續討論並繪製APP線框稿Wireframe做內容確認，取得共識後製作介面設計稿。
+                                        </div>
+                                        <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                            <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                            <span><a href="gapp_works_2.html">介面設計稿</a></span>
+                                        </div>
+                                        <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                            <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                            <span><a href="gapp_works_3.html">設計亮點</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="work_info_part display_none_1200_2 display_block_960_2" style="margin-bottom:0px;">
+                            <div class="work_info_title h3 font_bold">工作涵蓋範圍</div>
+                            <div class="work_info_subpart">
+                                <div class="work_info_subtitle h4 font_bold">
+                                    <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>規劃內容架構
+                                </div>
+                                <div class="work_info_subtext">
+                                    參照品牌網站內容，發想APP產品核心概念、制定頁面架構內容、分析視覺形象，與客戶凝聚出設計共識和執行方向。
+                                </div>
+                                <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                    <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                    <span><a href="gapp_works_1.html">產品提案(強化營利循環)</a></span>
+                                </div>
+                                <div class="work_info_note">
+                                    <div style="font-size:16px;color:#232323;"><span>*</span>以加速使用者旅程，提高營利循環效率作為產品規劃方向。</div>
+                                </div>
+                            </div>
+                            <div class="work_info_subpart">
+                                <div class="work_info_subtitle h4 font_bold">
+                                    <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>介面設計稿<span>Mockups</span>
+                                </div>
+                                <div class="work_info_subtext">
+                                    提案由客戶的營運單位考量歸納後，持續討論並繪製APP線框稿Wireframe做內容確認，取得共識後製作介面設計稿。
+                                </div>
+                                <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                    <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                    <span><a href="gapp_works_2.html">介面設計稿</a></span>
+                                </div>
+                                <div style="margin-top:10px;">
+                                    <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                        <div class="pup_link_container_tip">點擊藍色文字可查看內容</div>
+                                        <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                        <span><a href="gapp_works_3.html">產品設計亮點</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="page_footer">
+        <div class="page_footer_left_part h4">
+            <span class="emphasize_text font_bold">工作專案</span>
+        </div>
+        <div class="page_footer_right_part">
+            <div class="catalog_part_page_num">
+                <div class="large_text set_middle"><span>1</span></div>
+                <div class="large_text set_middle"><span>2</span></div>
+                <div class="large_text set_middle"><span>3</span></div>
+                <div class="large_text set_middle active"><span>4</span></div>
+                <div class="large_text set_middle"><span>5</span></div>
+            </div>
+        </div>
+    </div>
+    <!-- ... p10 end ... -->
+    <!-- ... p11 ... -->
+    <div id="p11" class="page_area">
+        <div class="page_content">
+            <div class="page_num_container">
+                第11頁<img src="images/page_num_line_img.png" class="page_num_line_img" alt="區隔線"><span style="color:#7D7D7D">UI.UX作品集 ‧ 共16頁</span>
+            </div>
+            <div class="page_content_container">
+                <div class="page_content_title">
+                    <div class="page_content_title_name">泰安產物&nbsp;行銷和維運事務</div>
+                    <div class="page_content_title_line"></div>
+                </div>
+
+                <div class="work_info_container">
+
+                    <div class="work_info_part">
+                        <div class="work_info_title h3 font_bold">行銷專案</div>
+                        <div class="work_info_text">
+                            暑期推廣旅平險商品，以旅遊主題製作網頁提供抽獎活動和旅平險資訊，<span class="font_bold">定義目標客群作為視覺風格依據</span>，能有效率提升投保意願。
+                        </div>
+                        <div class="project_img_container">
+                            <picture>
+                                <source media="(max-width:540px)" srcset="images/project_img_7_540.png" />
+                                <source media="(max-width:1024px)" srcset="images/project_img_7_1024.png" />
+                                <img src="images/project_img_7.png" class="project_img" alt="泰安產物 商品行銷專案示意圖">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div id="p11_title" class="work_info_part" style="margin-bottom:0px;">
+                        <div class="work_info_title h3 font_bold" style="display:none;">工作涵蓋範圍</div>
+                        <div class="work_info_subpart">
+                            <div class="work_info_subtitle h4 font_bold">
+                                <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>視覺設計稿<span>Mockups</span>
+                            </div>
+                            <div class="work_info_subtext">
+                                依行銷人員提供的<a href="taian_info.html" class="pup_info_link">示意資料</a>，討論確認後，產出介面設計稿。
+                            </div>
+                            <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                <span><a href="taian_works.html">視覺設計稿</a></span>
+                            </div>
+                        </div>
+                        <div class="work_info_subpart">
+                            <div class="work_info_subtitle h4 font_bold">
+                                <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>原型<span>Prototype</span>
+                            </div>
+                            <div class="work_info_subtext">
+                                確認介面設計稿後，進行前端切版製作初步原型。
+                            </div>
+                            <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                <div class="pup_link_container_tip">點擊藍色文字可查看內容</div>
+                                <img src="images/pup_link_dot.png" class="pup_link_dot"><span><a href="website/travel_activity/page.html" target="_blank" id="taian_prototype_html">實行性原型(前端切版)</a></span>
+                            </div>
+                        </div>
+                        <div class="work_info_subpart">
+                            <div class="work_info_subtitle h4 font_bold">
+                                <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>數據追蹤
+                            </div>
+                            <div class="work_info_subtext">
+                                有SEO觀念和行銷人員討論行銷接觸點、關鍵字定義，並設置GA和GTM追蹤事件。
+                            </div>
+                        </div>
+                        <div class="work_info_title h3 font_bold" style="margin-top:50px;">官網維運</div>
+                        <div class="work_info_subpart">
+                            <div class="work_info_subtitle h4 font_bold">
+                                <div class="subtitle_dot set_middle"><img src="images/subtitle_dot.png"></div>工作描述
+                            </div>
+                            <div class="work_info_subtext">
+                                維運泰安產物投保網站(3年)，主要負責定義視覺風格、製作商品頁面、優化投保流程和介面設計，<br />並參與製作B2B企業投保管理後台。
+                            </div>
+                            <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                <img src="images/pup_link_dot.png" class="pup_link_dot">
+                                <span class="taian_works_btn">部分內容展示</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="page_footer">
+        <div class="page_footer_left_part h4">
+            <span class="emphasize_text font_bold">工作專案</span>
+        </div>
+        <div class="page_footer_right_part">
+            <div class="catalog_part_page_num">
+                <div class="large_text set_middle"><span>1</span></div>
+                <div class="large_text set_middle"><span>2</span></div>
+                <div class="large_text set_middle"><span>3</span></div>
+                <div class="large_text set_middle"><span>4</span></div>
+                <div class="large_text set_middle active"><span>5</span></div>
+            </div>
+        </div>
+    </div>
+    <!-- ... p11 end ... -->
+    <!-- ... p12 ... -->
+    <div class="page_area">
+        <div class="page_content">
+            <div class="page_num_container">
+                第12頁<img src="images/page_num_line_img.png" class="page_num_line_img" alt="區隔線"><span style="color:#7D7D7D">UI.UX作品集 ‧ 共16頁</span>
+            </div>
+            <div class="page_title_img_container set_middle appear-animation" data-appear-animation="fadeInUp">
+                <div>
+                    <div class="page_title_container">
+                        外部專案
+                    </div>
+                    <div class="page_subtitle_container h3 set_middle" style="margin-top:25px;">
+                        <div>
+                            UXR市場研究
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page_footer">
+        <div class="page_footer_left_part">
+
+        </div>
+        <div class="page_footer_right_part h3">
+            <span class="font_bold">共1頁</span>
+        </div>
+    </div>
+    <!-- ... p12end ... -->
+    <!-- ... p13 ... -->
+    <div id="p13" class="page_area">
+        <div class="page_content">
+            <div class="page_num_container">
+                第13頁<img src="images/page_num_line_img.png" class="page_num_line_img" alt="區隔線"><span style="color:#7D7D7D">UI.UX作品集 ‧ 共16頁</span>
+            </div>
+            <div class="page_content_container">
+                <div class="page_content_title">
+                    <div class="page_content_title_name">共享交通&nbsp;市場開發UXR研究</div>
+                    <div class="page_content_title_line"></div>
+                </div>
+
+                <div class="work_info_container">
+
+                    <div class="work_info_part">
+                        <div class="work_info_title h3 font_bold">展示緣由</div>
+                        <div class="work_info_text">
+                            <ul>
+                                <li>負責人為業界UX顧問，工作流程扎實且專業。</li>
+                                <li>小組合作執行UXR研究，交付成果深受業主肯定。</li>
+                                <li class="h5 font_bold">定義議題到洞察價值，展現邏輯思維。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="work_info_part">
+                        <div class="project_img_container appear-animation" data-appear-animation="fadeInUp" style="margin-bottom:20px;padding:0px;">
+                            <picture>
+                                <source media="(max-width:540px)" srcset="images/project_img_6_540.png" />
+                                <source media="(max-width:1024px)" srcset="images/project_img_6_1024.png" />
+                                <img src="images/project_img_6.png" class="project_img" alt="Oloo UXR市場研究">
+                            </picture>
+                        </div>
+                        <div class="work_info_title h3 font_bold">專案介紹</div>
+                        <div class="work_info_text">
+                            <span class="work_info_text_p font_bold">起因</span>
+                            <div class="work_info_subtext" style="padding-left:10px;">
+                                <a href="https://Oloo.com.tw/about/" target="_blank" title="前往Oloo官方網站">Oloo公司</a>以共享交通服務為營運項目，提供電動滑板車租賃，讓民眾在<a href="https://edesg.com/%E5%BE%AE%E7%A7%BB%E5%8B%95%E7%9B%9B%E8%A1%8C%EF%BC%81%E9%82%A3%E4%BA%9B%E4%BA%A4%E9%80%9A%E5%B7%A5%E5%85%B7%E5%8F%AF%E4%BE%9B%E6%82%A8%E5%90%88%E6%B3%95%E4%BD%BF%E7%94%A8%E5%91%A2%EF%BC%9F/?srsltid=AfmBOopSBaKx6VHnwrHLJ1uZPN1powkqSP7gsdP4915PbjWDDXZgtTf8" title="前往EDESG永續思維網站，了解「微移動」是什麼。" target="_blank">「微移動」</a>距離中有一項新的選擇；電動滑板車因法規限制，Oloo多以<span class="font_bold">大學為場域</span>落地共享交通服務。<br /><span class="font_bold">為擴大產品營運的可能性，經由Oloo委託發起「展演場區」的市場研究專案。</span>
+                            </div>
+                            <span class="work_info_text_p font_bold" style="margin-top:15px;">目標客群</span>
+                            <ul>
+                                <li>經常參觀走訪展演場區的人群。</li>
+                            </ul>
+                            <span class="work_info_text_p font_bold" style="margin-top:15px;">研究目標</span>
+                            <ul>
+                                <li>了解目標客群的樣貌和分群。</li>
+                                <li>了解目標客群在展演場區的行為和脈絡。</li>
+                                <li>發現目標客群在展演場區中，短距離移動的交通需求和機會。</li>
+                            </ul>
+                            <span class="work_info_text_p font_bold" style="margin-top:15px;">研究預期</span>
+                            <ul>
+                                <li>確認展演場區的市場機會和開發潛力，作為商業策略投入產品的參考。</li>
+                                <li>獲得目標客群短距離移動的需求情境。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="work_info_part" style="margin-bottom:0px;">
+
+                        <div id="p13_title-1" class="work_info_title h3 font_bold">研究內容</div>
+                        <div class="work_info_text" style="margin-bottom:30px;">
+                            <span class="work_info_text_p font_bold">一、制定議題</span>
+                            <div class="work_info_subtext" style="padding-left:0px;">事前先與專案負責人了解研究目標脈絡，接續訪談Oloo創辦人了解營運的市場經驗。<br />執行以下步驟：</div>
+                            <ul style="list-style: decimal;padding-left:5px;">
+                                <li style="margin-top:10px;">
+                                    <span class="font_bold">桌面研究</span><span style="display:none;"><br />
+                                        使研究前期假設有所依據，<span class="font_bold">定義了研究目標的核心主題</span>「電動滑板車」、「展演場區」，根據主題於部落客心得、各大社群論壇、google評價留言，以研究目標為範圍收集資訊。</span>
+                                </li>
+                                <li style="margin-top:10px;">
+                                    <span class="font_bold">提出假設</span><span style="display:none;"><br />
+                                        經桌面研究獲取資訊，成員各自<span class="font_bold">以「價值主張地圖」收斂提出假設</span>，延伸導出「精實畫布」使假設更加明確。</span>
+                                </li>
+                                <li style="margin-top:10px;">
+                                    <span class="font_bold">萃取假設</span><span style="display:none;"><br />
+                                        將各自假設推演論述，<span class="font_bold">收斂出商業機會和風險</span>；<br />利用機會句型：「相信...因此有好的結果。」、風險句型：「如果...可能有不好的結果。」輔助論述。</span>
+                                </li>
+                                <li style="margin-top:10px;" style="display:none;">
+                                    <span class="font_bold">篩選假設</span><span style="display:none;"><br />
+                                        成員交互驗證各自的商業機會、風險，根據「已知、未知」和「商業價值高、低」以十字量表分類排序出<span class="font_bold">具「未知」和「高商業價值」</span>之機會和風險。</span>
+                                </li>
+                                <li style="margin-top:10px;">
+                                    <span class="font_bold">完成制定議題</span><span style="display:none;"><br />
+                                        觀察商業機會、風險依共通點分類1~3組，並篩選收斂出研究議題；<br />以句型「透過研究該議題，可以達成某項研究目標...」、「因研究該議題能達成某項研究預期...」輔助解釋。</span>
+                                </li>
+                            </ul>
+                            <div class="pup_link_area" style="margin-top:10px;">
+                                <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                    <img src="images/pup_link_dot.png" class="pup_link_dot"><span><a href="Oloo_works_1.html">實作內容</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="p13_title-2" class="work_info_text" style="margin-bottom:30px;">
+                            <span class="work_info_text_p font_bold">二、目標客群訪談</span>
+                            <div class="work_info_subtext" style="padding-left:0px;">執行以下步驟：</div>
+                            <ul style="list-style: decimal;padding-left:5px;">
+                                <li style="margin-top:10px;">
+                                    <span class="font_bold">拆解議題</span><span style="display:none;"><br />
+                                        將議題列出各種面向，如：本次議題「探查展區環境對於電動滑板車的適配度」面向有展區地貌、場館設施規劃、外部因素...等，<br />
+                                        將面向拆出次要面向，如：外部因素有天氣、周邊環境、交通連結、節慶活動、同行者。<br />
+                                        定義次要面向的指標，如：同行者有類型、人數、共同目的、移動方式。</span>
+                                </li>
+                                <li style="margin-top:10px;">
+                                    <span class="font_bold">招募受訪者</span><span style="display:none;"><br />
+                                        根據<span class="font_bold">議題重要面向設定招募條件</span>，如：同行者則招募條件為「有與他人一起逛展的經驗」；<br />
+                                        並制定招募問卷內容，問題從<span class="font_bold">概念方向→明確具篩選性→開放式了解細節</span>為設計原則。</span>
+                                </li>
+                                <li style="margin-top:10px;">
+                                    <span class="font_bold">規劃訪綱</span><span style="display:none;"><br />
+                                        以議題重要面向制定訪談問項，各面向<span class="font_bold">須含有ORID屬性「客觀事實、感受、意義/想法、決策/行動」</span>其中兩種屬性之問項，並以開放式問句作描述。</span>
+                                </li>
+                                <li style="margin-top:10px;">
+                                    <span class="font_bold">完成訪談行動</span><span style="display:none;"><br />
+                                        成員互相配置主訪員、副訪員，事前進行模擬訪談培養默契，並<span class="font_bold">驗證模擬結果能否關聯研究議題；</span><br />
+                                        實際訪談中，須牢記研究目標適時追問或拉回至研究目標，保持虛心、好奇心尊重受訪者的發言，只詢問表示興趣不給予任何評價。</span>
+                                </li>
+                            </ul>
+                            <div class="pup_link_area" style="margin-top:10px;">
+                                <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                    <img src="images/pup_link_dot.png" class="pup_link_dot"><span><a href="Oloo_works_2.html">實作內容</a></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="p13_title-3" class="work_info_text" style="margin-bottom:30px;">
+                            <span class="work_info_text_p font_bold">三、研究成果</span>
+                            <div class="work_info_subtext" style="padding-left:0px;">執行以下步驟：</div>
+                            <ul style="list-style: decimal;padding-left:5px;">
+                                <li style="margin-top:10px;">
+                                    <span class="font_bold">清洗訪談資料</span><span style="display:none;"><br />
+                                        將訪談記錄篩選出具研究目標相關之內容，<span class="font_bold">以一項獨立事件之文字描述為單位</span>，將事件依「客觀事實的明確關係」、「感受、決策、想法的因果關係」<span class="font_bold">切片成句子</span>。</span>
+                                </li>
+                                <li style="margin-top:10px;">
+                                    <span class="font_bold">編碼事件切片</span><span style="display:none;"><br />
+                                        以「切片人員姓名」、「受訪者代號」、<span class="font_bold">「研究議題」、「ORID屬性」進行編碼</span>，後續作系統性分類方便發現洞見。</span>
+                                </li>
+                                <li style="margin-top:10px;">
+                                    <span class="font_bold">發現洞見</span><span style="display:none;"><br />
+                                        彙整共六位受訪者訪談的<span class="font_bold">切片內容，以「親合圖」模式察覺有共通性的主題範圍</span>，思考主題當中的切片將有相同的原因、脈絡給予詮釋，和成員以「六頂思考帽」方式進行思辨驗證。<br />
+                                        探討各<span class="font_bold">詮釋中共同的痛點、需求</span>，讓已知事情有新的認識、補充細節，讓未知事情被注意和認知，最後形成研究洞見<span class="font_bold">啟發成商業機會、風險。</span></span>
+                                </li>
+                                <li style="margin-top:10px;">
+                                    <span class="font_bold">研究發表</span><span style="display:none;"><br />
+                                        根據研究目標和預期為方向，呈現研究洞見作為成果發表，以「<span class="font_bold">描述洞見內容→資料來源和證明根據→結論和行動建議」</span>為架構，鋪陳成果作為簡報內容。</span>
+                                </li>
+                            </ul>
+                            <div class="pup_link_area" style="margin-top:10px;">
+                                <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                    <img src="images/pup_link_dot.png" class="pup_link_dot"><span><a href="Oloo_works_3.html">實作內容</a></span>
+                                </div>
+                                <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                    <img src="images/pup_link_dot.png" class="pup_link_dot"><span id="Oloo_report_pdf"><a href="https://drive.google.com/file/d/1j_4-eB7PA6byz0AXoQirV0H5_B0rabhz/view?usp=drive_link" target="_blank">簡報內容.pdf&nbsp;(可公開部分)</a></span>
+                                </div>
+                            </div>
+                            <div class="pup_link_area" style="margin-top:10px;display:none;">
+                                <div class="pup_link_container font_bold appear-animation" data-appear-animation="fadeInUp">
+                                    <div class="pup_link_container_tip">點擊藍色文字可查看內容</div>
+                                    <img src="images/pup_link_dot.png" class="pup_link_dot"><span><a href="Oloo_works_4.html">專案個人亮點</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="page_footer">
+        <div class="page_footer_left_part h4">
+            <span class="emphasize_text font_bold">外部專案</span>
+        </div>
+        <div class="page_footer_right_part">
+            <div class="catalog_part_page_num">
+                <div class="large_text set_middle active"><span>1</span></div>
+            </div>
+        </div>
+    </div>
+    <!-- ... p13 end ... -->
+    <!-- ... p14... -->
+    <div class="page_area p14_page">
+        <div class="page_content">
+            <div class="page_num_container">
+                第14頁<img src="images/page_num_line_img.png" class="page_num_line_img" alt="區隔線"><span style="color:#7D7D7D">UI.UX作品集 ‧ 共16頁</span>
+            </div>
+            <div class="page_title_img_container set_middle appear-animation" data-appear-animation="fadeInUp">
+                <div>
+                    <div class="page_title_container">
+                        總結
+                    </div>
+                    <div class="page_subtitle_container h3 set_middle" style="margin-top:25px;">
+                        <div>
+                            專案能力描述
+                        </div>
+                        <div>
+                            <picture>
+                                <source media="(max-width:540px)" srcset="images/page_subtitle_arrow_540.png" />
+                                <img src="images/page_subtitle_arrow.png" alt="右箭頭">
+                            </picture>
+                        </div>
+                        <div>
+                            聯絡作者
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page_footer">
+        <div class="page_footer_left_part">
+
+        </div>
+        <div class="page_footer_right_part h3">
+            <span class="font_bold">共2頁</span>
+        </div>
+    </div>
+    <!-- ... p14 end ... -->
+    <!-- ... p15 ... -->
+    <div id="p15" class="page_area p15_page">
+        <div class="page_content">
+            <div class="page_num_container">
+                第15頁<img src="images/page_num_line_img.png" class="page_num_line_img" alt="區隔線"><span style="color:#7D7D7D">UI.UX作品集 ‧ 共16頁</span>
+            </div>
+            <div class="page_content_container">
+                <div class="page_content_title">
+                    <div class="page_content_title_name">專案能力描述</div>
+                    <div class="page_content_title_line"></div>
+                </div>
+
+                <div class="work_info_container">
+
+                    <div class="work_info_part">
+                        <div class="work_info_title h3 font_bold">永豐銀行&nbsp;網路投保網站</div>
+                        <div class="work_info_text" style="display:none;">
+                            <ul>
+                                <li>具調查市場觀念，作為網站內容基礎。</li>
+                                <li>能盤點網站資料來源、互動機制、頁面布局。</li>
+                                <li>製作線框稿，交代頁面操作和前後端資料關係。</li>
+                                <li>將視覺意象化，凝聚團隊設計共識。</li>
+                                <li>運用UX原則，進行介面設計。</li>
+                                <li>深度排版、配色技巧，交付成熟度高之介面設計稿。</li>
+                                <li>貼合網站開發，訂定設計規範文件。</li>
+                                <li>運用html、scss、jquery，製作實行性原型(前端切版)。</li>
+                                <li>彙整易用性測試報告，並提供行動建議。</li>
+                            </ul>
+                        </div>
+                        <div class="work_info_text" style="font-size:18px;padding-left:0px;">從產品需求規劃到交付產品前端原型，具有深度的專案執行力。</div>
+                    </div>
+                    <div class="work_info_part">
+                        <div class="work_info_title h3 font_bold">元大期貨&nbsp;槓桿交易商官網</div>
+                        <div class="work_info_text" style="display:none;">
+                            <ul>
+                                <li>了解官方網站，版型製作要點。</li>
+                                <li>針對產業類型與品牌訴求，規劃視覺風格。</li>
+                                <li>掌握版型和風格，交付介面設計稿。</li>
+                            </ul>
+                        </div>
+                        <div class="work_info_text" style="font-size:18px;padding-left:0px;">與兩家設計公司競爭標案，網站視覺提案勝出得標。</div>
+                    </div>
+                    <div class="work_info_part">
+                        <div class="work_info_title h3 font_bold">裕隆集團&nbsp;2B員工APP&amp;管理後台</div>
+                        <div class="work_info_text" style="display:none;">
+                            <ul>
+                                <li>緊密訪談客戶相關單位，作為產品規劃基礎。</li>
+                                <li>能盤點產品資料來源、互動機制、頁面布局。</li>
+                                <li>製作線框稿，交代前、後台頁面操作，和前、後端資料關係。</li>
+                                <li>了解2B-APP前台、管理後台，版型、功能製作要點。</li>
+                                <li>運用UX原則，進行介面設計。</li>
+                                <li>深度排版、配色技巧，交付成熟度高之介面設計稿。</li>
+                                <li>貼合產品開發，提供介面樣式庫文件。</li>
+                            </ul>
+                        </div>
+                        <div class="work_info_text" style="font-size:18px;padding-left:0px;">定義2B產品核心強化使用價值，規劃內容切合業務需求，完成介面設計原型。</div>
+                    </div>
+                    <div class="work_info_part">
+                        <div class="work_info_title h3 font_bold">金融服務商&nbsp;投資交易APP</div>
+                        <div class="work_info_text" style="display:none;">
+                            <ul>
+                                <li>以使用者為出發，發想產品核心概念。</li>
+                                <li>優化產品營運為訴求，分析並提出觀點。</li>
+                                <li>將核心概念與分析觀點，制定頁面架構內容。</li>
+                                <li>將視覺意象化，凝聚團隊設計共識。</li>
+                                <li>深度排版、配色技巧，交付成熟度高之介面設計稿。</li>
+                                <li>運用UX原則，進行介面設計。</li>
+                            </ul>
+                        </div>
+                        <div class="work_info_text" style="font-size:18px;padding-left:0px;">分析使用者旅程，以提升產品營利循環為規劃內容，完成介面設計原型。</div>
+                    </div>
+                    <div class="work_info_part">
+                        <div class="work_info_title h3 font_bold">泰安產物&nbsp;商品行銷網頁</div>
+                        <div class="work_info_text" style="display:none;">
+                            <ul>
+                                <li>熟悉一頁式行銷網頁，版型製作要點。</li>
+                                <li>針對行銷主題類型，規劃視覺風格。</li>
+                                <li>掌握版型和風格，交付網頁設計稿。</li>
+                                <li>依網頁設計稿執行前端RWD切版。</li>
+                                <li>擁有行銷接觸點、GA、GTM觀念。</li>
+                            </ul>
+                        </div>
+                        <div class="work_info_text" style="font-size:18px;padding-left:0px;">根據行銷人員規劃，完成符合形象之網頁前端原型，並討論行銷接觸點和GA、GTM設置。</div>
+                    </div>
+                    <div class="work_info_part">
+                        <div class="work_info_title h3 font_bold">共享交通&nbsp;市場開發UXR研究</div>
+                        <div class="work_info_text" style="display:none;">
+                            <ul>
+                                <li>根據UXR研究目標，進行桌面研究並收斂出研究議題。</li>
+                                <li>設計招募受訪者問卷，掌握訪綱要點並有效完成訪談行動。</li>
+                                <li>清洗訪談文字記錄，篩選出符合研究目標之資料。</li>
+                                <li>觀察資料詮釋原因脈絡，提出符合商業價值的研究洞見。</li>
+                                <li>了解「發表用簡報」架構要素，以圖文鋪陳故事性，呈現簡明易懂且具吸引力之內容。</li>
+                            </ul>
+                        </div>
+                        <div class="work_info_text" style="font-size:18px;padding-left:0px;">完整且深度之UXR研究案實作，論述商業價值之研究洞見並獲得業主肯定。</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="page_footer">
+        <div class="page_footer_left_part h4">
+            <span class="emphasize_text font_bold">總結</span>
+        </div>
+        <div class="page_footer_right_part">
+            <div class="catalog_part_page_num">
+                <div class="large_text set_middle active"><span>1</span></div>
+            </div>
+            <div class="catalog_part_page_num">
+                <div class="large_text set_middle"><span>2</span></div>
+            </div>
+        </div>
+    </div>
+    <!-- ... p15 end ... -->
+    <!-- ... p16 ... -->
+    <div id="p16" class="page_area">
+        <div class="page_content">
+            <div class="page_num_container">
+                第16頁<img src="images/page_num_line_img.png" class="page_num_line_img" alt="區隔線"><span style="color:#7D7D7D">UI.UX作品集 ‧ 共16頁</span>
+            </div>
+
+            <div class="page_content_container">
+
+                <div class="description_work_container">
+                    <div class="description_work_row">
+                        <div class="description_work_mypic display_none_1200_2">
+                            <picture>
+                                <img src="images/work_summary_mypic.png" alt="作者照片">
+                            </picture>
+                        </div>
+                        <div class="description_work_text">
+                            <div class="page_content_title" style="margin-bottom:30px;">
+                                <div class="page_content_title_name">聯絡作者</div>
+                                <div class="page_content_title_line"></div>
+                            </div>
+                            <div class="description_work_mypic display_block_1200">
+                                <picture>
+                                    <img src="images/work_summary_mypic.png" alt="作者照片">
+                                </picture>
+                            </div>
+                            <div class="work_info_part" style="margin-bottom:0px;">
+                                <div class="work_info_subpart">
+                                    <div class="work_info_subtitle h4 font_bold" style="margin-bottom:0px;padding-left:15px;">
+                                        王俊淵&nbsp;Joe
+                                    </div>
+                                    <div class="work_info_subtext font_bold" style="margin-bottom:15px;padding-left:15px;">UI.UX設計師 ‧ 產品規劃到維運迭代</div>
+                                    <div class="work_info_subtext" style="padding-left:17px;">
+                                        <ul>
+                                            <li>手機號碼：0927-821-279</li>
+                                            <li>電子信箱：a52363037@yahoo.com.tw</li>
+                                            <li>
+                                                <span class="font_bold">
+                                                    簡歷(Resume)：<a href="https://drive.google.com/file/d/18P3n0mx2iMAcWuLE7bKs-Rd4GoFKuGVg/view" target="_blank" id="resume_p1">查看、下載簡歷.pdf</a>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="work_info_subpart" style="display:none;">
+                                    <div class="work_info_subtitle h4 font_bold" style="padding-left:15px;">
+                                        回饋和建議
+                                    </div>
+                                    <div style="margin-bottom:10px;padding-left:15px;">11項選擇題(6題必填)、3項問答題(非必填)</div>
+                                    <div class="work_info_subtext" style="padding-left:17px;">
+                                        <ul>
+                                            <li><span class="font_bold"><a href="https://docs.google.com/forms/d/e/1FAIpQLScLUUrjDiHP_veNITIwouQITFz3aXFL_tX_TLLcaVVOBH9TvQ/viewform?usp=header" target="_blank" id="google_form">Google線上表單</a></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="contact_info_note font_bold">
+                                    <span style="color:#7d7d7d;">呈現我職涯累積的成果，感謝您付出時間的到訪&nbsp;:)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="page_footer">
+        <div class="page_footer_left_part h4">
+            <span class="emphasize_text font_bold">總結</span>
+        </div>
+        <div class="page_footer_right_part">
+            <div class="catalog_part_page_num">
+                <div class="large_text set_middle"><span>1</span></div>
+            </div>
+            <div class="catalog_part_page_num">
+                <div class="large_text set_middle active"><span>2</span></div>
+            </div>
+        </div>
+    </div>
+    <!-- ... p16 end ... -->
+
+    <div class="pup_bg" style="display:none;"></div>
+    <div class="pup_bg_transparent" style="display:none;"></div>
+
+
+
+    <!-- ... 永豐網路投保 用戶原型選項 ... -->
+    <div class="pup_window_small sino_works_5_pup" style="display:none;">
+        <div class="pup_close_btn set_middle pup_close_icon" role="button">
+
+        </div>
+        <div class="pup_window_small_title_container">
+            <div class="pup_window_small_title emphasize_text">Figma用戶原型入口</div>
+            <div class="pup_window_small_subtitle">選擇您目前的螢幕解析度</div>
+        </div>
+        <div class="pup_window_small_content">
+            <a href="https://www.figma.com/proto/wEkauSXWPLMvw6jZQfmbXR/%E6%B0%B8%E8%B1%90%E7%B6%B2%E8%B7%AF%E6%8A%95%E4%BF%9D%E7%B6%B2%E7%AB%99_prototype-%E6%A1%8C%E6%A9%9F?node-id=0-1&node-type=canvas&viewport=126%2C-364%2C0.02&t=gjPWu2OTWDAh27AY-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=11%3A6036" target="_blank">
+                <div class="pup_window_small_option">寬1920px<img src="images/arrow-left-link.png"></div>
+            </a>
+            <a href="https://www.figma.com/proto/wEkauSXWPLMvw6jZQfmbXR/%E6%B0%B8%E8%B1%90%E7%B6%B2%E8%B7%AF%E6%8A%95%E4%BF%9D%E7%B6%B2%E7%AB%99_prototype-%E6%A1%8C%E6%A9%9F?node-id=32-16553&node-type=canvas&viewport=340%2C316%2C0.02&t=gjPWu2OTWDAh27AY-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=237%3A268067" target="_blank">
+                <div class="pup_window_small_option">寬1440px<img src="images/arrow-left-link.png"></div>
+            </a>
+            <a href="https://www.figma.com/proto/wEkauSXWPLMvw6jZQfmbXR/%E6%B0%B8%E8%B1%90%E7%B6%B2%E8%B7%AF%E6%8A%95%E4%BF%9D%E7%B6%B2%E7%AB%99_prototype-%E6%A1%8C%E6%A9%9F?node-id=237-267666&node-type=canvas&viewport=16940%2C27766%2C0.27&t=gjPWu2OTWDAh27AY-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=237%3A844289" target="_blank">
+                <div class="pup_window_small_option">寬1366px<img src="images/arrow-left-link.png"></div>
+            </a>
+        </div>
+        <div class="pup_window_small_tip">
+            <span>進入後，若需隱藏figma功能選單
+                <ul style="list-style:disc;margin:5px 0px;padding-left:20px;">
+                    <li>Window按「ctrl」+「\」</li>
+                    <li>Mac按「command」+「\」</li>
+                </ul>
+            </span>
+        </div>
+
+    </div>
+    <!-- ... 永豐網路投保 用戶原型選項 end ... -->
+    <!-- ... 永豐網路投保 實行性原型  ... -->
+    <div class="pup_window_small sino_works_6_pup" style="display:none;">
+        <div class="pup_close_btn set_middle pup_close_icon" role="button">
+
+        </div>
+        <div class="pup_window_small_title_container">
+            <div class="pup_window_small_title emphasize_text">實行性原型</div>
+        </div>
+        <div class="pup_window_small_content">
+            由前端程式進行初步開發，具簡易資料輸入和檢核機制，如：藉由行事曆選單，輸入投保時間於資料框、檢核必填欄位是否為空值(null)。<br /><br />僅便於易用性測試，不接續開發更多檢核機制、不牽涉資料庫存取。
+        </div>
+        <div class="pup_window_small_tip">
+            <span>與前端工程師合作完成，故不提供於作品集審視。</span>
+        </div>
+
+    </div>
+    <!-- ... 永豐網路投保 用戶原型選項 end ... -->
+    <!-- ... 預計上線說明  ... -->
+    <div class="pup_window_small prepare_works_pup" style="display:none;">
+        <div class="pup_close_btn set_middle pup_close_icon" role="button">
+
+        </div>
+        <div class="pup_window_small_title_container">
+            <div class="pup_window_small_title emphasize_text">UXR市場研究&nbsp;專案個人亮點</div>
+        </div>
+        <div class="pup_window_small_content">
+            目前整理編寫中，<br />將於1/23上線展示，期望您的耐心等候。
+        </div>
+
+    </div>
+    <!-- ... 預計上線說明 end ... -->
+    <!-- ... 回饋瀏覽感受  ... -->
+    <div class="give_evaluate_pup" style="display:none;">
+        <div class="pup_close_btn set_middle pup_close_icon" role="button">
+
+        </div>
+        <div class="pup_window_small_title_container">
+            <div class="pup_window_small_title emphasize_text">作品集閱讀、了解作者能力，<br />您的感受是？</div>
+        </div>
+        <div class="pup_window_small_content">
+            <div id="good_read" class="pup_window_content_btn set_middle done_evaluate_btn" role="button"><span>清晰易懂</span></div>
+            <div id="normal_read" class="pup_window_content_btn set_middle done_evaluate_btn" role="button"><span>能夠了解</span></div>
+            <div id="bad_read" class="pup_window_content_btn set_middle done_evaluate_btn" role="button"><span>不好閱讀</span></div>
+        </div>
+    </div>
+    <!-- ... 回饋瀏覽感受 end ... -->
+    <!-- ... 完成回饋瀏覽感受  ... -->
+    <div class="done_evaluate_pup" style="display:none;">
+        <div class="pup_window_small_title_container">
+            <div class="pup_window_small_title emphasize_text" style="text-align:center;">感謝您的回饋</div>
+        </div>
+        <div class="pup_window_small_tip">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScLUUrjDiHP_veNITIwouQITFz3aXFL_tX_TLLcaVVOBH9TvQ/viewform" target="_blank">
+                <div class="pup_window_content_btn set_middle" role="button" style="margin-top:10px;"><span>給予更多回饋，10分鐘填寫表單</span></div>
+            </a>
+            <div style="text-align:center;margin-top:5px;">僅6題必填選擇題</div>
+            <div class="pup_window_content_btn set_middle close_done_evaluate_pup active" role="button"><span>繼續瀏覽作品集</span></div>
+        </div>
+    </div>
+    <!-- ... 完成回饋瀏覽感受 end ... -->
+    <!-- ... 預計上線說明  ... -->
+    <div class="pup_window_small pup_window_small_ae ae_works_pup" style="display:none;">
+        <div class="pup_close_btn set_middle pup_close_icon" role="button">
+
+        </div>
+        <div class="pup_window_small_title_container">
+            <div class="pup_window_small_title emphasize_text">UI動效圖</div>
+        </div>
+        <div class="pup_window_small_content">
+            <img src="images/sino_pic_15-12.gif" style="width:100%;max-width:100%;" alt="After effectsUI動效圖">
+        </div>
+
+    </div>
+    <!-- ... 預計上線說明 end ... -->
+
+    <!-- ... 泰安 維運  ... -->
+    <script type="text/javascript">
+        $(function() {
+            var showTab = 0;
+            var defaultLi = $('.taian_works_pup .pup_tab_btn').eq(showTab).addClass('active');
+            $(defaultLi.find('a').attr('href')).siblings().hide();
+            $('.taian_works_pup .pup_tab_btn').click(function() {
+                var $this = $(this),
+                    clickTab = $this.find('a').attr('href');
+                $this.addClass('active').siblings('.active').removeClass('active');
+                $(clickTab).stop(false, true).fadeIn().siblings().hide();
+                return false;
+            }).find('a').focus(function() {
+                this.blur();
+            });
+        });
+
+    </script>
+    <div class="pup_window taian_works_pup" style="display:none;">
+        <div class="pup_close_btn set_middle pup_close_icon" role="button">
+
+        </div>
+        <div class="pup_window_content" style="overflow:inherit;">
+
+            <div class="pup_window_content_title h4 font_bold">泰安產物官網&nbsp;維運部分展示</div>
+
+            <div class="pup_window_content_tab_container">
+                <div class="pup_window_content_tab pup_tab_btn h5 font_bold"><a href="#taian_tab_1" class="set_middle"><span>頁面設計</span></a></div>
+                <div class="pup_window_content_tab pup_tab_btn h5 font_bold"><a href="#taian_tab_2" class="set_middle"><span>介面流程</span></a></div>
+            </div>
+            <div class="pup_window_tab_content_container" style="height:calc(100% - 146px);">
+
+                <div id="taian_tab_1" class="pup_window_tab_content">
+                    <div class="pup_window_content_part project_content_part" style="margin-bottom:0px;">
+                        <div class="pup_content">
+                            <div class="pup_text large_text" style="margin-top:30px;text-align:center;">旅平險商品頁</div>
+                            <div class="pup_content_pic_container" style="margin-top:10px;">
+                                <div class="pup_content_pic_item">
+                                    <div class="pup_content_pic_item_content">
+                                        <img src="images_taian/taian_1-2.png" style="width:100%;max-width:1280px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pup_text large_text" style="margin-top:30px;text-align:center;">投保說明頁</div>
+                            <div class="pup_content_pic_container" style="margin-top:10px;">
+                                <div class="pup_content_pic_item">
+                                    <div class="pup_content_pic_item_content">
+                                        <img src="images_taian/taian_1-1.png" style="width:100%;max-width:1280px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pup_window_content_end_tip_container">
+                        <span class="pup_window_content_end_tip">已瀏覽完&nbsp;<span class="emphasize_text">視覺設計</span></span>
+                    </div>
+                </div>
+                <div id="taian_tab_2" class="pup_window_tab_content">
+                    <div class="pup_window_content_part project_content_part" style="margin-bottom:0px;">
+                        <div class="pup_content">
+                            <div class="pup_text large_text" style="margin-top:30px;text-align:center;">汽車險線上投保</div>
+                            <div class="pup_content_pic_container" style="margin-top:10px;">
+                                <div class="pup_content_pic_item">
+                                    <div class="pup_content_pic_item_content">
+                                        <img src="images_taian/taian_1-3.png" style="width:100%;max-width:1280px;">
+                                    </div>
+                                    <div class="pup_content_pic_item_content">
+                                        <img src="images_taian/taian_1-4.png" style="width:100%;max-width:1280px;">
+                                    </div>
+                                    <div class="pup_content_pic_item_content">
+                                        <img src="images_taian/taian_1-5.png" style="width:100%;max-width:1280px;">
+                                    </div>
+                                    <div class="pup_content_pic_item_content">
+                                        <img src="images_taian/taian_1-6.png" style="width:100%;max-width:1280px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pup_text large_text" style="margin-top:30px;text-align:center;">B2B企業投保管理後台</div>
+                            <div class="pup_content_pic_container" style="margin-top:10px;">
+                                <div class="pup_content_pic_item">
+                                    <div class="pup_content_pic_item_content">
+                                        <img src="images_taian/taian_1-7.png" style="width:100%;max-width:1280px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pup_window_content_next_tip" style="text-align:center;margin-top:20px;"><a href="website/taian_b2b_fire/page_plan-s1.html" target="_blank">前端切版原型</a></div>
+                            <div class="pup_text large_text" style="margin-top:20px;text-align:center;font-size:16px;">涉及商業相關業務邏輯資料，僅單頁展示於作品集。</div>
+                        </div>
+                    </div>
+                    <div class="pup_window_content_end_tip_container">
+                        <span class="pup_window_content_end_tip">已瀏覽完&nbsp;<span class="emphasize_text">介面流程</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ... 泰安 維運 end ... -->
+</body>
+
+
+</html>
